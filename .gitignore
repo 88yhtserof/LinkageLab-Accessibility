@@ -1,0 +1,7 @@
+# for mac
+.DS_Store
+
+# for Xcode
+*.xcuserstate
+
+
