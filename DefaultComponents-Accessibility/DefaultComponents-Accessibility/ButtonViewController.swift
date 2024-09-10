@@ -12,6 +12,7 @@ final class ButtonViewController: UIViewController {
     lazy var textButton = UIButton()
     lazy var imageButton = UIButton()
     lazy var textWithImageButton = UIButton()
+    lazy var textAsSubtitleButton = UIButton()
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var isLightOn: Bool = false {
@@ -46,6 +47,11 @@ private extension ButtonViewController {
         textWithImageConfiguration.image = UIImage(systemName: "pencil")
         textWithImageConfiguration.title = "연필"
         textWithImageButton.configuration = textWithImageConfiguration
+        
+        var textAsSubtitleConfiguration = UIButton.Configuration.plain()
+        textAsSubtitleConfiguration.title = "더보기"
+        textAsSubtitleConfiguration.subtitle = "상세 내용이 궁금하다면 더보기를 탭하세요"
+        textAsSubtitleButton.configuration = textAsSubtitleConfiguration
     }
     
     func configureView() {
@@ -53,7 +59,7 @@ private extension ButtonViewController {
     }
     
     func configureConstraints() {
-        [ textButton, imageButton, textWithImageButton ]
+        [ textButton, imageButton, textWithImageButton, textAsSubtitleButton ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -65,15 +71,19 @@ private extension ButtonViewController {
         NSLayoutConstraint.activate([
             textButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
             textButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            textButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: horizontalInset),
+            textButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
             imageButton.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
             imageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            imageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: horizontalInset),
+            imageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
             textWithImageButton.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: verticalInset),
             textWithImageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            textWithImageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: horizontalInset),
+            textWithImageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            
+            textAsSubtitleButton.topAnchor.constraint(equalTo: textWithImageButton.bottomAnchor, constant: verticalInset),
+            textAsSubtitleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            textAsSubtitleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
         ])
     }
 }
