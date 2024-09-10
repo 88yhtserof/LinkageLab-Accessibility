@@ -14,13 +14,14 @@ final class ButtonViewController: UIViewController {
     lazy var textWithImageButton = UIButton()
     lazy var textWithSubtitleButton = UIButton()
     
-    private var imageButtonConfiguration = UIButton.Configuration.plain()
-    private var isLightOn: Bool = false {
+    var isLightOn: Bool = false {
         didSet {
             imageButtonConfiguration.image = isLightOn ? imageLightOff : imageLightOn
             imageButton.configuration = imageButtonConfiguration
         }
     }
+    
+    private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
     private var imageLightOff = UIImage(named: "light_off")
     
@@ -32,6 +33,7 @@ final class ButtonViewController: UIViewController {
     }
 }
 
+// MARK: Configuration
 private extension ButtonViewController {
     func configureSubViews() {
         var textConfiguration = UIButton.Configuration.plain()
@@ -85,11 +87,5 @@ private extension ButtonViewController {
             textWithSubtitleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textWithSubtitleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
         ])
-    }
-}
-
-extension ButtonViewController {
-    @objc func didTouchUpInside(_ sender: UIButton) {
-        isLightOn.toggle()
     }
 }

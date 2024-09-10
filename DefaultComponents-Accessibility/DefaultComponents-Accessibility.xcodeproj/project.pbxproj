@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */; };
 		4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */; };
 		4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */; };
 		4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD497B2C8E9B6000F3BEC7 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonViewController+Action.swift"; sourceTree = "<group>"; };
 		4ECD49742C8E9B6000F3BEC7 /* DefaultComponents-Accessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DefaultComponents-Accessibility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E285DBD2C8FE911007F286C /* ButtonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */,
+				4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */,
+			);
+			path = ButtonViewController;
+			sourceTree = "<group>";
+		};
 		4ECD496B2C8E9B6000F3BEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +69,7 @@
 		4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */ = {
 			isa = PBXGroup;
 			children = (
+				4E285DBD2C8FE911007F286C /* ButtonViewController */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD497B2C8E9B6000F3BEC7 /* ViewController.swift */,
@@ -65,7 +77,6 @@
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 				4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */,
-				4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -142,6 +153,7 @@
 			files = (
 				4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
+				4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
 				4ECD498C2C8EB5BC00F3BEC7 /* LabelViewController.swift in Sources */,
