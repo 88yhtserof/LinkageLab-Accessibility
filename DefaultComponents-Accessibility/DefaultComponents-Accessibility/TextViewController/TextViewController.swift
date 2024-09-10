@@ -12,6 +12,7 @@ final class TextViewController: UIViewController {
     lazy var label = UILabel()
     lazy var textField = UITextField()
     lazy var textView = UITextView()
+    lazy var copyButton = UIButton()
     lazy var pasteControl = UIPasteControl(configuration: pasteControlConfiguration)
     
     private var pasteControlConfiguration = UIPasteControl.Configuration()
@@ -21,6 +22,10 @@ final class TextViewController: UIViewController {
         configureSubViews()
         configureView()
         configureConstraints()
+    }
+    
+    @objc func didSelectCopyButton(_ sender: UIButton) {
+        UIPasteboard.general.string = textField.text
     }
 }
 
@@ -36,11 +41,19 @@ private extension TextViewController {
         textField.layer.borderWidth = CGFloat(2.0)
         textField.clearButtonMode = .whileEditing
         
+        var copyButtonConfiguration = UIButton.Configuration.filled()
+        copyButtonConfiguration.title = "복사하기"
+        copyButtonConfiguration.baseBackgroundColor = .blue
+        copyButtonConfiguration.baseForegroundColor = .white
+        copyButton.configuration = copyButtonConfiguration
+        copyButton.addTarget(self, action: #selector(didSelectCopyButton), for: .touchUpInside)
+        
         pasteControlConfiguration = UIPasteControl.Configuration()
         pasteControlConfiguration.baseBackgroundColor = .black
         pasteControlConfiguration.baseForegroundColor = .white
         pasteControlConfiguration.displayMode = .iconAndLabel
         pasteControlConfiguration.cornerStyle = .capsule
+        pasteControl.target = textView
         
         textView.font = .systemFont(ofSize: 20)
         textView.backgroundColor = .systemGray6
@@ -51,7 +64,7 @@ private extension TextViewController {
     }
     
     func configureConstraints() {
-        [ label, textField, pasteControl, textView ]
+        [ label, copyButton, textField, textView, pasteControl ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -68,14 +81,18 @@ private extension TextViewController {
             textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            pasteControl.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: verticalInset),
-            pasteControl.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            pasteControl.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            copyButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: verticalInset),
+            copyButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            copyButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            textView.topAnchor.constraint(equalTo: pasteControl.bottomAnchor, constant: verticalInset),
+            textView.topAnchor.constraint(equalTo: copyButton.bottomAnchor, constant: verticalInset),
             textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -verticalInset)
+            
+            pasteControl.topAnchor.constraint(equalTo: textView.bottomAnchor, constant: verticalInset),
+            pasteControl.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            pasteControl.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            pasteControl.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -verticalInset),
         ])
     }
 }
