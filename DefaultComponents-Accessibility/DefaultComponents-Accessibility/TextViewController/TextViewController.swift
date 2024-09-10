@@ -12,6 +12,9 @@ final class TextViewController: UIViewController {
     lazy var label = UILabel()
     lazy var textField = UITextField()
     lazy var textView = UITextView()
+    lazy var pasteControl = UIPasteControl(configuration: pasteControlConfiguration)
+    
+    private var pasteControlConfiguration = UIPasteControl.Configuration()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,12 @@ private extension TextViewController {
         textField.layer.borderWidth = CGFloat(2.0)
         textField.clearButtonMode = .whileEditing
         
+        pasteControlConfiguration = UIPasteControl.Configuration()
+        pasteControlConfiguration.baseBackgroundColor = .black
+        pasteControlConfiguration.baseForegroundColor = .white
+        pasteControlConfiguration.displayMode = .iconAndLabel
+        pasteControlConfiguration.cornerStyle = .capsule
+        
         textView.font = .systemFont(ofSize: 20)
         textView.backgroundColor = .systemGray6
     }
@@ -42,7 +51,7 @@ private extension TextViewController {
     }
     
     func configureConstraints() {
-        [ label, textField, textView ]
+        [ label, textField, pasteControl, textView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -59,7 +68,11 @@ private extension TextViewController {
             textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            textView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: verticalInset),
+            pasteControl.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: verticalInset),
+            pasteControl.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            pasteControl.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            
+            textView.topAnchor.constraint(equalTo: pasteControl.bottomAnchor, constant: verticalInset),
             textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -verticalInset)
