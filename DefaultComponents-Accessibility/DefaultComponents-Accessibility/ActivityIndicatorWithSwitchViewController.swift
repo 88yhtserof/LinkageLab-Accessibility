@@ -10,6 +10,7 @@ import UIKit
 final class ActivityIndicatorWithSwitchViewController: UIViewController {
     
     lazy var switchControl = UISwitch()
+    lazy var activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ final class ActivityIndicatorWithSwitchViewController: UIViewController {
 // MARK: Configuration
 private extension ActivityIndicatorWithSwitchViewController {
     func configureSubViews() {
-        
+        activityIndicator.startAnimating()
     }
     
     func configureView() {
@@ -30,17 +31,19 @@ private extension ActivityIndicatorWithSwitchViewController {
     }
     
     func configureConstraints() {
-        [ switchControl ]
+        [ activityIndicator, switchControl ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
             }
         
-        let verticalInset: CGFloat = 20
-        let horizontalInset: CGFloat = 10
+        let verticalInset: CGFloat = 50
         
         NSLayoutConstraint.activate([
-            switchControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
+            activityIndicator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
+            activityIndicator.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            switchControl.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: verticalInset),
             switchControl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
         ])
     }
