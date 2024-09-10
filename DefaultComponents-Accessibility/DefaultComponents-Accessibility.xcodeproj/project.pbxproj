@@ -13,7 +13,7 @@
 		4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD497B2C8E9B6000F3BEC7 /* ViewController.swift */; };
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
-		4ECD498C2C8EB5BC00F3BEC7 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */; };
+		4ECD498C2C8EB5BC00F3BEC7 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498B2C8EB5BC00F3BEC7 /* TextViewController.swift */; };
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ECD49832C8E9B6200F3BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		4ECD498B2C8EB5BC00F3BEC7 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +48,14 @@
 				4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */,
 			);
 			path = ButtonViewController;
+			sourceTree = "<group>";
+		};
+		4E285DC02C8FF02E007F286C /* TextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD498B2C8EB5BC00F3BEC7 /* TextViewController.swift */,
+			);
+			path = TextViewController;
 			sourceTree = "<group>";
 		};
 		4ECD496B2C8E9B6000F3BEC7 = {
@@ -76,7 +84,7 @@
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
-				4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */,
+				4E285DC02C8FF02E007F286C /* TextViewController */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -156,7 +164,7 @@
 				4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
-				4ECD498C2C8EB5BC00F3BEC7 /* LabelViewController.swift in Sources */,
+				4ECD498C2C8EB5BC00F3BEC7 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

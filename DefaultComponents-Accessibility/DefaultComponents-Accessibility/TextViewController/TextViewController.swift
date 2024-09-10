@@ -1,5 +1,5 @@
 //
-//  LabelViewController.swift
+//  TextViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/9/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LabelViewController: UIViewController {
+final class TextViewController: UIViewController {
     
     lazy var label = UILabel()
     
@@ -19,7 +19,7 @@ final class LabelViewController: UIViewController {
     }
 }
 
-private extension LabelViewController {
+private extension TextViewController {
     func configureSubViews() {
         label.text = "링키지랩"
         label.font = .systemFont(ofSize: 30)
