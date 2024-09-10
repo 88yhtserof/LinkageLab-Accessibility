@@ -13,6 +13,7 @@
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
 		4ECD498C2C8EB5BC00F3BEC7 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */; };
+		4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4ECD49832C8E9B6200F3BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 				4ECD498B2C8EB5BC00F3BEC7 /* LabelViewController.swift */,
+				4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
+				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
 				4ECD498C2C8EB5BC00F3BEC7 /* LabelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
