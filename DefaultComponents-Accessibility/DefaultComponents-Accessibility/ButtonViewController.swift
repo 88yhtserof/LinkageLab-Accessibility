@@ -11,6 +11,7 @@ final class ButtonViewController: UIViewController {
     
     lazy var textButton = UIButton()
     lazy var imageButton = UIButton()
+    lazy var textWithImageButton = UIButton()
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var isLightOn: Bool = false {
@@ -40,6 +41,11 @@ private extension ButtonViewController {
         imageButton.configuration = imageButtonConfiguration
         imageButton.clipsToBounds = true
         imageButton.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
+        
+        var textWithImageConfiguration = UIButton.Configuration.plain()
+        textWithImageConfiguration.image = UIImage(systemName: "pencil")
+        textWithImageConfiguration.title = "연필"
+        textWithImageButton.configuration = textWithImageConfiguration
     }
     
     func configureView() {
@@ -47,7 +53,7 @@ private extension ButtonViewController {
     }
     
     func configureConstraints() {
-        [ textButton, imageButton ]
+        [ textButton, imageButton, textWithImageButton ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -64,6 +70,10 @@ private extension ButtonViewController {
             imageButton.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
             imageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             imageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: horizontalInset),
+            
+            textWithImageButton.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: verticalInset),
+            textWithImageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            textWithImageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: horizontalInset),
         ])
     }
 }
