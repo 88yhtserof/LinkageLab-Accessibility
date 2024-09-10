@@ -32,12 +32,9 @@ final class TextViewController: UIViewController {
             textView.resignFirstResponder()
         }
     }
-    
-    @objc func didSelectCopyButton(_ sender: UIButton) {
-        UIPasteboard.general.string = textField.text
-    }
 }
 
+// MARK: Configuration
 private extension TextViewController {
     func configureSubViews() {
         label.text = "링키지랩"
