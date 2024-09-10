@@ -24,6 +24,15 @@ final class TextViewController: UIViewController {
         configureConstraints()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        } else if textView.isFirstResponder {
+            textView.resignFirstResponder()
+        }
+    }
+    
     @objc func didSelectCopyButton(_ sender: UIButton) {
         UIPasteboard.general.string = textField.text
     }
