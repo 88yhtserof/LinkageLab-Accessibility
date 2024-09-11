@@ -18,12 +18,22 @@ final class ActivityIndicatorWithSwitchViewController: UIViewController {
         configureView()
         configureConstraints()
     }
+    
+    @objc func didToggleSwitch(_ sender: UISwitch) {
+        if switchControl.isOn {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
 }
 
 // MARK: Configuration
 private extension ActivityIndicatorWithSwitchViewController {
     func configureSubViews() {
-        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = false
+        
+        switchControl.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
     }
     
     func configureView() {
