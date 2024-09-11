@@ -16,6 +16,7 @@ extension OutLineViewController {
         var configuration = cell.defaultContentConfiguration()
         configuration.text = item.title
         cell.contentConfiguration = configuration
+        cell.selectedBackgroundView = UIView()
     }
     
     func updateSnapshot() {

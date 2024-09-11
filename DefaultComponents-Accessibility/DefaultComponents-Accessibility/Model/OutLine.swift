@@ -9,6 +9,10 @@ import Foundation
 
 struct OutLine: Hashable {
     let title: String
+    
+    enum OutLineCase: Int {
+        case button, text, activityIndicatorWithSwitch
+    }
 }
 
 #if DEBUG

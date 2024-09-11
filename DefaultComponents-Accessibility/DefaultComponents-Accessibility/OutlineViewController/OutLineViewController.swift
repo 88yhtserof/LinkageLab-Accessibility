@@ -26,6 +26,8 @@ final class OutLineViewController: UIViewController {
 // MARK: Configuration
 private extension OutLineViewController {
     func configureSubViews() {
+        collectionView.delegate = self
+        
         let cellRegistraion = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier -> UICollectionViewCell in
