@@ -11,6 +11,10 @@
 		4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC22C901405007F286C /* TextViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */; };
 		4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */; };
+		4EC51C972C91226300385BD0 /* OutLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutLineViewController.swift */; };
+		4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */; };
+		4EC51C9C2C91295200385BD0 /* OutLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C9B2C91295200385BD0 /* OutLine.swift */; };
+		4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C9E2C912AD800385BD0 /* OutLineViewController+Delegate.swift */; };
 		4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */; };
 		4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */; };
 		4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD497B2C8E9B6000F3BEC7 /* ViewController.swift */; };
@@ -25,6 +29,10 @@
 		4E285DC22C901405007F286C /* TextViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorWithSwitchViewController.swift; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorWithSwitchViewController+Action.swift"; sourceTree = "<group>"; };
+		4EC51C962C91226300385BD0 /* OutLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutLineViewController.swift; sourceTree = "<group>"; };
+		4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutLineViewController+DataSource.swift"; sourceTree = "<group>"; };
+		4EC51C9B2C91295200385BD0 /* OutLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutLine.swift; sourceTree = "<group>"; };
+		4EC51C9E2C912AD800385BD0 /* OutLineViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutLineViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4ECD49742C8E9B6000F3BEC7 /* DefaultComponents-Accessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DefaultComponents-Accessibility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +82,24 @@
 			path = ActivityIndicatorWithSwitchViewController;
 			sourceTree = "<group>";
 		};
+		4EC51C982C9128A900385BD0 /* OutlineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EC51C962C91226300385BD0 /* OutLineViewController.swift */,
+				4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */,
+				4EC51C9E2C912AD800385BD0 /* OutLineViewController+Delegate.swift */,
+			);
+			path = OutlineViewController;
+			sourceTree = "<group>";
+		};
+		4EC51C9D2C912A9100385BD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EC51C9B2C91295200385BD0 /* OutLine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4ECD496B2C8E9B6000F3BEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +119,7 @@
 		4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */ = {
 			isa = PBXGroup;
 			children = (
+				4EC51C9D2C912A9100385BD0 /* Model */,
 				4E285DBD2C8FE911007F286C /* ButtonViewController */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
@@ -102,6 +129,7 @@
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 				4E285DC02C8FF02E007F286C /* TextViewController */,
 				4EC51C932C911B4E00385BD0 /* ActivityIndicatorWithSwitchViewController */,
+				4EC51C982C9128A900385BD0 /* OutlineViewController */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -177,11 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */,
+				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
 				4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */,
+				4EC51C972C91226300385BD0 /* OutLineViewController.swift in Sources */,
 				4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */,
+				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
+				4EC51C9C2C91295200385BD0 /* OutLine.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
 				4ECD498C2C8EB5BC00F3BEC7 /* TextViewController.swift in Sources */,
