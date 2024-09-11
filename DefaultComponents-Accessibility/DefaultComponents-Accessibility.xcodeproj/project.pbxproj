@@ -89,10 +89,17 @@
 			path = OutlineViewController;
 			sourceTree = "<group>";
 		};
-		4ECD496B2C8E9B6000F3BEC7 = {
+		4EC51C9D2C912A9100385BD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4EC51C9B2C91295200385BD0 /* OutLine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4ECD496B2C8E9B6000F3BEC7 = {
+			isa = PBXGroup;
+			children = (
 				4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */,
 				4ECD49752C8E9B6000F3BEC7 /* Products */,
 			);
@@ -109,6 +116,7 @@
 		4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */ = {
 			isa = PBXGroup;
 			children = (
+				4EC51C9D2C912A9100385BD0 /* Model */,
 				4E285DBD2C8FE911007F286C /* ButtonViewController */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
