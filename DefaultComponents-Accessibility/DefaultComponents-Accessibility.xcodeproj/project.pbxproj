@@ -10,6 +10,7 @@
 		4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */; };
 		4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC22C901405007F286C /* TextViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */; };
+		4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */; };
 		4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */; };
 		4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */; };
 		4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD497B2C8E9B6000F3BEC7 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC22C901405007F286C /* TextViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorWithSwitchViewController.swift; sourceTree = "<group>"; };
+		4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorWithSwitchViewController+Action.swift"; sourceTree = "<group>"; };
 		4ECD49742C8E9B6000F3BEC7 /* DefaultComponents-Accessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DefaultComponents-Accessibility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,15 @@
 			path = TextViewController;
 			sourceTree = "<group>";
 		};
+		4EC51C932C911B4E00385BD0 /* ActivityIndicatorWithSwitchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */,
+				4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */,
+			);
+			path = ActivityIndicatorWithSwitchViewController;
+			sourceTree = "<group>";
+		};
 		4ECD496B2C8E9B6000F3BEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +101,7 @@
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 				4E285DC02C8FF02E007F286C /* TextViewController */,
-				4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */,
+				4EC51C932C911B4E00385BD0 /* ActivityIndicatorWithSwitchViewController */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 			files = (
 				4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */,
 				4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */,
+				4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */,
 				4ECD497C2C8E9B6000F3BEC7 /* ViewController.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */,

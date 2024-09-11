@@ -18,14 +18,6 @@ final class ActivityIndicatorWithSwitchViewController: UIViewController {
         configureView()
         configureConstraints()
     }
-    
-    @objc func didToggleSwitch(_ sender: UISwitch) {
-        if switchControl.isOn {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
-    }
 }
 
 // MARK: Configuration
