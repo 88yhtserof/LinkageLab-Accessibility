@@ -63,9 +63,9 @@ private extension PickerViewController {
                 view.addSubview($0)
             }
         
-        let verticalInset: CGFloat = 30
+        let verticalInset: CGFloat = 50
         let horizontalInset: CGFloat = 10
-        let padding: CGFloat = 3
+        let padding: CGFloat = 8
         
         NSLayoutConstraint.activate([
             labelForPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
@@ -81,16 +81,13 @@ private extension PickerViewController {
             
             datePicker.topAnchor.constraint(equalTo: labelForDatePicker.bottomAnchor, constant: padding),
             datePicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            datePicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
             labelForColorWell.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: verticalInset),
             labelForColorWell.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             labelForColorWell.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
             colorWell.topAnchor.constraint(equalTo: labelForColorWell.bottomAnchor, constant: padding),
-            colorWell.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            colorWell.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-//            colorWell.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -verticalInset),
+            colorWell.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset)
         ])
     }
 }
