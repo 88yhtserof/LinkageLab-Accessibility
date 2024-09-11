@@ -11,6 +11,7 @@ final class OutLineViewController: UIViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
+    var outlines = OutLine.outlines
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
