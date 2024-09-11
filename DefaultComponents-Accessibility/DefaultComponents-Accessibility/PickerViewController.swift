@@ -9,12 +9,18 @@ import UIKit
 
 final class PickerViewController: UIViewController {
     
-    lazy var labelForPicker = UILabel()
-    lazy var pickerView = UIPickerView()
-    lazy var labelForDatePicker = UILabel()
-    lazy var datePicker = UIDatePicker()
-    lazy var labelForColorWell = UILabel()
-    lazy var colorWell = UIColorWell()
+    var textForPicker: String? {
+        didSet {
+            labelForPicker.text = textForPicker
+        }
+    }
+    
+    private lazy var labelForPicker = UILabel()
+    private lazy var pickerView = UIPickerView()
+    private lazy var labelForDatePicker = UILabel()
+    private lazy var datePicker = UIDatePicker()
+    private lazy var labelForColorWell = UILabel()
+    private lazy var colorWell = UIColorWell()
     
     private var cities = [
         "서울",
@@ -109,5 +115,9 @@ extension PickerViewController: UIPickerViewDelegate {
         itemView.text = cities[row]
         itemView.textAlignment = .center
         return itemView
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        textForPicker = cities[row]
     }
 }
