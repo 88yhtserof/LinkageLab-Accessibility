@@ -11,6 +11,9 @@ final class PickerViewController: UIViewController {
     
     var textForPicker: String? {
         didSet {
+            if labelForPicker.alpha < 1.0 {
+                labelForPicker.alpha = 1.0
+            }
             labelForPicker.text = textForPicker
         }
     }
@@ -50,7 +53,8 @@ private extension PickerViewController {
             .enumerated()
             .forEach { (offset, view) in
                 view.text = labelTexts[offset]
-                view.alpha = CGFloat(0.7)
+                view.alpha = CGFloat(0.5)
+                view.font = .systemFont(ofSize: 20, weight: .medium)
             }
         
         pickerView.dataSource = self
