@@ -41,33 +41,34 @@ private extension PickerViewController {
                 view.addSubview($0)
             }
         
-        let verticalInset: CGFloat = 20
+        let verticalInset: CGFloat = 30
         let horizontalInset: CGFloat = 10
+        let padding: CGFloat = 3
         
         NSLayoutConstraint.activate([
             labelForPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
             labelForPicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             
-            pickerView.topAnchor.constraint(equalTo: labelForPicker.bottomAnchor, constant: verticalInset),
+            pickerView.topAnchor.constraint(equalTo: labelForPicker.bottomAnchor, constant: padding),
             pickerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             pickerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            datePicker.topAnchor.constraint(equalTo: pickerView.bottomAnchor, constant: verticalInset),
-            datePicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            datePicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            
-            labelForDatePicker.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: verticalInset),
+            labelForDatePicker.topAnchor.constraint(equalTo: pickerView.bottomAnchor, constant: verticalInset),
             labelForDatePicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             labelForDatePicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            labelForColorWell.topAnchor.constraint(equalTo: labelForDatePicker.bottomAnchor, constant: verticalInset),
+            datePicker.topAnchor.constraint(equalTo: labelForDatePicker.bottomAnchor, constant: padding),
+            datePicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            datePicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            
+            labelForColorWell.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: verticalInset),
             labelForColorWell.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             labelForColorWell.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            colorWell.topAnchor.constraint(equalTo: labelForColorWell.bottomAnchor, constant: verticalInset),
+            colorWell.topAnchor.constraint(equalTo: labelForColorWell.bottomAnchor, constant: padding),
             colorWell.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             colorWell.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            colorWell.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -verticalInset),
+//            colorWell.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -verticalInset),
         ])
     }
 }
