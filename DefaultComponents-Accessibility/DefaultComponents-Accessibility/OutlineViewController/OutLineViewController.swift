@@ -22,26 +22,6 @@ final class OutLineViewController: UIViewController {
     }
 }
 
-// MARK: DataSource
-extension OutLineViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
-    
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String) {
-        var configuration = cell.defaultContentConfiguration()
-        configuration.text = item
-        cell.contentConfiguration = configuration
-    }
-    
-    func updateSnapshot() {
-        let items = ["Button", "Text", "ActiviryIndicatorWithSwitch"]
-        var snapshot = Snapshot()
-        snapshot.appendSections([0])
-        snapshot.appendItems(items)
-        dataSource.apply(snapshot)
-    }
-}
-
 // MARK: Configuration
 private extension OutLineViewController {
     func configureSubViews() {
