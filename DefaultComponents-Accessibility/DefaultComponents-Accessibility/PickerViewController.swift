@@ -16,6 +16,13 @@ final class PickerViewController: UIViewController {
     lazy var labelForColorWell = UILabel()
     lazy var colorWell = UIColorWell()
     
+    private var cities = [
+        "서울",
+        "런던",
+        "도쿄",
+        "뉴욕"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
@@ -39,6 +46,9 @@ private extension PickerViewController {
                 view.text = labelTexts[offset]
                 view.alpha = CGFloat(0.7)
             }
+        
+        pickerView.dataSource = self
+        pickerView.delegate = self
         
     }
     
@@ -85,3 +95,22 @@ private extension PickerViewController {
     }
 }
 
+extension PickerViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return cities.count
+    }
+}
+
+
+extension PickerViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var itemView = UILabel()
+        itemView.text = cities[row]
+        itemView.textAlignment = .center
+        return itemView
+    }
+}
