@@ -27,6 +27,18 @@ final class PickerViewController: UIViewController {
 // MARK: Configuration
 private extension PickerViewController {
     func configureSubViews() {
+        let labelTexts = [
+            "Picker의 결과를 보여줍니다",
+            "DatePicker의 결과를 보여줍니다",
+            "ColorWell의 결과를 보여줍니다"
+        ]
+        
+        [ labelForPicker, labelForDatePicker, labelForColorWell ]
+            .enumerated()
+            .forEach { (offset, view) in
+                view.text = labelTexts[offset]
+                view.alpha = CGFloat(0.7)
+            }
         
     }
     
