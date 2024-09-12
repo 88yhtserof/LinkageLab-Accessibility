@@ -27,6 +27,15 @@ final class PickerViewController: UIViewController {
         }
     }
     
+    var textForColorWell: String? {
+        didSet {
+            if labelForColorWell.alpha < 1.0 {
+                labelForColorWell.alpha = 1.0
+            }
+            labelForColorWell.text = textForColorWell
+        }
+    }
+    
     private lazy var labelForPicker = UILabel()
     private lazy var pickerView = UIPickerView()
     private lazy var labelForDatePicker = UILabel()
@@ -71,6 +80,8 @@ private extension PickerViewController {
         
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(didSelectDate), for: .valueChanged)
+        
+        colorWell.addTarget(self, action: #selector(didSelectColor), for: .valueChanged)
     }
     
     func configureView() {
@@ -141,5 +152,9 @@ extension PickerViewController {
     @objc func didSelectDate(_ sender: UIDatePicker) {
         print(sender.date)
         textForDataPicker = DateFormatterManager.shared.string(from: sender.date)
+    }
+    
+    @objc func didSelectColor(_ senser: UIColorWell) {
+        textForColorWell = senser.selectedColor?.accessibilityName
     }
 }
