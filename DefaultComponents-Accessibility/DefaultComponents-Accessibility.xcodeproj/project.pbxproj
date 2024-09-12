@@ -10,6 +10,7 @@
 		4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */; };
 		4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC22C901405007F286C /* TextViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */; };
+		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
 		4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutLineViewController.swift */; };
 		4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */; };
@@ -29,6 +30,7 @@
 		4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC22C901405007F286C /* TextViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorWithSwitchViewController.swift; sourceTree = "<group>"; };
+		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorWithSwitchViewController+Action.swift"; sourceTree = "<group>"; };
 		4EC51C962C91226300385BD0 /* OutLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutLineViewController.swift; sourceTree = "<group>"; };
 		4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutLineViewController+DataSource.swift"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC51C9B2C91295200385BD0 /* OutLine.swift */,
+				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */,
+				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
 				4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */,
