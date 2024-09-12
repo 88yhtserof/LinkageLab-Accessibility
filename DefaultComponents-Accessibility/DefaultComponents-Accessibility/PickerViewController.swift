@@ -126,7 +126,7 @@ extension PickerViewController: UIPickerViewDataSource {
 
 extension PickerViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var itemView = UILabel()
+        let itemView = UILabel()
         itemView.text = cities[row]
         itemView.textAlignment = .center
         return itemView
