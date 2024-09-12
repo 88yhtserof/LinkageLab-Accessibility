@@ -150,7 +150,6 @@ extension PickerViewController: UIPickerViewDelegate {
 
 extension PickerViewController {
     @objc func didSelectDate(_ sender: UIDatePicker) {
-        print(sender.date)
         textForDataPicker = DateFormatterManager.shared.string(from: sender.date)
     }
     
