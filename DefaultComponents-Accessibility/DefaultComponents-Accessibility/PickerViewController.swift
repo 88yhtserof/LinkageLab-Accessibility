@@ -18,6 +18,15 @@ final class PickerViewController: UIViewController {
         }
     }
     
+    var textForDataPicker: String? {
+        didSet {
+            if labelForDatePicker.alpha < 1.0 {
+                labelForDatePicker.alpha = 1.0
+            }
+            labelForDatePicker.text = textForDataPicker
+        }
+    }
+    
     private lazy var labelForPicker = UILabel()
     private lazy var pickerView = UIPickerView()
     private lazy var labelForDatePicker = UILabel()
@@ -60,6 +69,8 @@ private extension PickerViewController {
         pickerView.dataSource = self
         pickerView.delegate = self
         
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.addTarget(self, action: #selector(didSelectDate), for: .valueChanged)
     }
     
     func configureView() {
@@ -123,5 +134,12 @@ extension PickerViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         textForPicker = cities[row]
+    }
+}
+
+extension PickerViewController {
+    @objc func didSelectDate(_ sender: UIDatePicker) {
+        print(sender.date)
+        textForDataPicker = DateFormatterManager.shared.string(from: sender.date)
     }
 }
