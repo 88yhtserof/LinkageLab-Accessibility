@@ -18,7 +18,7 @@ extension OutlineViewController: UICollectionViewDelegate {
         case .text:
             vc = TextViewController()
         case .activityIndicatorWithSwitch:
-            vc = ActivityIndicatorWithSwitchViewController()
+            vc = StateViewController()
         case .picker:
             vc = PickerViewController()
         case .none:

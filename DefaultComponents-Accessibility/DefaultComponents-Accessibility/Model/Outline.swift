@@ -19,7 +19,7 @@ extension Outline {
     static var outlines = [
         Outline(title: "Button"),
         Outline(title: "Text"),
-        Outline(title: "ActivityIndicatorWithSwitch"),
+        Outline(title: "State"),
         Outline(title: "Picker")
     ]
 }

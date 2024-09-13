@@ -94,13 +94,13 @@
 			path = PickerViewController;
 			sourceTree = "<group>";
 		};
-		4EC51C932C911B4E00385BD0 /* ActivityIndicatorWithSwitchViewController */ = {
+		4EC51C932C911B4E00385BD0 /* StateViewController */ = {
 			isa = PBXGroup;
 			children = (
 				4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */,
 				4EC51C942C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift */,
 			);
-			path = ActivityIndicatorWithSwitchViewController;
+			path = StateViewController;
 			sourceTree = "<group>";
 		};
 		4EC51C982C9128A900385BD0 /* OutlineViewController */ = {
@@ -151,7 +151,7 @@
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 				4E285DC02C8FF02E007F286C /* TextViewController */,
-				4EC51C932C911B4E00385BD0 /* ActivityIndicatorWithSwitchViewController */,
+				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4EC51C982C9128A900385BD0 /* OutlineViewController */,
 			);
 			path = "DefaultComponents-Accessibility";
