@@ -46,6 +46,8 @@ private extension AlertViewController{
                 configuration.title = description
                 button.configuration = configuration
             }
+        
+        alertForMessageButton.addTarget(self, action: #selector(didPresentAlertForMessage), for: .touchUpInside)
     }
     
     func configureView() {

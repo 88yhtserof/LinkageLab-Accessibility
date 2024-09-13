@@ -27,6 +27,7 @@
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */; };
 		4EF982132C93C4A900809294 /* PickerViewController+DatsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982122C93C4A900809294 /* PickerViewController+DatsSource.swift */; };
 		4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982142C93E4DF00809294 /* AlertViewController.swift */; };
+		4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		4EF982122C93C4A900809294 /* PickerViewController+DatsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerViewController+DatsSource.swift"; sourceTree = "<group>"; };
 		4EF982142C93E4DF00809294 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Action.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
 				4EF982142C93E4DF00809294 /* AlertViewController.swift */,
+				4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
@@ -239,6 +242,7 @@
 				4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
 				4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */,
+				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
