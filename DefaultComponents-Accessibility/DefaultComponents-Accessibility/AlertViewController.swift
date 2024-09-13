@@ -65,7 +65,6 @@ private extension AlertViewController{
                 stackView.addArrangedSubview($0)
             }
         
-        let verticalInset: CGFloat = 20
         let horizontalInset: CGFloat = 50
         let safeArea = view.safeAreaLayoutGuide
         
