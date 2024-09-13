@@ -43,7 +43,7 @@ final class PickerViewController: UIViewController {
     private lazy var labelForColorWell = UILabel()
     private lazy var colorWell = UIColorWell()
     
-    private var cities = [
+    var cities = [
         "서울",
         "런던",
         "도쿄",
@@ -121,39 +121,5 @@ private extension PickerViewController {
             colorWell.topAnchor.constraint(equalTo: labelForColorWell.bottomAnchor, constant: padding),
             colorWell.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset)
         ])
-    }
-}
-
-extension PickerViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return cities.count
-    }
-}
-
-
-extension PickerViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let itemView = UILabel()
-        itemView.text = cities[row]
-        itemView.textAlignment = .center
-        return itemView
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textForPicker = cities[row]
-    }
-}
-
-extension PickerViewController {
-    @objc func didSelectDate(_ sender: UIDatePicker) {
-        textForDataPicker = DateFormatterManager.shared.string(from: sender.date)
-    }
-    
-    @objc func didSelectColor(_ senser: UIColorWell) {
-        textForColorWell = senser.selectedColor?.accessibilityName
     }
 }
