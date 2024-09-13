@@ -8,11 +8,11 @@
 import UIKit
 
 // MARK: DataSource
-extension OutLineViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, OutLine>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, OutLine>
+extension OutlineViewController {
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, Outline>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Outline>
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: OutLine) {
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Outline) {
         var configuration = cell.defaultContentConfiguration()
         configuration.text = item.title
         cell.contentConfiguration = configuration

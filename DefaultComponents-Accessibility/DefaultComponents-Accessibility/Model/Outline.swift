@@ -1,5 +1,5 @@
 //
-//  OutLine.swift
+//  Outline.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/11/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OutLine: Hashable {
+struct Outline: Hashable {
     let title: String
     
     enum OutLineCase: Int {
@@ -15,11 +15,11 @@ struct OutLine: Hashable {
     }
 }
 
-extension OutLine {
+extension Outline {
     static var outlines = [
-        OutLine(title: "Button"),
-        OutLine(title: "Text"),
-        OutLine(title: "ActivityIndicatorWithSwitch"),
-        OutLine(title: "Picker")
+        Outline(title: "Button"),
+        Outline(title: "Text"),
+        Outline(title: "ActivityIndicatorWithSwitch"),
+        Outline(title: "Picker")
     ]
 }
