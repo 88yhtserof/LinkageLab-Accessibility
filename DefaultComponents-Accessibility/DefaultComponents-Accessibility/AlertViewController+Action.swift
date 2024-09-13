@@ -27,6 +27,20 @@ extension AlertViewController {
         self.present(alertVC, animated: true)
     }
     
+    @objc func didPresentAlertForTextField(_ sender: UIButton) {
+        let alertVC = UIAlertController(title: "AlertForView", message: "닉네임을 변경하시겠습니까?", preferredStyle: .alert)
+        alertVC.addTextField { textField in
+            textField.placeholder = "원하는 닉네임을 입력하세요"
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: didSelectCancel(_:))
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: didSelectOK(_:))
+        
+        [ cancelAction, okAction ]
+            .forEach{ alertVC.addAction($0) }
+        self.present(alertVC, animated: true)
+    }
+    
     private func didSelectOK(_ action: UIAlertAction) {
         print("didSelectOK")
     }
