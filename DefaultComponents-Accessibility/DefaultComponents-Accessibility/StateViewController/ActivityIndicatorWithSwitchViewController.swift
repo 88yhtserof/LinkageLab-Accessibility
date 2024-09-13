@@ -1,5 +1,5 @@
 //
-//  ActivityIndicatorWithSwitchViewController.swift
+//  StateViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/10/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ActivityIndicatorWithSwitchViewController: UIViewController {
+final class StateViewController: UIViewController {
     
     lazy var switchControl = UISwitch()
     lazy var activityIndicator = UIActivityIndicatorView(style: .large)
@@ -21,7 +21,7 @@ final class ActivityIndicatorWithSwitchViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension ActivityIndicatorWithSwitchViewController {
+private extension StateViewController {
     func configureSubViews() {
         activityIndicator.hidesWhenStopped = false
         

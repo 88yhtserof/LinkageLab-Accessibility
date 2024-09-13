@@ -1,5 +1,5 @@
 //
-//  OutLineViewController.swift
+//  OutlineViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/11/24.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class OutLineViewController: UIViewController {
+final class OutlineViewController: UIViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    var outlines = OutLine.outlines
+    var outlines = Outline.outlines
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
@@ -24,7 +24,7 @@ final class OutLineViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension OutLineViewController {
+private extension OutlineViewController {
     func configureSubViews() {
         collectionView.delegate = self
         
@@ -61,7 +61,7 @@ private extension OutLineViewController {
 }
 
 // MARK: CollectionView Layout
-private extension OutLineViewController {
+private extension OutlineViewController {
     func layout() -> UICollectionViewLayout {
         let configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
         return UICollectionViewCompositionalLayout.list(using: configuration)

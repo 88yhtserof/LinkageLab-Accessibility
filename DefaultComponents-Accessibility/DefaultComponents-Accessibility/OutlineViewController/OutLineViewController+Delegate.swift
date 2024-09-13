@@ -7,9 +7,9 @@
 
 import UIKit
 
-extension OutLineViewController: UICollectionViewDelegate {
+extension OutlineViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let itemCase = OutLine.OutLineCase(rawValue: indexPath.row)
+        let itemCase = Outline.OutLineCase(rawValue: indexPath.row)
         var vc: UIViewController
         
         switch itemCase {
@@ -18,7 +18,9 @@ extension OutLineViewController: UICollectionViewDelegate {
         case .text:
             vc = TextViewController()
         case .activityIndicatorWithSwitch:
-            vc = ActivityIndicatorWithSwitchViewController()
+            vc = StateViewController()
+        case .picker:
+            vc = PickerViewController()
         case .none:
             fatalError("Missing OutLine Case")
         }
