@@ -15,7 +15,6 @@ struct OutLine: Hashable {
     }
 }
 
-#if DEBUG
 extension OutLine {
     static var outlines = [
         OutLine(title: "Button"),
@@ -23,4 +22,3 @@ extension OutLine {
         OutLine(title: "ActivityIndicatorWithSwitch")
     ]
 }
-#endif
