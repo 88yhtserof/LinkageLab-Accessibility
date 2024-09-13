@@ -141,18 +141,18 @@
 		4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */ = {
 			isa = PBXGroup;
 			children = (
-				4E31E0F12C9275B7004C4979 /* PickerViewController */,
 				4EC51C9D2C912A9100385BD0 /* Model */,
+				4EC51C982C9128A900385BD0 /* OutlineViewController */,
 				4E285DBD2C8FE911007F286C /* ButtonViewController */,
+				4E285DC02C8FF02E007F286C /* TextViewController */,
+				4EC51C932C911B4E00385BD0 /* StateViewController */,
+				4E31E0F12C9275B7004C4979 /* PickerViewController */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD497B2C8E9B6000F3BEC7 /* ViewController.swift */,
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
-				4E285DC02C8FF02E007F286C /* TextViewController */,
-				4EC51C932C911B4E00385BD0 /* StateViewController */,
-				4EC51C982C9128A900385BD0 /* OutlineViewController */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
