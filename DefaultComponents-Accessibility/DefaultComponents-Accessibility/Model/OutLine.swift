@@ -11,7 +11,7 @@ struct OutLine: Hashable {
     let title: String
     
     enum OutLineCase: Int {
-        case button, text, activityIndicatorWithSwitch
+        case button, text, activityIndicatorWithSwitch, picker
     }
 }
 

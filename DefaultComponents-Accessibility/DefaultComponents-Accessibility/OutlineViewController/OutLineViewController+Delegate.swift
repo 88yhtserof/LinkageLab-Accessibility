@@ -19,6 +19,8 @@ extension OutLineViewController: UICollectionViewDelegate {
             vc = TextViewController()
         case .activityIndicatorWithSwitch:
             vc = ActivityIndicatorWithSwitchViewController()
+        case .picker:
+            vc = PickerViewController()
         case .none:
             fatalError("Missing OutLine Case")
         }
