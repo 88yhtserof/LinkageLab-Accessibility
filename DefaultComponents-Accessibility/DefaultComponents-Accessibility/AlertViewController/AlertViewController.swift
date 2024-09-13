@@ -34,7 +34,7 @@ private extension AlertViewController{
         configuration.baseBackgroundColor = .blue
         
         let descriptions = [
-            "Aler: 안내",
+            "Alert: 안내",
             "Alert: 선택",
             "Alert: 입력",
             "ActionSheet: 동작"
