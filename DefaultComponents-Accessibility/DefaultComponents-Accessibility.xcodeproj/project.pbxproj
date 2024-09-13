@@ -149,8 +149,7 @@
 				4E285DC02C8FF02E007F286C /* TextViewController */,
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
-				4EF982142C93E4DF00809294 /* AlertViewController.swift */,
-				4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */,
+				4EF982182C9415B100809294 /* AlertViewController */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
@@ -158,6 +157,15 @@
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 			);
 			path = "DefaultComponents-Accessibility";
+			sourceTree = "<group>";
+		};
+		4EF982182C9415B100809294 /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EF982142C93E4DF00809294 /* AlertViewController.swift */,
+				4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */,
+			);
+			path = AlertViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

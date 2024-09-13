@@ -9,6 +9,7 @@ import UIKit
 
 extension AlertViewController {
     
+    // MARK: Button Action
     @objc func didPresentAlertForMessage(_ sender: UIButton){
         let alertVC = UIAlertController(title: "Aler: 안내", message: "사용자에게 전달하고 싶은 메세지입니다", preferredStyle: .alert)
         let action = UIAlertAction(title: "확인", style: .default, handler: didSelectOK(_:))
@@ -53,6 +54,7 @@ extension AlertViewController {
         self.present(actionSheetVC, animated: true)
     }
     
+    // MARK: Alert Action
     private func didSelectOK(_ action: UIAlertAction) {
         print("didSelectOK")
     }
