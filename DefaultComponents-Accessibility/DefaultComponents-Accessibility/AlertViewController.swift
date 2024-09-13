@@ -48,6 +48,7 @@ private extension AlertViewController{
             }
         
         alertForMessageButton.addTarget(self, action: #selector(didPresentAlertForMessage), for: .touchUpInside)
+        alertForSelectButton.addTarget(self, action: #selector(didPresentAlertForSelect), for: .touchUpInside)
     }
     
     func configureView() {

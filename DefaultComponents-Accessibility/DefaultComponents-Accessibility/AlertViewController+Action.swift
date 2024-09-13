@@ -17,7 +17,21 @@ extension AlertViewController {
         self.present(alertVC, animated: true)
     }
     
-    func didSelectOK(_ action: UIAlertAction) {
+    @objc func didPresentAlertForSelect(_ sender: UIButton) {
+        let alertVC = UIAlertController(title: "AlertForSelect", message: "알림을 활성화 하시겠습니까?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: didSelectCancel(_:))
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: didSelectOK(_:))
+        
+        [ cancelAction, okAction ]
+            .forEach{ alertVC.addAction($0) }
+        self.present(alertVC, animated: true)
+    }
+    
+    private func didSelectOK(_ action: UIAlertAction) {
         print("didSelectOK")
+    }
+    
+    private func didSelectCancel(_ action: UIAlertAction) {
+        print("didSelectCancel")
     }
 }
