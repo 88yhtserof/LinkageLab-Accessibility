@@ -41,11 +41,27 @@ extension AlertViewController {
         self.present(alertVC, animated: true)
     }
     
+    @objc func didPresentActionSheetForSelect(_ sender: UIButton) {
+        let actionSheetVC = UIAlertController(title: "ActionSheetForSelect", message: "다른 형태의 Alert입니다. \n 여러 동작을 추가할 수 있습니다", preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: didSelectCancel)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: didSelectOK)
+        let destructiveAction = UIAlertAction(title: "삭제", style: .destructive, handler: didSelectDestructive)
+        
+        [ cancelAction, okAction, destructiveAction ]
+            .forEach{ actionSheetVC.addAction($0) }
+        self.present(actionSheetVC, animated: true)
+    }
+    
     private func didSelectOK(_ action: UIAlertAction) {
         print("didSelectOK")
     }
     
     private func didSelectCancel(_ action: UIAlertAction) {
         print("didSelectCancel")
+    }
+    
+    private func didSelectDestructive(_ action: UIAlertAction) {
+        print("didSelectDestructive")
     }
 }

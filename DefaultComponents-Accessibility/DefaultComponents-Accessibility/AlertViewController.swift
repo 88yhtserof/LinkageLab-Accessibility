@@ -13,7 +13,7 @@ final class AlertViewController: UIViewController {
     lazy var alertForMessageButton = UIButton()
     lazy var alertForSelectButton = UIButton()
     lazy var alertForViewTextField = UIButton()
-    lazy var actionSheetForActionButton = UIButton()
+    lazy var actionSheetForSelectButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ private extension AlertViewController{
             "Alert: View",
             "ActionSheet: 동작"
         ]
-        let buttons = [ alertForMessageButton, alertForSelectButton, alertForViewTextField, actionSheetForActionButton ]
+        let buttons = [ alertForMessageButton, alertForSelectButton, alertForViewTextField, actionSheetForSelectButton ]
         
         zip(buttons, descriptions)
             .forEach{ (button, description) in
@@ -50,6 +50,7 @@ private extension AlertViewController{
         alertForMessageButton.addTarget(self, action: #selector(didPresentAlertForMessage), for: .touchUpInside)
         alertForSelectButton.addTarget(self, action: #selector(didPresentAlertForSelect), for: .touchUpInside)
         alertForViewTextField.addTarget(self, action: #selector(didPresentAlertForTextField), for: .touchUpInside)
+        actionSheetForSelectButton.addTarget(self, action: #selector(didPresentActionSheetForSelect), for: .touchUpInside)
     }
     
     func configureView() {
@@ -60,7 +61,7 @@ private extension AlertViewController{
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
-        [ alertForMessageButton, alertForSelectButton, alertForViewTextField, actionSheetForActionButton ]
+        [ alertForMessageButton, alertForSelectButton, alertForViewTextField, actionSheetForSelectButton ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 stackView.addArrangedSubview($0)
