@@ -133,14 +133,14 @@
 			path = OutlineViewController;
 			sourceTree = "<group>";
 		};
-		4EC51C9D2C912A9100385BD0 /* Model */ = {
+		4EC51C9D2C912A9100385BD0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4EC51C9B2C91295200385BD0 /* Outline.swift */,
 				4E0AB03E2C9BAB9700B8A89C /* Item.swift */,
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4ECD496B2C8E9B6000F3BEC7 = {
@@ -162,7 +162,7 @@
 		4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */ = {
 			isa = PBXGroup;
 			children = (
-				4EC51C9D2C912A9100385BD0 /* Model */,
+				4EC51C9D2C912A9100385BD0 /* Models */,
 				4EC51C982C9128A900385BD0 /* OutlineViewController */,
 				4E285DBD2C8FE911007F286C /* ButtonViewController */,
 				4E285DC02C8FF02E007F286C /* TextViewController */,
