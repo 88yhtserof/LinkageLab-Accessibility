@@ -9,10 +9,19 @@ import UIKit
 
 // MARK: DataSource
 extension OutlineViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, Outline>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Outline>
+    typealias DataSource = UICollectionViewDiffableDataSource<Outline, Item>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Outline, Item>
+    typealias SectionSnapshot = NSDiffableDataSourceSectionSnapshot<Item>
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Outline) {
+    func headerRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Item) {
+        var configuration = cell.defaultContentConfiguration()
+        configuration.text = item.title
+        cell.contentConfiguration = configuration
+        cell.selectedBackgroundView = UIView()
+        cell.accessories = [.outlineDisclosure()]
+    }
+    
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Item) {
         var configuration = cell.defaultContentConfiguration()
         configuration.text = item.title
         cell.contentConfiguration = configuration
@@ -21,8 +30,16 @@ extension OutlineViewController {
     
     func updateSnapshot() {
         var snapshot = Snapshot()
-        snapshot.appendSections([0])
-        snapshot.appendItems(self.outlines)
+        snapshot.appendSections(sections)
         dataSource.apply(snapshot)
+        
+        for (offeset, section) in sections.enumerated() {
+            var sectionSnapshot = SectionSnapshot()
+            let headerItem = Item(title: "\(section.title)")
+            sectionSnapshot.append([headerItem])
+            sectionSnapshot.append(items[offeset], to: headerItem)
+            sectionSnapshot.expand([headerItem])
+            dataSource.apply(sectionSnapshot, to: section)
+        }
     }
 }

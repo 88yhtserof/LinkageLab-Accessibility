@@ -16,10 +16,15 @@ struct Outline: Hashable {
 }
 
 extension Outline {
-    static var outlines = [
-        Outline(title: "Button"),
+    static var sections = [
         Outline(title: "Text"),
+        Outline(title: "Button"),
         Outline(title: "State"),
-        Outline(title: "Picker")
+        Outline(title: "DateAndTime"),
+        Outline(title: "Menu"),
+        Outline(title: "List"),
+        Outline(title: "Page"),
+        Outline(title: "Alert"),
+        Outline(title: "Sheet")
     ]
 }
