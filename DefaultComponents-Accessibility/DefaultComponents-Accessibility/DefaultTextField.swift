@@ -9,11 +9,16 @@ import UIKit
 
 class DefaultTextField: UITextField {
     
+    var placeholderText: String? {
+        didSet {
+            placeholder = placeholderText
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         font = .systemFont(ofSize: 20, weight: .regular)
-        placeholder = "원하는 데이터를 입력하세요."
         textAlignment = .left
         layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = CGFloat(1.0)

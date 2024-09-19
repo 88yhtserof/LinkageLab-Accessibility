@@ -47,9 +47,13 @@ private extension TextFieldController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 20
         
+        textFieldForDefault.placeholderText = "원하는 데이터를 입력하세요"
         textFieldForPW.isSecureTextEntry = true
+        textFieldForPW.placeholderText = "비밀번호를 입력하세요"
         textFieldForNumber.keyboardType = .numberPad
+        textFieldForNumber.placeholderText = "해당하는 숫자를 입력하세요"
         textFieldForEmail.keyboardType = .emailAddress
+        textFieldForEmail.placeholderText = "예: default@email.com"
         
         defaultBoxView.title = "기본"
         pwBoxView.title = "비밀번호"
