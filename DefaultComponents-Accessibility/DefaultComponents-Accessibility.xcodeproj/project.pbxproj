@@ -84,6 +84,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4E0AB04B2C9BE1DA00B8A89C /* TextFieldController */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB0482C9BDD9900B8A89C /* TextFieldViewController.swift */,
+			);
+			path = TextFieldController;
+			sourceTree = "<group>";
+		};
+		4E0AB04C2C9BE1FB00B8A89C /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB04B2C9BE1DA00B8A89C /* TextFieldController */,
+				4E285DC02C8FF02E007F286C /* TextViewController */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		4E285DBD2C8FE911007F286C /* ButtonViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +115,6 @@
 			children = (
 				4ECD498B2C8EB5BC00F3BEC7 /* TextViewController.swift */,
 				4E285DC22C901405007F286C /* TextViewController+Action.swift */,
-				4E0AB0482C9BDD9900B8A89C /* TextFieldViewController.swift */,
 			);
 			path = TextViewController;
 			sourceTree = "<group>";
@@ -165,7 +181,7 @@
 				4EC51C9D2C912A9100385BD0 /* Models */,
 				4EC51C982C9128A900385BD0 /* OutlineViewController */,
 				4E285DBD2C8FE911007F286C /* ButtonViewController */,
-				4E285DC02C8FF02E007F286C /* TextViewController */,
+				4E0AB04C2C9BE1FB00B8A89C /* Text */,
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
 				4EF982182C9415B100809294 /* AlertViewController */,
