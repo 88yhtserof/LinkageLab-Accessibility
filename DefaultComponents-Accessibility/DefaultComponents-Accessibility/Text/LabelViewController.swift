@@ -1,5 +1,5 @@
 //
-//  LabelAndSearchViewController.swift
+//  LabelViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/19/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LabelAndSearchViewController: UIViewController {
+final class LabelViewController: UIViewController {
     
     var navigationTitle: String? {
         didSet {
@@ -38,7 +38,7 @@ final class LabelAndSearchViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension LabelAndSearchViewController {
+private extension LabelViewController {
     func configureSubViews() {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
