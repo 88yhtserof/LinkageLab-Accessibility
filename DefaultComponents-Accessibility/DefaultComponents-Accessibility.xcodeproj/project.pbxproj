@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E0AB03F2C9BAB9700B8A89C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Item.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
+		4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */; };
 		4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */; };
 		4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC22C901405007F286C /* TextViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		4E0AB03E2C9BAB9700B8A89C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
+		4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC22C901405007F286C /* TextViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorWithSwitchViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
 				4EF982182C9415B100809294 /* AlertViewController */,
 				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
+				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 				4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */,
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
+				4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
