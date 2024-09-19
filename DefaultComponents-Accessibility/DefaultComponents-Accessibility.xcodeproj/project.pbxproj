@@ -75,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0AB04A2C9BE10200B8A89C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
+				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4E285DBD2C8FE911007F286C /* ButtonViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,8 +169,7 @@
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
 				4EF982182C9415B100809294 /* AlertViewController */,
-				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
-				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
+				4E0AB04A2C9BE10200B8A89C /* Views */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
