@@ -11,6 +11,7 @@
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
 		4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */; };
 		4E0AB0492C9BDD9900B8A89C /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0482C9BDD9900B8A89C /* TextFieldViewController.swift */; };
+		4E0AB04E2C9BE27300B8A89C /* LabelAndSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB04D2C9BE27300B8A89C /* LabelAndSearchViewController.swift */; };
 		4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */; };
 		4E285DC32C901405007F286C /* TextViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC22C901405007F286C /* TextViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */; };
@@ -39,6 +40,7 @@
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
 		4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		4E0AB0482C9BDD9900B8A89C /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		4E0AB04D2C9BE27300B8A89C /* LabelAndSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSearchViewController.swift; sourceTree = "<group>"; };
 		4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC22C901405007F286C /* TextViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorWithSwitchViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				4E0AB04B2C9BE1DA00B8A89C /* TextFieldController */,
 				4E285DC02C8FF02E007F286C /* TextViewController */,
+				4E0AB04D2C9BE27300B8A89C /* LabelAndSearchViewController.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
 				4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */,
+				4E0AB04E2C9BE27300B8A89C /* LabelAndSearchViewController.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
