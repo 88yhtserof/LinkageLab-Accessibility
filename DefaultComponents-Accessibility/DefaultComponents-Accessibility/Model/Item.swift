@@ -16,6 +16,7 @@ extension Item {
     static let items = [
         itemsForText,
         itemsForButton,
+        itemsForState,
         itemsForDateAndTime,
         itemsForMenu,
         itemsForList,
@@ -24,43 +25,52 @@ extension Item {
         itemsForSheet
     ]
     
-    static let itemsForText = [
+    static let test = [
+        "UILabel",
+        "UIText"
+    ]
+    
+    private static let itemsForText = [
         Item(title: "UILabel"),
         Item(title: "UITextField"),
         Item(title: "UITextView"),
         Item(title: "UISearchView")
     ]
     
-    static let itemsForButton = [
-        Item(title: "UIActivityIndicatorView"),
-        Item(title: "UIProgressView"),
-        Item(title: "UISlider")
+    private static let itemsForButton = [
+        Item(title: "UIButton"),
+        Item(title: "UISwitch/UISlider")
     ]
     
-    static let itemsForDateAndTime = [
+    private static let itemsForState = [
+        Item(title: "UIActivityIndicatorView"),
+        Item(title: "UIProgressView")
+    ]
+    
+    private static let itemsForDateAndTime = [
         Item(title: "UIDatePickerView"),
         Item(title: "UICalendarView")
     ]
     
-    static let itemsForMenu = [
+    private static let itemsForMenu = [
         Item(title: "UIMenu")
     ]
     
-    static let itemsForList = [
+    private static let itemsForList = [
         Item(title: "UICollectionView"),
         Item(title: "UITableView")
     ]
     
-    static let itemsForPage = [
+    private static let itemsForPage = [
         Item(title: "UIPageViewController/UIPageControl"),
         Item(title: "UISegmentedController")
     ]
     
-    static let itemsForAlert = [
+    private static let itemsForAlert = [
         Item(title: "UIAlertViewController"),
     ]
     
-    static let itemsForSheet = [
+    private static let itemsForSheet = [
         Item(title: "PresentationController")
     ]
 }
