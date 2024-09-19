@@ -11,7 +11,8 @@ final class OutlineViewController: UIViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    var outlines = Outline.outlines
+    var sections = Outline.sections
+    var items = Item.items
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
@@ -28,10 +29,15 @@ private extension OutlineViewController {
     func configureSubViews() {
         collectionView.delegate = self
         
+        let headerRegistration = UICollectionView.CellRegistration(handler: headerRegistrationHandler)
         let cellRegistraion = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier -> UICollectionViewCell in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistraion, for: indexPath, item: itemIdentifier)
+            if indexPath.item == 0 {
+                return collectionView.dequeueConfiguredReusableCell(using: headerRegistration, for: indexPath, item: itemIdentifier)
+            } else {
+                return collectionView.dequeueConfiguredReusableCell(using: cellRegistraion, for: indexPath, item: itemIdentifier)
+            }
         })
         
         updateSnapshot()
@@ -40,6 +46,7 @@ private extension OutlineViewController {
     
     func configureView() {
         view.backgroundColor = .systemBackground
+        navigationItem.title = "기본 컴포넌트"
     }
     
     func configureConstraints() {
@@ -63,7 +70,7 @@ private extension OutlineViewController {
 // MARK: CollectionView Layout
 private extension OutlineViewController {
     func layout() -> UICollectionViewLayout {
-        let configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         return UICollectionViewCompositionalLayout.list(using: configuration)
     }
 }
