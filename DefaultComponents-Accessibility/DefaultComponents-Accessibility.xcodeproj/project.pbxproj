@@ -105,10 +105,8 @@
 			children = (
 				4E0AB04B2C9BE1DA00B8A89C /* TextFieldController */,
 				4E285DC02C8FF02E007F286C /* TextViewController */,
-				4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */,
-				4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */,
-				4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */,
-				4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */,
+				4EC52AD82C9CFDA4007E07D6 /* LabelViewController */,
+				4EC52AD72C9CFD8B007E07D6 /* SearchViewController */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -169,6 +167,24 @@
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4EC52AD72C9CFD8B007E07D6 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */,
+				4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */,
+				4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		4EC52AD82C9CFDA4007E07D6 /* LabelViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */,
+			);
+			path = LabelViewController;
 			sourceTree = "<group>";
 		};
 		4ECD496B2C8E9B6000F3BEC7 = {
