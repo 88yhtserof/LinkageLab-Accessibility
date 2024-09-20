@@ -20,11 +20,13 @@ final class TextFieldController: UIViewController {
     private lazy var pwBoxView = ComponentBoxView([textFieldForPW])
     private lazy var numberBoxView = ComponentBoxView([textFieldForNumber])
     private lazy var emailBoxView = ComponentBoxView([textFieldForEmail])
+    private lazy var textViewBoxView = ComponentBoxView([textView])
     
     private lazy var textFieldForDefault = DefaultTextField()
     private lazy var textFieldForPW = DefaultTextField()
     private lazy var textFieldForNumber = DefaultTextField()
     private lazy var textFieldForEmail = DefaultTextField()
+    private lazy var textView = UITextView()
     private lazy var stackView = UIStackView()
     
     override func viewDidLoad() {
@@ -54,11 +56,14 @@ private extension TextFieldController {
         textFieldForNumber.placeholderText = "해당하는 숫자를 입력하세요"
         textFieldForEmail.keyboardType = .emailAddress
         textFieldForEmail.placeholderText = "예: default@email.com"
+        textView.font = .systemFont(ofSize: 20)
+        textView.backgroundColor = .systemGray6
         
         defaultBoxView.title = "기본"
         pwBoxView.title = "비밀번호"
         numberBoxView.title = "숫자"
         emailBoxView.title = "이메일"
+        textViewBoxView.title = "TextView 여러 줄 입력 상자"
     }
     
     func configureView() {
@@ -68,7 +73,10 @@ private extension TextFieldController {
     
     func configureConstraints() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textViewBoxView.translatesAutoresizingMaskIntoConstraints = false
+        [ stackView, textViewBoxView ]
+            .forEach{ view.addSubview($0) }
         
         [ defaultBoxView, pwBoxView, numberBoxView, emailBoxView ]
             .forEach{
@@ -77,12 +85,18 @@ private extension TextFieldController {
             }
         
         let horizontalInset: CGFloat = 50
+        let verticalInset: CGFloat = 50
         let safeArea = view.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: safeArea.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalInset)
+            stackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalInset),
+            
+            textViewBoxView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: verticalInset),
+            textViewBoxView.heightAnchor.constraint(equalToConstant: CGFloat(300)),
+            textViewBoxView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalInset),
+            textViewBoxView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalInset)
         ])
     }
 }

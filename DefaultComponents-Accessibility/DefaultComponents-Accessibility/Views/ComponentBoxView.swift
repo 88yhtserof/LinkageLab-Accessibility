@@ -37,7 +37,7 @@ class ComponentBoxView: UIView {
 extension ComponentBoxView {
     func configurationSubViews() {
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         stackView.spacing = 10
     }
     
