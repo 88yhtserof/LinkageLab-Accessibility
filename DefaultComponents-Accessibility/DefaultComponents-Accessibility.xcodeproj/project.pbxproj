@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E0AB03F2C9BAB9700B8A89C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Item.swift */; };
+		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
 		4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */; };
 		4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */; };
@@ -37,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E0AB03E2C9BAB9700B8A89C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
 		4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC51C9B2C91295200385BD0 /* Outline.swift */,
-				4E0AB03E2C9BAB9700B8A89C /* Item.swift */,
+				4E0AB03E2C9BAB9700B8A89C /* Detail.swift */,
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 			);
 			path = Models;
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0AB03F2C9BAB9700B8A89C /* Item.swift in Sources */,
+				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
 				4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */,

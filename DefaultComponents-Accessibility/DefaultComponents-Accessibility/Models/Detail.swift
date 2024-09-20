@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Detail.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/19/24.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Item: Hashable {
+struct Detail: Hashable {
     let title: String
 }
 
-extension Item {
+extension Detail {
     
     static let items = [
         itemsForText,
@@ -31,45 +31,45 @@ extension Item {
     ]
     
     private static let itemsForText = [
-        Item(title: "UILabel"),
-        Item(title: "UITextField / UITextView"),
-        Item(title: "UISearchView")
+        Detail(title: "UILabel"),
+        Detail(title: "UITextField / UITextView"),
+        Detail(title: "UISearchView")
     ]
     
     private static let itemsForButton = [
-        Item(title: "UIButton / UISlider"),
-        Item(title: "UISwitch")
+        Detail(title: "UIButton / UISlider"),
+        Detail(title: "UISwitch")
     ]
     
     private static let itemsForState = [
-        Item(title: "UIActivityIndicatorView"),
-        Item(title: "UIProgressView")
+        Detail(title: "UIActivityIndicatorView"),
+        Detail(title: "UIProgressView")
     ]
     
     private static let itemsForDateAndTime = [
-        Item(title: "UIDatePickerView"),
-        Item(title: "UICalendarView")
+        Detail(title: "UIDatePickerView"),
+        Detail(title: "UICalendarView")
     ]
     
     private static let itemsForMenu = [
-        Item(title: "UIMenu")
+        Detail(title: "UIMenu")
     ]
     
     private static let itemsForList = [
-        Item(title: "UICollectionView"),
-        Item(title: "UITableView")
+        Detail(title: "UICollectionView"),
+        Detail(title: "UITableView")
     ]
     
     private static let itemsForPage = [
-        Item(title: "UIPageViewController/UIPageControl"),
-        Item(title: "UISegmentedController")
+        Detail(title: "UIPageViewController/UIPageControl"),
+        Detail(title: "UISegmentedController")
     ]
     
     private static let itemsForAlert = [
-        Item(title: "UIAlertViewController"),
+        Detail(title: "UIAlertViewController"),
     ]
     
     private static let itemsForSheet = [
-        Item(title: "PresentationController")
+        Detail(title: "PresentationController")
     ]
 }

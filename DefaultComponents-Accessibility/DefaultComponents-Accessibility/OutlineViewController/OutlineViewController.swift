@@ -12,7 +12,7 @@ final class OutlineViewController: UIViewController {
     var dataSource: DataSource!
     var snapshot: Snapshot!
     var sections = Outline.sections
-    var items = Item.items
+    var items = Detail.items
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
