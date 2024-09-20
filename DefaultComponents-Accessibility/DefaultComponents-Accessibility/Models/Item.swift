@@ -32,14 +32,13 @@ extension Item {
     
     private static let itemsForText = [
         Item(title: "UILabel"),
-        Item(title: "UITextField"),
-        Item(title: "UITextView"),
+        Item(title: "UITextField / UITextView"),
         Item(title: "UISearchView")
     ]
     
     private static let itemsForButton = [
         Item(title: "UIButton"),
-        Item(title: "UISwitch/UISlider")
+        Item(title: "UISwitch / UISlider")
     ]
     
     private static let itemsForState = [
