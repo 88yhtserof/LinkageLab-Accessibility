@@ -115,11 +115,8 @@
 		4E285DBD2C8FE911007F286C /* ButtonViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */,
-				4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */,
-				4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */,
-				4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */,
-				4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */,
+				4EC52AE42C9D2017007E07D6 /* ButtonAndSliderViewController */,
+				4EC52AE52C9D202D007E07D6 /* SwitchViewController */,
 			);
 			path = ButtonViewController;
 			sourceTree = "<group>";
@@ -180,6 +177,25 @@
 				4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */,
 			);
 			path = LabelViewController;
+			sourceTree = "<group>";
+		};
+		4EC52AE42C9D2017007E07D6 /* ButtonAndSliderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */,
+				4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */,
+			);
+			path = ButtonAndSliderViewController;
+			sourceTree = "<group>";
+		};
+		4EC52AE52C9D202D007E07D6 /* SwitchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */,
+				4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */,
+				4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */,
+			);
+			path = SwitchViewController;
 			sourceTree = "<group>";
 		};
 		4ECD496B2C8E9B6000F3BEC7 = {
