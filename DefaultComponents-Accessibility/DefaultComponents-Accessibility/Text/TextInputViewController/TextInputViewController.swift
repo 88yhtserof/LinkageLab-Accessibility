@@ -1,5 +1,5 @@
 //
-//  TextFieldViewController.swift
+//  TextInputViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/19/24.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TextFieldController: UIViewController {
+final class TextInputViewController: UIViewController {
     
     var navigationTitle: String? {
         didSet {
@@ -43,7 +43,7 @@ final class TextFieldController: UIViewController {
 }
 
 // MARK: Configuration
-private extension TextFieldController {
+private extension TextInputViewController {
     func configureSubViews() {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
