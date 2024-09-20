@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E0AB03F2C9BAB9700B8A89C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Item.swift */; };
+		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
 		4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */; };
 		4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */; };
@@ -15,7 +15,7 @@
 		4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */; };
 		4E0AB0522C9BF02500B8A89C /* SearchViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */; };
 		4E0AB0542C9BF19C00B8A89C /* SearchViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */; };
-		4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */; };
+		4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
 		4E31E0F32C927621004C4979 /* PickerViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0F22C927621004C4979 /* PickerViewController+Action.swift */; };
@@ -26,18 +26,21 @@
 		4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C9B2C91295200385BD0 /* Outline.swift */; };
 		4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C9E2C912AD800385BD0 /* OutLineViewController+Delegate.swift */; };
 		4EC51CA12C91597B00385BD0 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51CA02C91597B00385BD0 /* PickerViewController.swift */; };
+		4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */; };
+		4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */; };
+		4EC52AE32C9D19D8007E07D6 /* SwitchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */; };
 		4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */; };
 		4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */; };
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
-		4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */; };
+		4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */; };
 		4EF982132C93C4A900809294 /* PickerViewController+DatsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982122C93C4A900809294 /* PickerViewController+DatsSource.swift */; };
 		4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982142C93E4DF00809294 /* AlertViewController.swift */; };
 		4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E0AB03E2C9BAB9700B8A89C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
 		4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +48,7 @@
 		4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Delegate.swift"; sourceTree = "<group>"; };
-		4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonViewController+Action.swift"; sourceTree = "<group>"; };
+		4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonAndSliderViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorWithSwitchViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		4E31E0F22C927621004C4979 /* PickerViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerViewController+Action.swift"; sourceTree = "<group>"; };
@@ -56,13 +59,16 @@
 		4EC51C9B2C91295200385BD0 /* Outline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outline.swift; sourceTree = "<group>"; };
 		4EC51C9E2C912AD800385BD0 /* OutLineViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutLineViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4EC51CA02C91597B00385BD0 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
+		4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwitchViewController+DataSource.swift"; sourceTree = "<group>"; };
+		4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwitchViewController+Action.swift"; sourceTree = "<group>"; };
 		4ECD49742C8E9B6000F3BEC7 /* DefaultComponents-Accessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DefaultComponents-Accessibility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ECD49832C8E9B6200F3BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndSliderViewController.swift; sourceTree = "<group>"; };
 		4EF982122C93C4A900809294 /* PickerViewController+DatsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerViewController+DatsSource.swift"; sourceTree = "<group>"; };
 		4EF982142C93E4DF00809294 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Action.swift"; sourceTree = "<group>"; };
@@ -109,8 +115,8 @@
 		4E285DBD2C8FE911007F286C /* ButtonViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4ECD498D2C8ECBDD00F3BEC7 /* ButtonViewController.swift */,
-				4E285DBE2C8FE947007F286C /* ButtonViewController+Action.swift */,
+				4EC52AE42C9D2017007E07D6 /* ButtonAndSliderViewController */,
+				4EC52AE52C9D202D007E07D6 /* SwitchViewController */,
 			);
 			path = ButtonViewController;
 			sourceTree = "<group>";
@@ -149,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC51C9B2C91295200385BD0 /* Outline.swift */,
-				4E0AB03E2C9BAB9700B8A89C /* Item.swift */,
+				4E0AB03E2C9BAB9700B8A89C /* Detail.swift */,
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 			);
 			path = Models;
@@ -171,6 +177,25 @@
 				4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */,
 			);
 			path = LabelViewController;
+			sourceTree = "<group>";
+		};
+		4EC52AE42C9D2017007E07D6 /* ButtonAndSliderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */,
+				4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */,
+			);
+			path = ButtonAndSliderViewController;
+			sourceTree = "<group>";
+		};
+		4EC52AE52C9D202D007E07D6 /* SwitchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */,
+				4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */,
+				4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */,
+			);
+			path = SwitchViewController;
 			sourceTree = "<group>";
 		};
 		4ECD496B2C8E9B6000F3BEC7 = {
@@ -288,30 +313,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0AB03F2C9BAB9700B8A89C /* Item.swift in Sources */,
+				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
 				4E285DC52C901C68007F286C /* ActivityIndicatorWithSwitchViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* ActivityIndicatorWithSwitchViewController+Action.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
+				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */,
 				4E31E0F32C927621004C4979 /* PickerViewController+Action.swift in Sources */,
 				4E31E0F52C92766B004C4979 /* PickerViewController+Delegate.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
-				4E285DBF2C8FE947007F286C /* ButtonViewController+Action.swift in Sources */,
+				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
 				4E0AB0522C9BF02500B8A89C /* SearchViewController+DataSource.swift in Sources */,
 				4E0AB0542C9BF19C00B8A89C /* SearchViewController+Delegate.swift in Sources */,
 				4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */,
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */,
+				4EC52AE32C9D19D8007E07D6 /* SwitchViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,
 				4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */,
 				4E0AB04E2C9BE27300B8A89C /* LabelViewController.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
-				4ECD498E2C8ECBDD00F3BEC7 /* ButtonViewController.swift in Sources */,
+				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,
 				4EF982132C93C4A900809294 /* PickerViewController+DatsSource.swift in Sources */,
+				4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */,
 				4EC51CA12C91597B00385BD0 /* PickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

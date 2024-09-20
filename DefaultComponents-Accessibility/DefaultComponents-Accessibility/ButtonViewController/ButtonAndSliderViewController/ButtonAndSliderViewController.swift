@@ -1,5 +1,5 @@
 //
-//  ButtonViewController.swift
+//  ButtonAndSliderViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/9/24.
@@ -7,12 +7,19 @@
 
 import UIKit
 
-final class ButtonViewController: UIViewController {
+final class ButtonAndSliderViewController: UIViewController {
     
-    lazy var textButton = UIButton()
-    lazy var imageButton = UIButton()
-    lazy var textWithImageButton = UIButton()
-    lazy var textWithSubtitleButton = UIButton()
+    var navigationTitle: String? {
+        didSet {
+            navigationItem.title = navigationTitle
+        }
+    }
+    
+    var sliderValue: CGFloat = 0 {
+        didSet {
+            labelForSlider.font = .systemFont(ofSize: sliderValue)
+        }
+    }
     
     var isLightOn: Bool = false {
         didSet {
@@ -20,6 +27,14 @@ final class ButtonViewController: UIViewController {
             imageButton.configuration = imageButtonConfiguration
         }
     }
+    
+    private lazy var sliderBoxView = ComponentBoxView([slider, labelForSlider])
+    private lazy var textButton = UIButton()
+    private lazy var imageButton = UIButton()
+    private lazy var textWithImageButton = UIButton()
+    private lazy var textWithSubtitleButton = UIButton()
+    private lazy var slider = UISlider()
+    private lazy var labelForSlider = UILabel()
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
@@ -34,7 +49,7 @@ final class ButtonViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension ButtonViewController {
+private extension ButtonAndSliderViewController {
     func configureSubViews() {
         var textConfiguration = UIButton.Configuration.plain()
         textConfiguration.title = "텍스트 타입"
@@ -54,6 +69,12 @@ private extension ButtonViewController {
         textWithSubtitleConfiguration.title = "더보기"
         textWithSubtitleConfiguration.subtitle = "상세 내용이 궁금하다면 더보기를 탭하세요"
         textWithSubtitleButton.configuration = textWithSubtitleConfiguration
+        
+        slider.maximumValue = 50
+        slider.minimumValue = 10
+        slider.value = Float(labelForSlider.font.pointSize)
+        slider.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
+        labelForSlider.text = "Slider를 조정하면 글자 크기가 변경됩니다."
     }
     
     func configureView() {
@@ -61,7 +82,7 @@ private extension ButtonViewController {
     }
     
     func configureConstraints() {
-        [ textButton, imageButton, textWithImageButton, textWithSubtitleButton ]
+        [ textButton, imageButton, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -86,6 +107,10 @@ private extension ButtonViewController {
             textWithSubtitleButton.topAnchor.constraint(equalTo: textWithImageButton.bottomAnchor, constant: verticalInset),
             textWithSubtitleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textWithSubtitleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            
+            sliderBoxView.topAnchor.constraint(equalTo: textWithSubtitleButton.bottomAnchor, constant: verticalInset),
+            sliderBoxView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            sliderBoxView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
         ])
     }
 }

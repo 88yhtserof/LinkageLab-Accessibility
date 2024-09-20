@@ -1,20 +1,26 @@
 //
-//  OutlineViewController.swift
+//  SwitchViewController.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/11/24.
+//  Created by 링키지랩 on 9/20/24.
 //
 
 import UIKit
 
-final class OutlineViewController: UIViewController {
+final class SwitchViewController: UIViewController {
+    
+    var navigationTitle: String? {
+        didSet {
+            navigationItem.title = navigationTitle
+        }
+    }
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    var sections = Outline.sections
-    var items = Detail.items
+    var outlines = Outline.sections
+    var isEnabled: Bool = true
     
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +31,18 @@ final class OutlineViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension OutlineViewController {
+private extension SwitchViewController {
     func configureSubViews() {
-        collectionView.delegate = self
-        
-        let headerRegistration = UICollectionView.CellRegistration(handler: headerRegistrationHandler)
-        let cellRegistraion = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
+        let controlCellRegistration = UICollectionView.CellRegistration(handler: controlCellRegistrationHandler)
+        let listCellRegistraion = UICollectionView.CellRegistration(handler: listCellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier -> UICollectionViewCell in
-            if indexPath.item == 0 {
-                return collectionView.dequeueConfiguredReusableCell(using: headerRegistration, for: indexPath, item: itemIdentifier)
-            } else {
-                return collectionView.dequeueConfiguredReusableCell(using: cellRegistraion, for: indexPath, item: itemIdentifier)
+            let section = Section(rawValue: indexPath.section) ?? .control
+            switch section {
+            case .control:
+                return collectionView.dequeueConfiguredReusableCell(using: controlCellRegistration, for: indexPath, item: itemIdentifier)
+            case .list:
+                return collectionView.dequeueConfiguredReusableCell(using: listCellRegistraion, for: indexPath, item: itemIdentifier)
             }
         })
         
@@ -46,7 +52,6 @@ private extension OutlineViewController {
     
     func configureView() {
         view.backgroundColor = .systemBackground
-        navigationItem.title = "기본 컴포넌트"
     }
     
     func configureConstraints() {
@@ -68,9 +73,9 @@ private extension OutlineViewController {
 }
 
 // MARK: CollectionView Layout
-private extension OutlineViewController {
+private extension SwitchViewController {
     func layout() -> UICollectionViewLayout {
-        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         return UICollectionViewCompositionalLayout.list(using: configuration)
     }
 }
