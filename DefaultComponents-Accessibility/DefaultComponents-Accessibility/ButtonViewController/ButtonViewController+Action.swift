@@ -11,4 +11,8 @@ extension ButtonViewController {
     @objc func didTouchUpInside(_ sender: UIButton) {
         isLightOn.toggle()
     }
+    
+    @objc func didChangeValue(_ sender: UISlider) {
+        sliderValue = CGFloat(sender.value)
+    }
 }

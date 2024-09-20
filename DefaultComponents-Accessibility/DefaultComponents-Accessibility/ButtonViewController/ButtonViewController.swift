@@ -9,10 +9,26 @@ import UIKit
 
 final class ButtonViewController: UIViewController {
     
+    var navigationTitle: String? {
+        didSet {
+            navigationItem.title = navigationTitle
+        }
+    }
+    
+    var sliderValue: CGFloat = 0 {
+        didSet {
+            labelForSlider.font = .systemFont(ofSize: sliderValue)
+        }
+    }
+    
+    private lazy var sliderBoxView = ComponentBoxView([slider, labelForSlider])
+    
     lazy var textButton = UIButton()
     lazy var imageButton = UIButton()
     lazy var textWithImageButton = UIButton()
     lazy var textWithSubtitleButton = UIButton()
+    private lazy var slider = UISlider()
+    private lazy var labelForSlider = UILabel()
     
     var isLightOn: Bool = false {
         didSet {
@@ -54,6 +70,12 @@ private extension ButtonViewController {
         textWithSubtitleConfiguration.title = "더보기"
         textWithSubtitleConfiguration.subtitle = "상세 내용이 궁금하다면 더보기를 탭하세요"
         textWithSubtitleButton.configuration = textWithSubtitleConfiguration
+        
+        slider.maximumValue = 50
+        slider.minimumValue = 10
+        slider.value = Float(labelForSlider.font.pointSize)
+        slider.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
+        labelForSlider.text = "Slider를 조정하면 글자 크기가 변경됩니다."
     }
     
     func configureView() {
@@ -61,7 +83,7 @@ private extension ButtonViewController {
     }
     
     func configureConstraints() {
-        [ textButton, imageButton, textWithImageButton, textWithSubtitleButton ]
+        [ textButton, imageButton, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -86,6 +108,10 @@ private extension ButtonViewController {
             textWithSubtitleButton.topAnchor.constraint(equalTo: textWithImageButton.bottomAnchor, constant: verticalInset),
             textWithSubtitleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textWithSubtitleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            
+            sliderBoxView.topAnchor.constraint(equalTo: textWithSubtitleButton.bottomAnchor, constant: verticalInset),
+            sliderBoxView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            sliderBoxView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
         ])
     }
 }
