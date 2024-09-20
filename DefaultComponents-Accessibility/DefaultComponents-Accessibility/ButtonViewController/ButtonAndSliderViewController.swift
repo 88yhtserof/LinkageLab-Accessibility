@@ -1,5 +1,5 @@
 //
-//  ButtonViewController.swift
+//  ButtonAndSliderViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/9/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ButtonViewController: UIViewController {
+final class ButtonAndSliderViewController: UIViewController {
     
     var navigationTitle: String? {
         didSet {
@@ -21,21 +21,20 @@ final class ButtonViewController: UIViewController {
         }
     }
     
-    private lazy var sliderBoxView = ComponentBoxView([slider, labelForSlider])
-    
-    lazy var textButton = UIButton()
-    lazy var imageButton = UIButton()
-    lazy var textWithImageButton = UIButton()
-    lazy var textWithSubtitleButton = UIButton()
-    private lazy var slider = UISlider()
-    private lazy var labelForSlider = UILabel()
-    
     var isLightOn: Bool = false {
         didSet {
             imageButtonConfiguration.image = isLightOn ? imageLightOff : imageLightOn
             imageButton.configuration = imageButtonConfiguration
         }
     }
+    
+    private lazy var sliderBoxView = ComponentBoxView([slider, labelForSlider])
+    private lazy var textButton = UIButton()
+    private lazy var imageButton = UIButton()
+    private lazy var textWithImageButton = UIButton()
+    private lazy var textWithSubtitleButton = UIButton()
+    private lazy var slider = UISlider()
+    private lazy var labelForSlider = UILabel()
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
@@ -50,7 +49,7 @@ final class ButtonViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension ButtonViewController {
+private extension ButtonAndSliderViewController {
     func configureSubViews() {
         var textConfiguration = UIButton.Configuration.plain()
         textConfiguration.title = "텍스트 타입"
