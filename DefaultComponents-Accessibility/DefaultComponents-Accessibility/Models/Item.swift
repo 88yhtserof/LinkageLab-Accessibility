@@ -37,8 +37,8 @@ extension Item {
     ]
     
     private static let itemsForButton = [
-        Item(title: "UIButton"),
-        Item(title: "UISwitch / UISlider")
+        Item(title: "UIButton / UISlider"),
+        Item(title: "UISwitch")
     ]
     
     private static let itemsForState = [
