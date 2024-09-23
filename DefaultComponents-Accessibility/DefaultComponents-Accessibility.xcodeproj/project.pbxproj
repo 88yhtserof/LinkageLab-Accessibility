@@ -218,6 +218,17 @@
 			path = SwitchViewController;
 			sourceTree = "<group>";
 		};
+		4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52AEC2CA1352F007E07D6 /* CollectionViewController.swift */,
+				4EC52AEE2CA1359F007E07D6 /* CollectionViewController+DataSource.swift */,
+				4EC52AF62CA13A51007E07D6 /* CollectionView+ListLayout.swift */,
+				4EC52AF82CA13F3E007E07D6 /* CollectionViewController+Type.swift */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
 		4ECD496B2C8E9B6000F3BEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -243,12 +254,9 @@
 				4E0AB04C2C9BE1FB00B8A89C /* Text */,
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
+				4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */,
 				4EF982182C9415B100809294 /* AlertViewController */,
 				4E0AB04A2C9BE10200B8A89C /* Views */,
-				4EC52AEC2CA1352F007E07D6 /* CollectionViewController.swift */,
-				4EC52AEE2CA1359F007E07D6 /* CollectionViewController+DataSource.swift */,
-				4EC52AF62CA13A51007E07D6 /* CollectionView+ListLayout.swift */,
-				4EC52AF82CA13F3E007E07D6 /* CollectionViewController+Type.swift */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
