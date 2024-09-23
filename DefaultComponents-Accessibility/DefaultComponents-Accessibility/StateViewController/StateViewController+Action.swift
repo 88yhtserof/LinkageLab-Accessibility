@@ -16,4 +16,16 @@ extension StateViewController {
             activityIndicator.stopAnimating()
         }
     }
+    
+    func loadImage(_ url: URL) async throws {
+        do {
+            let image = try await imageLoader.loadImage(from: url, delegate: self)
+            imageView.image = image
+        } catch {
+            let alert = UIAlertController(title: "오류", message: "URL을 확인해주세요.", preferredStyle: .alert)
+            alert.addAction(.init(title: "확인", style: .default))
+            present(alert, animated: true)
+            return
+        }
+    }
 }

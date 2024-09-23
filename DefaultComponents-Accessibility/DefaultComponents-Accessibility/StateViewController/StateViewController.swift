@@ -14,6 +14,7 @@ final class StateViewController: UIViewController {
             navigationItem.title = navigationTitle
         }
     }
+    let imageLoader = ImageLoader()
     
     lazy var progressBoxView = ComponentBoxView([textField, imageView, progressView])
     lazy var switchControl = UISwitch()
@@ -21,48 +22,12 @@ final class StateViewController: UIViewController {
     lazy var imageView = UIImageView()
     lazy var progressView = UIProgressView(progressViewStyle: .bar)
     lazy var textField = DefaultTextField()
-    private let imageLoader = ImageLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
         configureView()
         configureConstraints()
-    }
-    
-    func loadImage(_ url: URL) async throws {
-        do {
-            let image = try await imageLoader.loadImage(from: url, delegate: self)
-            imageView.image = image
-        } catch {
-            let alert = UIAlertController(title: "오류", message: "URL을 확인해주세요.", preferredStyle: .alert)
-            alert.addAction(.init(title: "확인", style: .default))
-            present(alert, animated: true)
-            return
-        }
-    }
-}
-
-extension StateViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        if let textForURL = textField.text, !textForURL.isEmpty,
-           let url = URL(string: textForURL) {
-            Task {
-                try await loadImage(url)
-            }
-        }
-        return true
-    }
-}
-
-extension StateViewController: URLSessionDataDelegate {
-    func urlSession(_ session: URLSession, didCreateTask task: URLSessionTask) {
-        Task { @MainActor in
-            self.progressView.setProgress(1.0, animated: true)
-            
-        }
     }
 }
 
