@@ -11,8 +11,4 @@ extension DateAndTimeViewController {
     @objc func didSelectDate(_ sender: UIDatePicker) {
         textForDataPicker = DateFormatterManager.shared.string(from: sender.date)
     }
-    
-    @objc func didSelectColor(_ senser: UIColorWell) {
-        textForColorWell = senser.selectedColor?.accessibilityName
-    }
 }
