@@ -1,5 +1,5 @@
 //
-//  PickerViewController.swift
+//  DateAndTimeViewController.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/11/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PickerViewController: UIViewController {
+final class DateAndTimeViewController: UIViewController {
     
     var textForPicker: String? {
         didSet {
@@ -59,7 +59,7 @@ final class PickerViewController: UIViewController {
 }
 
 // MARK: Configuration
-private extension PickerViewController {
+private extension DateAndTimeViewController {
     func configureSubViews() {
         let labelTexts = [
             "Picker의 결과를 보여줍니다",

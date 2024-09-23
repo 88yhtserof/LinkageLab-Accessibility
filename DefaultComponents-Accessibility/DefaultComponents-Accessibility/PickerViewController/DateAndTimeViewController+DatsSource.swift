@@ -1,5 +1,5 @@
 //
-//  PickerViewController+DatsSource.swift
+//  DateAndTimeViewController+DatsSource.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 링키지랩 on 9/13/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension PickerViewController: UIPickerViewDataSource {
+extension DateAndTimeViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
