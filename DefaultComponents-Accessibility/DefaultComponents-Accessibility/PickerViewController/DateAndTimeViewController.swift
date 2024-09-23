@@ -33,12 +33,17 @@ final class DateAndTimeViewController: UIViewController {
         }
     }
     
+    var selectedData: DateComponents? = nil
+    var dates: Set<DateComponents> = []
+    
     private lazy var dateBoxView = ComponentBoxView([labelForDatePicker, datePicker])
     private lazy var labelForDatePicker = UILabel()
     private lazy var datePicker = UIDatePicker()
     private lazy var countdownBoxView = ComponentBoxView([labelForCountdown, countdownPicker])
     private lazy var labelForCountdown = UILabel()
     private lazy var countdownPicker = UIDatePicker()
+    private lazy var calendarBoxView = ComponentBoxView([calendarView])
+    private lazy var calendarView = UICalendarView()
     private lazy var stackView = UIStackView()
     
     override func viewDidLoad() {
@@ -73,6 +78,11 @@ private extension DateAndTimeViewController {
         
         dateBoxView.title = "날짜 선택 컴포넌트"
         countdownBoxView.title = "시간 선택 컴포넌트"
+        calendarBoxView.title = "달력 컴포넌트"
+        
+        let dateSelection = UICalendarSelectionSingleDate(delegate: self)
+        calendarView.selectionBehavior = dateSelection
+        calendarView.delegate = self
         
         stackView.axis = .vertical
         stackView.spacing = 35
@@ -83,7 +93,7 @@ private extension DateAndTimeViewController {
     }
     
     func configureConstraints() {
-        [ dateBoxView, countdownBoxView ]
+        [ dateBoxView, countdownBoxView, calendarBoxView]
             .forEach{
                 stackView.addArrangedSubview($0)
             }
@@ -94,9 +104,35 @@ private extension DateAndTimeViewController {
         let horizontalInset: CGFloat = 10
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset)
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+}
+
+extension DateAndTimeViewController: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
+    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
+        if dateComponents == selectedData {
+            if !dates.contains(dateComponents) {
+                dates.insert(dateComponents)
+                return .customView {
+                    var label = UILabel()
+                    label.text = "⭐️"
+                    return label
+                }
+            }
+            dates.remove(dateComponents)
+        }
+        
+        return .none
+    }
+    
+    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+        selectedData = dateComponents
+        if let date = dateComponents {
+            calendarView.reloadDecorations(forDateComponents: [date], animated: true)
+        }
     }
 }
