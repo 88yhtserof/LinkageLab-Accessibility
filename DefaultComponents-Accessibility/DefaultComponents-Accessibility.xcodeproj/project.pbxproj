@@ -38,6 +38,9 @@
 		4EC52AF52CA13925007E07D6 /* View+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AF42CA13925007E07D6 /* View+Constraints.swift */; };
 		4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AF62CA13A51007E07D6 /* CollectionView+ListLayout.swift */; };
 		4EC52AF92CA13F3E007E07D6 /* CollectionViewController+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AF82CA13F3E007E07D6 /* CollectionViewController+Type.swift */; };
+		4EC52AFC2CA144D5007E07D6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AFB2CA144D5007E07D6 /* TableViewController.swift */; };
+		4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AFD2CA145C0007E07D6 /* TableViewController+DataSource.swift */; };
+		4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AFF2CA14976007E07D6 /* TableViewController+Delegate.swift */; };
 		4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */; };
 		4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */; };
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
@@ -79,6 +82,9 @@
 		4EC52AF42CA13925007E07D6 /* View+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Constraints.swift"; sourceTree = "<group>"; };
 		4EC52AF62CA13A51007E07D6 /* CollectionView+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+ListLayout.swift"; sourceTree = "<group>"; };
 		4EC52AF82CA13F3E007E07D6 /* CollectionViewController+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController+Type.swift"; sourceTree = "<group>"; };
+		4EC52AFB2CA144D5007E07D6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4EC52AFD2CA145C0007E07D6 /* TableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+DataSource.swift"; sourceTree = "<group>"; };
+		4EC52AFF2CA14976007E07D6 /* TableViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4ECD49742C8E9B6000F3BEC7 /* DefaultComponents-Accessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DefaultComponents-Accessibility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +268,9 @@
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
+				4EC52AFB2CA144D5007E07D6 /* TableViewController.swift */,
+				4EC52AFD2CA145C0007E07D6 /* TableViewController+DataSource.swift */,
+				4EC52AFF2CA14976007E07D6 /* TableViewController+Delegate.swift */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -354,7 +363,9 @@
 				4EC52AEF2CA1359F007E07D6 /* CollectionViewController+DataSource.swift in Sources */,
 				4E285DC52C901C68007F286C /* StateViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,
+				4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
+				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
@@ -374,6 +385,7 @@
 				4EC52AF92CA13F3E007E07D6 /* CollectionViewController+Type.swift in Sources */,
 				4EC52AF12CA13728007E07D6 /* GridTextCell.swift in Sources */,
 				4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */,
+				4EC52AFC2CA144D5007E07D6 /* TableViewController.swift in Sources */,
 				4E0AB04E2C9BE27300B8A89C /* LabelViewController.swift in Sources */,
 				4EC52AED2CA1352F007E07D6 /* CollectionViewController.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
