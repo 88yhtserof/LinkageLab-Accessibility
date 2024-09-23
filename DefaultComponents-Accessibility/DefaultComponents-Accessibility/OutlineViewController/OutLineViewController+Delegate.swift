@@ -20,7 +20,7 @@ extension OutlineViewController: UICollectionViewDelegate {
         case .activityIndicatorWithSwitch:
             vc = StateViewController()
         case .picker:
-            vc = PickerViewController()
+            vc = DateAndTimeViewController()
         case .none:
             fatalError("Missing OutLine Case")
         }
