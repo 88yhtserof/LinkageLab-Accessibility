@@ -16,7 +16,7 @@ final class TableViewController: UITableViewController {
             navigationItem.title = navigationTitle
         }
     }
-    var outlines = Outline.sections
+    var books = Book.samples
     var dataSource: DataSource!
     
     override func viewDidLoad() {
