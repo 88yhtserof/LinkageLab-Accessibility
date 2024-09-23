@@ -10,7 +10,7 @@ import UIKit
 extension TableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let contextualAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, handler in
-            self.outlines.remove(at: indexPath.item)
+            self.books.remove(at: indexPath.item)
             self.updateSnapshot()
             handler(true)
         }

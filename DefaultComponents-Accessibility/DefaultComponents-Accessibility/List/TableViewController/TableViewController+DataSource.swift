@@ -12,7 +12,7 @@ extension TableViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
     
     func updateSnapshot() {
-        let items = outlines.map{ $0.title }
+        let items = books.map{ $0.title }
         var snapshot = Snapshot()
         snapshot.appendSections([0])
         snapshot.appendItems(items)
