@@ -235,6 +235,25 @@
 			path = CollectionViewController;
 			sourceTree = "<group>";
 		};
+		4EC52B012CA151D4007E07D6 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52AFB2CA144D5007E07D6 /* TableViewController.swift */,
+				4EC52AFD2CA145C0007E07D6 /* TableViewController+DataSource.swift */,
+				4EC52AFF2CA14976007E07D6 /* TableViewController+Delegate.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		4EC52B022CA151E3007E07D6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */,
+				4EC52B012CA151D4007E07D6 /* TableViewController */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		4ECD496B2C8E9B6000F3BEC7 = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +279,7 @@
 				4E0AB04C2C9BE1FB00B8A89C /* Text */,
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,
-				4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */,
+				4EC52B022CA151E3007E07D6 /* List */,
 				4EF982182C9415B100809294 /* AlertViewController */,
 				4E0AB04A2C9BE10200B8A89C /* Views */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
@@ -268,9 +287,6 @@
 				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
 				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
-				4EC52AFB2CA144D5007E07D6 /* TableViewController.swift */,
-				4EC52AFD2CA145C0007E07D6 /* TableViewController+DataSource.swift */,
-				4EC52AFF2CA14976007E07D6 /* TableViewController+Delegate.swift */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
