@@ -29,6 +29,7 @@
 		4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */; };
 		4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */; };
 		4EC52AE32C9D19D8007E07D6 /* SwitchViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */; };
+		4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52AE62C9D36F4007E07D6 /* ImageLoader.swift */; };
 		4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */; };
 		4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */; };
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwitchViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwitchViewController+Action.swift"; sourceTree = "<group>"; };
+		4EC52AE62C9D36F4007E07D6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4ECD49742C8E9B6000F3BEC7 /* DefaultComponents-Accessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DefaultComponents-Accessibility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4EC51C9B2C91295200385BD0 /* Outline.swift */,
 				4E0AB03E2C9BAB9700B8A89C /* Detail.swift */,
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
+				4EC52AE62C9D36F4007E07D6 /* ImageLoader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
+				4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */,
 				4E285DC52C901C68007F286C /* StateViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
