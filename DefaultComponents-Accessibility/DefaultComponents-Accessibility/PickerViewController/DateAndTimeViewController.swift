@@ -43,7 +43,7 @@ final class DateAndTimeViewController: UIViewController {
     private lazy var labelForCountdown = UILabel()
     private lazy var countdownPicker = UIDatePicker()
     private lazy var calendarBoxView = ComponentBoxView([calendarView])
-    private lazy var calendarView = UICalendarView()
+    lazy var calendarView = UICalendarView()
     private lazy var stackView = UIStackView()
     
     override func viewDidLoad() {
@@ -109,30 +109,5 @@ private extension DateAndTimeViewController {
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-    }
-}
-
-extension DateAndTimeViewController: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
-    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        if dateComponents == selectedData {
-            if !dates.contains(dateComponents) {
-                dates.insert(dateComponents)
-                return .customView {
-                    var label = UILabel()
-                    label.text = "⭐️"
-                    return label
-                }
-            }
-            dates.remove(dateComponents)
-        }
-        
-        return .none
-    }
-    
-    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-        selectedData = dateComponents
-        if let date = dateComponents {
-            calendarView.reloadDecorations(forDateComponents: [date], animated: true)
-        }
     }
 }
