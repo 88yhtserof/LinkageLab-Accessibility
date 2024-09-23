@@ -24,9 +24,21 @@ final class DateAndTimeViewController: UIViewController {
         }
     }
     
+    var textForCountdown: String? {
+        didSet {
+            if labelForCountdown.alpha < 1.0 {
+                labelForCountdown.alpha = 1.0
+            }
+            labelForCountdown.text = textForCountdown
+        }
+    }
+    
     private lazy var dateBoxView = ComponentBoxView([labelForDatePicker, datePicker])
     private lazy var labelForDatePicker = UILabel()
     private lazy var datePicker = UIDatePicker()
+    private lazy var countdownBoxView = ComponentBoxView([labelForCountdown, countdownPicker])
+    private lazy var labelForCountdown = UILabel()
+    private lazy var countdownPicker = UIDatePicker()
     private lazy var stackView = UIStackView()
     
     override func viewDidLoad() {
@@ -41,10 +53,11 @@ final class DateAndTimeViewController: UIViewController {
 private extension DateAndTimeViewController {
     func configureSubViews() {
         let labelTexts = [
-            "DatePicker의 결과를 보여줍니다"
+            "DatePicker의 결과를 보여줍니다",
+            "00:00"
         ]
         
-        [ labelForDatePicker ]
+        [ labelForDatePicker, labelForCountdown ]
             .enumerated()
             .forEach { (offset, view) in
                 view.text = labelTexts[offset]
@@ -55,7 +68,14 @@ private extension DateAndTimeViewController {
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(didSelectDate), for: .valueChanged)
         
+        countdownPicker.datePickerMode = .countDownTimer
+        countdownPicker.addTarget(self, action: #selector(didSelectCountdown), for: .valueChanged)
+        
         dateBoxView.title = "날짜 선택 컴포넌트"
+        countdownBoxView.title = "시간 선택 컴포넌트"
+        
+        stackView.axis = .vertical
+        stackView.spacing = 35
     }
     
     func configureView() {
@@ -63,7 +83,7 @@ private extension DateAndTimeViewController {
     }
     
     func configureConstraints() {
-        [ dateBoxView ]
+        [ dateBoxView, countdownBoxView ]
             .forEach{
                 stackView.addArrangedSubview($0)
             }
@@ -72,7 +92,6 @@ private extension DateAndTimeViewController {
         
         let verticalInset: CGFloat = 50
         let horizontalInset: CGFloat = 10
-        let padding: CGFloat = 8
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
