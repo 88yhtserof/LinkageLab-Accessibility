@@ -22,7 +22,7 @@ extension OutlineViewController: UICollectionViewDelegate {
             case 0:
                 vc = LabelViewController()
             case 1:
-                vc = ButtonAndSliderViewController()
+                vc = TextInputViewController()
             case 2:
                 vc = SearchViewController()
             default:
