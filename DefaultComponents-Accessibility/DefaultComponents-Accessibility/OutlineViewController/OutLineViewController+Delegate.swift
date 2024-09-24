@@ -28,7 +28,7 @@ extension OutlineViewController: UICollectionViewDelegate {
             default:
                 return
             }
-        case .button:
+        case .control:
             switch item {
             case 0:
                 vc = ButtonAndSliderViewController()

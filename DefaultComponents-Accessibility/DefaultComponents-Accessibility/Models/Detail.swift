@@ -11,7 +11,7 @@ struct Detail: Hashable {
     let title: String
     
     enum SectionCase: Int {
-        case text, button, state, dateAndTime, list, page, alert, sheet
+        case text, control, state, dateAndTime, list, page, alert, sheet
     }
 }
 
@@ -19,7 +19,7 @@ extension Detail {
     
     static let items = [
         itemsForText,
-        itemsForButton,
+        itemsForControl,
         itemsForState,
         itemsForDateAndTime,
         itemsForList,
@@ -39,7 +39,7 @@ extension Detail {
         Detail(title: "UISearchView")
     ]
     
-    private static let itemsForButton = [
+    private static let itemsForControl = [
         Detail(title: "UIButton / UISlider"),
         Detail(title: "UISwitch")
     ]
