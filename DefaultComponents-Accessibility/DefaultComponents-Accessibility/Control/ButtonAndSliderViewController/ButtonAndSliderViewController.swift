@@ -44,7 +44,7 @@ final class ButtonAndSliderViewController: DefaultViewController {
 // MARK: Configuration
 private extension ButtonAndSliderViewController {
     func configureSubViews() {
-        var textConfiguration = UIButton.Configuration.plain()
+        var textConfiguration = UIButton.Configuration.filled()
         textConfiguration.title = "텍스트 타입"
         textButton.configuration = textConfiguration
         
@@ -53,12 +53,12 @@ private extension ButtonAndSliderViewController {
         imageButton.clipsToBounds = true
         imageButton.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
         
-        var textWithImageConfiguration = UIButton.Configuration.plain()
+        var textWithImageConfiguration = UIButton.Configuration.filled()
         textWithImageConfiguration.image = UIImage(systemName: "pencil")
         textWithImageConfiguration.title = "연필"
         textWithImageButton.configuration = textWithImageConfiguration
         
-        var textWithSubtitleConfiguration = UIButton.Configuration.plain()
+        var textWithSubtitleConfiguration = UIButton.Configuration.filled()
         textWithSubtitleConfiguration.title = "더보기"
         textWithSubtitleConfiguration.subtitle = "상세 내용이 궁금하다면 더보기를 탭하세요"
         textWithSubtitleButton.configuration = textWithSubtitleConfiguration
