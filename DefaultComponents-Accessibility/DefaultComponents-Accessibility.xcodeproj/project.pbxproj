@@ -155,13 +155,13 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
-		4E285DBD2C8FE911007F286C /* ButtonViewController */ = {
+		4E285DBD2C8FE911007F286C /* Control */ = {
 			isa = PBXGroup;
 			children = (
 				4EC52AE42C9D2017007E07D6 /* ButtonAndSliderViewController */,
 				4EC52AE52C9D202D007E07D6 /* SwitchViewController */,
 			);
-			path = ButtonViewController;
+			path = Control;
 			sourceTree = "<group>";
 		};
 		4E31E0F12C9275B7004C4979 /* PickerViewController */ = {
@@ -313,7 +313,7 @@
 			children = (
 				4EC51C9D2C912A9100385BD0 /* Models */,
 				4EC51C982C9128A900385BD0 /* OutlineViewController */,
-				4E285DBD2C8FE911007F286C /* ButtonViewController */,
+				4E285DBD2C8FE911007F286C /* Control */,
 				4E0AB04C2C9BE1FB00B8A89C /* Text */,
 				4EC51C932C911B4E00385BD0 /* StateViewController */,
 				4E31E0F12C9275B7004C4979 /* PickerViewController */,

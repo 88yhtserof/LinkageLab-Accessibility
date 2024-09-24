@@ -11,14 +11,14 @@ struct Outline: Hashable {
     let title: String
     
     enum OutLineCase: Int {
-        case button, text, activityIndicatorWithSwitch, picker
+        case text, control, activityIndicatorWithSwitch, picker
     }
 }
 
 extension Outline {
     static var sections = [
         Outline(title: "Text"),
-        Outline(title: "Button"),
+        Outline(title: "Control"),
         Outline(title: "State"),
         Outline(title: "DateAndTime"),
         Outline(title: "List"),
