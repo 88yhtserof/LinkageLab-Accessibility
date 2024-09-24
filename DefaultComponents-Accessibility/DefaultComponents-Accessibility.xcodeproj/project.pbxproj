@@ -17,6 +17,7 @@
 		4E0AB0542C9BF19C00B8A89C /* SearchViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */; };
 		4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */; };
 		4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4A2CA2482F004DF1EA /* Titleable.swift */; };
+		4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */; };
 		4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
@@ -68,6 +69,7 @@
 		4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		4E12CE4A2CA2482F004DF1EA /* Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titleable.swift; sourceTree = "<group>"; };
+		4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWithScrollViewController.swift; sourceTree = "<group>"; };
 		4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonAndSliderViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4EC52AF22CA138D3007E07D6 /* TitleSupplementaryView.swift */,
 				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
 				4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */,
+				4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */,
 				4EC52AEB2CA11594007E07D6 /* DateAndTimeViewController+Delegate.swift in Sources */,
 				4EC52AEF2CA1359F007E07D6 /* CollectionViewController+DataSource.swift in Sources */,
+				4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */,
 				4E285DC52C901C68007F286C /* StateViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,
 				4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */,
