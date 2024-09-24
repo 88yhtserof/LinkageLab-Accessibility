@@ -9,22 +9,58 @@ import UIKit
 
 extension OutlineViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let itemCase = Outline.OutLineCase(rawValue: indexPath.row)
-        var vc: UIViewController
+        if indexPath.item <= 0 {
+            return
+        }
+        let sectionCase = Detail.SectionCase(rawValue: indexPath.section)
+        let item = indexPath.item - 1
+        var vc: Titleable
         
-        switch itemCase {
-        case .button:
-            vc = ButtonAndSliderViewController()
+        switch sectionCase {
         case .text:
-            vc = TextInputViewController()
-        case .activityIndicatorWithSwitch:
+            switch item {
+            case 0:
+                vc = LabelViewController()
+            case 1:
+                vc = ButtonAndSliderViewController()
+            case 2:
+                vc = SearchViewController()
+            default:
+                return
+            }
+        case .button:
+            switch item {
+            case 0:
+                vc = ButtonAndSliderViewController()
+            case 1:
+                vc = SwitchViewController()
+            default:
+                return
+            }
+        case .state:
             vc = StateViewController()
-        case .picker:
+        case .dateAndTime:
             vc = DateAndTimeViewController()
-        case .none:
-            fatalError("Missing OutLine Case")
+        case .list:
+            switch item {
+            case 0:
+                vc = CollectionViewController()
+            case 1:
+                vc = TableViewController()
+            default:
+                return
+            }
+        case .page:
+            vc = PageViewController()
+        case .alert:
+            vc = AlertViewController()
+        case .sheet:
+            vc = PresentationAndMenuViewController()
+        case nil:
+            return
         }
         
-        navigationController?.pushViewController(vc, animated: true)
+        vc.navigationTitle = Detail.items[indexPath.section][item].title
+        navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
 }

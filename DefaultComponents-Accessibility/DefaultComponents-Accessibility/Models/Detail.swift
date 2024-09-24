@@ -9,6 +9,10 @@ import Foundation
 
 struct Detail: Hashable {
     let title: String
+    
+    enum SectionCase: Int {
+        case text, button, state, dateAndTime, list, page, alert, sheet
+    }
 }
 
 extension Detail {
