@@ -8,13 +8,7 @@
 
 import UIKit
 
-final class TextInputViewController: UIViewController {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
+final class TextInputViewController: DefaultViewController {
     
     private lazy var defaultBoxView = ComponentBoxView([textFieldForDefault])
     private lazy var pwBoxView = ComponentBoxView([textFieldForPW])
@@ -32,7 +26,6 @@ final class TextInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
     
@@ -64,11 +57,6 @@ private extension TextInputViewController {
         numberBoxView.title = "숫자"
         emailBoxView.title = "이메일"
         textViewBoxView.title = "TextView 여러 줄 입력 상자"
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
-        
     }
     
     func configureConstraints() {

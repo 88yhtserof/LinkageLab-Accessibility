@@ -7,13 +7,7 @@
 
 import UIKit
 
-final class SwitchViewController: UIViewController {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
+final class SwitchViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
@@ -25,7 +19,6 @@ final class SwitchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
 }
@@ -48,10 +41,6 @@ private extension SwitchViewController {
         
         updateSnapshot()
         collectionView.dataSource = dataSource
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
     }
     
     func configureConstraints() {

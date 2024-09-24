@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PageViewController: UIPageViewController{
+final class PageViewController: UIPageViewController, Titleable {
     
     var navigationTitle: String? {
         didSet {

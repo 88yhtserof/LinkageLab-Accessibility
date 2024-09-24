@@ -7,13 +7,7 @@
 
 import UIKit
 
-final class DateAndTimeViewController: UIViewController {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
+final class DateAndTimeViewController: DefaultViewController {
     
     var textForDataPicker: String? {
         didSet {
@@ -49,7 +43,6 @@ final class DateAndTimeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
 }
@@ -86,10 +79,6 @@ private extension DateAndTimeViewController {
         
         stackView.axis = .vertical
         stackView.spacing = 35
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
     }
     
     func configureConstraints() {

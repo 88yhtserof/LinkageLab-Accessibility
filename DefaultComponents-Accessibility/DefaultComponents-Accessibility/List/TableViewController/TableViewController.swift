@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class TableViewController: UITableViewController {
-    
-    static let reuseIdentifier = "tableview-identifier"
+final class TableViewController: UITableViewController, Titleable {
     
     var navigationTitle: String? {
         didSet {
             navigationItem.title = navigationTitle
         }
     }
+    
+    static let reuseIdentifier = "tableview-identifier"
     var books = Book.samples
     var dataSource: DataSource!
     

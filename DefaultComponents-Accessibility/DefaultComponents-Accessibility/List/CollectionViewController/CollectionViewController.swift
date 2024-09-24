@@ -7,13 +7,7 @@
 
 import UIKit
 
-final class CollectionViewController: UIViewController {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
+final class CollectionViewController: DefaultViewController {
     
     var dataSouce: DataSource!
     var snapshot: Snapshot!
@@ -37,7 +31,6 @@ private extension CollectionViewController {
     }
     
     func configureView() {
-        view.backgroundColor = .white
         view.addPinnedSubview(collectionView, height: nil)
     }
     

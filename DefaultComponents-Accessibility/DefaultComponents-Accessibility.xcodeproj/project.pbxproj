@@ -15,6 +15,8 @@
 		4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */; };
 		4E0AB0522C9BF02500B8A89C /* SearchViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */; };
 		4E0AB0542C9BF19C00B8A89C /* SearchViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */; };
+		4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */; };
+		4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4A2CA2482F004DF1EA /* Titleable.swift */; };
 		4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
@@ -64,6 +66,8 @@
 		4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Delegate.swift"; sourceTree = "<group>"; };
+		4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		4E12CE4A2CA2482F004DF1EA /* Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titleable.swift; sourceTree = "<group>"; };
 		4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonAndSliderViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				4EC52AF02CA13728007E07D6 /* GridTextCell.swift */,
 				4EC52AF22CA138D3007E07D6 /* TitleSupplementaryView.swift */,
 				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
+				4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				4EC52B132CA1ABC0007E07D6 /* Book.swift */,
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 				4EC52AE62C9D36F4007E07D6 /* ImageLoader.swift */,
+				4E12CE4A2CA2482F004DF1EA /* Titleable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */,
+				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
 				4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */,
 				4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */,
@@ -428,6 +435,7 @@
 				4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */,
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */,
+				4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */,
 				4EC52AF52CA13925007E07D6 /* View+Constraints.swift in Sources */,
 				4EC52AE32C9D19D8007E07D6 /* SwitchViewController+Action.swift in Sources */,
 				4ECD497A2C8E9B6000F3BEC7 /* SceneDelegate.swift in Sources */,

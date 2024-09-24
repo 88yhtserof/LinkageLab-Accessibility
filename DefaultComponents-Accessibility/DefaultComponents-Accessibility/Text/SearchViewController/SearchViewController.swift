@@ -7,17 +7,10 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class SearchViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
-    
     let samples = Outline.sections
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureLayout())
@@ -53,7 +46,6 @@ extension SearchViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         
         searchController.searchBar.delegate = self
-        view.backgroundColor = .systemBackground
     }
     
     func configureConstraints() {

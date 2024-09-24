@@ -7,13 +7,8 @@
 
 import UIKit
 
-final class PresentationAndMenuViewController: UIViewController {
+final class PresentationAndMenuViewController: DefaultViewController {
     
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
     private lazy var presentBoxView = ComponentBoxView([presentButton])
     private lazy var presentButton = UIButton()
     private lazy var menuBoxView = ComponentBoxView([menuButton])
@@ -23,7 +18,6 @@ final class PresentationAndMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubviews()
-        configureView()
         configureConstraints()
     }
 }
@@ -47,10 +41,6 @@ extension PresentationAndMenuViewController {
         
         stackView.axis = .vertical
         stackView.spacing = 10
-    }
-    
-    func configureView() {
-        view.backgroundColor = .white
     }
     
     func configureConstraints() {
