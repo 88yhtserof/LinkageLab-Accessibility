@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OutlineViewController: UIViewController {
+final class OutlineViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
@@ -19,7 +19,6 @@ final class OutlineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
 }
@@ -42,11 +41,6 @@ private extension OutlineViewController {
         
         updateSnapshot()
         collectionView.dataSource = dataSource
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "기본 컴포넌트"
     }
     
     func configureConstraints() {

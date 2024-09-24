@@ -7,14 +7,8 @@
 
 import UIKit
 
-final class LabelViewController: UIViewController {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
-    
+final class LabelViewController: DefaultViewController {
+
     private lazy var singleLineBoxView = ComponentBoxView([labelForsingleLine])
     private lazy var multipleLineBoxView = ComponentBoxView([labelForMultipleLine])
     private lazy var maximumLinesBoxView = ComponentBoxView([labelForMiximumLines])
@@ -27,7 +21,6 @@ final class LabelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
     
@@ -52,11 +45,6 @@ private extension LabelViewController {
         singleLineBoxView.title = "한 줄"
         multipleLineBoxView.title = "여러 줄"
         maximumLinesBoxView.title = "최대 라인 수 설정"
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
-        
     }
     
     func configureConstraints() {

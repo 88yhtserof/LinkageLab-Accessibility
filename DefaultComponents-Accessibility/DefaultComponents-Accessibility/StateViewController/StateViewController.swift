@@ -7,13 +7,8 @@
 
 import UIKit
 
-final class StateViewController: UIViewController {
+final class StateViewController: DefaultViewController {
     
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
     let imageLoader = ImageLoader()
     
     lazy var progressBoxView = ComponentBoxView([textField, imageView, progressView])
@@ -26,7 +21,6 @@ final class StateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
 }
@@ -44,10 +38,6 @@ private extension StateViewController {
         imageView.clipsToBounds = true
         progressView.progress = Float(0)
         progressView.backgroundColor = .systemGray6
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
     }
     
     func configureConstraints() {

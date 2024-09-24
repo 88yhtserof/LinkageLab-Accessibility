@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AlertViewController: UIViewController {
+final class AlertViewController: DefaultViewController {
     
     lazy var stackView = UIStackView()
     lazy var alertForMessageButton = UIButton()
@@ -18,7 +18,6 @@ final class AlertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
 }
@@ -51,10 +50,6 @@ private extension AlertViewController{
         alertForSelectButton.addTarget(self, action: #selector(didPresentAlertForSelect), for: .touchUpInside)
         alertForViewTextField.addTarget(self, action: #selector(didPresentAlertForTextField), for: .touchUpInside)
         actionSheetForActionButton.addTarget(self, action: #selector(didPresentActionSheetForAction), for: .touchUpInside)
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
     }
     
     func configureConstraints() {

@@ -7,13 +7,7 @@
 
 import UIKit
 
-final class ButtonAndSliderViewController: UIViewController {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
+final class ButtonAndSliderViewController: DefaultViewController {
     
     var sliderValue: CGFloat = 0 {
         didSet {
@@ -43,7 +37,6 @@ final class ButtonAndSliderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
-        configureView()
         configureConstraints()
     }
 }
@@ -75,10 +68,6 @@ private extension ButtonAndSliderViewController {
         slider.value = Float(labelForSlider.font.pointSize)
         slider.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
         labelForSlider.text = "Slider를 조정하면 글자 크기가 변경됩니다."
-    }
-    
-    func configureView() {
-        view.backgroundColor = .systemBackground
     }
     
     func configureConstraints() {
