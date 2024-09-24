@@ -18,7 +18,6 @@ extension Detail {
         itemsForButton,
         itemsForState,
         itemsForDateAndTime,
-        itemsForMenu,
         itemsForList,
         itemsForPage,
         itemsForAlert,
@@ -42,17 +41,11 @@ extension Detail {
     ]
     
     private static let itemsForState = [
-        Detail(title: "UIActivityIndicatorView"),
-        Detail(title: "UIProgressView")
+        Detail(title: "UIActivityIndicatorView / UIProgressView")
     ]
     
     private static let itemsForDateAndTime = [
-        Detail(title: "UIDatePickerView"),
-        Detail(title: "UICalendarView")
-    ]
-    
-    private static let itemsForMenu = [
-        Detail(title: "UIMenu")
+        Detail(title: "UIDatePickerView / UICalendarView")
     ]
     
     private static let itemsForList = [
@@ -61,8 +54,7 @@ extension Detail {
     ]
     
     private static let itemsForPage = [
-        Detail(title: "UIPageViewController/UIPageControl"),
-        Detail(title: "UISegmentedController")
+        Detail(title: "UIPageViewController / UIPageControl")
     ]
     
     private static let itemsForAlert = [
@@ -70,6 +62,6 @@ extension Detail {
     ]
     
     private static let itemsForSheet = [
-        Detail(title: "PresentationController")
+        Detail(title: "PresentationController / UIMenu")
     ]
 }

@@ -21,7 +21,6 @@ extension Outline {
         Outline(title: "Button"),
         Outline(title: "State"),
         Outline(title: "DateAndTime"),
-        Outline(title: "Menu"),
         Outline(title: "List"),
         Outline(title: "Page"),
         Outline(title: "Alert"),
