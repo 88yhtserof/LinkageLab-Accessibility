@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DateAndTimeViewController: DefaultViewController {
+final class DateAndTimeViewController: DefaultWithScrollViewController {
     
     var textForDataPicker: String? {
         didSet {
@@ -78,6 +78,7 @@ private extension DateAndTimeViewController {
         calendarView.delegate = self
         
         stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
         stackView.spacing = 35
     }
     
@@ -87,16 +88,16 @@ private extension DateAndTimeViewController {
                 stackView.addArrangedSubview($0)
             }
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
+        contentView.addSubview(stackView)
         
         let verticalInset: CGFloat = 50
         let horizontalInset: CGFloat = 10
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }
