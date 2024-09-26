@@ -20,10 +20,8 @@ extension OutlineViewController: UICollectionViewDelegate {
         case .text:
             switch item {
             case 0:
-                vc = LabelViewController()
+                vc = TextViewController()
             case 1:
-                vc = TextInputViewController()
-            case 2:
                 vc = SearchViewController()
             default:
                 return

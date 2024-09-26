@@ -34,8 +34,7 @@ extension Detail {
     ]
     
     private static let itemsForText = [
-        Detail(title: "UILabel"),
-        Detail(title: "UITextField / UITextView"),
+        Detail(title: "UILabel / UITextField / UITextView"),
         Detail(title: "UISearchView")
     ]
     
