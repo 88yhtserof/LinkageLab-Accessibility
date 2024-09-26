@@ -39,7 +39,7 @@ final class ButtonAndSliderViewController: DefaultViewController {
     private lazy var labelForSliderTitle = UILabel()
     private lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
-    private lazy var imageButtonStackView = ComponentBoxView([imageButton, imageButtonAccessibility])
+    private lazy var imageButtonBoxView = ComponentBoxView([imageButton, imageButtonAccessibility])
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
@@ -69,7 +69,7 @@ private extension ButtonAndSliderViewController {
         imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구 이미지" : "꺼진 전구 이미지"
         imageButtonAccessibility.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
         
-        ImageButtonStackView.axis = .horizontal
+        imageButtonBoxView.axis = .horizontal
         
         var textWithImageConfiguration = UIButton.Configuration.filled()
         textWithImageConfiguration.image = UIImage(systemName: "pencil")
@@ -90,7 +90,7 @@ private extension ButtonAndSliderViewController {
     }
     
     func configureConstraints() {
-        [ textButton, ImageButtonStackView, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
+        [ textButton, imageButtonBoxView, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
@@ -104,9 +104,9 @@ private extension ButtonAndSliderViewController {
             textButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            ImageButtonStackView.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
-            ImageButtonStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            ImageButtonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            imageButtonBoxView.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
+            imageButtonBoxView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            imageButtonBoxView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
             textWithImageButton.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: verticalInset),
             textWithImageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
