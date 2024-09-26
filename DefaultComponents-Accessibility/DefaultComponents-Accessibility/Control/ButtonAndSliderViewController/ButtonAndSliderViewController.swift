@@ -22,11 +22,12 @@ final class ButtonAndSliderViewController: DefaultViewController {
         }
     }
     
-    private lazy var sliderBoxView = ComponentBoxView([slider, labelForSlider])
+    private lazy var sliderBoxView = ComponentBoxView([labelForSliderTitle, slider, labelForSlider])
     private lazy var textButton = UIButton()
     private lazy var imageButton = UIButton()
     private lazy var textWithImageButton = UIButton()
     private lazy var textWithSubtitleButton = UIButton()
+    private lazy var labelForSliderTitle = UILabel()
     private lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
     
@@ -63,6 +64,7 @@ private extension ButtonAndSliderViewController {
         textWithSubtitleConfiguration.subtitle = "랜덤 이미지 다운로드"
         textWithSubtitleButton.configuration = textWithSubtitleConfiguration
         
+        labelForSliderTitle.text = "글자 크기 조정하기"
         slider.maximumValue = 50
         slider.minimumValue = 10
         slider.value = Float(labelForSlider.font.pointSize)
