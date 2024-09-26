@@ -26,15 +26,17 @@ final class PresentationAndMenuViewController: DefaultViewController {
 extension PresentationAndMenuViewController {
     func configureSubviews() {
         var configForPresent = UIButton.Configuration.filled()
-        configForPresent.title = "화면 Present"
+        configForPresent.title = "책 목록 확인"
+        configForPresent.subtitle = "PresentationController 시연"
+        configForPresent.titleAlignment = .center
         presentButton.configuration = configForPresent
         presentButton.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
         
         let items = [ changeBackgroundAction(), moreMenu() ]
         let menu = UIMenu(title: "UIMenu", children: items)
         var configForeMenu = UIButton.Configuration.filled()
-        configForeMenu.title = "Menu 보기"
-        configForeMenu.subtitle = "버튼을 길게 눌러주세요"
+        configForeMenu.title = "더보기"
+        configForeMenu.subtitle = "UIMenu 시연"
         configForeMenu.titleAlignment = .center
         menuButton.menu = menu
         menuButton.configuration = configForeMenu
