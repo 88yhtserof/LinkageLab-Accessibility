@@ -25,8 +25,6 @@ final class TextViewController: DefaultWithScrollViewController {
     private lazy var textView = UITextView()
     private lazy var stackView = UIStackView()
     
-    private lazy var textInputViews = [ textFieldForDefault, textFieldForPW, textFieldForNumber, textFieldForEmail, textView ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubViews()
