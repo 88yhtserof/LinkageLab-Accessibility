@@ -17,8 +17,9 @@ final class ButtonAndSliderViewController: DefaultViewController {
     
     var isLightOn: Bool = false {
         didSet {
-            imageButtonConfiguration.image = isLightOn ? imageLightOff : imageLightOn
+            imageButtonConfiguration.image = isLightOn ? imageLightOn : imageLightOff
             imageButton.configuration = imageButtonConfiguration
+            imageButton.accessibilityLabel = isLightOn ? "켜진 전구 이미지" : "꺼진 전구 이미지"
         }
     }
     
@@ -51,6 +52,7 @@ private extension ButtonAndSliderViewController {
         
         imageButtonConfiguration.image = imageLightOff
         imageButton.configuration = imageButtonConfiguration
+        imageButton.accessibilityLabel = isLightOn ? "켜진 전구 이미지" : "꺼진 전구 이미지"
         imageButton.clipsToBounds = true
         imageButton.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
         
