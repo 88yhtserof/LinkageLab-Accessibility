@@ -8,10 +8,10 @@
 import UIKit
 
 extension SearchViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, Outline>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Outline>
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, Book>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Book>
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Outline) {
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Book) {
         var configuration = UIListContentConfiguration.cell()
         configuration.text = item.title
         cell.contentConfiguration = configuration

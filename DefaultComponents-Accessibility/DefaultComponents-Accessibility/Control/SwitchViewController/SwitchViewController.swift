@@ -11,7 +11,7 @@ final class SwitchViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    var outlines = Outline.sections
+    var wifies = WiFi.wifies
     var isEnabled: Bool = true
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())

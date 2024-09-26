@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0925182CA4EC5D00474A16 /* WiFi.swift */; };
 		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
 		4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */; };
-		4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */; };
-		4E0AB04E2C9BE27300B8A89C /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */; };
+		4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0482C9BDD9900B8A89C /* TextViewController.swift */; };
 		4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */; };
 		4E0AB0522C9BF02500B8A89C /* SearchViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */; };
 		4E0AB0542C9BF19C00B8A89C /* SearchViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */; };
@@ -22,7 +22,7 @@
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
 		4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */; };
-		4EBB491B2CA3D63C006FD702 /* TextInputViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB491A2CA3D63C006FD702 /* TextInputViewController+Delegate.swift */; };
+		4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */; };
 		4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutlineViewController.swift */; };
 		4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */; };
@@ -60,11 +60,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0925182CA4EC5D00474A16 /* WiFi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFi.swift; sourceTree = "<group>"; };
 		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
 		4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
-		4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
-		4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		4E0AB0482C9BDD9900B8A89C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Delegate.swift"; sourceTree = "<group>"; };
@@ -75,7 +75,8 @@
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateAndTimeViewController+Action.swift"; sourceTree = "<group>"; };
-		4EBB491A2CA3D63C006FD702 /* TextInputViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextInputViewController+Delegate.swift"; sourceTree = "<group>"; };
+		4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Delegate.swift"; sourceTree = "<group>"; };
+		4EBB491C2CA3E014006FD702 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewController+Action.swift"; sourceTree = "<group>"; };
 		4EC51C962C91226300385BD0 /* OutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; };
 		4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutLineViewController+DataSource.swift"; sourceTree = "<group>"; };
@@ -139,20 +140,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4E0AB04B2C9BE1DA00B8A89C /* TextInputViewController */ = {
+		4E0AB04B2C9BE1DA00B8A89C /* TextViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4E0AB0482C9BDD9900B8A89C /* TextInputViewController.swift */,
-				4EBB491A2CA3D63C006FD702 /* TextInputViewController+Delegate.swift */,
+				4E0AB0482C9BDD9900B8A89C /* TextViewController.swift */,
+				4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */,
 			);
-			path = TextInputViewController;
+			path = TextViewController;
 			sourceTree = "<group>";
 		};
 		4E0AB04C2C9BE1FB00B8A89C /* Text */ = {
 			isa = PBXGroup;
 			children = (
-				4E0AB04B2C9BE1DA00B8A89C /* TextInputViewController */,
-				4EC52AD82C9CFDA4007E07D6 /* LabelViewController */,
+				4E0AB04B2C9BE1DA00B8A89C /* TextViewController */,
 				4EC52AD72C9CFD8B007E07D6 /* SearchViewController */,
 			);
 			path = Text;
@@ -217,6 +217,7 @@
 				4EC51C9B2C91295200385BD0 /* Outline.swift */,
 				4E0AB03E2C9BAB9700B8A89C /* Detail.swift */,
 				4EC52B132CA1ABC0007E07D6 /* Book.swift */,
+				4E0925182CA4EC5D00474A16 /* WiFi.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -291,14 +292,6 @@
 				4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */,
 			);
 			path = SearchViewController;
-			sourceTree = "<group>";
-		};
-		4EC52AD82C9CFDA4007E07D6 /* LabelViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4E0AB04D2C9BE27300B8A89C /* LabelViewController.swift */,
-			);
-			path = LabelViewController;
 			sourceTree = "<group>";
 		};
 		4EC52AE42C9D2017007E07D6 /* ButtonAndSliderViewController */ = {
@@ -452,11 +445,11 @@
 			};
 			buildConfigurationList = 4ECD496F2C8E9B6000F3BEC7 /* Build configuration list for PBXProject "DefaultComponents-Accessibility" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ko,
 			);
 			mainGroup = 4ECD496B2C8E9B6000F3BEC7;
 			productRefGroup = 4ECD49752C8E9B6000F3BEC7 /* Products */;
@@ -499,12 +492,13 @@
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
-				4E0AB0492C9BDD9900B8A89C /* TextInputViewController.swift in Sources */,
+				4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */,
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
 				4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */,
 				4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
+				4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */,
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
@@ -523,12 +517,11 @@
 				4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */,
 				4EC52B092CA16D95007E07D6 /* PageViewController.swift in Sources */,
 				4EC52AFC2CA144D5007E07D6 /* TableViewController.swift in Sources */,
-				4E0AB04E2C9BE27300B8A89C /* LabelViewController.swift in Sources */,
 				4EC52B142CA1ABC0007E07D6 /* Book.swift in Sources */,
 				4EC52AED2CA1352F007E07D6 /* CollectionViewController.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
-				4EBB491B2CA3D63C006FD702 /* TextInputViewController+Delegate.swift in Sources */,
+				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,
 				4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */,
@@ -543,6 +536,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4ECD49832C8E9B6200F3BEC7 /* Base */,
+				4EBB491C2CA3E014006FD702 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -555,6 +549,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -618,6 +613,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

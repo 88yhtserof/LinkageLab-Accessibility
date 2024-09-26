@@ -22,11 +22,12 @@ final class ButtonAndSliderViewController: DefaultViewController {
         }
     }
     
-    private lazy var sliderBoxView = ComponentBoxView([slider, labelForSlider])
+    private lazy var sliderBoxView = ComponentBoxView([labelForSliderTitle, slider, labelForSlider])
     private lazy var textButton = UIButton()
     private lazy var imageButton = UIButton()
     private lazy var textWithImageButton = UIButton()
     private lazy var textWithSubtitleButton = UIButton()
+    private lazy var labelForSliderTitle = UILabel()
     private lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
     
@@ -45,7 +46,7 @@ final class ButtonAndSliderViewController: DefaultViewController {
 private extension ButtonAndSliderViewController {
     func configureSubViews() {
         var textConfiguration = UIButton.Configuration.filled()
-        textConfiguration.title = "텍스트 타입"
+        textConfiguration.title = "로그인"
         textButton.configuration = textConfiguration
         
         imageButtonConfiguration.image = imageLightOff
@@ -55,19 +56,20 @@ private extension ButtonAndSliderViewController {
         
         var textWithImageConfiguration = UIButton.Configuration.filled()
         textWithImageConfiguration.image = UIImage(systemName: "pencil")
-        textWithImageConfiguration.title = "연필"
+        textWithImageConfiguration.title = "작성"
         textWithImageButton.configuration = textWithImageConfiguration
         
         var textWithSubtitleConfiguration = UIButton.Configuration.filled()
-        textWithSubtitleConfiguration.title = "더보기"
-        textWithSubtitleConfiguration.subtitle = "상세 내용이 궁금하다면 더보기를 탭하세요"
+        textWithSubtitleConfiguration.title = "다운로드 시작하기"
+        textWithSubtitleConfiguration.subtitle = "랜덤 이미지 다운로드"
         textWithSubtitleButton.configuration = textWithSubtitleConfiguration
         
+        labelForSliderTitle.text = "글자 크기 조정하기"
         slider.maximumValue = 50
         slider.minimumValue = 10
         slider.value = Float(labelForSlider.font.pointSize)
         slider.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
-        labelForSlider.text = "Slider를 조정하면 글자 크기가 변경됩니다."
+        labelForSlider.text = "카카오의 자회사형 장애인 표준사업장 링키지랩은 카카오 플랫폼 서비스 운영, 디지털 접근성 컨설팅 등 IT 특화 업무와 카카오 공동체 사내 카페, 시각장애인 헬스키퍼, 스낵 큐레이션 등 전문적인 사내 복지 사업을 함께 수행하고 있습니다."
     }
     
     func configureConstraints() {

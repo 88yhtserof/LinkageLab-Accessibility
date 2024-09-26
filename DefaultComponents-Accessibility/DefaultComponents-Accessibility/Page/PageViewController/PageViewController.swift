@@ -18,7 +18,7 @@ final class PageViewController: UIPageViewController, Titleable {
     var pages: [UIViewController] = []
     
     lazy var pageControl = UIPageControl()
-    lazy var vc1 = LabelViewController()
+    lazy var vc1 = TextViewController()
     lazy var vc2 = ButtonAndSliderViewController()
     lazy var vc3 = DateAndTimeViewController()
     

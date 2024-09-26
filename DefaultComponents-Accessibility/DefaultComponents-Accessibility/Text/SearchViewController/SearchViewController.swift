@@ -11,7 +11,7 @@ final class SearchViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    let samples = Outline.sections
+    let samples = Book.samples
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureLayout())
     private lazy var searchController = UISearchController()
@@ -46,6 +46,7 @@ extension SearchViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         
         searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "책 제목을 입력하세요"
     }
     
     func configureConstraints() {
