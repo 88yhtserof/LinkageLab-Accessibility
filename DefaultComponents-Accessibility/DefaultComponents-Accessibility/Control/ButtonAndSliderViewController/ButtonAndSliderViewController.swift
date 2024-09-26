@@ -39,7 +39,7 @@ final class ButtonAndSliderViewController: DefaultViewController {
     private lazy var labelForSliderTitle = UILabel()
     private lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
-    private lazy var ImageButtonStackView = UIStackView()
+    private lazy var imageButtonStackView = ComponentBoxView([imageButton, imageButtonAccessibility])
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
@@ -95,9 +95,6 @@ private extension ButtonAndSliderViewController {
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
             }
-        
-        [ imageButton, imageButtonAccessibility ]
-            .forEach{ ImageButtonStackView.addArrangedSubview($0) }
         
         let verticalInset: CGFloat = 20
         let horizontalInset: CGFloat = 10

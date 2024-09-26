@@ -16,6 +16,12 @@ class ComponentBoxView: UIView {
         }
     }
     
+    var axis: NSLayoutConstraint.Axis = .vertical {
+        didSet {
+            stackView.axis = axis
+        }
+    }
+    
     var componenets: [UIView]?
     private lazy var stackView = UIStackView()
     private lazy var titleLabel = UILabel()
@@ -36,7 +42,7 @@ class ComponentBoxView: UIView {
 // MARK: Configuration
 extension ComponentBoxView {
     func configurationSubViews() {
-        stackView.axis = .vertical
+        stackView.axis = axis
         stackView.distribution = .fill
         stackView.spacing = 10
     }
