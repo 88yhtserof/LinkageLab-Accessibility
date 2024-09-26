@@ -19,18 +19,27 @@ final class ButtonAndSliderViewController: DefaultViewController {
         didSet {
             imageButtonConfiguration.image = isLightOn ? imageLightOn : imageLightOff
             imageButton.configuration = imageButtonConfiguration
-            imageButton.accessibilityLabel = isLightOn ? "켜진 전구 이미지" : "꺼진 전구 이미지"
+        }
+    }
+    
+    var isLightOnForAccessibility: Bool = false {
+        didSet {
+            imageButtonConfiguration.image = isLightOnForAccessibility ? imageLightOn : imageLightOff
+            imageButtonAccessibility.configuration = imageButtonConfiguration
+            imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구 이미지" : "꺼진 전구 이미지"
         }
     }
     
     private lazy var sliderBoxView = ComponentBoxView([labelForSliderTitle, slider, labelForSlider])
     private lazy var textButton = UIButton()
-    private lazy var imageButton = UIButton()
+    lazy var imageButton = UIButton()
+    lazy var imageButtonAccessibility = UIButton()
     private lazy var textWithImageButton = UIButton()
     private lazy var textWithSubtitleButton = UIButton()
     private lazy var labelForSliderTitle = UILabel()
     private lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
+    private lazy var ImageButtonStackView = UIStackView()
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
@@ -52,9 +61,15 @@ private extension ButtonAndSliderViewController {
         
         imageButtonConfiguration.image = imageLightOff
         imageButton.configuration = imageButtonConfiguration
-        imageButton.accessibilityLabel = isLightOn ? "켜진 전구 이미지" : "꺼진 전구 이미지"
         imageButton.clipsToBounds = true
         imageButton.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
+        
+        imageButtonAccessibility.configuration = imageButtonConfiguration
+        imageButtonAccessibility.clipsToBounds = true
+        imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구 이미지" : "꺼진 전구 이미지"
+        imageButtonAccessibility.addTarget(self, action: #selector(didTouchUpInside), for: .touchUpInside)
+        
+        ImageButtonStackView.axis = .horizontal
         
         var textWithImageConfiguration = UIButton.Configuration.filled()
         textWithImageConfiguration.image = UIImage(systemName: "pencil")
@@ -75,11 +90,14 @@ private extension ButtonAndSliderViewController {
     }
     
     func configureConstraints() {
-        [ textButton, imageButton, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
+        [ textButton, ImageButtonStackView, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview($0)
             }
+        
+        [ imageButton, imageButtonAccessibility ]
+            .forEach{ ImageButtonStackView.addArrangedSubview($0) }
         
         let verticalInset: CGFloat = 20
         let horizontalInset: CGFloat = 10
@@ -89,9 +107,9 @@ private extension ButtonAndSliderViewController {
             textButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
             textButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
-            imageButton.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
-            imageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            imageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            ImageButtonStackView.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
+            ImageButtonStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
+            ImageButtonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
             
             textWithImageButton.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: verticalInset),
             textWithImageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
