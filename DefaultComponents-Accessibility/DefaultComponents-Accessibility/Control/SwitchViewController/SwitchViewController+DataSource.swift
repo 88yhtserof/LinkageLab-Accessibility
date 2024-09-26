@@ -33,7 +33,7 @@ extension SwitchViewController {
         toggle.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
         
         var configuration = UIListContentConfiguration.cell()
-        configuration.text = "활성화 버튼"
+        configuration.text = "Wi-Fi"
         cell.contentConfiguration = configuration
         cell.accessories = [.customView(configuration: .init(customView: toggle, placement: .trailing()))]
         cell.selectedBackgroundView = UIView()
@@ -47,7 +47,7 @@ extension SwitchViewController {
     }
     
     func updateSnapshot() {
-        let items = outlines.map{ Item(title: $0.title) }
+        let items = wifies.map{ Item(title: $0.title) }
         var snapshot = Snapshot()
         snapshot.appendSections([.control])
         snapshot.appendItems([Item(isEnabled: true)], toSection: .control)
