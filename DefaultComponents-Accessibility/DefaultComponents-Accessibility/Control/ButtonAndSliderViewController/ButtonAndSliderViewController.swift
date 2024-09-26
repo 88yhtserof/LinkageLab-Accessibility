@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ButtonAndSliderViewController: DefaultViewController {
+final class ButtonAndSliderViewController: DefaultWithScrollViewController {
     
     var sliderValue: CGFloat = 0 {
         didSet {
@@ -30,16 +30,19 @@ final class ButtonAndSliderViewController: DefaultViewController {
         }
     }
     
+    private lazy var stackView = UIStackView()
     private lazy var sliderBoxView = ComponentBoxView([labelForSliderTitle, slider, labelForSlider])
     private lazy var textButton = UIButton()
     lazy var imageButton = UIButton()
     lazy var imageButtonAccessibility = UIButton()
     private lazy var textWithImageButton = UIButton()
+    private lazy var textWithImageButtonAccessibility = UIButton()
     private lazy var textWithSubtitleButton = UIButton()
     private lazy var labelForSliderTitle = UILabel()
     private lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
     private lazy var imageButtonBoxView = ComponentBoxView([imageButton, imageButtonAccessibility])
+    private lazy var textWithImageButtonBoxView = ComponentBoxView([textWithImageButton, textWithImageButtonAccessibility])
     
     private var imageButtonConfiguration = UIButton.Configuration.plain()
     private var imageLightOn = UIImage(named: "light_on")
@@ -55,6 +58,9 @@ final class ButtonAndSliderViewController: DefaultViewController {
 // MARK: Configuration
 private extension ButtonAndSliderViewController {
     func configureSubViews() {
+        stackView.axis = .vertical
+        stackView.spacing = 30
+        
         var textConfiguration = UIButton.Configuration.filled()
         textConfiguration.title = "로그인"
         textButton.configuration = textConfiguration
@@ -76,6 +82,10 @@ private extension ButtonAndSliderViewController {
         textWithImageConfiguration.title = "작성"
         textWithImageButton.configuration = textWithImageConfiguration
         
+        textWithImageButtonAccessibility.configuration = textWithImageConfiguration
+        textWithImageButtonAccessibility.accessibilityLabel = "연필 이미지"
+        textWithImageButtonAccessibility.accessibilityValue = "작성"
+        
         var textWithSubtitleConfiguration = UIButton.Configuration.filled()
         textWithSubtitleConfiguration.title = "다운로드 시작하기"
         textWithSubtitleConfiguration.subtitle = "랜덤 이미지 다운로드"
@@ -90,35 +100,22 @@ private extension ButtonAndSliderViewController {
     }
     
     func configureConstraints() {
-        [ textButton, imageButtonBoxView, textWithImageButton, textWithSubtitleButton, sliderBoxView ]
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        
+        [ textButton, imageButtonBoxView, textWithImageButtonBoxView, textWithSubtitleButton, sliderBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview($0)
+                stackView.addArrangedSubview($0)
             }
         
-        let verticalInset: CGFloat = 20
         let horizontalInset: CGFloat = 10
+        let verticalInset: CGFloat = 50
         
         NSLayoutConstraint.activate([
-            textButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
-            textButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            textButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            
-            imageButtonBoxView.topAnchor.constraint(equalTo: textButton.bottomAnchor, constant: verticalInset),
-            imageButtonBoxView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            imageButtonBoxView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            
-            textWithImageButton.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: verticalInset),
-            textWithImageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            textWithImageButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            
-            textWithSubtitleButton.topAnchor.constraint(equalTo: textWithImageButton.bottomAnchor, constant: verticalInset),
-            textWithSubtitleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            textWithSubtitleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
-            
-            sliderBoxView.topAnchor.constraint(equalTo: textWithSubtitleButton.bottomAnchor, constant: verticalInset),
-            sliderBoxView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            sliderBoxView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset)
         ])
     }
 }
