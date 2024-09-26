@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StateViewController: DefaultViewController {
+final class StateViewController: DefaultWithScrollViewController {
     
     let imageLoader = ImageLoader()
     
@@ -22,6 +22,11 @@ final class StateViewController: DefaultViewController {
         super.viewDidLoad()
         configureSubViews()
         configureConstraints()
+        registerKeyboardNotifications()
+    }
+    
+    deinit {
+        removeKeyboardNotification()
     }
 }
 
@@ -44,22 +49,24 @@ private extension StateViewController {
         [ activityIndicator, switchControl, progressBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview($0)
+                contentView.addSubview($0)
             }
         
         let verticalInset: CGFloat = 50
         let horizontalInset: CGFloat = 50
         
         NSLayoutConstraint.activate([
-            activityIndicator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalInset),
-            activityIndicator.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            activityIndicator.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
+            activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
             switchControl.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: verticalInset),
-            switchControl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            switchControl.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
             progressBoxView.topAnchor.constraint(equalTo: switchControl.bottomAnchor, constant: verticalInset),
-            progressBoxView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            progressBoxView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset),
+            progressBoxView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
+            progressBoxView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
+            progressView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalInset),
+            
             imageView.heightAnchor.constraint(equalToConstant: CGFloat(200))
         ])
     }
