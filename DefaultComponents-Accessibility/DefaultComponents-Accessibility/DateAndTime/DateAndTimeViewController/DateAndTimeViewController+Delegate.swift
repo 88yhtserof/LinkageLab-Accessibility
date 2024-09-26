@@ -8,21 +8,6 @@
 import UIKit
 
 extension DateAndTimeViewController: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
-    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        if dateComponents == selectedData {
-            if !dates.contains(dateComponents) {
-                dates.insert(dateComponents)
-                return .customView {
-                    var label = UILabel()
-                    label.text = "⭐️"
-                    return label
-                }
-            }
-            dates.remove(dateComponents)
-        }
-        
-        return .none
-    }
     
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         selectedData = dateComponents
