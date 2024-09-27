@@ -9,7 +9,12 @@ import UIKit
 
 extension SwitchViewController {
     @objc func didToggleSwitch(_ sender: UISwitch) {
+        toggle.isOn.toggle()
         isEnabled = sender.isOn
         updateSnapshot()
+    }
+    
+    func didDoubleTapToSetWiFi() {
+        toggle.sendActions(for: .valueChanged)
     }
 }

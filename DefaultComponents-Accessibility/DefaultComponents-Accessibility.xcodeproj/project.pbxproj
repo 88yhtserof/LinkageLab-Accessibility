@@ -55,6 +55,7 @@
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */; };
+		4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */; };
 		4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982142C93E4DF00809294 /* AlertViewController.swift */; };
 		4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */; };
 /* End PBXBuildFile section */
@@ -111,6 +112,7 @@
 		4ECD49832C8E9B6200F3BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndSliderViewController.swift; sourceTree = "<group>"; };
+		4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityListCell.swift; sourceTree = "<group>"; };
 		4EF982142C93E4DF00809294 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Action.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -309,6 +311,7 @@
 				4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */,
 				4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */,
 				4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */,
+				4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */,
 			);
 			path = SwitchViewController;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
+				4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */,
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,

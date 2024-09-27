@@ -13,6 +13,7 @@ final class SwitchViewController: DefaultViewController {
     var snapshot: Snapshot!
     var wifies = WiFi.wifies
     var isEnabled: Bool = true
+    let toggle = UISwitch()
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     

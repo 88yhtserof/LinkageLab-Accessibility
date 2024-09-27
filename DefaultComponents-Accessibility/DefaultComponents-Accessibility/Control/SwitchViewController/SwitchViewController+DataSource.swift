@@ -27,16 +27,18 @@ extension SwitchViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func controlCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Item) {
-        let toggle = UISwitch()
+    func controlCellRegistrationHandler(cell: AccessibilityListCell, indexPath: IndexPath, item: Item) {
         toggle.isOn = true
         toggle.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
+        toggle.isAccessibilityElement = false
         
         var configuration = UIListContentConfiguration.cell()
         configuration.text = "Wi-Fi"
         cell.contentConfiguration = configuration
         cell.accessories = [.customView(configuration: .init(customView: toggle, placement: .trailing()))]
         cell.selectedBackgroundView = UIView()
+        cell.actionForAccessibility = didDoubleTapToSetWiFi
+        
     }
     
     func listCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Item) {
