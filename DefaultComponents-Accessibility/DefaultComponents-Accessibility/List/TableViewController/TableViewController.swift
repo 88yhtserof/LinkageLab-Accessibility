@@ -23,6 +23,12 @@ final class TableViewController: UITableViewController, Titleable {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        
+        if let sheet = self.sheetPresentationController, UIAccessibility.isVoiceOverRunning {
+            print("!!!")
+            contentDescription = "책 목록을 탐색할 수 있는 화면입니다 \(sheet.detents)"
+            UIAccessibility.post(notification: .announcement, argument: contentDescription)
+        }
     }
 }
 

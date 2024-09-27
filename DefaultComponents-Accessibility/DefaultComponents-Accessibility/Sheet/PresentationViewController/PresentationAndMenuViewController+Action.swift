@@ -14,7 +14,11 @@ extension PresentationAndMenuViewController {
             sheet.detents = [.medium(), .large()]
             sheet.prefersGrabberVisible = true
         }
-        present(presentVC, animated: true)
+        
+        present(presentVC, animated: true) {
+            let contentDescription = "책 목록을 탐색할 수 있는 화면입니다"
+            UIAccessibility.post(notification: .announcement, argument: contentDescription)
+        }
     }
     
     func changeBackgroundAction() -> UIAction {

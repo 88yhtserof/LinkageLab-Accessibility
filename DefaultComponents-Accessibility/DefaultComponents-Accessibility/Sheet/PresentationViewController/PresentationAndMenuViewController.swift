@@ -9,8 +9,8 @@ import UIKit
 
 final class PresentationAndMenuViewController: DefaultViewController {
     
-    private lazy var presentBoxView = ComponentBoxView([presentButton])
-    private lazy var presentButton = UIButton()
+    lazy var presentBoxView = ComponentBoxView([presentButton])
+    lazy var presentButton = UIButton()
     private lazy var menuBoxView = ComponentBoxView([menuButton])
     private lazy var menuButton = UIButton()
     private lazy var stackView = UIStackView()
