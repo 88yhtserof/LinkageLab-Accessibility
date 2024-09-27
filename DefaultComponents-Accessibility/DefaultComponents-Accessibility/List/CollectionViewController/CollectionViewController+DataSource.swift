@@ -25,7 +25,11 @@ extension CollectionViewController {
     }
     
     func supplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
-        supplementaryView.title = snapshot.sectionIdentifiers[indexPath.section].title
+        let title = snapshot.sectionIdentifiers[indexPath.section].title
+        supplementaryView.title = title
+        supplementaryView.isAccessibilityElement = true
+        supplementaryView.accessibilityLabel = title
+        supplementaryView.accessibilityTraits = .header
     }
     
     func updateSnapshot() {
