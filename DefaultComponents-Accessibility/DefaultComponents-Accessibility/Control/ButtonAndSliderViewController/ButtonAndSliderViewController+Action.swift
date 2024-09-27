@@ -17,10 +17,14 @@ extension ButtonAndSliderViewController {
     }
     
     @objc func didChangeValue(_ sender: UISlider) {
-        sliderValue = CGFloat(sender.value)
+        if sender == slider {
+            sliderValue = CGFloat(sender.value)
+        } else {
+            sliderValueAccessibility = CGFloat(sender.value)
+        }
     }
     
     func didDoubleTapToSetAccessibility() {
-        UIAccessibility.post(notification: .layoutChanged, argument: slider)
+        UIAccessibility.post(notification: .layoutChanged, argument: sliderAccessibility)
     }
 }

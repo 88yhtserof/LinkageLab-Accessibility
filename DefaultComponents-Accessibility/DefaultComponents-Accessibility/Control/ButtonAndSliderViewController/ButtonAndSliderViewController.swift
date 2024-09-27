@@ -15,6 +15,12 @@ final class ButtonAndSliderViewController: DefaultWithScrollViewController {
         }
     }
     
+    var sliderValueAccessibility: CGFloat = 0 {
+        didSet {
+            labelForSliderAccessibility.font = .systemFont(ofSize: sliderValueAccessibility)
+        }
+    }
+    
     var isLightOn: Bool = false {
         didSet {
             imageButtonConfiguration.image = isLightOn ? imageLightOn : imageLightOff
@@ -32,6 +38,7 @@ final class ButtonAndSliderViewController: DefaultWithScrollViewController {
     
     private lazy var stackView = UIStackView()
     private lazy var sliderBoxView = ComponentBoxView([labelForSliderTitle, slider, labelForSlider])
+    private lazy var sliderBoxViewAccessibility = ComponentBoxView([labelForSliderTitleAccessibility, sliderAccessibility, labelForSliderAccessibility])
     private lazy var textButton = UIButton()
     lazy var imageButton = UIButton()
     lazy var imageButtonAccessibility = UIButton()
@@ -39,8 +46,11 @@ final class ButtonAndSliderViewController: DefaultWithScrollViewController {
     private lazy var textWithImageButtonAccessibility = UIButton()
     private lazy var textWithSubtitleButton = UIButton()
     private lazy var labelForSliderTitle = UILabel()
+    private lazy var labelForSliderTitleAccessibility = UILabel()
     lazy var slider = UISlider()
+    lazy var sliderAccessibility = UISlider()
     private lazy var labelForSlider = UILabel()
+    private lazy var labelForSliderAccessibility = UILabel()
     private lazy var imageButtonBoxView = ComponentBoxView([imageButton, imageButtonAccessibility])
     private lazy var textWithImageButtonBoxView = ComponentBoxView([textWithImageButton, textWithImageButtonAccessibility])
     
@@ -59,6 +69,7 @@ final class ButtonAndSliderViewController: DefaultWithScrollViewController {
 private extension ButtonAndSliderViewController {
     func configureSubViews() {
         stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
         stackView.spacing = 30
         
         var textConfiguration = UIButton.Configuration.filled()
@@ -99,10 +110,17 @@ private extension ButtonAndSliderViewController {
         labelForSlider.text = "카카오의 자회사형 장애인 표준사업장 링키지랩은 카카오 플랫폼 서비스 운영, 디지털 접근성 컨설팅 등 IT 특화 업무와 카카오 공동체 사내 카페, 시각장애인 헬스키퍼, 스낵 큐레이션 등 전문적인 사내 복지 사업을 함께 수행하고 있습니다."
 
         
-        sliderBoxView.isAccessibilityElement = true
-        sliderBoxView.accessibilityLabel = "글자 크기 조절"
-        sliderBoxView.accessibilityHint = "더블 탭하여 값 조절을 활성화하십시오"
-        sliderBoxView.actionForAccessibility = didDoubleTapToSetAccessibility
+        sliderBoxViewAccessibility.isAccessibilityElement = true
+        sliderBoxViewAccessibility.accessibilityLabel = "글자 크기 조절"
+        sliderBoxViewAccessibility.accessibilityHint = "더블 탭하여 값 조절을 활성화하십시오"
+        sliderBoxViewAccessibility.actionForAccessibility = didDoubleTapToSetAccessibility
+        
+        labelForSliderTitleAccessibility.text = "글자 크기 조절"
+        sliderAccessibility.maximumValue = 50
+        sliderAccessibility.minimumValue = 10
+        sliderAccessibility.value = Float(labelForSlider.font.pointSize)
+        sliderAccessibility.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
+        labelForSliderAccessibility.text = "카카오의 자회사형 장애인 표준사업장 링키지랩은 카카오 플랫폼 서비스 운영, 디지털 접근성 컨설팅 등 IT 특화 업무와 카카오 공동체 사내 카페, 시각장애인 헬스키퍼, 스낵 큐레이션 등 전문적인 사내 복지 사업을 함께 수행하고 있습니다."
         
     }
     
@@ -110,7 +128,7 @@ private extension ButtonAndSliderViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
-        [ textButton, imageButtonBoxView, textWithImageButtonBoxView, textWithSubtitleButton, sliderBoxView ]
+        [ textButton, imageButtonBoxView, textWithImageButtonBoxView, textWithSubtitleButton, sliderBoxView, sliderBoxViewAccessibility ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 stackView.addArrangedSubview($0)
@@ -122,7 +140,8 @@ private extension ButtonAndSliderViewController {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset)
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }
