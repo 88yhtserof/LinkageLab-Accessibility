@@ -12,9 +12,11 @@ extension StateViewController {
     @objc func didToggleSwitch(_ sender: UISwitch) {
         if switchControl.isOn {
             activityIndicator.startAnimating()
+            UIAccessibility.post(notification: .layoutChanged, argument: activityIndicator)
         } else {
             activityIndicator.stopAnimating()
         }
+        UIAccessibility.post(notification: .layoutChanged, argument: activityIndicator)
     }
     
     func loadImage(_ url: URL) async throws {
