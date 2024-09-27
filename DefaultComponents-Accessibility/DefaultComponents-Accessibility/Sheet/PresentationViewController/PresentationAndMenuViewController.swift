@@ -40,6 +40,7 @@ extension PresentationAndMenuViewController {
         configForeMenu.titleAlignment = .center
         menuButton.menu = menu
         menuButton.configuration = configForeMenu
+        menuButton.accessibilityHint = "동작을 활성화하려면 이중탭하고 누른 채로 있으십시오"
         
         stackView.axis = .vertical
         stackView.spacing = 10
