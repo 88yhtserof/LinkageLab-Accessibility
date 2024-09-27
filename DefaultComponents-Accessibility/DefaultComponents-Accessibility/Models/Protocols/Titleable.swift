@@ -9,4 +9,5 @@ import Foundation
 
 protocol Titleable {
     var navigationTitle: String? { get set }
+    var contentDescription: String? { get set }
 }

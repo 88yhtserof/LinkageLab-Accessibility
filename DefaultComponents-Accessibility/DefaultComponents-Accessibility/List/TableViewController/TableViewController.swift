@@ -14,6 +14,7 @@ final class TableViewController: UITableViewController, Titleable {
             navigationItem.title = navigationTitle
         }
     }
+    var contentDescription: String?
     
     static let reuseIdentifier = "tableview-identifier"
     var books = Book.samples

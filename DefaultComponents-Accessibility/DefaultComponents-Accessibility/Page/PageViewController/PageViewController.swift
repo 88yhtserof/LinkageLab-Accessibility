@@ -14,6 +14,7 @@ final class PageViewController: UIPageViewController, Titleable {
             navigationItem.title = navigationTitle
         }
     }
+    var contentDescription: String?
     
     var pages: [UIViewController] = []
     
