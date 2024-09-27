@@ -27,6 +27,10 @@ final class SwitchViewController: DefaultViewController {
 // MARK: Configuration
 private extension SwitchViewController {
     func configureSubViews() {
+        toggle.isOn = true
+        toggle.isAccessibilityElement = false
+        toggle.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
+        
         let controlCellRegistration = UICollectionView.CellRegistration(handler: controlCellRegistrationHandler)
         let listCellRegistraion = UICollectionView.CellRegistration(handler: listCellRegistrationHandler)
         

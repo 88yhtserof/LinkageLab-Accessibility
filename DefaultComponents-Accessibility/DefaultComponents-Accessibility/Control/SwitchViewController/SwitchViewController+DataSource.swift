@@ -28,9 +28,6 @@ extension SwitchViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
     func controlCellRegistrationHandler(cell: AccessibilityListCell, indexPath: IndexPath, item: Item) {
-        toggle.isOn = true
-        toggle.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
-        toggle.isAccessibilityElement = false
         
         var configuration = UIListContentConfiguration.cell()
         configuration.text = "Wi-Fi"
