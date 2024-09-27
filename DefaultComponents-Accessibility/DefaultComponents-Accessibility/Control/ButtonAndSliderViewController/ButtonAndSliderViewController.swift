@@ -39,6 +39,7 @@ final class ButtonAndSliderViewController: DefaultWithScrollViewController {
     private lazy var stackView = UIStackView()
     private lazy var sliderBoxView = ComponentBoxView([labelForSliderTitle, slider, labelForSlider])
     private lazy var sliderBoxViewAccessibility = ComponentBoxView([labelForSliderTitleAccessibility, sliderAccessibility, labelForSliderAccessibility])
+    private lazy var disabledButton = UIButton()
     private lazy var textButton = UIButton()
     lazy var imageButton = UIButton()
     lazy var imageButtonAccessibility = UIButton()
@@ -71,6 +72,11 @@ private extension ButtonAndSliderViewController {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 30
+        
+        var disablesConfigration = UIButton.Configuration.filled()
+        disablesConfigration.title = "완료"
+        disabledButton.configuration = disablesConfigration
+        disabledButton.isEnabled = false
         
         var textConfiguration = UIButton.Configuration.filled()
         textConfiguration.title = "로그인"
@@ -126,9 +132,9 @@ private extension ButtonAndSliderViewController {
     
     func configureConstraints() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
+        contentView.addSubview(stackView)
         
-        [ textButton, imageButtonBoxView, textWithImageButtonBoxView, textWithSubtitleButton, sliderBoxView, sliderBoxViewAccessibility ]
+        [ disabledButton, textButton, imageButtonBoxView, textWithImageButtonBoxView, textWithSubtitleButton, sliderBoxView, sliderBoxViewAccessibility ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 stackView.addArrangedSubview($0)
@@ -141,7 +147,7 @@ private extension ButtonAndSliderViewController {
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalInset)
         ])
     }
 }
