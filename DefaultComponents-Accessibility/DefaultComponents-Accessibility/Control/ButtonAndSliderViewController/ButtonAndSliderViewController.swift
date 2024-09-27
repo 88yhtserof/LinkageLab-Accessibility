@@ -39,7 +39,7 @@ final class ButtonAndSliderViewController: DefaultWithScrollViewController {
     private lazy var textWithImageButtonAccessibility = UIButton()
     private lazy var textWithSubtitleButton = UIButton()
     private lazy var labelForSliderTitle = UILabel()
-    private lazy var slider = UISlider()
+    lazy var slider = UISlider()
     private lazy var labelForSlider = UILabel()
     private lazy var imageButtonBoxView = ComponentBoxView([imageButton, imageButtonAccessibility])
     private lazy var textWithImageButtonBoxView = ComponentBoxView([textWithImageButton, textWithImageButtonAccessibility])
@@ -91,12 +91,19 @@ private extension ButtonAndSliderViewController {
         textWithSubtitleConfiguration.subtitle = "랜덤 이미지 다운로드"
         textWithSubtitleButton.configuration = textWithSubtitleConfiguration
         
-        labelForSliderTitle.text = "글자 크기 조정하기"
+        labelForSliderTitle.text = "글자 크기 조절"
         slider.maximumValue = 50
         slider.minimumValue = 10
         slider.value = Float(labelForSlider.font.pointSize)
         slider.addTarget(self, action: #selector(didChangeValue(_:)), for: .valueChanged)
         labelForSlider.text = "카카오의 자회사형 장애인 표준사업장 링키지랩은 카카오 플랫폼 서비스 운영, 디지털 접근성 컨설팅 등 IT 특화 업무와 카카오 공동체 사내 카페, 시각장애인 헬스키퍼, 스낵 큐레이션 등 전문적인 사내 복지 사업을 함께 수행하고 있습니다."
+
+        
+        sliderBoxView.isAccessibilityElement = true
+        sliderBoxView.accessibilityLabel = "글자 크기 조절"
+        sliderBoxView.accessibilityHint = "더블 탭하여 값 조절을 활성화하십시오"
+        sliderBoxView.actionForAccessibility = didDoubleTapToSetAccessibility
+        
     }
     
     func configureConstraints() {
