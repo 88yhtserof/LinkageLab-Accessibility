@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14408A992CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14408A982CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift */; };
 		4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0925182CA4EC5D00474A16 /* WiFi.swift */; };
 		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14408A982CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationAndMenuViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4E0925182CA4EC5D00474A16 /* WiFi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFi.swift; sourceTree = "<group>"; };
 		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				4EC52B0B2CA19D57007E07D6 /* PresentationAndMenuViewController.swift */,
 				4EC52B0D2CA1A5A9007E07D6 /* PresentationAndMenuViewController+Action.swift */,
+				14408A982CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift */,
 			);
 			path = PresentationViewController;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				4EC52AE92CA0F53A007E07D6 /* StateViewController+Delegate.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
+				14408A992CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift in Sources */,
 				4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */,
 				4EC52AEB2CA11594007E07D6 /* DateAndTimeViewController+Delegate.swift in Sources */,
 				4EC52AEF2CA1359F007E07D6 /* CollectionViewController+DataSource.swift in Sources */,

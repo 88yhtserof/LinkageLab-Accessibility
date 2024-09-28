@@ -23,11 +23,18 @@ final class TableViewController: UITableViewController, Titleable {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        
-        if let sheet = self.sheetPresentationController, UIAccessibility.isVoiceOverRunning {
-            print("!!!")
-            contentDescription = "책 목록을 탐색할 수 있는 화면입니다 \(sheet.detents)"
-            UIAccessibility.post(notification: .announcement, argument: contentDescription)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if  UIAccessibility.isVoiceOverRunning,
+            let sheet = self.sheetPresentationController
+        {
+            print(sheet.selectedDetentIdentifier)
+            view.isAccessibilityElement = true
+            view.accessibilityLabel = "책 목록을 탐색할 수 있는 화면입니다"
+            view.accessibilityValue = "시트의 크기가 화면의 절반 정도 차지하고 있습니다"
+            UIAccessibility.post(notification: .screenChanged, argument: view)
         }
     }
 }
