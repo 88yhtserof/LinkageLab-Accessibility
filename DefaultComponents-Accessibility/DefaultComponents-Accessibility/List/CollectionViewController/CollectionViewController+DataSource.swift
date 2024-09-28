@@ -15,6 +15,8 @@ extension CollectionViewController {
     func pagableCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
         cell.text = item
         cell.selectedBackgroundView = UIView()
+        cell.isAccessibilityElement = true
+        cell.accessibilityLabel = item
     }
     
     func listTypesCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String) {
