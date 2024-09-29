@@ -12,11 +12,18 @@ extension StateViewController {
     @objc func didToggleSwitch(_ sender: UISwitch) {
         if switchControl.isOn {
             activityIndicator.startAnimating()
-            UIAccessibility.post(notification: .layoutChanged, argument: activityIndicator)
         } else {
             activityIndicator.stopAnimating()
         }
-        UIAccessibility.post(notification: .layoutChanged, argument: activityIndicator)
+    }
+    
+    @objc func didToggleSwitchWithAccessibility(_ sender: UISwitch) {
+        if switchControlWithAccessibility.isOn {
+            activityIndicatorWithAccessibility.startAnimating()
+        } else {
+            activityIndicatorWithAccessibility.stopAnimating()
+        }
+        UIAccessibility.post(notification: .layoutChanged, argument: activityIndicatorWithAccessibility)
     }
     
     func loadImage(_ url: URL) async throws {
