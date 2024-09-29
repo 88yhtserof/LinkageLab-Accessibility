@@ -44,7 +44,9 @@ extension OutlineViewController: UICollectionViewDelegate {
             case 0:
                 vc = CollectionViewController()
             case 1:
-                vc = TableViewController()
+                vc = TableViewController(isAccessible: false)
+            case 2:
+                vc = TableViewController(isAccessible: true)
             default:
                 return
             }
