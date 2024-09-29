@@ -15,8 +15,10 @@ extension CollectionViewController {
     func pagableCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
         cell.text = item
         cell.selectedBackgroundView = UIView()
-        cell.isAccessibilityElement = true
-        cell.accessibilityLabel = item
+        if isAccessible {
+            cell.isAccessibilityElement = true
+            cell.accessibilityLabel = item
+        }
     }
     
     func listTypesCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String) {
@@ -29,9 +31,11 @@ extension CollectionViewController {
     func supplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
         let title = snapshot.sectionIdentifiers[indexPath.section].title
         supplementaryView.title = title
-        supplementaryView.isAccessibilityElement = true
-        supplementaryView.accessibilityLabel = title
-        supplementaryView.accessibilityTraits = .header
+        if isAccessible {
+            supplementaryView.isAccessibilityElement = true
+            supplementaryView.accessibilityLabel = title
+            supplementaryView.accessibilityTraits = .header
+        }
     }
     
     func updateSnapshot() {

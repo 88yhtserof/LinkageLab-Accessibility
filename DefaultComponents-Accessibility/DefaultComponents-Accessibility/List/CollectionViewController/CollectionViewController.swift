@@ -9,12 +9,23 @@ import UIKit
 
 final class CollectionViewController: DefaultViewController {
     
+    var isAccessible: Bool
     var dataSouce: DataSource!
     var snapshot: Snapshot!
     var outlines = Outline.sections
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
-
+    
+    // MARK: Initialize
+    init(isAccessible: Bool) {
+        self.isAccessible = isAccessible
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
