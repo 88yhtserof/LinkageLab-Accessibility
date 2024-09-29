@@ -19,6 +19,7 @@ final class TableViewController: UITableViewController, Titleable {
     static let reuseIdentifier = "tableview-identifier"
     var books = Book.samples
     var dataSource: DataSource!
+    var snapshot: Snapshot!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +43,20 @@ extension TableViewController {
         view.backgroundColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: TableViewController.reuseIdentifier)
         
-        dataSource = DataSource(tableView: tableView, cellProvider: { tableView, indexPath, itemIdentifier in
+        dataSource = DataSource(tableView: tableView, cellProvider: { tableView, indexPath, _ in
+            let item = self.books[indexPath.item]
             let cell = tableView.dequeueReusableCell(withIdentifier: TableViewController.reuseIdentifier, for: indexPath)
             var config = cell.defaultContentConfiguration()
-            config.text = itemIdentifier
+            config.text = item.title
+            if item.bookmark {
+                let image = UIImage(systemName: "star.fill")
+                config.image = image
+            }
             cell.contentConfiguration = config
             return cell
         })
         
-        updateSnapshot()
+        createSnapshot()
         tableView.dataSource = dataSource
     }
 }
