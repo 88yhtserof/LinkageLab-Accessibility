@@ -20,6 +20,8 @@ extension TableViewController {
             let item = self.books[indexPath.item]
             self.reconfigureSnapshot(at: item)
             handler(true)
+            let announcement = self.books[indexPath.item].bookmark ? "즐겨찾기 설정" : "즐겨찾기 해제"
+            UIAccessibility.post(notification: .announcement, argument: announcement)
         }
         
         return UISwipeActionsConfiguration(actions: [deleteAction, bookmarkAction])

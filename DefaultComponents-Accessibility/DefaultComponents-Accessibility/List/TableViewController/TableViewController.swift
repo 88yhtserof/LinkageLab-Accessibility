@@ -51,8 +51,10 @@ extension TableViewController {
             if item.bookmark {
                 let image = UIImage(systemName: "star.fill")
                 config.image = image
+                cell.accessibilityValue = "즐겨찾기"
             }
             cell.contentConfiguration = config
+            cell.accessibilityHint = "동작을 사용하려면 한 손가락으로 쓸어내리거나 쓸어올리십시오"
             return cell
         })
         
