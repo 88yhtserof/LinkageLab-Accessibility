@@ -11,7 +11,8 @@ extension PresentationAndMenuViewController: UISheetPresentationControllerDelega
     func sheetPresentationControllerDidChangeSelectedDetentIdentifier(_ sheetPresentationController: UISheetPresentationController) {
         
         guard UIAccessibility.isVoiceOverRunning,
-              let selectedDetent = sheetPresentationController.selectedDetentIdentifier else { return }
+              let selectedDetent = sheetPresentationController.selectedDetentIdentifier,
+              isAccessible else { return }
         
         if selectedDetent == UISheetPresentationController.Detent.medium().identifier {
             UIAccessibility.post(notification: .screenChanged, argument: "시트의 크기가 화면의 절반 정도 차지하고 있습니다")

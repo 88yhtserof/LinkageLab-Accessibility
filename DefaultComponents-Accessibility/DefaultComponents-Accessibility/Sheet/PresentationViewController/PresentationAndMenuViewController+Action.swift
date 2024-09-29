@@ -9,7 +9,9 @@ import UIKit
 
 extension PresentationAndMenuViewController {
     @objc func didTapPresentButton(_ sender: UIButton) {
-        let presentVC = TableViewController(isAccessible: true)
+        isAccessible = sender == presentButtonWithAccessibility
+        
+        let presentVC = TableViewController(isAccessible: isAccessible)
         if let sheet = presentVC.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
             sheet.prefersGrabberVisible = true

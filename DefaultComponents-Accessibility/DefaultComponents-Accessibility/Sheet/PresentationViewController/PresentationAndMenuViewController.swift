@@ -9,8 +9,12 @@ import UIKit
 
 final class PresentationAndMenuViewController: DefaultViewController {
     
+    var isAccessible: Bool!
+    
     lazy var presentBoxView = ComponentBoxView([presentButton])
     lazy var presentButton = UIButton()
+    lazy var presentBoxViewWithAccessibility = ComponentBoxView([presentButtonWithAccessibility])
+    lazy var presentButtonWithAccessibility = UIButton()
     private lazy var menuBoxView = ComponentBoxView([menuButton])
     private lazy var menuButton = UIButton()
     private lazy var stackView = UIStackView()
@@ -32,6 +36,10 @@ extension PresentationAndMenuViewController {
         presentButton.configuration = configForPresent
         presentButton.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
         
+        configForPresent.title = "책 목록 확인 with Accessibility"
+        presentButtonWithAccessibility.configuration = configForPresent
+        presentButtonWithAccessibility.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
+        
         let items = [ changeBackgroundAction(), moreMenu() ]
         let menu = UIMenu(title: "UIMenu", children: items)
         var configForeMenu = UIButton.Configuration.filled()
@@ -50,7 +58,7 @@ extension PresentationAndMenuViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
-        [ presentBoxView, menuBoxView ]
+        [ presentBoxView, presentBoxViewWithAccessibility, menuBoxView ]
             .forEach{ stackView.addArrangedSubview($0) }
         
         let horizontalInset: CGFloat = 40
