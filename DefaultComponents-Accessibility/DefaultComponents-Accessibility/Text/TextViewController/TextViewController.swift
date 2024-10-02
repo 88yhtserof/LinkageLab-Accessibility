@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TextViewController: DefaultWithScrollViewController {
+final class TextViewController: DefaultCollectionViewController {
     
     private lazy var maximumLinesBoxView = ComponentBoxView([labelForMiximumLines])
     private lazy var defaultBoxView = ComponentBoxView([textFieldForDefault])
@@ -25,10 +25,34 @@ final class TextViewController: DefaultWithScrollViewController {
     private lazy var textView = UITextView()
     private lazy var stackView = UIStackView()
     
+    init() {
+        super.init(isAccessible: true)
+        
+        configureSubViews()
+        let sections = [
+            "UILabel",
+            "UITextField",
+            "UITextView"
+        ]
+        
+        let items = [
+            Item(sectionID: 0, tag: .standard, description: "텍스트 길이 조건이 있는 컴포넌트입니다.", view: maximumLinesBoxView),
+            Item(sectionID: 1, tag: .standard,description: "한 줄을 입력할 수 있는 텍스트 입력창입니다.", view: defaultBoxView),
+            Item(sectionID: 1, tag: .standard, description: "암호를 입력하는 텍스트 입력창입니다.", view: pwBoxView),
+            Item(sectionID: 1, tag: .standard,description: "숫자를 입력하는 텍스트 입력창입니다.", view: numberBoxView),
+            Item(sectionID: 1, tag: .standard,description: "이메일을 입력하는 텍스트 입력창입니다.", view: emailBoxView),
+            Item(sectionID: 2, tag: .standard,description: "여러 줄을 입력할 수 있는 텍스트 입력창입니다.", view: textViewBoxView)
+        ]
+        super.sections = sections
+        super.items = items
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubViews()
-        configureConstraints()
         registerKeyboardNotifications()
     }
     
@@ -40,9 +64,6 @@ final class TextViewController: DefaultWithScrollViewController {
 // MARK: Configuration
 private extension TextViewController {
     func configureSubViews() {
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 20
         
         textFieldForDefault.placeholderText = "예: 홍길동"
         textFieldForPW.isSecureTextEntry = true
@@ -53,6 +74,7 @@ private extension TextViewController {
         textFieldForEmail.placeholderText = "예: default@email.com"
         textView.font = .systemFont(ofSize: 20)
         textView.backgroundColor = .systemGray6
+        textView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         defaultBoxView.title = "이름"
         pwBoxView.title = "비밀번호"
@@ -66,35 +88,6 @@ private extension TextViewController {
         
         [ textFieldForDefault, textFieldForPW, textFieldForNumber, textFieldForEmail ]
             .forEach{ $0.delegate = self }
-    }
-    
-    func configureConstraints() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textViewBoxView.translatesAutoresizingMaskIntoConstraints = false
-        [ stackView, textViewBoxView ]
-            .forEach{ contentView.addSubview($0) }
-        
-        [ maximumLinesBoxView, defaultBoxView, pwBoxView, numberBoxView, emailBoxView ]
-            .forEach{
-                $0.translatesAutoresizingMaskIntoConstraints = false
-                stackView.addArrangedSubview($0)
-            }
-        
-        let horizontalInset: CGFloat = 50
-        let verticalInset: CGFloat = 50
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            
-            textViewBoxView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: verticalInset),
-            textViewBoxView.heightAnchor.constraint(equalToConstant: CGFloat(300)),
-            textViewBoxView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            textViewBoxView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            textViewBoxView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
     }
 }
 

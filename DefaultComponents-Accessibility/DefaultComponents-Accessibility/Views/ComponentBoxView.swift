@@ -53,6 +53,8 @@ extension ComponentBoxView {
         stackView.axis = axis
         stackView.distribution = .fill
         stackView.spacing = 10
+        
+        titleLabel.font = .systemFont(ofSize: 20, weight: .regular)
     }
     
     func configureConstraints() {
