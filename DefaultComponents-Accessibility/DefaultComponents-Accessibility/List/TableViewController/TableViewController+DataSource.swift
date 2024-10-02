@@ -8,14 +8,23 @@
 import UIKit
 
 extension TableViewController {
-    typealias DataSource = UITableViewDiffableDataSource<Int, String>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+    typealias DataSource = UITableViewDiffableDataSource<Int, Book>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Book>
     
-    func updateSnapshot() {
-        let items = books.map{ $0.title }
-        var snapshot = Snapshot()
+    func createSnapshot() {
+        self.snapshot = Snapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems(items)
+        snapshot.appendItems(books)
+        dataSource.apply(snapshot)
+    }
+    
+    func deleteSnapshot(at item: Book) {
+        snapshot.deleteItems([item])
+        dataSource.apply(snapshot)
+    }
+    
+    func reconfigureSnapshot(at item: Book) {
+        snapshot.reconfigureItems([item])
         dataSource.apply(snapshot)
     }
 }

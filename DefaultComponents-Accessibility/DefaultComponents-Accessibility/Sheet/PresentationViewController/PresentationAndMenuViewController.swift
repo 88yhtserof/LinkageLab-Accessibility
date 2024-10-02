@@ -9,10 +9,16 @@ import UIKit
 
 final class PresentationAndMenuViewController: DefaultViewController {
     
-    private lazy var presentBoxView = ComponentBoxView([presentButton])
-    private lazy var presentButton = UIButton()
+    var isAccessible: Bool!
+    
+    lazy var presentBoxView = ComponentBoxView([presentButton])
+    lazy var presentButton = UIButton()
+    lazy var presentBoxViewWithAccessibility = ComponentBoxView([presentButtonWithAccessibility])
+    lazy var presentButtonWithAccessibility = UIButton()
     private lazy var menuBoxView = ComponentBoxView([menuButton])
     private lazy var menuButton = UIButton()
+    lazy var menuBoxViewWithAccessibility = ComponentBoxView([menuButtonWithAccessibility])
+    lazy var menuButtonWithAccessibility = UIButton()
     private lazy var stackView = UIStackView()
     
     override func viewDidLoad() {
@@ -32,7 +38,11 @@ extension PresentationAndMenuViewController {
         presentButton.configuration = configForPresent
         presentButton.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
         
-        let items = [ changeBackgroundAction(), moreMenu() ]
+        configForPresent.title = "책 목록 확인 with Accessibility"
+        presentButtonWithAccessibility.configuration = configForPresent
+        presentButtonWithAccessibility.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
+        
+        let items = [ changeBackgroundAction(menuButton), moreMenu(menuButton) ]
         let menu = UIMenu(title: "UIMenu", children: items)
         var configForeMenu = UIButton.Configuration.filled()
         configForeMenu.title = "더보기"
@@ -40,6 +50,13 @@ extension PresentationAndMenuViewController {
         configForeMenu.titleAlignment = .center
         menuButton.menu = menu
         menuButton.configuration = configForeMenu
+        
+        let itemsWithAccessibility = [ changeBackgroundAction(menuButtonWithAccessibility), moreMenu(menuButtonWithAccessibility) ]
+        let menuWithAccessibility = UIMenu(title: "UIMenu", children: itemsWithAccessibility)
+        configForeMenu.title = "더보기 with Accessibility"
+        menuButtonWithAccessibility.menu = menuWithAccessibility
+        menuButtonWithAccessibility.configuration = configForeMenu
+        menuButtonWithAccessibility.accessibilityHint = "동작을 활성화하려면 이중탭하고 누른 채로 있으십시오"
         
         stackView.axis = .vertical
         stackView.spacing = 10
@@ -49,7 +66,7 @@ extension PresentationAndMenuViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stackView)
         
-        [ presentBoxView, menuBoxView ]
+        [ presentBoxView, presentBoxViewWithAccessibility, menuBoxView, menuButtonWithAccessibility ]
             .forEach{ stackView.addArrangedSubview($0) }
         
         let horizontalInset: CGFloat = 40

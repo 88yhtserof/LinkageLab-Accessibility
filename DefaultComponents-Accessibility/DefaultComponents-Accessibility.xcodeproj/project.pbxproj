@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14408A992CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14408A982CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift */; };
 		4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0925182CA4EC5D00474A16 /* WiFi.swift */; };
 		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
@@ -55,11 +56,13 @@
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */; };
+		4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */; };
 		4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982142C93E4DF00809294 /* AlertViewController.swift */; };
 		4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14408A982CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationAndMenuViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4E0925182CA4EC5D00474A16 /* WiFi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFi.swift; sourceTree = "<group>"; };
 		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		4ECD49832C8E9B6200F3BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndSliderViewController.swift; sourceTree = "<group>"; };
+		4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityListCell.swift; sourceTree = "<group>"; };
 		4EF982142C93E4DF00809294 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Action.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +191,7 @@
 			children = (
 				4EC52B0B2CA19D57007E07D6 /* PresentationAndMenuViewController.swift */,
 				4EC52B0D2CA1A5A9007E07D6 /* PresentationAndMenuViewController+Action.swift */,
+				14408A982CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift */,
 			);
 			path = PresentationViewController;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				4EC52ADE2C9D157B007E07D6 /* SwitchViewController.swift */,
 				4EC52AE02C9D1590007E07D6 /* SwitchViewController+DataSource.swift */,
 				4EC52AE22C9D19D8007E07D6 /* SwitchViewController+Action.swift */,
+				4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */,
 			);
 			path = SwitchViewController;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				4EC52AE92CA0F53A007E07D6 /* StateViewController+Delegate.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
+				14408A992CA86ECC0089A6F7 /* PresentationAndMenuViewController+Delegate.swift in Sources */,
 				4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */,
 				4EC52AEB2CA11594007E07D6 /* DateAndTimeViewController+Delegate.swift in Sources */,
 				4EC52AEF2CA1359F007E07D6 /* CollectionViewController+DataSource.swift in Sources */,
@@ -491,6 +498,7 @@
 				4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
+				4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */,
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,

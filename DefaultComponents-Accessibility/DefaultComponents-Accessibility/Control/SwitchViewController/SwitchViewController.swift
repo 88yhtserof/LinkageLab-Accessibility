@@ -13,6 +13,8 @@ final class SwitchViewController: DefaultViewController {
     var snapshot: Snapshot!
     var wifies = WiFi.wifies
     var isEnabled: Bool = true
+    let toggle = UISwitch()
+    let toggleAccessibility = UISwitch()
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
@@ -26,6 +28,13 @@ final class SwitchViewController: DefaultViewController {
 // MARK: Configuration
 private extension SwitchViewController {
     func configureSubViews() {
+        toggle.isOn = true
+        toggle.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
+        
+        toggleAccessibility.isOn = true
+        toggleAccessibility.isAccessibilityElement = false
+        toggleAccessibility.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
+        
         let controlCellRegistration = UICollectionView.CellRegistration(handler: controlCellRegistrationHandler)
         let listCellRegistraion = UICollectionView.CellRegistration(handler: listCellRegistrationHandler)
         

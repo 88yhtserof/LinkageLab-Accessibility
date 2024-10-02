@@ -15,6 +15,8 @@ class DefaultViewController: UIViewController, Titleable {
         }
     }
     
+    var contentDescription: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

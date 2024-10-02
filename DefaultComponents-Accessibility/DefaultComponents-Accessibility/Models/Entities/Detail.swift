@@ -53,7 +53,9 @@ extension Detail {
     
     private static let itemsForList = [
         Detail(title: "UICollectionView"),
-        Detail(title: "UITableView")
+        Detail(title: "UICollectionView with Accessibility"),
+        Detail(title: "UITableView"),
+        Detail(title: "UITableView with Accessibility")
     ]
     
     private static let itemsForPage = [

@@ -42,9 +42,13 @@ extension OutlineViewController: UICollectionViewDelegate {
         case .list:
             switch item {
             case 0:
-                vc = CollectionViewController()
+                vc = CollectionViewController(isAccessible: false)
             case 1:
-                vc = TableViewController()
+                vc = CollectionViewController(isAccessible: true)
+            case 2:
+                vc = TableViewController(isAccessible: false)
+            case 3:
+                vc = TableViewController(isAccessible: true)
             default:
                 return
             }

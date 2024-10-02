@@ -16,9 +16,9 @@ extension CollectionViewController {
         var title: String {
             switch self {
             case .pagable:
-                return "Pagable 유형"
+                return "Pagable"
             case .list:
-                return "List 유형"
+                return "List"
             }
         }
     }

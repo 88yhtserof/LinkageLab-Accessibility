@@ -9,7 +9,14 @@ import UIKit
 
 extension SwitchViewController {
     @objc func didToggleSwitch(_ sender: UISwitch) {
+        if UIAccessibility.isVoiceOverRunning, sender == toggleAccessibility {
+            sender.isOn.toggle()
+        }
         isEnabled = sender.isOn
         updateSnapshot()
+    }
+    
+    func didDoubleTapToSetWiFi() {
+        toggleAccessibility.sendActions(for: .valueChanged)
     }
 }

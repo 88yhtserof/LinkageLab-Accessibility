@@ -10,9 +10,17 @@ import UIKit
 /// View to be used as the basic structure  of a component
 class ComponentBoxView: UIView {
     
+    var actionForAccessibility: (() -> Void)?
+    
     var title: String? {
         didSet {
             titleLabel.text = title
+        }
+    }
+    
+    var axis: NSLayoutConstraint.Axis = .vertical {
+        didSet {
+            stackView.axis = axis
         }
     }
     
@@ -31,12 +39,18 @@ class ComponentBoxView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func accessibilityActivate() -> Bool {
+        guard let action = actionForAccessibility else { return false }
+        action()
+        return true
+    }
 }
 
 // MARK: Configuration
 extension ComponentBoxView {
     func configurationSubViews() {
-        stackView.axis = .vertical
+        stackView.axis = axis
         stackView.distribution = .fill
         stackView.spacing = 10
     }

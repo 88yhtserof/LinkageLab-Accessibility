@@ -14,9 +14,14 @@ final class StateViewController: DefaultWithScrollViewController {
     lazy var progressBoxView = ComponentBoxView([textField, imageView, progressView])
     lazy var switchControl = UISwitch()
     lazy var activityIndicator = UIActivityIndicatorView(style: .large)
+    lazy var switchControlWithAccessibility = UISwitch()
+    lazy var activityIndicatorWithAccessibility = UIActivityIndicatorView(style: .large)
     lazy var imageView = UIImageView()
     lazy var progressView = UIProgressView(progressViewStyle: .bar)
     lazy var textField = DefaultTextField()
+    lazy var activityStack = UIStackView()
+    lazy var activityBoxView = ComponentBoxView([activityIndicator, switchControl])
+    lazy var activityBoxViewWithAccessibility = ComponentBoxView([activityIndicatorWithAccessibility, switchControlWithAccessibility])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +40,8 @@ private extension StateViewController {
     func configureSubViews() {
         activityIndicator.hidesWhenStopped = false
         switchControl.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
+        activityIndicatorWithAccessibility.hidesWhenStopped = false
+        switchControlWithAccessibility.addTarget(self, action: #selector(didToggleSwitchWithAccessibility), for: .valueChanged)
         
         textField.placeholderText = "이미지 주소를 입력하세요."
         textField.delegate = self
@@ -43,10 +50,17 @@ private extension StateViewController {
         imageView.clipsToBounds = true
         progressView.progress = Float(0)
         progressView.backgroundColor = .systemGray6
+        
+        activityStack.axis = .horizontal
+        activityStack.distribution = .fillEqually
     }
     
     func configureConstraints() {
-        [ activityIndicator, switchControl, progressBoxView ]
+        
+        [ activityBoxView, activityBoxViewWithAccessibility ]
+            .forEach{ activityStack.addArrangedSubview($0) }
+        
+        [ activityStack, progressBoxView ]
             .forEach{
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 contentView.addSubview($0)
@@ -56,13 +70,11 @@ private extension StateViewController {
         let horizontalInset: CGFloat = 50
         
         NSLayoutConstraint.activate([
-            activityIndicator.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
-            activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            activityStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
+            activityStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
+            activityStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
             
-            switchControl.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: verticalInset),
-            switchControl.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            
-            progressBoxView.topAnchor.constraint(equalTo: switchControl.bottomAnchor, constant: verticalInset),
+            progressBoxView.topAnchor.constraint(equalTo: activityStack.bottomAnchor, constant: verticalInset),
             progressBoxView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
             progressBoxView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
             progressView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalInset),

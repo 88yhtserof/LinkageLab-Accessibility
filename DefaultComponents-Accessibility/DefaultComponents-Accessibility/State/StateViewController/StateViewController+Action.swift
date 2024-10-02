@@ -17,6 +17,15 @@ extension StateViewController {
         }
     }
     
+    @objc func didToggleSwitchWithAccessibility(_ sender: UISwitch) {
+        if switchControlWithAccessibility.isOn {
+            activityIndicatorWithAccessibility.startAnimating()
+        } else {
+            activityIndicatorWithAccessibility.stopAnimating()
+        }
+        UIAccessibility.post(notification: .layoutChanged, argument: activityIndicatorWithAccessibility)
+    }
+    
     func loadImage(_ url: URL) async throws {
         do {
             let image = try await imageLoader.loadImage(from: url, delegate: self)

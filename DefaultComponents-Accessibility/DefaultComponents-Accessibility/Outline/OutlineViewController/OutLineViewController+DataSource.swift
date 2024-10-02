@@ -26,6 +26,7 @@ extension OutlineViewController {
         configuration.text = item.title
         cell.contentConfiguration = configuration
         cell.selectedBackgroundView = UIView()
+        cell.accessories = [.disclosureIndicator()]
     }
     
     func updateSnapshot() {

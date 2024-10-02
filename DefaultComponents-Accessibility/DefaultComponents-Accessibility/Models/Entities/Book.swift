@@ -8,8 +8,24 @@
 import Foundation
 
 
-struct Book: Hashable {
+struct Book: Hashable, Identifiable {
+    var id = UUID()
+    
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     let title: String
+    var bookmark: Bool
+    
+    init(title: String, bookmark: Bool = false) {
+        self.title = title
+        self.bookmark = bookmark
+    }
 }
 
 extension Book {

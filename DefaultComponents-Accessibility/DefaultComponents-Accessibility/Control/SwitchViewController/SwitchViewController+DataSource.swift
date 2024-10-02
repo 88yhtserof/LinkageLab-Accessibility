@@ -15,11 +15,11 @@ extension SwitchViewController {
     }
     
     struct Item: Hashable {
-        let isEnabled: Bool?
-        let title: String?
+        let isAccessibility: Bool?
+        let title: String
         
-        init(isEnabled: Bool? = nil, title: String? = nil) {
-            self.isEnabled = isEnabled
+        init(isAccessibility: Bool? = nil, title: String) {
+            self.isAccessibility = isAccessibility
             self.title = title
         }
     }
@@ -27,16 +27,19 @@ extension SwitchViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func controlCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Item) {
-        let toggle = UISwitch()
-        toggle.isOn = true
-        toggle.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
-        
+    func controlCellRegistrationHandler(cell: AccessibilityListCell, indexPath: IndexPath, item: Item) {
         var configuration = UIListContentConfiguration.cell()
-        configuration.text = "Wi-Fi"
+        configuration.text = item.title
         cell.contentConfiguration = configuration
-        cell.accessories = [.customView(configuration: .init(customView: toggle, placement: .trailing()))]
+        if (item.isAccessibility ?? false) {
+            cell.isAccessibilityElement = true
+            cell.accessories = [.customView(configuration: .init(customView: toggleAccessibility, placement: .trailing()))]
+            cell.actionForAccessibility = didDoubleTapToSetWiFi
+        } else {
+            cell.accessories = [.customView(configuration: .init(customView: toggle, placement: .trailing()))]
+        }
         cell.selectedBackgroundView = UIView()
+        
     }
     
     func listCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Item) {
@@ -47,10 +50,11 @@ extension SwitchViewController {
     }
     
     func updateSnapshot() {
+        let components = [Item(isAccessibility: false, title: "WiFi"), Item(isAccessibility: true, title: "WiFi for Accessibility")]
         let items = wifies.map{ Item(title: $0.title) }
         var snapshot = Snapshot()
         snapshot.appendSections([.control])
-        snapshot.appendItems([Item(isEnabled: true)], toSection: .control)
+        snapshot.appendItems(components, toSection: .control)
         
         if isEnabled {
             snapshot.appendSections([.list])

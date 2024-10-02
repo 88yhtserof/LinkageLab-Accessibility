@@ -9,11 +9,23 @@ import UIKit
 
 extension TableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let contextualAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, handler in
+        let deleteAction = UIContextualAction(style: .destructive, title: "삭제하기") { _, _, handler in
+            let item = self.books[indexPath.item]
+            self.deleteSnapshot(at: item)
             self.books.remove(at: indexPath.item)
-            self.updateSnapshot()
             handler(true)
         }
-        return UISwipeActionsConfiguration(actions: [contextualAction])
+        let bookmarkAction = UIContextualAction(style: .normal, title: "즐겨찾기") { action, view, handler in
+            self.books[indexPath.item].bookmark.toggle()
+            let item = self.books[indexPath.item]
+            self.reconfigureSnapshot(at: item)
+            handler(true)
+            if self.isAccessible {
+                let announcement = self.books[indexPath.item].bookmark ? "즐겨찾기 설정" : "즐겨찾기 해제"
+                UIAccessibility.post(notification: .announcement, argument: announcement)
+            }
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, bookmarkAction])
     }
 }
