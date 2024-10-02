@@ -23,6 +23,11 @@
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
 		4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */; };
+		4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */; };
+		4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */; };
+		4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */; };
+		4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */; };
+		4E855F5C2CACF378008CDB3B /* DefaultListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */; };
 		4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */; };
 		4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutlineViewController.swift */; };
@@ -78,6 +83,11 @@
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateAndTimeViewController+Action.swift"; sourceTree = "<group>"; };
+		4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCollectionViewController.swift; sourceTree = "<group>"; };
+		4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+DataSource.swift"; sourceTree = "<group>"; };
+		4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+ListLayout.swift"; sourceTree = "<group>"; };
+		4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+Type.swift"; sourceTree = "<group>"; };
+		4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListCell.swift; sourceTree = "<group>"; };
 		4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4EBB491C2CA3E014006FD702 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewController+Action.swift"; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 		4E0AB04A2C9BE10200B8A89C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E855F522CACE13D008CDB3B /* DefaultCollectionViewController */,
 				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
 				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
 				4EC52AF02CA13728007E07D6 /* GridTextCell.swift */,
@@ -140,6 +151,7 @@
 				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
 				4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */,
 				4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */,
+				4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +271,17 @@
 				4E12CE522CA28AAF004DF1EA /* DateAndTimeViewController */,
 			);
 			path = DateAndTime;
+			sourceTree = "<group>";
+		};
+		4E855F522CACE13D008CDB3B /* DefaultCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */,
+				4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */,
+				4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */,
+				4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */,
+			);
+			path = DefaultCollectionViewController;
 			sourceTree = "<group>";
 		};
 		4EC51C932C911B4E00385BD0 /* State */ = {
@@ -485,6 +508,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
+				4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */,
+				4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */,
 				4EC52AE92CA0F53A007E07D6 /* StateViewController+Delegate.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
@@ -508,6 +533,7 @@
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
 				4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */,
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
+				4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
 				4EC52B0E2CA1A5A9007E07D6 /* PresentationAndMenuViewController+Action.swift in Sources */,
@@ -528,7 +554,9 @@
 				4EC52B142CA1ABC0007E07D6 /* Book.swift in Sources */,
 				4EC52AED2CA1352F007E07D6 /* CollectionViewController.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
+				4E855F5C2CACF378008CDB3B /* DefaultListCell.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
+				4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */,
 				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,

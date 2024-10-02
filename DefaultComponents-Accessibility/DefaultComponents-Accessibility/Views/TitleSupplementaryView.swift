@@ -32,7 +32,7 @@ class TitleSupplementaryView: UICollectionReusableView {
 //MARK: Configuration
 private extension TitleSupplementaryView {
     func configureSubviews() {
-        titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        titleLabel.font = .systemFont(ofSize: 25, weight: .bold)
     }
     
     func configureConstraints() {
