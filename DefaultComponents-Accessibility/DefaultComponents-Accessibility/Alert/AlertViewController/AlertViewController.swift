@@ -23,10 +23,10 @@ final class AlertViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "안내 메세지를 전달할 수 있는 경고창", view: alertForMessageButton),
-            Item(sectionID: 0, tag: .standard,description: "두개의 선택 사항 중 하나를 선택할 수 있는 경고창", view: alertForSelectButton),
-            Item(sectionID: 0, tag: .standard, description: "입력을 받을 수 있는 경고창", view: alertForViewTextField),
-            Item(sectionID: 0, tag: .standard,description: "다양한 동작을 제공할 수 있는 동작 시트", view: actionSheetForActionButton)
+            Item(sectionID: 0, tag: .standard, title: "안내 경고창", description: "안내 메세지를 전달할 수 있는 경고창", view: alertForMessageButton),
+            Item(sectionID: 0, tag: .standard, title: "선택 경고창",description: "두개의 선택 사항 중 하나를 선택할 수 있는 경고창", view: alertForSelectButton),
+            Item(sectionID: 0, tag: .standard, title: "입력 경고창", description: "입력을 받을 수 있는 경고창", view: alertForViewTextField),
+            Item(sectionID: 0, tag: .standard, title: "액션 시트",description: "다양한 동작을 제공할 수 있는 동작 시트", view: actionSheetForActionButton)
         ]
         super.sections = sections
         super.items = items

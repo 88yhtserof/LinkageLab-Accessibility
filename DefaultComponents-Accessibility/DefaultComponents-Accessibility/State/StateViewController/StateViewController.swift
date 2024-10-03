@@ -32,9 +32,9 @@ final class StateViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "작업의 진행 상황을 보여주는 컴포넌트", view: activityBoxView),
-            Item(sectionID: 0, tag: .improve, description: "작업의 진행 상황을 보여주는 컴포넌트 \n활성화 시 해당 컴포넌트로 초점 이동", view: activityBoxViewWithAccessibility),
-            Item(sectionID: 1, tag: .standard, description: "시간에 따른 작업 진행 상황을 보여주는 컴포넌트 \n이미지 주소를 입력하고 엔터를 누르십시오.", view: progressBoxView)
+            Item(sectionID: 0, tag: .standard, title: "액티비티 인디케이터", description: "작업의 진행 상황을 보여주는 컴포넌트입니다.", view: activityBoxView),
+            Item(sectionID: 0, tag: .improve, title: "액티비티 인디케이터", description: "활성화 시 해당 컴포넌트로 초점 이동합니다", view: activityBoxViewWithAccessibility),
+            Item(sectionID: 1, tag: .standard, title: "프로그래스", description: "시간에 따른 작업 진행 상황을 보여주는 컴포넌트입니다. \n이미지 주소를 입력하고 엔터를 누르십시오.", view: progressBoxView)
         ]
         super.sections = sections
         super.items = items

@@ -36,12 +36,12 @@ final class TextViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "텍스트 길이 조건이 있는 컴포넌트", view: maximumLinesBoxView),
-            Item(sectionID: 1, tag: .standard,description: "한 줄을 입력할 수 있는 텍스트 입력창", view: defaultBoxView),
-            Item(sectionID: 1, tag: .standard, description: "암호를 입력하는 텍스트 입력창", view: pwBoxView),
-            Item(sectionID: 1, tag: .standard,description: "숫자를 입력하는 텍스트 입력창", view: numberBoxView),
-            Item(sectionID: 1, tag: .standard,description: "이메일을 입력하는 텍스트 입력창", view: emailBoxView),
-            Item(sectionID: 2, tag: .standard,description: "여러 줄을 입력할 수 있는 텍스트 입력창", view: textViewBoxView)
+            Item(sectionID: 0, tag: .standard, title: "텍스트 컴포넌트", description: "텍스트 길이를 한 줄로 제한했습니다.", view: maximumLinesBoxView),
+            Item(sectionID: 1, tag: .standard, title: "텍스트 입력 컴포넌트", description: "한 줄을 입력할 수 있는 텍스트 입력창입니다.", view: defaultBoxView),
+            Item(sectionID: 1, tag: .standard, title: "암호 입력 컴포넌트", description: "암호를 입력하는 텍스트 입력창입니다.", view: pwBoxView),
+            Item(sectionID: 1, tag: .standard, title: "숫자 입력 컴포넌트", description: "숫자를 입력하는 텍스트 입력창입니다.", view: numberBoxView),
+            Item(sectionID: 1, tag: .standard, title: "이메일 입력 컴포넌트", description: "이메일을 입력하는 텍스트 입력창입니다.", view: emailBoxView),
+            Item(sectionID: 2, tag: .standard, title: "여러 줄 텍스트 입력 컴포넌트", description: "여러 줄을 입력할 수 있는 텍스트 입력창입니다.", view: textViewBoxView)
         ]
         super.sections = sections
         super.items = items

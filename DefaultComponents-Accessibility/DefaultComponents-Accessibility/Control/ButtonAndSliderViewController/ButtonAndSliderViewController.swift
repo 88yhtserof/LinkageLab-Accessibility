@@ -56,13 +56,13 @@ final class ButtonAndSliderViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "비활성화 버튼", view: disabledButton),
-            Item(sectionID: 0, tag: .standard,description: "텍스트 버튼", view: textButton),
-            Item(sectionID: 0, tag: .standard, description: "이미지 버튼", view: imageButton),
-            Item(sectionID: 0, tag: .improve,description: "이미지 설명이 있는 이미지 버튼", view: imageButtonAccessibility),
-            Item(sectionID: 0, tag: .standard,description: "이미지와 텍스트가 있는 버튼", view: textWithImageButton),
-            Item(sectionID: 0, tag: .standard, description: "제목과 부제목이 있는 버튼", view: textWithSubtitleButton),
-            Item(sectionID: 1, tag: .standard, description: "값을 조절하는 슬라이더", view: sliderBoxView)
+            Item(sectionID: 0, tag: .standard, title: "비활성화 버튼", description: "비활성화 버튼", view: disabledButton),
+            Item(sectionID: 0, tag: .standard, title: "텍스트 버튼",description: "기본적인 텍스트 버튼입니다.", view: textButton),
+            Item(sectionID: 0, tag: .standard, title: "이미지 버튼", description: "이미지로 구성된 버튼입니다.", view: imageButton),
+            Item(sectionID: 0, tag: .improve, title: "이미지 버튼",description: "이미지에 대한 설명이 제공됩니다.", view: imageButtonAccessibility),
+            Item(sectionID: 0, tag: .standard, title: "텍스트 이미지 버튼",description: "텍스트와 같은 의미의 이미지가 있는 버튼입니다.", view: textWithImageButton),
+            Item(sectionID: 0, tag: .standard, title: "제목 부제목 버튼", description: "제목과 부제목이 있는 버튼입니다.", view: textWithSubtitleButton),
+            Item(sectionID: 1, tag: .standard, title: "슬라이더", description: "값을 조절하는 슬라이더 입니다.", view: sliderBoxView)
         ]
         super.sections = sections
         super.items = items

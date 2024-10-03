@@ -26,10 +26,10 @@ final class PresentationAndMenuViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "확장 규모 조정 가능 화면", view: presentButton),
-            Item(sectionID: 0, tag: .improve, description: "확장 규모 조정 가능 화면 \n내용 및 확장 정도를 안내합니다.", view: presentButtonWithAccessibility),
-            Item(sectionID: 1, tag: .standard, description: "여러 동작을 담을 수 있는 메뉴", view: menuButton),
-            Item(sectionID: 1, tag: .improve, description: "여러 동작을 담을 수 있는 메뉴 \n ", view: menuButtonWithAccessibility)
+            Item(sectionID: 0, tag: .standard, title: "확장 규모 조정 가능 화면", description: "화면의 높이를 조정할 수 있습니다.", view: presentButton),
+            Item(sectionID: 0, tag: .improve, title: "확장 규모 조정 가능 화면", description: "화며의 높이를 조정할 수 있으며 \n내용 및 확장 정도를 음성 안내합니다.", view: presentButtonWithAccessibility),
+            Item(sectionID: 1, tag: .standard, title: "메뉴", description: "여러 동작을 담을 수 있습니다.", view: menuButton),
+            Item(sectionID: 1, tag: .improve, title: "메뉴", description: "여러 동작을 담을 수 있을 수 있으며 동작 힌트를 제공합니다. ", view: menuButtonWithAccessibility)
         ]
         super.sections = sections
         super.items = items

@@ -49,9 +49,9 @@ final class DateAndTimeViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "날짜를 선택할 수 있는 컴포넌트", view: dateBoxView),
-            Item(sectionID: 0, tag: .standard,description: "시간을 선택할 수 있는 컴포넌트", view: countdownBoxView),
-            Item(sectionID: 1, tag: .standard, description: "달력 컴포넌트", view: calendarBoxView)
+            Item(sectionID: 0, tag: .standard, title: "날짜 선택 컴포넌트", description: "버튼을 통해 날짜를 선택할 수 있는  창이 나타나 날짜를 선택할 수 있습니다.", view: dateBoxView),
+            Item(sectionID: 0, tag: .standard, title: "시간 선택 컴포넌트",description: "시간과 분을 선택할 수 있습니다.", view: countdownBoxView),
+            Item(sectionID: 1, tag: .standard, title: "달력 컴포넌트", description: "달력을 볼 수 있는 컴포넌트입니다.", view: calendarBoxView)
         ]
         super.sections = sections
         super.items = items

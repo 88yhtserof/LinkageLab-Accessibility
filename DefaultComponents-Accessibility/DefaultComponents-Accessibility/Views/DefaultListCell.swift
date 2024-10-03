@@ -10,7 +10,8 @@ import UIKit
 class DefaultListCell: UICollectionViewCell {
     
     lazy var view = UIView()
-    lazy var textLabel = UILabel()
+    lazy var titleLabel = UILabel()
+    lazy var subtitleLabel = UILabel()
     lazy var tagLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -28,24 +29,29 @@ class DefaultListCell: UICollectionViewCell {
 // MARK: Configuration
 private extension DefaultListCell {
     func configureConstraints() {
-        textLabel.font = .systemFont(ofSize: 18, weight: .regular)
-        textLabel.numberOfLines = 0
-        tagLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+        subtitleLabel.font = .systemFont(ofSize: 18, weight: .regular)
+        subtitleLabel.numberOfLines = 0
+        tagLabel.font = .systemFont(ofSize: 16, weight: .regular)
         tagLabel.backgroundColor = .yellow
         
-        addSubviews([ tagLabel, textLabel, view ])
+        addSubviews([ titleLabel, tagLabel, subtitleLabel, view ])
         
         NSLayoutConstraint.activate([
-            tagLabel.topAnchor.constraint(equalTo: topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            
+            tagLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             tagLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             
-            textLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            textLabel.topAnchor.constraint(equalTo: tagLabel.bottomAnchor, constant: 5),
+            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            subtitleLabel.topAnchor.constraint(equalTo: tagLabel.bottomAnchor, constant: 5),
             
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
-            view.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 15),
+            view.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 15),
             view.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
