@@ -7,24 +7,40 @@
 
 import UIKit
 
-final class PresentationAndMenuViewController: DefaultViewController {
+final class PresentationAndMenuViewController: DefaultCollectionViewController {
     
-    var isAccessible: Bool!
+    var isPresentAccessible: Bool!
     
-    lazy var presentBoxView = ComponentBoxView([presentButton])
     lazy var presentButton = UIButton()
-    lazy var presentBoxViewWithAccessibility = ComponentBoxView([presentButtonWithAccessibility])
     lazy var presentButtonWithAccessibility = UIButton()
-    private lazy var menuBoxView = ComponentBoxView([menuButton])
     private lazy var menuButton = UIButton()
-    lazy var menuBoxViewWithAccessibility = ComponentBoxView([menuButtonWithAccessibility])
     lazy var menuButtonWithAccessibility = UIButton()
-    private lazy var stackView = UIStackView()
+    
+    init() {
+        super.init(isAccessible: true)
+        
+        configureSubviews()
+        let sections = [
+            "PresentationContoller",
+            "UIMenu"
+        ]
+        
+        let items = [
+            Item(sectionID: 0, tag: .standard, description: "확장 규모 조정 가능 화면", view: presentButton),
+            Item(sectionID: 0, tag: .improve, description: "확장 규모 조정 가능 화면 \n내용 및 확장 정도를 안내합니다.", view: presentButtonWithAccessibility),
+            Item(sectionID: 1, tag: .standard, description: "여러 동작을 담을 수 있는 메뉴", view: menuButton),
+            Item(sectionID: 1, tag: .improve, description: "여러 동작을 담을 수 있는 메뉴 \n ", view: menuButtonWithAccessibility)
+        ]
+        super.sections = sections
+        super.items = items
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubviews()
-        configureConstraints()
     }
 }
 
@@ -33,12 +49,11 @@ extension PresentationAndMenuViewController {
     func configureSubviews() {
         var configForPresent = UIButton.Configuration.filled()
         configForPresent.title = "책 목록 확인"
-        configForPresent.subtitle = "PresentationController 시연"
         configForPresent.titleAlignment = .center
         presentButton.configuration = configForPresent
         presentButton.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
         
-        configForPresent.title = "책 목록 확인 with Accessibility"
+        configForPresent.title = "책 목록 확인"
         presentButtonWithAccessibility.configuration = configForPresent
         presentButtonWithAccessibility.addTarget(self, action: #selector(didTapPresentButton), for: .touchUpInside)
         
@@ -46,35 +61,14 @@ extension PresentationAndMenuViewController {
         let menu = UIMenu(title: "UIMenu", children: items)
         var configForeMenu = UIButton.Configuration.filled()
         configForeMenu.title = "더보기"
-        configForeMenu.subtitle = "UIMenu 시연"
         configForeMenu.titleAlignment = .center
         menuButton.menu = menu
         menuButton.configuration = configForeMenu
         
         let itemsWithAccessibility = [ changeBackgroundAction(menuButtonWithAccessibility), moreMenu(menuButtonWithAccessibility) ]
         let menuWithAccessibility = UIMenu(title: "UIMenu", children: itemsWithAccessibility)
-        configForeMenu.title = "더보기 with Accessibility"
         menuButtonWithAccessibility.menu = menuWithAccessibility
         menuButtonWithAccessibility.configuration = configForeMenu
         menuButtonWithAccessibility.accessibilityHint = "동작을 활성화하려면 이중탭하고 누른 채로 있으십시오"
-        
-        stackView.axis = .vertical
-        stackView.spacing = 10
-    }
-    
-    func configureConstraints() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
-        
-        [ presentBoxView, presentBoxViewWithAccessibility, menuBoxView, menuButtonWithAccessibility ]
-            .forEach{ stackView.addArrangedSubview($0) }
-        
-        let horizontalInset: CGFloat = 40
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInset)
-        ])
     }
 }
