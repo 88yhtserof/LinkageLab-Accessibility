@@ -29,6 +29,7 @@ class DefaultListCell: UICollectionViewCell {
 private extension DefaultListCell {
     func configureConstraints() {
         textLabel.font = .systemFont(ofSize: 18, weight: .regular)
+        textLabel.numberOfLines = 0
         tagLabel.font = .systemFont(ofSize: 18, weight: .bold)
         tagLabel.backgroundColor = .yellow
         
