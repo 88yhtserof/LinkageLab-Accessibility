@@ -67,7 +67,7 @@ extension TableViewController {
             cell.contentConfiguration = config
             if self.isAccessible {
                 cell.accessibilityHint = "동작을 사용하려면 한 손가락으로 쓸어내리거나 쓸어올리십시오"
-                cell.accessibilityValue = item.bookmark ? "즐겨찾기" : nil
+                cell.accessibilityValue = item.bookmark ? "즐겨찾기 설정됨" : "즐겨찾기 해제됨"
             }
             return cell
         })
