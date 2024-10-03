@@ -16,6 +16,7 @@ class DefaultListCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureConstraints()
+        contentView.isUserInteractionEnabled = false
     }
     
     required init?(coder: NSCoder) {
@@ -27,8 +28,8 @@ class DefaultListCell: UICollectionViewCell {
 // MARK: Configuration
 private extension DefaultListCell {
     func configureConstraints() {
-        textLabel.font = .systemFont(ofSize: 20, weight: .regular)
-        tagLabel.font = .systemFont(ofSize: 20, weight: .regular)
+        textLabel.font = .systemFont(ofSize: 18, weight: .regular)
+        tagLabel.font = .systemFont(ofSize: 18, weight: .bold)
         tagLabel.backgroundColor = .yellow
         
         addSubviews([ tagLabel, textLabel, view ])
@@ -39,7 +40,7 @@ private extension DefaultListCell {
             
             textLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             textLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            textLabel.topAnchor.constraint(equalTo: tagLabel.bottomAnchor),
+            textLabel.topAnchor.constraint(equalTo: tagLabel.bottomAnchor, constant: 5),
             
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
