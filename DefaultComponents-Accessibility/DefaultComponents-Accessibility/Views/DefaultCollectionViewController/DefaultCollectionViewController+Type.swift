@@ -17,9 +17,10 @@ extension DefaultCollectionViewController {
     }
     
     enum Accessibility: String {
-        case standard = "기본 컴포넌트"
-        case improve = "개선 컴포넌트"
-        case custom = "커스텀 컴포넌트"
+        // More angle, More Custom
+        case standard = "● 기본 컴포넌트"
+        case improve = "▲ 개선 컴포넌트"
+        case custom = "⭑ 커스텀 컴포넌트"
     }
     
     enum Supplementary: String {
