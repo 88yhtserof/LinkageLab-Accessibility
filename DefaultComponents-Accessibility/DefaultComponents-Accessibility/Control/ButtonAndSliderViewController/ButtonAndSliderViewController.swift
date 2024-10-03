@@ -103,7 +103,7 @@ private extension ButtonAndSliderViewController {
         
         imageButtonAccessibility.configuration = imageButtonConfiguration
         imageButtonAccessibility.clipsToBounds = true
-        imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구 이미지" : "꺼진 전구 이미지"
+        imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구" : "꺼진 전구"
         imageButtonAccessibility.addTarget(self, action: #selector(didTapLightButton), for: .touchUpInside)
         
         var textWithImageConfiguration = UIButton.Configuration.filled()
