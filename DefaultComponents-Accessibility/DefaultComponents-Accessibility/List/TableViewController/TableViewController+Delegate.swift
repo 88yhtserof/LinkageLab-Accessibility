@@ -7,8 +7,8 @@
 
 import UIKit
 
-extension TableViewController {
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+extension TableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "삭제하기") { _, _, handler in
             let item = self.books[indexPath.item]
             self.deleteSnapshot(at: item)
@@ -19,7 +19,7 @@ extension TableViewController {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
-    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let bookmarkAction = UIContextualAction(style: .normal, title: "즐겨찾기") { action, view, handler in
             self.books[indexPath.item].bookmark.toggle()
             let item = self.books[indexPath.item]
