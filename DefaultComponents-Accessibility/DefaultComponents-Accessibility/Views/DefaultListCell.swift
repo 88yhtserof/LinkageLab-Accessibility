@@ -7,7 +7,9 @@
 
 import UIKit
 
-class DefaultListCell: UICollectionViewCell {
+class DefaultListCell: UICollectionViewCell, Identifiable {
+    
+    var id: UUID?
     
     lazy var view = UIView()
     lazy var titleLabel = UILabel()
@@ -22,6 +24,16 @@ class DefaultListCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        view.subviews
+            .forEach{ $0.removeFromSuperview() }
+        titleLabel.text = nil
+        subtitleLabel.text = nil
+        tagLabel.text = nil
     }
 
 }

@@ -10,8 +10,10 @@ import UIKit
 //MARK: Types for DataSource
 extension DefaultCollectionViewController {
     struct Item: Hashable {
+        var id = UUID()
         let sectionID: Int
         let tag: Accessibility
+        let title: String
         let description: String
         let view: UIView
     }

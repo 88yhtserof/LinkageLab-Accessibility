@@ -13,7 +13,10 @@ extension DefaultCollectionViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<String, Item>
     
     func cellRegistrationHandler(cell: DefaultListCell, indexPath: IndexPath, item: Item) {
-        cell.textLabel.text = item.description
+        cell.id = item.id
+        guard cell.id == item.id else { return }
+        cell.titleLabel.text = item.title
+        cell.subtitleLabel.text = item.description
         cell.selectedBackgroundView = UIView()
         cell.view.addSubview(item.view)
         cell.tagLabel.text = item.tag.rawValue
