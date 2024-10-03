@@ -38,7 +38,6 @@ final class DateAndTimeViewController: DefaultCollectionViewController {
     private lazy var countdownPicker = UIDatePicker()
     private lazy var calendarBoxView = ComponentBoxView([calendarView])
     lazy var calendarView = UICalendarView()
-    private lazy var stackView = UIStackView()
     
     init() {
         super.init(isAccessible: true)
@@ -92,9 +91,5 @@ private extension DateAndTimeViewController {
         let dateSelection = UICalendarSelectionSingleDate(delegate: self)
         calendarView.selectionBehavior = dateSelection
         calendarView.delegate = self
-        
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 35
     }
 }

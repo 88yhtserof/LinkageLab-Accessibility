@@ -9,7 +9,6 @@ import UIKit
 
 final class AlertViewController: DefaultCollectionViewController {
     
-    lazy var stackView = UIStackView()
     lazy var alertForMessageButton = UIButton()
     lazy var alertForSelectButton = UIButton()
     lazy var alertForViewTextField = UIButton()
@@ -45,10 +44,6 @@ final class AlertViewController: DefaultCollectionViewController {
 // MARK: Configuration
 private extension AlertViewController{
     func configureSubViews() {
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.spacing = 20
-        
         var configuration = UIButton.Configuration.filled()
         configuration.baseBackgroundColor = .blue
         
