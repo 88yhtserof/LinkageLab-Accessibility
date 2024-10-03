@@ -72,32 +72,4 @@ private extension StateViewController {
         progressView.progress = Float(0)
         progressView.backgroundColor = .systemGray6
     }
-//    
-//    func configureConstraints() {
-//        
-//        [ activityBoxView, activityBoxViewWithAccessibility ]
-//            .forEach{ activityStack.addArrangedSubview($0) }
-//        
-//        [ activityStack, progressBoxView ]
-//            .forEach{
-//                $0.translatesAutoresizingMaskIntoConstraints = false
-//                contentView.addSubview($0)
-//            }
-//        
-//        let verticalInset: CGFloat = 50
-//        let horizontalInset: CGFloat = 50
-//        
-//        NSLayoutConstraint.activate([
-//            activityStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
-//            activityStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-//            activityStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-//            
-//            progressBoxView.topAnchor.constraint(equalTo: activityStack.bottomAnchor, constant: verticalInset),
-//            progressBoxView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-//            progressBoxView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-//            progressView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalInset),
-//            
-//            imageView.heightAnchor.constraint(equalToConstant: CGFloat(200))
-//        ])
-//    }
 }
