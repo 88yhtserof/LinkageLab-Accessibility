@@ -56,13 +56,13 @@ final class ButtonAndSliderViewController: DefaultCollectionViewController {
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, description: "비활성화 버튼입니다.", view: disabledButton),
-            Item(sectionID: 0, tag: .standard,description: "텍스트 버튼입니다.", view: textButton),
-            Item(sectionID: 0, tag: .standard, description: "이미지 버튼입니다.", view: imageButton),
-            Item(sectionID: 0, tag: .improve,description: "이미지 설명이 있는 이미지 버튼입니다.", view: imageButtonAccessibility),
-            Item(sectionID: 0, tag: .standard,description: "이미지와 텍스트가 있는 버튼입니다.", view: textWithImageButton),
-            Item(sectionID: 0, tag: .standard, description: "제목과 부제목이 있는 버튼입니다.", view: textWithSubtitleButton),
-            Item(sectionID: 1, tag: .standard, description: "값을 조절하는 슬라이더입니다.", view: sliderBoxView)
+            Item(sectionID: 0, tag: .standard, description: "비활성화 버튼", view: disabledButton),
+            Item(sectionID: 0, tag: .standard,description: "텍스트 버튼", view: textButton),
+            Item(sectionID: 0, tag: .standard, description: "이미지 버튼", view: imageButton),
+            Item(sectionID: 0, tag: .improve,description: "이미지 설명이 있는 이미지 버튼", view: imageButtonAccessibility),
+            Item(sectionID: 0, tag: .standard,description: "이미지와 텍스트가 있는 버튼", view: textWithImageButton),
+            Item(sectionID: 0, tag: .standard, description: "제목과 부제목이 있는 버튼", view: textWithSubtitleButton),
+            Item(sectionID: 1, tag: .standard, description: "값을 조절하는 슬라이더", view: sliderBoxView)
         ]
         super.sections = sections
         super.items = items
