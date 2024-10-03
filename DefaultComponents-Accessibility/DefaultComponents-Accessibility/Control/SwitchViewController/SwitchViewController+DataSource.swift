@@ -33,6 +33,7 @@ extension SwitchViewController {
         cell.contentConfiguration = configuration
         if (item.isAccessibility ?? false) {
             cell.isAccessibilityElement = true
+            cell.accessibilityValue = toggleAccessibility.isOn ? "켬" : "끔"
             cell.accessories = [.customView(configuration: .init(customView: toggleAccessibility, placement: .trailing()))]
             cell.actionForAccessibility = didDoubleTapToSetWiFi
         } else {
@@ -50,7 +51,6 @@ extension SwitchViewController {
     }
     
     func updateSnapshot() {
-        let components = [Item(isAccessibility: false, title: "WiFi"), Item(isAccessibility: true, title: "WiFi for Accessibility")]
         let items = wifies.map{ Item(title: $0.title) }
         var snapshot = Snapshot()
         snapshot.appendSections([.control])
