@@ -12,7 +12,7 @@ extension DefaultCollectionViewController {
     
     func layout() -> UICollectionViewLayout {
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
-        configuration.interSectionSpacing = 50
+        configuration.interSectionSpacing = 60
         return UICollectionViewCompositionalLayout(sectionProvider: sectionProviderHandler, configuration: configuration)
     }
     
@@ -21,13 +21,13 @@ extension DefaultCollectionViewController {
     }
     
     func sectionForList(_ layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(1.0))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(400))
         
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = 30
+        section.interGroupSpacing = 40
         section.boundarySupplementaryItems = [titleBoundarySupplementaryItem()]
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
         

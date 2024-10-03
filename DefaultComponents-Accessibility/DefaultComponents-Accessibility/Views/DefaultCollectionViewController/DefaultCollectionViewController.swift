@@ -39,6 +39,7 @@ class DefaultCollectionViewController: DefaultViewController {
 // MARK: Configuration
 private extension DefaultCollectionViewController {
     func configureSubviews() {
+        collectionView.allowsSelection = false
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
     }
     
