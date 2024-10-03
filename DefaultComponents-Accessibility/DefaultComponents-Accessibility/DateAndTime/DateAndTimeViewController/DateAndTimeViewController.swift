@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DateAndTimeViewController: DefaultWithScrollViewController {
+final class DateAndTimeViewController: DefaultCollectionViewController {
     
     var textForDataPicker: String? {
         didSet {
@@ -40,10 +40,30 @@ final class DateAndTimeViewController: DefaultWithScrollViewController {
     lazy var calendarView = UICalendarView()
     private lazy var stackView = UIStackView()
     
+    init() {
+        super.init(isAccessible: true)
+        
+        configureSubViews()
+        let sections = [
+            "UIDatePicker",
+            "UICalendar"
+        ]
+        
+        let items = [
+            Item(sectionID: 0, tag: .standard, description: "날짜를 선택할 수 있는 컴포넌트", view: dateBoxView),
+            Item(sectionID: 0, tag: .standard,description: "시간을 선택할 수 있는 컴포넌트", view: countdownBoxView),
+            Item(sectionID: 1, tag: .standard, description: "달력 컴포넌트", view: calendarBoxView)
+        ]
+        super.sections = sections
+        super.items = items
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubViews()
-        configureConstraints()
     }
 }
 
@@ -69,10 +89,6 @@ private extension DateAndTimeViewController {
         countdownPicker.datePickerMode = .countDownTimer
         countdownPicker.addTarget(self, action: #selector(didSelectCountdown), for: .valueChanged)
         
-        dateBoxView.title = "날짜 선택 컴포넌트"
-        countdownBoxView.title = "시간 선택 컴포넌트"
-        calendarBoxView.title = "달력 컴포넌트"
-        
         let dateSelection = UICalendarSelectionSingleDate(delegate: self)
         calendarView.selectionBehavior = dateSelection
         calendarView.delegate = self
@@ -80,24 +96,5 @@ private extension DateAndTimeViewController {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.spacing = 35
-    }
-    
-    func configureConstraints() {
-        [ dateBoxView, countdownBoxView, calendarBoxView]
-            .forEach{
-                stackView.addArrangedSubview($0)
-            }
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(stackView)
-        
-        let verticalInset: CGFloat = 50
-        let horizontalInset: CGFloat = 10
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
     }
 }
