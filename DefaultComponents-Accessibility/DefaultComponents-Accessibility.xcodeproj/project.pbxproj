@@ -19,6 +19,7 @@
 		4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */; };
 		4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4A2CA2482F004DF1EA /* Titleable.swift */; };
 		4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */; };
+		4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BC4F62CAF7244001A29D5 /* SearchViewController+Updating.swift */; };
 		4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
@@ -79,6 +80,7 @@
 		4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		4E12CE4A2CA2482F004DF1EA /* Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titleable.swift; sourceTree = "<group>"; };
 		4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWithScrollViewController.swift; sourceTree = "<group>"; };
+		4E1BC4F62CAF7244001A29D5 /* SearchViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Updating.swift"; sourceTree = "<group>"; };
 		4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonAndSliderViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				4E0AB04F2C9BEF2800B8A89C /* SearchViewController.swift */,
 				4E0AB0512C9BF02500B8A89C /* SearchViewController+DataSource.swift */,
 				4E0AB0532C9BF19C00B8A89C /* SearchViewController+Delegate.swift */,
+				4E1BC4F62CAF7244001A29D5 /* SearchViewController+Updating.swift */,
 			);
 			path = SearchViewController;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */,
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
 				4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */,
+				4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
 				4EC52B0E2CA1A5A9007E07D6 /* PresentationAndMenuViewController+Action.swift in Sources */,
