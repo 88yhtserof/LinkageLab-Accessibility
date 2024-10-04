@@ -23,6 +23,13 @@ final class SearchViewController: DefaultViewController {
         configureView()
         configureConstraints()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Task {
+            try? await UIAccessibility.setFocus(to: searchController.searchBar.searchTextField)
+        }
+    }
 }
 
 // MARK: Configuration
