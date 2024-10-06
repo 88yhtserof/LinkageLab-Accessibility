@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
+		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0925182CA4EC5D00474A16 /* WiFi.swift */; };
 		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
+		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		4E0925182CA4EC5D00474A16 /* WiFi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFi.swift; sourceTree = "<group>"; };
 		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			children = (
 				4EC52B082CA16D95007E07D6 /* PageViewController.swift */,
 				4EC52B052CA16CF5007E07D6 /* PageViewController+DataSource.swift */,
+				14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */,
 				4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */,
+				14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */,
 				14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */,
 				4EC52AF52CA13925007E07D6 /* View+Constraints.swift in Sources */,
 				4EC52AE32C9D19D8007E07D6 /* SwitchViewController+Action.swift in Sources */,

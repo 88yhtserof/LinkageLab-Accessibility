@@ -53,7 +53,7 @@ extension OutlineViewController: UICollectionViewDelegate {
                 return
             }
         case .page:
-            vc = PageViewController()
+            vc = PageViewController(isAccessible: true)
         case .alert:
             vc = AlertViewController()
         case .sheet:

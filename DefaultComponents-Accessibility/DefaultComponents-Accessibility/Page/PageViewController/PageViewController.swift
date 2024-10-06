@@ -7,51 +7,46 @@
 
 import UIKit
 
-final class PageViewController: UIPageViewController, Titleable {
-    
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
-    var contentDescription: String?
+final class PageViewController: DefaultCollectionViewController {
     
     var pages: [UIViewController] = []
     
-    lazy var pageControl = UIPageControl()
-    lazy var vc1 = TextViewController()
-    lazy var vc2 = ButtonAndSliderViewController()
-    lazy var vc3 = DateAndTimeViewController()
-    
-    init() {
-        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    lazy var pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+    lazy var pageView = UIView()
+    lazy var vc1 = PageDetailViewController(backgroundColor: .systemYellow, text: "첫 번째 페이지")
+    lazy var vc2 = PageDetailViewController(backgroundColor: .systemBlue, text: "두 번째 페이지")
+    lazy var vc3 = PageDetailViewController(backgroundColor: .systemMint, text: "세 번째 페이지")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        configureConstraints()
+        pageView.isAccessibilityElement = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        pageView.isAccessibilityElement = false
     }
 }
 
 extension PageViewController {
     func configureView() {
         pages = [ vc1, vc2, vc3 ]
-        setViewControllers([pages[0]], direction: .forward, animated: true)
-        dataSource = self
+        pageViewController.view.backgroundColor = .black
+        pageViewController.setViewControllers([pages[0]], direction: .forward, animated: true)
+        pageViewController.dataSource = self
     }
     
     func configureConstraints() {
-        view.addSubview(pageControl)
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubviews([pageView])
+        pageView.addPinnedSubview(pageViewController.view, height: nil)
         
         NSLayoutConstraint.activate([
-            pageControl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            pageControl.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            pageControl.widthAnchor.constraint(equalToConstant: 40)
+            pageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            pageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            pageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            pageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
