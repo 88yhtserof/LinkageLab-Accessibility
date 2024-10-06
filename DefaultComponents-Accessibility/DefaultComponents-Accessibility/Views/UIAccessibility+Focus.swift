@@ -12,7 +12,7 @@ extension UIAccessibility {
     static func setFocus(to object: Any) async throws {
         guard UIAccessibility.isVoiceOverRunning else { return }
         
-        try await Task.sleep(for: .seconds(0.08))
+        try await Task.sleep(for: .seconds(0.03))
         UIAccessibility.post(notification: .layoutChanged, argument: object)
     }
 }
