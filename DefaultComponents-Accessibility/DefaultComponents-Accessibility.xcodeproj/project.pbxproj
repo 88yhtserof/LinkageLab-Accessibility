@@ -13,6 +13,8 @@
 		14F7FC402CB2C8D300F3FA61 /* SearchViewControllerWithAccessibility+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3F2CB2C8D300F3FA61 /* SearchViewControllerWithAccessibility+DataSource.swift */; };
 		14F7FC422CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC412CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift */; };
 		14F7FC442CB2C8EC00F3FA61 /* SearchViewControllerWithAccessibility+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC432CB2C8EC00F3FA61 /* SearchViewControllerWithAccessibility+Updating.swift */; };
+		14F7FC472CB2CF6C00F3FA61 /* PageViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC462CB2CF6C00F3FA61 /* PageViewControllerWithAccessibility.swift */; };
+		14F7FC492CB2D28100F3FA61 /* PageViewControllerWithAccessibility+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC482CB2D28100F3FA61 /* PageViewControllerWithAccessibility+DataSource.swift */; };
 		4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0925182CA4EC5D00474A16 /* WiFi.swift */; };
 		4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB03E2C9BAB9700B8A89C /* Detail.swift */; };
 		4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */; };
@@ -80,6 +82,8 @@
 		14F7FC3F2CB2C8D300F3FA61 /* SearchViewControllerWithAccessibility+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewControllerWithAccessibility+DataSource.swift"; sourceTree = "<group>"; };
 		14F7FC412CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewControllerWithAccessibility+Delegate.swift"; sourceTree = "<group>"; };
 		14F7FC432CB2C8EC00F3FA61 /* SearchViewControllerWithAccessibility+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewControllerWithAccessibility+Updating.swift"; sourceTree = "<group>"; };
+		14F7FC462CB2CF6C00F3FA61 /* PageViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
+		14F7FC482CB2D28100F3FA61 /* PageViewControllerWithAccessibility+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageViewControllerWithAccessibility+DataSource.swift"; sourceTree = "<group>"; };
 		4E0925182CA4EC5D00474A16 /* WiFi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFi.swift; sourceTree = "<group>"; };
 		4E0AB03E2C9BAB9700B8A89C /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBoxView.swift; sourceTree = "<group>"; };
@@ -165,6 +169,15 @@
 			path = SearchViewControllerWithAccessibility;
 			sourceTree = "<group>";
 		};
+		14F7FC452CB2CF3C00F3FA61 /* PageViewControllerWithAccessibility */ = {
+			isa = PBXGroup;
+			children = (
+				14F7FC462CB2CF6C00F3FA61 /* PageViewControllerWithAccessibility.swift */,
+				14F7FC482CB2D28100F3FA61 /* PageViewControllerWithAccessibility+DataSource.swift */,
+			);
+			path = PageViewControllerWithAccessibility;
+			sourceTree = "<group>";
+		};
 		4E0AB04A2C9BE10200B8A89C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				4EC52B0A2CA16DB8007E07D6 /* PageViewController */,
+				14F7FC452CB2CF3C00F3FA61 /* PageViewControllerWithAccessibility */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -541,6 +555,7 @@
 				4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */,
 				4EC52AE92CA0F53A007E07D6 /* StateViewController+Delegate.swift in Sources */,
 				14F7FC402CB2C8D300F3FA61 /* SearchViewControllerWithAccessibility+DataSource.swift in Sources */,
+				14F7FC492CB2D28100F3FA61 /* PageViewControllerWithAccessibility+DataSource.swift in Sources */,
 				4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */,
 				4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */,
 				4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */,
@@ -588,6 +603,7 @@
 				4EC52AFC2CA144D5007E07D6 /* TableViewController.swift in Sources */,
 				4EC52B142CA1ABC0007E07D6 /* Book.swift in Sources */,
 				4EC52AED2CA1352F007E07D6 /* CollectionViewController.swift in Sources */,
+				14F7FC472CB2CF6C00F3FA61 /* PageViewControllerWithAccessibility.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4E855F5C2CACF378008CDB3B /* DefaultListCell.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
