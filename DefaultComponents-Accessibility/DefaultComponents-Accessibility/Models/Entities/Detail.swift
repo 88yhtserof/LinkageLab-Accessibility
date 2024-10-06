@@ -35,7 +35,8 @@ extension Detail {
     
     private static let itemsForText = [
         Detail(title: "UILabel / UITextField / UITextView"),
-        Detail(title: "UISearchView")
+        Detail(title: "UISearchView"),
+        Detail(title: "UISearchView with Accessibility")
     ]
     
     private static let itemsForControl = [

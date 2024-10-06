@@ -9,6 +9,8 @@ import UIKit
 
 class DefaultViewController: UIViewController, Titleable {
     
+    var isSettingFocus: Bool = true
+    
     var navigationTitle: String? {
         didSet {
             navigationItem.title = navigationTitle
@@ -30,7 +32,7 @@ class DefaultViewController: UIViewController, Titleable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if UIAccessibility.isVoiceOverRunning {
+        if UIAccessibility.isVoiceOverRunning, isSettingFocus {
             navigationItem.leftBarButtonItem?.accessibilityLabel = "뒤로 가기"
             Task {
                 try? await UIAccessibility.setFocus(to: navigationItem.leftBarButtonItem)
