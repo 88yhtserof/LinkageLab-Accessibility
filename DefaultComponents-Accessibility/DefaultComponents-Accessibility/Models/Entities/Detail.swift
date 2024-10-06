@@ -13,6 +13,13 @@ struct Detail: Hashable {
     enum SectionCase: Int {
         case text, control, state, dateAndTime, list, page, alert, sheet
     }
+    
+    enum Accessibility: String {
+        // More angle, More Custom
+        case standard = "● 기본 컴포넌트"
+        case improve = "▲ 개선 컴포넌트"
+        case custom = "⭑ 커스텀 컴포넌트"
+    }
 }
 
 extension Detail {
@@ -35,8 +42,8 @@ extension Detail {
     
     private static let itemsForText = [
         Detail(title: "UILabel / UITextField / UITextView"),
-        Detail(title: "UISearchView"),
-        Detail(title: "UISearchView with Accessibility")
+        Detail(title: "UISearchView ● 기본 컴포넌트"),
+        Detail(title: "UISearchView ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForControl = [
@@ -53,14 +60,15 @@ extension Detail {
     ]
     
     private static let itemsForList = [
-        Detail(title: "UICollectionView"),
-        Detail(title: "UICollectionView with Accessibility"),
-        Detail(title: "UITableView"),
-        Detail(title: "UITableView with Accessibility")
+        Detail(title: "UICollectionView ● 기본 컴포넌트"),
+        Detail(title: "UICollectionView ▲ 개선 컴포넌트"),
+        Detail(title: "UITableView ● 기본 컴포넌트"),
+        Detail(title: "UITableView ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForPage = [
-        Detail(title: "UIPageViewController / UIPageControl")
+        Detail(title: "UIPageViewController ● 기본 컴포넌트"),
+        Detail(title: "UIPageViewController ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForAlert = [

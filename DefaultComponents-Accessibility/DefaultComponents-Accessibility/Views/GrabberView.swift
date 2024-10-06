@@ -29,7 +29,7 @@ final class GrabberView: UIControl {
         addSubviews([grabber])
         
         NSLayoutConstraint.activate([
-            widthAnchor.constraint(equalToConstant: 100),
+            widthAnchor.constraint(equalToConstant: 300),
             heightAnchor.constraint(equalToConstant: 15),
             
             grabber.widthAnchor.constraint(equalToConstant: 30),

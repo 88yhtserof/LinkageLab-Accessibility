@@ -26,7 +26,7 @@ final class ButtonAndSliderViewController: DefaultCollectionViewController {
         didSet {
             imageButtonConfiguration.image = isLightOnForAccessibility ? imageLightOn : imageLightOff
             imageButtonAccessibility.configuration = imageButtonConfiguration
-            imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구 이미지" : "꺼진 전구 이미지"
+            imageButtonAccessibility.accessibilityLabel = isLightOnForAccessibility ? "켜진 전구" : "꺼진 전구"
         }
     }
     
