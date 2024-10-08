@@ -40,6 +40,7 @@ class ComponentBoxView: UIView {
         super.init(frame: .zero)
         configurationSubViews()
         configureConstraints()
+        setPreferredFontyStyle()
     }
     
     required init?(coder: NSCoder) {
@@ -59,8 +60,6 @@ extension ComponentBoxView {
         stackView.axis = axis
         stackView.distribution = .fill
         stackView.spacing = 10
-        
-        titleLabel.font = .systemFont(ofSize: 20, weight: .regular)
     }
     
     func configureConstraints() {
@@ -85,5 +84,11 @@ extension ComponentBoxView {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -horizontalInset),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+}
+
+extension ComponentBoxView: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
     }
 }

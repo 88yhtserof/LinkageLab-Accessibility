@@ -19,6 +19,7 @@ class DefaultListCell: UICollectionViewCell, Identifiable {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureConstraints()
+        setPreferredFontyStyle()
         contentView.isUserInteractionEnabled = false
     }
     
@@ -41,10 +42,7 @@ class DefaultListCell: UICollectionViewCell, Identifiable {
 // MARK: Configuration
 private extension DefaultListCell {
     func configureConstraints() {
-        titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
-        subtitleLabel.font = .systemFont(ofSize: 18, weight: .regular)
         subtitleLabel.numberOfLines = 0
-        tagLabel.font = .systemFont(ofSize: 16, weight: .regular)
         tagLabel.backgroundColor = .yellow
         
         addSubviews([ titleLabel, tagLabel, subtitleLabel, view ])
@@ -66,5 +64,13 @@ private extension DefaultListCell {
             view.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 15),
             view.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+}
+
+extension DefaultListCell: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        tagLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .subheadline)
     }
 }
