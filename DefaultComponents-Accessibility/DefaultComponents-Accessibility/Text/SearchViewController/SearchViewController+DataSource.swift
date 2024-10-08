@@ -25,6 +25,13 @@ extension SearchViewController {
         dataSource.apply(snapshot)
     }
     
+    func emptySnashot() {
+        snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems([])
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
     func filteredSnapshot(searchWord word: String) {
         let filteredItems = samples.filter{ $0.title.contains(word) }
         snapshot = Snapshot()
