@@ -32,6 +32,7 @@
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
 		4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */; };
+		4E612E532CB4BB09004FAFA0 /* DynamicTypeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E612E522CB4BB09004FAFA0 /* DynamicTypeable.swift */; };
 		4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */; };
 		4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */; };
 		4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */; };
@@ -101,6 +102,7 @@
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateAndTimeViewController+Action.swift"; sourceTree = "<group>"; };
+		4E612E522CB4BB09004FAFA0 /* DynamicTypeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeable.swift; sourceTree = "<group>"; };
 		4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCollectionViewController.swift; sourceTree = "<group>"; };
 		4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+ListLayout.swift"; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				4E12CE4A2CA2482F004DF1EA /* Titleable.swift */,
+				4E612E522CB4BB09004FAFA0 /* DynamicTypeable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				4EC52B092CA16D95007E07D6 /* PageViewController.swift in Sources */,
 				4EC52AFC2CA144D5007E07D6 /* TableViewController.swift in Sources */,
 				4EC52B142CA1ABC0007E07D6 /* Book.swift in Sources */,
+				4E612E532CB4BB09004FAFA0 /* DynamicTypeable.swift in Sources */,
 				4EC52AED2CA1352F007E07D6 /* CollectionViewController.swift in Sources */,
 				14F7FC472CB2CF6C00F3FA61 /* PageViewControllerWithAccessibility.swift in Sources */,
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
