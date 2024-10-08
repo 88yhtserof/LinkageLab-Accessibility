@@ -36,6 +36,7 @@ class GridTextCell: UICollectionViewCell, Identifiable {
         super.init(frame: frame)
         
         configureSubviews()
+        setPreferredFontyStyle()
         configureContentView()
         configureConstraints()
     }
@@ -87,5 +88,12 @@ private extension GridTextCell {
             secondaryTextLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             secondaryTextLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
+    }
+}
+
+extension GridTextCell: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        textLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        secondaryTextLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
     }
 }

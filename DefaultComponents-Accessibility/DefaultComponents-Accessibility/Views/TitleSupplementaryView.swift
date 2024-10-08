@@ -20,7 +20,7 @@ class TitleSupplementaryView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configureSubviews()
+        setPreferredFontyStyle()
         configureConstraints()
     }
     
@@ -31,11 +31,14 @@ class TitleSupplementaryView: UICollectionReusableView {
 
 //MARK: Configuration
 private extension TitleSupplementaryView {
-    func configureSubviews() {
-        titleLabel.font = .systemFont(ofSize: 25, weight: .bold)
-    }
     
     func configureConstraints() {
         addPinnedSubview(titleLabel, height: nil)
+    }
+}
+
+extension TitleSupplementaryView: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title2)
     }
 }

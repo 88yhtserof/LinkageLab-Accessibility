@@ -11,6 +11,8 @@ final class PageDetailViewController: UIViewController {
     
     private let text: String
     
+    private lazy var textLabel = UILabel()
+    
     init(backgroundColor: UIColor, text: String) {
         self.text = text
         super.init(nibName: .none, bundle: .none)
@@ -24,14 +26,20 @@ final class PageDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let textView = UILabel()
-        textView.text = self.text
-        textView.font = .systemFont(ofSize: 30, weight: .bold)
+        textLabel.text = self.text
         
-        view.addSubviews([textView])
+        view.addSubviews([textLabel])
         NSLayoutConstraint.activate([
-            textView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            textView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+            textLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            textLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
         ])
+        
+        setPreferredFontyStyle()
+    }
+}
+
+extension PageDetailViewController: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        textLabel.font = UIFont.preferredFont(forTextStyle: .headline)
     }
 }

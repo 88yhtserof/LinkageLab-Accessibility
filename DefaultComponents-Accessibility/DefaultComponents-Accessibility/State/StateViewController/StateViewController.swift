@@ -26,6 +26,7 @@ final class StateViewController: DefaultCollectionViewController {
         super.init(isAccessible: true)
         
         configureSubViews()
+        setPreferredFontyStyle()
         let sections = [
             "UIActivityIndicator",
             "UIProgress"
@@ -71,5 +72,11 @@ private extension StateViewController {
         imageView.clipsToBounds = true
         progressView.progress = Float(0)
         progressView.backgroundColor = .systemGray6
+    }
+}
+
+extension StateViewController: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        textField.font = UIFont.preferredFont(forTextStyle: .body)
     }
 }

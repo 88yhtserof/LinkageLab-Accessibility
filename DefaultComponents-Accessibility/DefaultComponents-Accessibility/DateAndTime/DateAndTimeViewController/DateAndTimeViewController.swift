@@ -43,6 +43,7 @@ final class DateAndTimeViewController: DefaultCollectionViewController {
         super.init(isAccessible: true)
         
         configureSubViews()
+        setPreferredFontyStyle()
         let sections = [
             "UIDatePicker",
             "UICalendar"
@@ -79,7 +80,6 @@ private extension DateAndTimeViewController {
             .forEach { (offset, view) in
                 view.text = labelTexts[offset]
                 view.alpha = CGFloat(0.5)
-                view.font = .systemFont(ofSize: 20, weight: .medium)
             }
         
         datePicker.datePickerMode = .dateAndTime
@@ -91,5 +91,12 @@ private extension DateAndTimeViewController {
         let dateSelection = UICalendarSelectionSingleDate(delegate: self)
         calendarView.selectionBehavior = dateSelection
         calendarView.delegate = self
+    }
+}
+
+extension DateAndTimeViewController: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        labelForCountdown.font = UIFont.preferredFont(forTextStyle: .body)
+        labelForDatePicker.font = UIFont.preferredFont(forTextStyle: .body)
     }
 }

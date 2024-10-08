@@ -29,6 +29,7 @@ final class TextViewController: DefaultCollectionViewController {
         super.init(isAccessible: true)
         
         configureSubViews()
+        setPreferredFontyStyle()
         let sections = [
             "UILabel",
             "UITextField",
@@ -72,7 +73,6 @@ private extension TextViewController {
         textFieldForNumber.placeholderText = "예: 1234"
         textFieldForEmail.keyboardType = .emailAddress
         textFieldForEmail.placeholderText = "예: default@email.com"
-        textView.font = .systemFont(ofSize: 20)
         textView.backgroundColor = .systemGray6
         textView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
@@ -91,3 +91,13 @@ private extension TextViewController {
     }
 }
 
+extension TextViewController: DynamicTypeable {
+    func setPreferredFontyStyle() {
+        labelForMiximumLines.font = UIFont.preferredFont(forTextStyle: .body)
+        textFieldForDefault.font = UIFont.preferredFont(forTextStyle: .body)
+        textFieldForPW.font = UIFont.preferredFont(forTextStyle: .body)
+        textFieldForNumber.font = UIFont.preferredFont(forTextStyle: .body)
+        textFieldForEmail.font = UIFont.preferredFont(forTextStyle: .body)
+        textView.font = UIFont.preferredFont(forTextStyle: .body)
+    }
+}
