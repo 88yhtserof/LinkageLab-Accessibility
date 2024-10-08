@@ -33,6 +33,7 @@
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
 		4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */; };
 		4E612E532CB4BB09004FAFA0 /* DynamicTypeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E612E522CB4BB09004FAFA0 /* DynamicTypeable.swift */; };
+		4E612E552CB502E9004FAFA0 /* PublicHoliday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E612E542CB502E9004FAFA0 /* PublicHoliday.swift */; };
 		4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */; };
 		4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */; };
 		4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */; };
@@ -103,6 +104,7 @@
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		4E31E0F22C927621004C4979 /* DateAndTimeViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateAndTimeViewController+Action.swift"; sourceTree = "<group>"; };
 		4E612E522CB4BB09004FAFA0 /* DynamicTypeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeable.swift; sourceTree = "<group>"; };
+		4E612E542CB502E9004FAFA0 /* PublicHoliday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicHoliday.swift; sourceTree = "<group>"; };
 		4E855F532CACE15C008CDB3B /* DefaultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCollectionViewController.swift; sourceTree = "<group>"; };
 		4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+ListLayout.swift"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				4E0AB03E2C9BAB9700B8A89C /* Detail.swift */,
 				4EC52B132CA1ABC0007E07D6 /* Book.swift */,
 				4E0925182CA4EC5D00474A16 /* WiFi.swift */,
+				4E612E542CB502E9004FAFA0 /* PublicHoliday.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				4E0AB0522C9BF02500B8A89C /* SearchViewController+DataSource.swift in Sources */,
 				4E0AB0542C9BF19C00B8A89C /* SearchViewController+Delegate.swift in Sources */,
 				14F7FC442CB2C8EC00F3FA61 /* SearchViewControllerWithAccessibility+Updating.swift in Sources */,
+				4E612E552CB502E9004FAFA0 /* PublicHoliday.swift in Sources */,
 				4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */,
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
 				4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */,
