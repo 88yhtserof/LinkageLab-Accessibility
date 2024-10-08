@@ -19,4 +19,7 @@ extension SearchViewControllerWithAccessibility: UISearchBarDelegate {
         initialSnapshot()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        emptySnashot()
+    }
 }
