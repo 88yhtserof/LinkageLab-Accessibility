@@ -19,4 +19,9 @@ extension SearchViewController: UISearchBarDelegate {
         initialSnapshot()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        if let searchWord = searchBar.text {
+            filteredSnapshot(searchWord: searchWord)
+        }
+    }
 }
