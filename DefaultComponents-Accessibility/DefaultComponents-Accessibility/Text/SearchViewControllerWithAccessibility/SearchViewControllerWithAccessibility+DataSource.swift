@@ -46,7 +46,7 @@ extension SearchViewControllerWithAccessibility {
     
     func accessibilityAnnounceSearchResult(for list: [Book]) {
         if UIAccessibility.isVoiceOverRunning {
-            let annuouncement = "\(list.count)개의 검색 결과로 제한됨"
+            let annuouncement = "\(list.count)개 검색 결과 제안됨"
             UIAccessibility.post(notification: .announcement, argument: annuouncement)
         }
     }
