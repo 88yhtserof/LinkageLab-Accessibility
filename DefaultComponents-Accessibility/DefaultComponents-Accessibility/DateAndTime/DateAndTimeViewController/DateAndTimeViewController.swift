@@ -29,6 +29,7 @@ final class DateAndTimeViewController: DefaultCollectionViewController {
     
     var selectedData: DateComponents? = nil
     var dates: Set<DateComponents> = []
+    var publicHolidays = PublicHoliday.samples
     
     private lazy var dateBoxView = ComponentBoxView([labelForDatePicker, datePicker])
     private lazy var labelForDatePicker = UILabel()
