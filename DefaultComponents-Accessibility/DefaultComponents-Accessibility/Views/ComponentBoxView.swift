@@ -24,6 +24,12 @@ class ComponentBoxView: UIView {
         }
     }
     
+    var alignment: UIStackView.Alignment = .fill {
+        didSet {
+            stackView.alignment = alignment
+        }
+    }
+    
     var componenets: [UIView]?
     private lazy var stackView = UIStackView()
     private lazy var titleLabel = UILabel()
@@ -53,6 +59,8 @@ extension ComponentBoxView {
         stackView.axis = axis
         stackView.distribution = .fill
         stackView.spacing = 10
+        
+        titleLabel.font = .systemFont(ofSize: 20, weight: .regular)
     }
     
     func configureConstraints() {

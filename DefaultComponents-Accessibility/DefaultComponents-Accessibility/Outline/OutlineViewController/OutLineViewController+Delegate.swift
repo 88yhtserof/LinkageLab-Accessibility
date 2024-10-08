@@ -23,6 +23,8 @@ extension OutlineViewController: UICollectionViewDelegate {
                 vc = TextViewController()
             case 1:
                 vc = SearchViewController()
+            case 2:
+                vc = SearchViewControllerWithAccessibility()
             default:
                 return
             }
@@ -53,7 +55,14 @@ extension OutlineViewController: UICollectionViewDelegate {
                 return
             }
         case .page:
-            vc = PageViewController()
+            switch item {
+            case 0:
+                vc = PageViewController()
+            case 1:
+                vc = PageViewControllerWithAccessibility()
+            default:
+                return
+            }
         case .alert:
             vc = AlertViewController()
         case .sheet:

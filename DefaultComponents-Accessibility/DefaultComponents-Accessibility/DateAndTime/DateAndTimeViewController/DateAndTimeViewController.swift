@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DateAndTimeViewController: DefaultWithScrollViewController {
+final class DateAndTimeViewController: DefaultCollectionViewController {
     
     var textForDataPicker: String? {
         didSet {
@@ -38,12 +38,31 @@ final class DateAndTimeViewController: DefaultWithScrollViewController {
     private lazy var countdownPicker = UIDatePicker()
     private lazy var calendarBoxView = ComponentBoxView([calendarView])
     lazy var calendarView = UICalendarView()
-    private lazy var stackView = UIStackView()
+    
+    init() {
+        super.init(isAccessible: true)
+        
+        configureSubViews()
+        let sections = [
+            "UIDatePicker",
+            "UICalendar"
+        ]
+        
+        let items = [
+            Item(sectionID: 0, tag: .standard, title: "날짜 선택 컴포넌트", description: "버튼을 통해 날짜를 선택할 수 있는  창이 나타나 날짜를 선택할 수 있습니다.", view: dateBoxView),
+            Item(sectionID: 0, tag: .standard, title: "시간 선택 컴포넌트",description: "시간과 분을 선택할 수 있습니다.", view: countdownBoxView),
+            Item(sectionID: 1, tag: .standard, title: "달력 컴포넌트", description: "달력을 볼 수 있는 컴포넌트입니다.", view: calendarBoxView)
+        ]
+        super.sections = sections
+        super.items = items
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubViews()
-        configureConstraints()
     }
 }
 
@@ -69,35 +88,8 @@ private extension DateAndTimeViewController {
         countdownPicker.datePickerMode = .countDownTimer
         countdownPicker.addTarget(self, action: #selector(didSelectCountdown), for: .valueChanged)
         
-        dateBoxView.title = "날짜 선택 컴포넌트"
-        countdownBoxView.title = "시간 선택 컴포넌트"
-        calendarBoxView.title = "달력 컴포넌트"
-        
         let dateSelection = UICalendarSelectionSingleDate(delegate: self)
         calendarView.selectionBehavior = dateSelection
         calendarView.delegate = self
-        
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 35
-    }
-    
-    func configureConstraints() {
-        [ dateBoxView, countdownBoxView, calendarBoxView]
-            .forEach{
-                stackView.addArrangedSubview($0)
-            }
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(stackView)
-        
-        let verticalInset: CGFloat = 50
-        let horizontalInset: CGFloat = 10
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
     }
 }

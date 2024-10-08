@@ -9,11 +9,11 @@ import UIKit
 
 class AccessibilityListCell: UICollectionViewListCell {
     
-    var actionForAccessibility: (() -> Void)?
+    var actionForAccessibility: ((UICollectionViewCell) -> Void)?
     
     override func accessibilityActivate() -> Bool {
         guard let action = actionForAccessibility else { return false }
-        action()
+        action(self)
         return true
     }
     

@@ -8,7 +8,7 @@
 import UIKit
 
 extension ButtonAndSliderViewController {
-    @objc func didTouchUpInside(_ sender: UIButton) {
+    @objc func didTapLightButton(_ sender: UIButton) {
         if sender == imageButton {
             isLightOn.toggle()
         } else {
@@ -17,14 +17,14 @@ extension ButtonAndSliderViewController {
     }
     
     @objc func didChangeValue(_ sender: UISlider) {
-        if sender == slider {
-            sliderValue = CGFloat(sender.value)
-        } else {
-            sliderValueAccessibility = CGFloat(sender.value)
-        }
+        sliderValue = CGFloat(sender.value)
     }
     
-    func didDoubleTapToSetAccessibility() {
-        UIAccessibility.post(notification: .layoutChanged, argument: sliderAccessibility)
+    @objc func didTouchDown(_ sender: UIButton) {
+        sender.alpha = 0.5
+    }
+    
+    @objc func didTouchUp(_ sender: UIButton) {
+        sender.alpha = 1.0
     }
 }

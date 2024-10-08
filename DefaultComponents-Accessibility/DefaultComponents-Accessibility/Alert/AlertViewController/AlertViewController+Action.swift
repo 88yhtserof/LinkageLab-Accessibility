@@ -11,7 +11,7 @@ extension AlertViewController {
     
     // MARK: Button Action
     @objc func didPresentAlertForMessage(_ sender: UIButton){
-        let alertVC = UIAlertController(title: "Alert: 안내", message: "사용자에게 전달하고 싶은 메세지입니다", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "오류", message: "네트워크 오류가 발생했습니다.\n와이파이를 확인해주십시오.", preferredStyle: .alert)
         let action = UIAlertAction(title: "확인", style: .default, handler: didSelectOK(_:))
         alertVC.addAction(action)
         
@@ -19,7 +19,7 @@ extension AlertViewController {
     }
     
     @objc func didPresentAlertForSelect(_ sender: UIButton) {
-        let alertVC = UIAlertController(title: "Alert: 선택", message: "알림을 활성화 하시겠습니까?", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "알림 활성화", message: "알림을 활성화 하시겠습니까?", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: didSelectCancel(_:))
         let okAction = UIAlertAction(title: "확인", style: .default, handler: didSelectOK(_:))
         
@@ -29,9 +29,9 @@ extension AlertViewController {
     }
     
     @objc func didPresentAlertForTextField(_ sender: UIButton) {
-        let alertVC = UIAlertController(title: "Alert: 입력", message: "닉네임을 변경하시겠습니까?", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "닉네임 설정", message: "원하는 닉네임을 입력하십시오.", preferredStyle: .alert)
         alertVC.addTextField { textField in
-            textField.placeholder = "원하는 닉네임을 입력하세요"
+            textField.placeholder = "예: 하퍼"
         }
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: didSelectCancel(_:))
@@ -43,7 +43,7 @@ extension AlertViewController {
     }
     
     @objc func didPresentActionSheetForAction(_ sender: UIButton) {
-        let actionSheetVC = UIAlertController(title: "ActionSheet: 동작", message: "다른 형태의 Alert입니다. \n 여러 동작을 추가할 수 있습니다", preferredStyle: .actionSheet)
+        let actionSheetVC = UIAlertController(title: "동작", message: "다음 동작 중 하나를 선택하십시오.", preferredStyle: .actionSheet)
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: didSelectCancel)
         let okAction = UIAlertAction(title: "확인", style: .default, handler: didSelectOK)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StateViewController: DefaultWithScrollViewController {
+final class StateViewController: DefaultCollectionViewController {
     
     let imageLoader = ImageLoader()
     
@@ -19,14 +19,33 @@ final class StateViewController: DefaultWithScrollViewController {
     lazy var imageView = UIImageView()
     lazy var progressView = UIProgressView(progressViewStyle: .bar)
     lazy var textField = DefaultTextField()
-    lazy var activityStack = UIStackView()
     lazy var activityBoxView = ComponentBoxView([activityIndicator, switchControl])
     lazy var activityBoxViewWithAccessibility = ComponentBoxView([activityIndicatorWithAccessibility, switchControlWithAccessibility])
     
+    init() {
+        super.init(isAccessible: true)
+        
+        configureSubViews()
+        let sections = [
+            "UIActivityIndicator",
+            "UIProgress"
+        ]
+        
+        let items = [
+            Item(sectionID: 0, tag: .standard, title: "액티비티 인디케이터", description: "작업의 진행 상황을 보여주는 컴포넌트입니다.", view: activityBoxView),
+            Item(sectionID: 0, tag: .improve, title: "액티비티 인디케이터", description: "활성화 시 해당 컴포넌트로 초점 이동합니다", view: activityBoxViewWithAccessibility),
+            Item(sectionID: 1, tag: .standard, title: "프로그래스", description: "시간에 따른 작업 진행 상황을 보여주는 컴포넌트입니다. \n이미지 주소를 입력하고 엔터를 누르십시오.", view: progressBoxView)
+        ]
+        super.sections = sections
+        super.items = items
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubViews()
-        configureConstraints()
         registerKeyboardNotifications()
     }
     
@@ -42,6 +61,8 @@ private extension StateViewController {
         switchControl.addTarget(self, action: #selector(didToggleSwitch), for: .valueChanged)
         activityIndicatorWithAccessibility.hidesWhenStopped = false
         switchControlWithAccessibility.addTarget(self, action: #selector(didToggleSwitchWithAccessibility), for: .valueChanged)
+        activityBoxView.alignment = .leading
+        activityBoxViewWithAccessibility.alignment = .leading
         
         textField.placeholderText = "이미지 주소를 입력하세요."
         textField.delegate = self
@@ -50,36 +71,5 @@ private extension StateViewController {
         imageView.clipsToBounds = true
         progressView.progress = Float(0)
         progressView.backgroundColor = .systemGray6
-        
-        activityStack.axis = .horizontal
-        activityStack.distribution = .fillEqually
-    }
-    
-    func configureConstraints() {
-        
-        [ activityBoxView, activityBoxViewWithAccessibility ]
-            .forEach{ activityStack.addArrangedSubview($0) }
-        
-        [ activityStack, progressBoxView ]
-            .forEach{
-                $0.translatesAutoresizingMaskIntoConstraints = false
-                contentView.addSubview($0)
-            }
-        
-        let verticalInset: CGFloat = 50
-        let horizontalInset: CGFloat = 50
-        
-        NSLayoutConstraint.activate([
-            activityStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalInset),
-            activityStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            activityStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            
-            progressBoxView.topAnchor.constraint(equalTo: activityStack.bottomAnchor, constant: verticalInset),
-            progressBoxView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
-            progressBoxView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
-            progressView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalInset),
-            
-            imageView.heightAnchor.constraint(equalToConstant: CGFloat(200))
-        ])
     }
 }

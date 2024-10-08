@@ -7,20 +7,18 @@
 
 import UIKit
 
-final class TableViewController: UITableViewController, Titleable {
+final class TableViewController: DefaultViewController {
     
-    var navigationTitle: String? {
-        didSet {
-            navigationItem.title = navigationTitle
-        }
-    }
-    var contentDescription: String?
     var isAccessible: Bool
+    var isShownGrabber = false
     
     static let reuseIdentifier = "tableview-identifier"
     var books = Book.samples
     var dataSource: DataSource!
     var snapshot: Snapshot!
+    
+    private lazy var tableView = UITableView()
+    lazy var grabber = GrabberView()
     
     // MARK: Initialize
     init(isAccessible: Bool) {
@@ -36,23 +34,49 @@ final class TableViewController: UITableViewController, Titleable {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        if isShownGrabber {
+            configureConstrationsWithGrabber()
+        } else {
+            configureConstrations()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if  UIAccessibility.isVoiceOverRunning && presentingViewController != nil && isAccessible {
-            view.isAccessibilityElement = true
-            view.accessibilityLabel = "책 목록을 탐색할 수 있는 화면입니다"
-            view.accessibilityValue = "시트의 크기가 화면의 절반 정도 차지하고 있습니다"
-            UIAccessibility.post(notification: .screenChanged, argument: view)
+            grabber.isAccessibilityElement = true
+            grabber.accessibilityLabel = "책 목록을 탐색할 수 있는 화면입니다"
+            grabber.accessibilityValue = "절반 화면"
+            grabber.actionAccessibility = didDoubleTap
+        }
+    }
+    
+    @objc func didDoubleTap() {
+        if let sheet = self.sheetPresentationController {
+            if grabber.accessibilityLabel != nil {
+                grabber.accessibilityLabel = nil
+            }
+            if let identifier = sheet.selectedDetentIdentifier, identifier == .large {
+                sheet.animateChanges {
+                    sheet.selectedDetentIdentifier = .medium
+                }
+                grabber.accessibilityValue = "절반 화면"
+            } else {
+                sheet.animateChanges {
+                    sheet.selectedDetentIdentifier = .large
+                }
+                grabber.accessibilityValue = "전체 화면"
+            }
         }
     }
 }
 
 extension TableViewController {
     func configureView() {
+        grabber.isHidden = !isShownGrabber
         view.backgroundColor = .white
+        tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: TableViewController.reuseIdentifier)
         
         dataSource = DataSource(tableView: tableView, cellProvider: { tableView, indexPath, _ in
@@ -67,12 +91,37 @@ extension TableViewController {
             cell.contentConfiguration = config
             if self.isAccessible {
                 cell.accessibilityHint = "동작을 사용하려면 한 손가락으로 쓸어내리거나 쓸어올리십시오"
-                cell.accessibilityValue = item.bookmark ? "즐겨찾기" : nil
+                cell.accessibilityValue = item.bookmark ? "즐겨찾기 설정됨" : "즐겨찾기 해제됨"
             }
             return cell
         })
         
         createSnapshot()
         tableView.dataSource = dataSource
+    }
+    
+    func configureConstrations() {
+        view.addSubviews([tableView])
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    func configureConstrationsWithGrabber() {
+        view.addSubviews([grabber, tableView])
+        
+        NSLayoutConstraint.activate([
+            grabber.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
+            grabber.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: grabber.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }

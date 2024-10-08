@@ -1,13 +1,13 @@
 //
-//  PageViewController.swift
+//  PageViewControllerWithAccessibility.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/23/24.
+//  Created by 임윤휘 on 10/6/24.
 //
 
 import UIKit
 
-final class PageViewController: DefaultViewController {
+final class PageViewControllerWithAccessibility: DefaultViewController {
     
     var pages: [UIViewController] = []
     
@@ -19,13 +19,18 @@ final class PageViewController: DefaultViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isSettingFocus = false
         configureView()
         configureConstraints()
+        pageView.isAccessibilityElement = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        pageView.isAccessibilityElement = false
     }
 }
 
-extension PageViewController {
+extension PageViewControllerWithAccessibility {
     func configureView() {
         pages = [ vc1, vc2, vc3 ]
         pageViewController.view.backgroundColor = .black

@@ -16,6 +16,8 @@ final class SwitchViewController: DefaultViewController {
     let toggle = UISwitch()
     let toggleAccessibility = UISwitch()
     
+    let components = [Item(isAccessibility: false, title: "WiFi ● 기본 컴포넌트"), Item(isAccessibility: true, title: "WiFi ▲ 개선 컴포넌트")]
+    
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
     override func viewDidLoad() {

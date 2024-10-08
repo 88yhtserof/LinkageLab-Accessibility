@@ -1,13 +1,13 @@
 //
-//  SearchViewController.swift
+//  SearchViewControllerWithAccessibility.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/19/24.
+//  Created by 임윤휘 on 10/6/24.
 //
 
 import UIKit
 
-final class SearchViewController: DefaultViewController {
+final class SearchViewControllerWithAccessibility: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
@@ -18,7 +18,7 @@ final class SearchViewController: DefaultViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isSettingFocus = false
+        
         configureSubviews()
         configureView()
         configureConstraints()
@@ -26,7 +26,7 @@ final class SearchViewController: DefaultViewController {
 }
 
 // MARK: Configuration
-extension SearchViewController {
+extension SearchViewControllerWithAccessibility {
     
     func configureSubviews() {
         collectionView.collectionViewLayout = configureLayout()
