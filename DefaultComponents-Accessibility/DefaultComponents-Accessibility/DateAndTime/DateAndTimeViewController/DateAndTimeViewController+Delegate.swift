@@ -10,12 +10,22 @@ import UIKit
 extension DateAndTimeViewController: UICalendarViewDelegate {
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
         
+        let todayConponents = Calendar.current.dateComponents([.year, .month, .day], from: Date())
         let publicHolidayComponentsList = publicHolidays.map{
-            let date = Calendar.current.date(byAdding: .day, value: 0, to: $0.locdate)!
-            return Calendar.current.dateComponents([.year, .month, .day], from: date)
+            Calendar.current.dateComponents([.year, .month, .day], from: $0.locdate)
         }
         
-        if let index = publicHolidayComponentsList.firstIndex(where: {
+        if todayConponents.year == dateComponents.year, todayConponents.month == dateComponents.month, todayConponents.day == dateComponents.day {
+            return UICalendarView.Decoration.customView {
+                let label = UILabel()
+                label.text = "●"
+                label.textColor = .blue
+                label.font = UIFont.preferredFont(forTextStyle: .caption2)
+                label.accessibilityLabel = String()
+                return label
+            }
+        }
+        else if let index = publicHolidayComponentsList.firstIndex(where: {
             $0.year == dateComponents.year && $0.month == dateComponents.month && $0.day == dateComponents.day
         }) {
             return .customView {
