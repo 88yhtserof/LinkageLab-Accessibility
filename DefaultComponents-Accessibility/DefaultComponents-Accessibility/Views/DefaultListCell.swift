@@ -18,6 +18,7 @@ class DefaultListCell: UICollectionViewCell, Identifiable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureSubviews()
         configureConstraints()
         setPreferredFontyStyle()
         contentView.isUserInteractionEnabled = false
@@ -41,6 +42,11 @@ class DefaultListCell: UICollectionViewCell, Identifiable {
 
 // MARK: Configuration
 private extension DefaultListCell {
+    func configureSubviews() {
+        titleLabel.numberOfLines = 0
+        subtitleLabel.numberOfLines = 0
+    }
+    
     func configureConstraints() {
         subtitleLabel.numberOfLines = 0
         tagLabel.backgroundColor = .yellow
