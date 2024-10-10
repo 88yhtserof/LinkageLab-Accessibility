@@ -40,10 +40,22 @@ private extension NewsListViewController {
         }
         initializeSnapshot()
         tableView.dataSource = dataSource
+        tableView.tableFooterView = ButtonSupplementaryView(title: "더보기")
+        
+        let footerView = ButtonSupplementaryView(title: "더보기")
+        footerView.delegate = self
+        tableView.tableFooterView = footerView
     }
     
     func configureConstraints() {
         view.addPinnedSubview(tableView, height: nil)
+        
+    }
+}
+
+extension NewsListViewController: ButtonSupplementaryViewDelegate {
+    func buttonSupplementaryView(didTapButton button: UIButton) {
+        print("Tap")
     }
 }
 
