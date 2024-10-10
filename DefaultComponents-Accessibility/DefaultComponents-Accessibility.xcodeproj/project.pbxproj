@@ -39,6 +39,8 @@
 		4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */; };
 		4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */; };
 		4E855F5C2CACF378008CDB3B /* DefaultListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */; };
+		4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122F72CB7679300D771D3 /* NewsListViewController.swift */; };
+		4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122F92CB7694300D771D3 /* NewsListCell.swift */; };
 		4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */; };
 		4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutlineViewController.swift */; };
@@ -110,6 +112,8 @@
 		4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+ListLayout.swift"; sourceTree = "<group>"; };
 		4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+Type.swift"; sourceTree = "<group>"; };
 		4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListCell.swift; sourceTree = "<group>"; };
+		4EB122F72CB7679300D771D3 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		4EB122F92CB7694300D771D3 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4EBB491C2CA3E014006FD702 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewController+Action.swift"; sourceTree = "<group>"; };
@@ -416,6 +420,8 @@
 			children = (
 				4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */,
 				4EC52B012CA151D4007E07D6 /* TableViewController */,
+				4EB122F72CB7679300D771D3 /* NewsListViewController.swift */,
+				4EB122F92CB7694300D771D3 /* NewsListCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
 				4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */,
 				4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */,
+				4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				14F7FC422CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
@@ -618,6 +625,7 @@
 				4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */,
 				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
+				4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,
 				4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */,
 				4EC51CA12C91597B00385BD0 /* DateAndTimeViewController.swift in Sources */,
