@@ -205,6 +205,7 @@
 				4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */,
 				4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */,
 				14B1303B2CAED6D500877314 /* GrabberView.swift */,
+				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
 				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */,
 			);
 			path = Views;
@@ -430,7 +431,6 @@
 				4EC52B012CA151D4007E07D6 /* TableViewController */,
 				4EB122F72CB7679300D771D3 /* NewsListViewController.swift */,
 				4EB122F92CB7694300D771D3 /* NewsListCell.swift */,
-				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
