@@ -51,6 +51,10 @@ extension OutlineViewController: UICollectionViewDelegate {
                 vc = TableViewController(isAccessible: false)
             case 3:
                 vc = TableViewController(isAccessible: true)
+            case 4:
+                vc = NewsListViewController()
+            case 5:
+                vc = NewsListViewControllerWithAccessibility()
             default:
                 return
             }
