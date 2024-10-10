@@ -43,6 +43,7 @@
 		4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122F92CB7694300D771D3 /* NewsListCell.swift */; };
 		4EB122FC2CB7821A00D771D3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122FB2CB7821A00D771D3 /* News.swift */; };
 		4EB123002CB793B100D771D3 /* ButtonSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */; };
+		4EB123022CB7A71300D771D3 /* Pagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB123012CB7A71300D771D3 /* Pagable.swift */; };
 		4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */; };
 		4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutlineViewController.swift */; };
@@ -118,6 +119,7 @@
 		4EB122F92CB7694300D771D3 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		4EB122FB2CB7821A00D771D3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupplementaryView.swift; sourceTree = "<group>"; };
+		4EB123012CB7A71300D771D3 /* Pagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagable.swift; sourceTree = "<group>"; };
 		4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4EBB491C2CA3E014006FD702 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewController+Action.swift"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				4E0925182CA4EC5D00474A16 /* WiFi.swift */,
 				4E612E542CB502E9004FAFA0 /* PublicHoliday.swift */,
 				4EB122FB2CB7821A00D771D3 /* News.swift */,
+				4EB123012CB7A71300D771D3 /* Pagable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */,
+				4EB123022CB7A71300D771D3 /* Pagable.swift in Sources */,
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
 				4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+Focus.swift in Sources */,
