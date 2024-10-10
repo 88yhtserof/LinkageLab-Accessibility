@@ -51,6 +51,7 @@ private extension DefaultListCell {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 30),
             
             tagLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             tagLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -59,6 +60,7 @@ private extension DefaultListCell {
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             subtitleLabel.topAnchor.constraint(equalTo: tagLabel.bottomAnchor, constant: 5),
+            subtitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 30),
             
             view.leadingAnchor.constraint(equalTo: leadingAnchor),
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
