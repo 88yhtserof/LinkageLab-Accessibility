@@ -23,6 +23,7 @@ extension DateAndTimeViewController: UICalendarViewDelegate {
                 dateNameLabel.text = self.publicHolidays[index].dateName
                 dateNameLabel.backgroundColor = .green
                 dateNameLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
+                dateNameLabel.accessibilityValue = "공휴일"
                 return dateNameLabel
             }
         }
