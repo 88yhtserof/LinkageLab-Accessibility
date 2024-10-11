@@ -320,6 +320,24 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		4E1306B72CB8B5B400ABA955 /* NewsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EB122F72CB7679300D771D3 /* NewsListViewController.swift */,
+				4EB122F92CB7694300D771D3 /* NewsListCell.swift */,
+			);
+			path = NewsListViewController;
+			sourceTree = "<group>";
+		};
+		4E1306B82CB8B5C600ABA955 /* NewListViewControllerWithAccessibility */ = {
+			isa = PBXGroup;
+			children = (
+				4EB123032CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift */,
+				4EB123052CB7B57900D771D3 /* NewsListCellWithAccessibility.swift */,
+			);
+			path = NewListViewControllerWithAccessibility;
+			sourceTree = "<group>";
+		};
 		4E285DBD2C8FE911007F286C /* Control */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,10 +451,8 @@
 			children = (
 				4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */,
 				4EC52B012CA151D4007E07D6 /* TableViewController */,
-				4EB122F72CB7679300D771D3 /* NewsListViewController.swift */,
-				4EB123052CB7B57900D771D3 /* NewsListCellWithAccessibility.swift */,
-				4EB122F92CB7694300D771D3 /* NewsListCell.swift */,
-				4EB123032CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift */,
+				4E1306B72CB8B5B400ABA955 /* NewsListViewController */,
+				4E1306B82CB8B5C600ABA955 /* NewListViewControllerWithAccessibility */,
 			);
 			path = List;
 			sourceTree = "<group>";
