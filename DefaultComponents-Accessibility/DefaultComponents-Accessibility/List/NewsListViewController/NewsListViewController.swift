@@ -16,14 +16,11 @@ final class NewsListViewController: DefaultViewController {
     
     private lazy var tableView = UITableView()
     
-    init() {
-        super.init(nibName: .none, bundle: .none)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        isSettingFocus = false
         configureSubviews()
         configureConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
