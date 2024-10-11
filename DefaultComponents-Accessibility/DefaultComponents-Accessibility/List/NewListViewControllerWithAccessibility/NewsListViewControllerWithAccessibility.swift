@@ -16,14 +16,10 @@ final class NewsListViewControllerWithAccessibility: DefaultViewController {
     
     private lazy var tableView = UITableView()
     
-    init() {
-        super.init(nibName: .none, bundle: .none)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         configureSubviews()
         configureConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -72,10 +68,16 @@ extension NewsListViewControllerWithAccessibility: ButtonSupplementaryViewDelega
         updateSnapshot(newItems: items, after: pagable.lastIndex)
         
         if UIAccessibility.isVoiceOverRunning {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                UIAccessibility.post(notification: .announcement, argument: "\(endIndex - startIndex + 1)개의 뉴스가 추가되었습니다")
+            Task {
+                try? await announceNumOfAddedNews(count: endIndex - startIndex + 1)
             }
         }
+    }
+    
+    @MainActor
+    func announceNumOfAddedNews(count: Int) async throws {
+        try await Task.sleep(for: .seconds(0.8))
+        UIAccessibility.post(notification: .announcement, argument: "\(count)개의 뉴스가 추가되었습니다")
     }
 }
 
