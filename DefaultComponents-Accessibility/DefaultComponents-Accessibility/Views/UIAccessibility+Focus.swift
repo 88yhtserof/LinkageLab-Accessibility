@@ -9,10 +9,9 @@ import UIKit
 
 extension UIAccessibility {
     @MainActor
-    static func setFocus(to object: Any) async throws {
+    static func setFocus(to object: Any, for duration: ContinuousClock.Instant.Duration = .seconds(0.03)) async throws {
         guard UIAccessibility.isVoiceOverRunning else { return }
-        
-        try await Task.sleep(for: .seconds(0.03))
+        try await Task.sleep(for: duration)
         UIAccessibility.post(notification: .layoutChanged, argument: object)
     }
 }

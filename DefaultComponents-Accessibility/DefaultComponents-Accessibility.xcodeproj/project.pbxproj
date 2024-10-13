@@ -39,6 +39,13 @@
 		4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */; };
 		4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */; };
 		4E855F5C2CACF378008CDB3B /* DefaultListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */; };
+		4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122F72CB7679300D771D3 /* NewsListViewController.swift */; };
+		4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122F92CB7694300D771D3 /* NewsListCell.swift */; };
+		4EB122FC2CB7821A00D771D3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122FB2CB7821A00D771D3 /* News.swift */; };
+		4EB123002CB793B100D771D3 /* ButtonSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */; };
+		4EB123022CB7A71300D771D3 /* Pagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB123012CB7A71300D771D3 /* Pagable.swift */; };
+		4EB123042CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB123032CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift */; };
+		4EB123062CB7B57900D771D3 /* NewsListCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB123052CB7B57900D771D3 /* NewsListCellWithAccessibility.swift */; };
 		4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */; };
 		4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutlineViewController.swift */; };
@@ -110,6 +117,13 @@
 		4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+ListLayout.swift"; sourceTree = "<group>"; };
 		4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCollectionViewController+Type.swift"; sourceTree = "<group>"; };
 		4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListCell.swift; sourceTree = "<group>"; };
+		4EB122F72CB7679300D771D3 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		4EB122F92CB7694300D771D3 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
+		4EB122FB2CB7821A00D771D3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupplementaryView.swift; sourceTree = "<group>"; };
+		4EB123012CB7A71300D771D3 /* Pagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagable.swift; sourceTree = "<group>"; };
+		4EB123032CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
+		4EB123052CB7B57900D771D3 /* NewsListCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCellWithAccessibility.swift; sourceTree = "<group>"; };
 		4EBB491A2CA3D63C006FD702 /* TextViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewController+Delegate.swift"; sourceTree = "<group>"; };
 		4EBB491C2CA3E014006FD702 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewController+Action.swift"; sourceTree = "<group>"; };
@@ -195,6 +209,7 @@
 				4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */,
 				4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */,
 				14B1303B2CAED6D500877314 /* GrabberView.swift */,
+				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
 				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */,
 			);
 			path = Views;
@@ -281,6 +296,8 @@
 				4EC52B132CA1ABC0007E07D6 /* Book.swift */,
 				4E0925182CA4EC5D00474A16 /* WiFi.swift */,
 				4E612E542CB502E9004FAFA0 /* PublicHoliday.swift */,
+				4EB122FB2CB7821A00D771D3 /* News.swift */,
+				4EB123012CB7A71300D771D3 /* Pagable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -301,6 +318,24 @@
 				4EC52AE62C9D36F4007E07D6 /* ImageLoader.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4E1306B72CB8B5B400ABA955 /* NewsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EB122F72CB7679300D771D3 /* NewsListViewController.swift */,
+				4EB122F92CB7694300D771D3 /* NewsListCell.swift */,
+			);
+			path = NewsListViewController;
+			sourceTree = "<group>";
+		};
+		4E1306B82CB8B5C600ABA955 /* NewListViewControllerWithAccessibility */ = {
+			isa = PBXGroup;
+			children = (
+				4EB123032CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift */,
+				4EB123052CB7B57900D771D3 /* NewsListCellWithAccessibility.swift */,
+			);
+			path = NewListViewControllerWithAccessibility;
 			sourceTree = "<group>";
 		};
 		4E285DBD2C8FE911007F286C /* Control */ = {
@@ -416,6 +451,8 @@
 			children = (
 				4EC52AFA2CA13FA4007E07D6 /* CollectionViewController */,
 				4EC52B012CA151D4007E07D6 /* TableViewController */,
+				4E1306B72CB8B5B400ABA955 /* NewsListViewController */,
+				4E1306B82CB8B5C600ABA955 /* NewListViewControllerWithAccessibility */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -572,20 +609,24 @@
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,
 				4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
+				4EB123002CB793B100D771D3 /* ButtonSupplementaryView.swift in Sources */,
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
 				4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */,
+				4EB123022CB7A71300D771D3 /* Pagable.swift in Sources */,
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
 				4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+Focus.swift in Sources */,
 				4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */,
+				4EB122FC2CB7821A00D771D3 /* News.swift in Sources */,
 				4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
 				4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */,
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
 				4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */,
 				4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */,
+				4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				14F7FC422CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift in Sources */,
 				4EC51C9F2C912AD800385BD0 /* OutLineViewController+Delegate.swift in Sources */,
@@ -596,6 +637,7 @@
 				4E612E552CB502E9004FAFA0 /* PublicHoliday.swift in Sources */,
 				4EC51C9C2C91295200385BD0 /* Outline.swift in Sources */,
 				4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */,
+				4EB123042CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift in Sources */,
 				4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */,
 				4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */,
 				14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */,
@@ -615,9 +657,11 @@
 				4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */,
 				4E855F5C2CACF378008CDB3B /* DefaultListCell.swift in Sources */,
 				4E0AB0452C9BC9CE00B8A89C /* ComponentBoxView.swift in Sources */,
+				4EB123062CB7B57900D771D3 /* NewsListCellWithAccessibility.swift in Sources */,
 				4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */,
 				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
+				4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,
 				4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */,
 				4EC51CA12C91597B00385BD0 /* DateAndTimeViewController.swift in Sources */,
