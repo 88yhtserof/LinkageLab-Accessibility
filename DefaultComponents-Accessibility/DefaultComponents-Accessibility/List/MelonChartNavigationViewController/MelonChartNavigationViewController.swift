@@ -17,6 +17,7 @@ final class MelonChartNavigationViewController: DefaultViewController {
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        isSettingFocus = false
         
         configureSubviews()
         configureView()
