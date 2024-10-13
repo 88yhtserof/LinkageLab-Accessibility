@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144564222CBB932B0097DF89 /* MelonChartNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144564212CBB932B0097DF89 /* MelonChartNavigationViewController.swift */; };
+		144564242CBB941B0097DF89 /* MelonChartNavigationViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144564232CBB941B0097DF89 /* MelonChartNavigationViewController+ListLayout.swift */; };
+		144564262CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144564252CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift */; };
+		144564282CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144564272CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -85,6 +89,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144564212CBB932B0097DF89 /* MelonChartNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelonChartNavigationViewController.swift; sourceTree = "<group>"; };
+		144564232CBB941B0097DF89 /* MelonChartNavigationViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewController+ListLayout.swift"; sourceTree = "<group>"; };
+		144564252CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewController+Type.swift"; sourceTree = "<group>"; };
+		144564272CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewController+DataSource.swift"; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -176,6 +184,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		144564202CBB92DC0097DF89 /* MelonChartNavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				144564212CBB932B0097DF89 /* MelonChartNavigationViewController.swift */,
+				144564272CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift */,
+				144564232CBB941B0097DF89 /* MelonChartNavigationViewController+ListLayout.swift */,
+				144564252CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift */,
+			);
+			path = MelonChartNavigationViewController;
+			sourceTree = "<group>";
+		};
 		14F7FC3C2CB2C89300F3FA61 /* SearchViewControllerWithAccessibility */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +472,7 @@
 				4EC52B012CA151D4007E07D6 /* TableViewController */,
 				4E1306B72CB8B5B400ABA955 /* NewsListViewController */,
 				4E1306B82CB8B5C600ABA955 /* NewListViewControllerWithAccessibility */,
+				144564202CBB92DC0097DF89 /* MelonChartNavigationViewController */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -593,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144564282CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift in Sources */,
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */,
 				4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */,
@@ -604,6 +625,7 @@
 				4EC52AE72C9D36F4007E07D6 /* ImageLoader.swift in Sources */,
 				4EC52AEB2CA11594007E07D6 /* DateAndTimeViewController+Delegate.swift in Sources */,
 				4EC52AEF2CA1359F007E07D6 /* CollectionViewController+DataSource.swift in Sources */,
+				144564222CBB932B0097DF89 /* MelonChartNavigationViewController.swift in Sources */,
 				4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */,
 				4E285DC52C901C68007F286C /* StateViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,
@@ -620,6 +642,7 @@
 				4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+Focus.swift in Sources */,
 				4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */,
 				4EB122FC2CB7821A00D771D3 /* News.swift in Sources */,
+				144564242CBB941B0097DF89 /* MelonChartNavigationViewController+ListLayout.swift in Sources */,
 				4E31E0F32C927621004C4979 /* DateAndTimeViewController+Action.swift in Sources */,
 				4ECD49782C8E9B6000F3BEC7 /* AppDelegate.swift in Sources */,
 				4E0925192CA4EC5D00474A16 /* WiFi.swift in Sources */,
@@ -648,6 +671,7 @@
 				4EC52AF92CA13F3E007E07D6 /* CollectionViewController+Type.swift in Sources */,
 				4EC52AF12CA13728007E07D6 /* GridTextCell.swift in Sources */,
 				4E0AB0472C9BD22200B8A89C /* DefaultTextField.swift in Sources */,
+				144564262CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift in Sources */,
 				4EC52B092CA16D95007E07D6 /* PageViewController.swift in Sources */,
 				4EC52AFC2CA144D5007E07D6 /* TableViewController.swift in Sources */,
 				4EC52B142CA1ABC0007E07D6 /* Book.swift in Sources */,
