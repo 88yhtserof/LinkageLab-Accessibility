@@ -20,6 +20,7 @@
 		144FC6F32CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */; };
 		144FC6F52CBCD87300CC75FE /* BorderedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */; };
 		144FC6F72CBCDAB100CC75FE /* AdjustableForAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */; };
+		144FC6FA2CBCE8B000CC75FE /* InnerCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -111,6 +112,7 @@
 		144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTextCellWithAccessibility.swift; sourceTree = "<group>"; };
 		144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedListCell.swift; sourceTree = "<group>"; };
 		144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableForAccessibility.swift; sourceTree = "<group>"; };
+		144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCollectionListCell.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				144FC6EE2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift */,
 				1445642D2CBC00DF0097DF89 /* MelonChartNavigationViewControllerWithAccessibility+ListLayout.swift */,
 				1445642F2CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift */,
+				144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */,
 			);
 			path = MelonChartNavigationViewControllerWithAccessibility;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
 				4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */,
 				4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */,
+				144FC6FA2CBCE8B000CC75FE /* InnerCollectionListCell.swift in Sources */,
 				4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				14F7FC422CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift in Sources */,

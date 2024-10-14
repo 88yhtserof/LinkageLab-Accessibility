@@ -26,6 +26,8 @@ extension MelonChartNavigationViewControllerWithAccessibility {
             return sectionForLatest()
         case .chart:
             return sectionForChart()
+        case .custom:
+            return sectionForCustom()
         }
     }
     
@@ -62,6 +64,20 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
         section.boundarySupplementaryItems = [titleBoundarySupplementaryItem()]
         section.orthogonalScrollingBehavior = .groupPaging
+        
+        return section
+    }
+    
+    func sectionForCustom() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
+        section.boundarySupplementaryItems = [titleBoundarySupplementaryItem()]
         
         return section
     }

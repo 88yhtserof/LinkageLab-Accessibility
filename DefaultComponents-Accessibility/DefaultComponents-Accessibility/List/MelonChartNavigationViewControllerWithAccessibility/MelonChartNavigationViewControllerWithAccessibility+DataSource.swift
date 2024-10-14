@@ -39,6 +39,10 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         
     }
     
+    func customCellRegistrationHandler(cell: InnerCollectionListCell, indexPath: IndexPath, item: Bool) {
+        
+    }
+    
     func supplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
         let title = snapshot.sectionIdentifiers[indexPath.section].title
         supplementaryView.title = title
@@ -55,9 +59,10 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         let chartItems = books.map{ Item(chart: $0.title) }
         
         snapshot = Snapshot()
-        snapshot.appendSections([.latest, .chart])
+        snapshot.appendSections([.latest, .chart, .custom])
         snapshot.appendItems(latestItems, toSection: .latest)
         snapshot.appendItems(chartItems, toSection: .chart)
+        snapshot.appendItems([Item(custom: true)], toSection: .custom)
         dataSource.apply(snapshot)
     }
     

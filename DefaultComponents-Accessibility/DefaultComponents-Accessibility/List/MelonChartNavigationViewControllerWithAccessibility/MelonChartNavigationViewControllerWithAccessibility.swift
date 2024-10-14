@@ -42,6 +42,7 @@ private extension MelonChartNavigationViewControllerWithAccessibility {
     func configureDataSource() {
         let latestCellRegistration = UICollectionView.CellRegistration(handler: latestCellRegistrationHandler)
         let chartCellRegistration = UICollectionView.CellRegistration(handler: chartCellRegistrationHandler)
+        let customCellRegistration = UICollectionView.CellRegistration(handler: customCellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let section = Section(rawValue: indexPath.section) else {
@@ -52,6 +53,8 @@ private extension MelonChartNavigationViewControllerWithAccessibility {
                 return collectionView.dequeueConfiguredReusableCell(using: latestCellRegistration, for: indexPath, item: itemIdentifier.latest)
             case .chart:
                 return collectionView.dequeueConfiguredReusableCell(using: chartCellRegistration, for: indexPath, item: itemIdentifier.chart)
+            case.custom:
+                return collectionView.dequeueConfiguredReusableCell(using: customCellRegistration, for: indexPath, item: itemIdentifier.custom)
             }
         })
         

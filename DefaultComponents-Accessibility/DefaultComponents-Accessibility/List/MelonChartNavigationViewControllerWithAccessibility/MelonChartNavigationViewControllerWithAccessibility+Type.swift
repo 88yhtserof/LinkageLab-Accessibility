@@ -10,7 +10,7 @@ import Foundation
 //MARK: Types for DataSource
 extension MelonChartNavigationViewControllerWithAccessibility {
     enum Section: Int {
-        case latest, chart
+        case latest, chart, custom
         
         var title: String {
             switch self {
@@ -18,6 +18,8 @@ extension MelonChartNavigationViewControllerWithAccessibility {
                 return "Latest"
             case .chart:
                 return "Chart"
+            case .custom:
+                return "Custom"
             }
         }
     }
@@ -25,16 +27,26 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     struct Item: Hashable {
         let latest: String?
         let chart: String?
+        let custom: Bool?
         
-        init(latest: String?) {
+        init(latest: String?, chart: String?, custom: Bool?) {
             self.latest = latest
-            self.chart = nil
+            self.chart = chart
+            self.custom = custom
         }
         
-        init(chart: String?) {
-            self.chart = chart
-            self.latest = nil
+        init(latest: String) {
+            self.init(latest: latest, chart: nil, custom: nil)
         }
+        
+        init(chart: String) {
+            self.init(latest: nil, chart: chart, custom: nil)
+        }
+        
+        init(custom: Bool) {
+            self.init(latest: nil, chart: nil, custom: custom)
+        }
+        
     }
     
     enum Supplementary: String {
