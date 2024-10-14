@@ -30,8 +30,8 @@ extension MelonChartNavigationViewController {
     }
     
     func updateSnapshot() {
-        let latestItems = ["노래1", "노래2", "노래3", "노래4", "노래5", "노래6", "노래7", "노래8"].map{ Item(latest: $0) }
-        let chartItems = ["노래1", "노래2", "노래3", "노래4", "노래5", "노래6", "노래7", "노래8"].map{ Item(chart: $0) }
+        let latestItems = books.map{ Item(latest: $0.title) }
+        let chartItems = books.map{ Item(chart: $0.title) }
         
         snapshot = Snapshot()
         snapshot.appendSections([.latest, .chart])

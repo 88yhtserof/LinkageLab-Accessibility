@@ -11,6 +11,7 @@ final class MelonChartNavigationViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
+    var books = Book.samples
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     

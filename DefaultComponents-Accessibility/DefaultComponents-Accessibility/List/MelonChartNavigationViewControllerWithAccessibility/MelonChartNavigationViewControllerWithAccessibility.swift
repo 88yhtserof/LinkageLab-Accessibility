@@ -12,7 +12,7 @@ final class MelonChartNavigationViewControllerWithAccessibility: DefaultViewCont
     var dataSource: DataSource!
     var snapshot: Snapshot!
     var accessibilityelements: [Any] = []
-    var samples = ["노래1", "노래2", "노래3", "노래4", "노래5", "노래6", "노래7", "노래8"]
+    var books = Book.samples
     var currentPageOfLatest = 0
     var currentPageOfChart = 0
     

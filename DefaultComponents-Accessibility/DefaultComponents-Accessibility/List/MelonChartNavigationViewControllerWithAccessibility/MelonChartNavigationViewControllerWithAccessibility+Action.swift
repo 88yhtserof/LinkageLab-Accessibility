@@ -22,8 +22,8 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     }
     
     func configureAccessibilityValue(_ cell: UICollectionViewCell, current index: Int) {
-        let label = samples[index]
-        let value = "총 \(samples.count) 페이지 중 \(index + 1) 페이지"
+        let label = books[index].title
+        let value = "총 \(books.count) 페이지 중 \(index + 1) 페이지"
         let descriptions = [label, value]
         cell.accessibilityValue = descriptions.compactMap({ $0 }).joined(separator: ", ")
     }

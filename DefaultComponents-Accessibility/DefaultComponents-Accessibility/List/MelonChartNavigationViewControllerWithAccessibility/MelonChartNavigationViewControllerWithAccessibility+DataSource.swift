@@ -18,7 +18,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
             cell.isAccessibilityElement = true
             cell.accessibilityFrame = configureAccessibilityFrame(with: cell, for: .initial)
             cell.accessibilityLabel = item
-            cell.accessibilityValue = "총 \(samples.count) 페이지 중 \(indexPath.item + 1) 페이지"
+            cell.accessibilityValue = "총 \(books.count) 페이지 중 \(indexPath.item + 1) 페이지"
             cell.accessibilityTraits = [.button, .adjustable]
             cell.delegate = self
         }
@@ -45,8 +45,8 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     }
     
     func updateSnapshot() {
-        let latestItems = samples.map{ Item(latest: $0) }
-        let chartItems = samples.map{ Item(chart: $0) }
+        let latestItems = books.map{ Item(latest: $0.title) }
+        let chartItems = books.map{ Item(chart: $0.title) }
         
         snapshot = Snapshot()
         snapshot.appendSections([.latest, .chart])

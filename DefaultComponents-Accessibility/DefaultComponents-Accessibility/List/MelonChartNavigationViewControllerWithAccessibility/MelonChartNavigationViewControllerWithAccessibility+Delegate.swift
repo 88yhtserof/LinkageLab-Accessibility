@@ -16,7 +16,7 @@ extension MelonChartNavigationViewControllerWithAccessibility: UIScrollViewDeleg
 
 extension MelonChartNavigationViewControllerWithAccessibility: AdjustableForAccessibilityDelegate {
     func adjustableIncrement(_ view: UICollectionViewCell) {
-        guard currentPageOfLatest < (samples.count - 1) else { return }
+        guard currentPageOfLatest < (books.count - 1) else { return }
         currentPageOfLatest += 1
         configureAccessibilityValue(view, current: currentPageOfLatest)
         
