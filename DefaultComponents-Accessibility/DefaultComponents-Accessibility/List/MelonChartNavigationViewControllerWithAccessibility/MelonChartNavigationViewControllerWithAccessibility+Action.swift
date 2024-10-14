@@ -46,6 +46,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
             value = "총 \(books.count) 페이지 중 \(index + 1) 페이지"
         }
         let descriptions = [label, value]
+        cell.accessibilityLabel = nil
         cell.accessibilityValue = descriptions.compactMap({ $0 }).joined(separator: ", ")
     }
 }

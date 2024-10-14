@@ -17,7 +17,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         if indexPath.item == 0 {
             cell.isAccessibilityElement = true
             cell.accessibilityFrame = AccessibilityFrameForLatest(with: cell, height: 2, for: .initial)
-            cell.accessibilityLabel = item
+            cell.accessibilityLabel = books[currentPageOfLatest].title
             cell.accessibilityValue = "총 \(books.count) 페이지 중 \(indexPath.item + 1) 페이지"
             cell.accessibilityTraits = [.button, .adjustable]
             cell.delegate = self
@@ -31,7 +31,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         if indexPath.item == 0 {
             cell.isAccessibilityElement = true
             cell.accessibilityFrame = AccessibilityFrameForChart(with: cell, height: 3, for: .initial)
-            cell.accessibilityLabel = "\(indexPath.item + 1)위, \(item)"
+            cell.accessibilityLabel = "\(currentPageOfChart + 1)위, \(books[currentPageOfChart].title)"
             cell.accessibilityValue = "총 \(books.count) 페이지 중 \(indexPath.item + 1) 페이지"
             cell.accessibilityTraits = [.button, .adjustable]
             cell.delegate = self
@@ -43,7 +43,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         cell.delegate = self
         cell.isAccessibilityElement = true
         cell.accessibilityTraits = [.button, .adjustable]
-        cell.accessibilityLabel = "\(indexPath.item + 1)위, \(books[indexPath.item].title)"
+        cell.accessibilityLabel = "\(currentPageOfCustom + 1)위, \(books[currentPageOfCustom].title)"
         cell.accessibilityValue = "총 \(books.count) 페이지 중 \(currentPageOfCustom + 1) 페이지"
     }
     
