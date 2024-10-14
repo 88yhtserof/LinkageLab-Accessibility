@@ -17,6 +17,7 @@
 		144564302CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445642F2CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift */; };
 		144FC6ED2CBCB0FF00CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6EC2CBCB0FF00CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Delegate.swift */; };
 		144FC6EF2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6EE2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift */; };
+		144FC6F32CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -105,6 +106,7 @@
 		1445642F2CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewControllerWithAccessibility+Type.swift"; sourceTree = "<group>"; };
 		144FC6EC2CBCB0FF00CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewControllerWithAccessibility+Delegate.swift"; sourceTree = "<group>"; };
 		144FC6EE2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewControllerWithAccessibility+Action.swift"; sourceTree = "<group>"; };
+		144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTextCellWithAccessibility.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
 				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
 				4EC52AF02CA13728007E07D6 /* GridTextCell.swift */,
+				144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */,
 				4EC52AF22CA138D3007E07D6 /* TitleSupplementaryView.swift */,
 				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
 				4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */,
@@ -668,6 +671,7 @@
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
 				4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+Focus.swift in Sources */,
+				144FC6F32CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift in Sources */,
 				144564302CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift in Sources */,
 				4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */,
 				4EB122FC2CB7821A00D771D3 /* News.swift in Sources */,
