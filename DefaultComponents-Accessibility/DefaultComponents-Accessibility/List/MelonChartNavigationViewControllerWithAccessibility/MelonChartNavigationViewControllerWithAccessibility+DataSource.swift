@@ -40,7 +40,11 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     }
     
     func customCellRegistrationHandler(cell: InnerCollectionListCell, indexPath: IndexPath, item: Bool) {
-        
+        cell.delegate = self
+        cell.isAccessibilityElement = true
+        cell.accessibilityTraits = [.button, .adjustable]
+        cell.accessibilityLabel = "\(indexPath.item + 1)위, \(books[indexPath.item].title)"
+        cell.accessibilityValue = "총 \(books.count) 페이지 중 \(currentPageOfCustom + 1) 페이지"
     }
     
     func supplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {

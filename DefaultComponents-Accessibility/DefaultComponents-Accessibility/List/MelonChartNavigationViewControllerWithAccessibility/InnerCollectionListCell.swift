@@ -11,6 +11,8 @@ final class InnerCollectionListCell: UICollectionViewCell {
     
     var dataSource: UICollectionViewDiffableDataSource<Int, String>!
     var books = Book.samples
+    weak var delegate: AdjustableForAccessibility?
+    private var currentPageOfCustom = 0
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
@@ -22,6 +24,15 @@ final class InnerCollectionListCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func accessibilityIncrement() {
+        delegate?.adjustableIncrement(self)
+        
+    }
+    
+    override func accessibilityDecrement() {
+        delegate?.adjustableDecrement(self)
     }
 }
 
@@ -58,7 +69,14 @@ private extension InnerCollectionListCell {
     }
     
     func cellRegistrationHandler(cell: BorderedListCell, indexPath: IndexPath, item: String) {
-        cell.rank = indexPath.item
+        cell.rank = indexPath.item + 1
         cell.text = item
+    }
+    
+    func configureAccessibilityValue(current index: Int) {
+        let label = books[index].title
+        let value = "총 \(books.count) 페이지 중 \(index + 1) 페이지"
+        let descriptions = [label, value]
+        collectionView.accessibilityValue = descriptions.compactMap({ $0 }).joined(separator: ", ")
     }
 }

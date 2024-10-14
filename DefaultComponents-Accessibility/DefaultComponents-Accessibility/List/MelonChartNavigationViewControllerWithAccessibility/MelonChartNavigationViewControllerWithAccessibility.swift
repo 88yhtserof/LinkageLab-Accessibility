@@ -15,6 +15,7 @@ final class MelonChartNavigationViewControllerWithAccessibility: DefaultViewCont
     var books = Book.samples
     var currentPageOfLatest = 0
     var currentPageOfChart = 0
+    var currentPageOfCustom = 0
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
