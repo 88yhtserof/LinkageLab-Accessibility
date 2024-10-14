@@ -11,8 +11,10 @@ final class MelonChartNavigationViewControllerWithAccessibility: DefaultViewCont
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
+    var accessibilityelements: [Any] = []
+    var samples = ["노래1", "노래2", "노래3", "노래4", "노래5", "노래6", "노래7", "노래8"]
     
-    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -28,6 +30,7 @@ final class MelonChartNavigationViewControllerWithAccessibility: DefaultViewCont
 private extension MelonChartNavigationViewControllerWithAccessibility {
     func configureSubviews() {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: -10)
+        collectionView.delegate = self
     }
     
     func configureView() {

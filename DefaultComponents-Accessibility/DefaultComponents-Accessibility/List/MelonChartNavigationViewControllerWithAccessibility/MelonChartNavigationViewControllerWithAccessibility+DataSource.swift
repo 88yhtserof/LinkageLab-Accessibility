@@ -13,6 +13,15 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     
     func latestCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
         cell.text = item
+        cell.isAccessibilityForText = false
+        
+        if indexPath.item == 0 {
+            cell.isAccessibilityElement = true
+            cell.accessibilityFrame = configureAccessibilityFrame(with: cell, for: .initial)
+            cell.accessibilityLabel = item
+            cell.accessibilityValue = "총 \(samples.count) 페이지 중 \(indexPath.item + 1) 페이지"
+            cell.accessibilityTraits = [.button, .adjustable]
+        }
     }
     
     func chartCellRegistrationHandler(cell: UICollectionViewCell, indexPath: IndexPath, item: String) {
@@ -27,11 +36,17 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     func supplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
         let title = snapshot.sectionIdentifiers[indexPath.section].title
         supplementaryView.title = title
+        
+        if UIAccessibility.isVoiceOverRunning {
+            supplementaryView.isAccessibilityElement = true
+            supplementaryView.accessibilityLabel = title
+            supplementaryView.accessibilityTraits = .header
+        }
     }
     
     func updateSnapshot() {
-        let latestItems = ["노래1", "노래2", "노래3", "노래4", "노래5", "노래6", "노래7", "노래8"].map{ Item(latest: $0) }
-        let chartItems = ["노래1", "노래2", "노래3", "노래4", "노래5", "노래6", "노래7", "노래8"].map{ Item(chart: $0) }
+        let latestItems = samples.map{ Item(latest: $0) }
+        let chartItems = samples.map{ Item(chart: $0) }
         
         snapshot = Snapshot()
         snapshot.appendSections([.latest, .chart])

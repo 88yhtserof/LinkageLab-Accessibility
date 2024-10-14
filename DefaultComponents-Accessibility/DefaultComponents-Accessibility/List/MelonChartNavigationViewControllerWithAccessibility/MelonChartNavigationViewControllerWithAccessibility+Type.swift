@@ -44,4 +44,8 @@ extension MelonChartNavigationViewControllerWithAccessibility {
             self.rawValue
         }
     }
+    
+    enum AccessibilityFrameState {
+        case initial, scroll
+    }
 }
