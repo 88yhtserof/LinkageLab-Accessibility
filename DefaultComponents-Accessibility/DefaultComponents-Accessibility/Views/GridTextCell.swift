@@ -28,6 +28,12 @@ class GridTextCell: UICollectionViewCell, Identifiable {
         }
     }
     
+    var isAccessibilityForText: Bool = true {
+        didSet {
+            textLabel.isAccessibilityElement = isAccessibilityForText
+        }
+    }
+    
     private lazy var imageView = UIImageView()
     private lazy var textLabel = UILabel()
     private lazy var secondaryTextLabel = UILabel()
