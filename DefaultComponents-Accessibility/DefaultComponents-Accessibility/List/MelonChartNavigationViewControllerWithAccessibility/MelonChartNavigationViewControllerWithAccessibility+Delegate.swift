@@ -13,3 +13,25 @@ extension MelonChartNavigationViewControllerWithAccessibility: UIScrollViewDeleg
         cell.accessibilityFrame = configureAccessibilityFrame(with: cell, for: .scroll)
     }
 }
+
+extension MelonChartNavigationViewControllerWithAccessibility: AdjustableForAccessibilityDelegate {
+    func adjustableIncrement(_ view: UICollectionViewCell) {
+        guard currentPageOfLatest < (samples.count - 1) else { return }
+        currentPageOfLatest += 1
+        configureAccessibilityValue(view, current: currentPageOfLatest)
+        
+        if currentPageOfLatest != 0, currentPageOfLatest % 4 == 0 {
+            collectionView.scrollToItem(at: IndexPath(item: currentPageOfLatest, section: 0), at: .left, animated: true)
+        }
+    }
+    
+    func adjustableDecrement(_ view: UICollectionViewCell) {
+        guard currentPageOfLatest > 0 else { return }
+        currentPageOfLatest -= 1
+        configureAccessibilityValue(view, current: currentPageOfLatest)
+        
+        if currentPageOfLatest % 4 == 3 {
+            collectionView.scrollToItem(at: IndexPath(item: currentPageOfLatest, section: 0), at: .right, animated: true)
+        }
+    }
+}

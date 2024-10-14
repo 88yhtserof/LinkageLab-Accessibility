@@ -11,9 +11,8 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func latestCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
+    func latestCellRegistrationHandler(cell: GridTextCellWithAccessibility, indexPath: IndexPath, item: String) {
         cell.text = item
-        cell.isAccessibilityForText = false
         
         if indexPath.item == 0 {
             cell.isAccessibilityElement = true
@@ -21,6 +20,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
             cell.accessibilityLabel = item
             cell.accessibilityValue = "총 \(samples.count) 페이지 중 \(indexPath.item + 1) 페이지"
             cell.accessibilityTraits = [.button, .adjustable]
+            cell.delegate = self
         }
     }
     
