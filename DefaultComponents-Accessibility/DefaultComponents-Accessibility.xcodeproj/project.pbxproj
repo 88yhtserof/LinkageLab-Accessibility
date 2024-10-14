@@ -18,6 +18,8 @@
 		144FC6ED2CBCB0FF00CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6EC2CBCB0FF00CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Delegate.swift */; };
 		144FC6EF2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6EE2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift */; };
 		144FC6F32CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */; };
+		144FC6F52CBCD87300CC75FE /* BorderedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */; };
+		144FC6F72CBCDAB100CC75FE /* AdjustableForAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -107,6 +109,8 @@
 		144FC6EC2CBCB0FF00CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewControllerWithAccessibility+Delegate.swift"; sourceTree = "<group>"; };
 		144FC6EE2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewControllerWithAccessibility+Action.swift"; sourceTree = "<group>"; };
 		144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTextCellWithAccessibility.swift; sourceTree = "<group>"; };
+		144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedListCell.swift; sourceTree = "<group>"; };
+		144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableForAccessibility.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
 				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
 				4EC52AF02CA13728007E07D6 /* GridTextCell.swift */,
+				144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */,
 				144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */,
 				4EC52AF22CA138D3007E07D6 /* TitleSupplementaryView.swift */,
 				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
@@ -354,6 +359,7 @@
 			children = (
 				4E12CE4A2CA2482F004DF1EA /* Titleable.swift */,
 				4E612E522CB4BB09004FAFA0 /* DynamicTypeable.swift */,
+				144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -642,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144FC6F52CBCD87300CC75FE /* BorderedListCell.swift in Sources */,
 				144564282CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift in Sources */,
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */,
@@ -664,6 +671,7 @@
 				4EB123002CB793B100D771D3 /* ButtonSupplementaryView.swift in Sources */,
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
 				1445642A2CBC00AA0097DF89 /* MelonChartNavigationViewControllerWithAccessibility.swift in Sources */,
+				144FC6F72CBCDAB100CC75FE /* AdjustableForAccessibility.swift in Sources */,
 				4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */,
 				4EC52AE12C9D1590007E07D6 /* SwitchViewController+DataSource.swift in Sources */,
 				4E0AB0492C9BDD9900B8A89C /* TextViewController.swift in Sources */,

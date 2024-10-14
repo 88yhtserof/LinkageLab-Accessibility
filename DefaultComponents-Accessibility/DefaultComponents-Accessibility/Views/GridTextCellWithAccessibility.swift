@@ -7,16 +7,11 @@
 
 import UIKit
 
-protocol AdjustableForAccessibilityDelegate: AnyObject {
-    func adjustableIncrement(_ view: UICollectionViewCell)
-    func adjustableDecrement(_ view: UICollectionViewCell)
-}
-
 /// Grid shape list cell with text and image
 class GridTextCellWithAccessibility: UICollectionViewCell, Identifiable {
     typealias ID = String?
     
-    weak var delegate: AdjustableForAccessibilityDelegate?
+    weak var delegate: AdjustableForAccessibility?
     
     var id: String?
     var thumbnailImage: UIImage? {
