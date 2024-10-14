@@ -8,7 +8,7 @@
 import UIKit
 
 extension MelonChartNavigationViewControllerWithAccessibility {
-    func configureAccessibilityFrame(with cell: UICollectionViewCell, for state: AccessibilityFrameState) -> CGRect {
+    func AccessibilityFrameForLatest(with cell: UICollectionViewCell, height: CGFloat, for state: AccessibilityFrameState) -> CGRect {
         let originToView = collectionView.convert(cell.frame.origin, to: view)
         let origin: CGPoint
         switch state {
@@ -17,7 +17,20 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         case .scroll:
             origin = CGPoint(x: originToView.x, y: originToView.y)
         }
-        let size = CGSize(width: view.frame.width - 20, height: cell.frame.height * 2)
+        let size = CGSize(width: view.frame.width - 20, height: cell.frame.height * height)
+        return CGRect(origin: origin, size: size)
+    }
+    
+    func AccessibilityFrameForChart(with cell: UICollectionViewCell, height: CGFloat, for state: AccessibilityFrameState) -> CGRect {
+        let originToView = collectionView.convert(cell.frame.origin, to: view)
+        let origin: CGPoint
+        switch state {
+        case .initial:
+            origin = CGPoint(x: originToView.x, y: originToView.y + collectionView.contentOffset.y - 35)
+        case .scroll:
+            origin = CGPoint(x: originToView.x, y: originToView.y)
+        }
+        let size = CGSize(width: view.frame.width - 20, height: cell.frame.height * height + 10)
         return CGRect(origin: origin, size: size)
     }
     

@@ -16,7 +16,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         
         if indexPath.item == 0 {
             cell.isAccessibilityElement = true
-            cell.accessibilityFrame = configureAccessibilityFrame(with: cell, for: .initial)
+            cell.accessibilityFrame = AccessibilityFrameForLatest(with: cell, height: 2, for: .initial)
             cell.accessibilityLabel = item
             cell.accessibilityValue = "총 \(books.count) 페이지 중 \(indexPath.item + 1) 페이지"
             cell.accessibilityTraits = [.button, .adjustable]
@@ -24,12 +24,18 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         }
     }
     
-    func chartCellRegistrationHandler(cell: UICollectionViewCell, indexPath: IndexPath, item: String) {
-        var config = UIListContentConfiguration.valueCell()
-        config.text = item
-        cell.contentConfiguration = config
-        cell.contentView.layer.borderWidth = 1
-        cell.contentView.layer.borderColor = UIColor.black.cgColor
+    func chartCellRegistrationHandler(cell: BorderedListCell, indexPath: IndexPath, item: String) {
+        cell.rank = indexPath.item + 1
+        cell.text = item
+        
+        if indexPath.item == 0 {
+            cell.isAccessibilityElement = true
+            cell.accessibilityFrame = AccessibilityFrameForChart(with: cell, height: 3, for: .initial)
+            cell.accessibilityLabel = "\(indexPath.item + 1)위, \(item)"
+            cell.accessibilityValue = "총 \(books.count) 페이지 중 \(indexPath.item + 1) 페이지"
+            cell.accessibilityTraits = [.button, .adjustable]
+            cell.delegate = self
+        }
         
     }
     
