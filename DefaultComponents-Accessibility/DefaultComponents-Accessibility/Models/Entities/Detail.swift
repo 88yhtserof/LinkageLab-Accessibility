@@ -65,7 +65,9 @@ extension Detail {
         Detail(title: "UITableView ● 기본 컴포넌트"),
         Detail(title: "UITableView ▲ 개선 컴포넌트"),
         Detail(title: "뉴스 더보기 ● 기본 컴포넌트"),
-        Detail(title: "뉴스 더보기 ▲ 개선 컴포넌트")
+        Detail(title: "뉴스 더보기 ▲ 개선 컴포넌트"),
+        Detail(title: "멜론 차트 탐색 ● 기본 컴포넌트"),
+        Detail(title: "멜론 차트 탐색 ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForPage = [

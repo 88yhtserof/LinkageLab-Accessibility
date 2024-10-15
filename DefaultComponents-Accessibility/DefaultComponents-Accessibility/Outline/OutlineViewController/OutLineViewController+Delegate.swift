@@ -55,6 +55,10 @@ extension OutlineViewController: UICollectionViewDelegate {
                 vc = NewsListViewController()
             case 5:
                 vc = NewsListViewControllerWithAccessibility()
+            case 6:
+                vc = MelonChartNavigationViewController()
+            case 7:
+                vc = MelonChartNavigationViewControllerWithAccessibility()
             default:
                 return
             }

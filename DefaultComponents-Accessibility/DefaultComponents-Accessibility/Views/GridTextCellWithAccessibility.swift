@@ -1,15 +1,17 @@
 //
-//  GridTextCell.swift
+//  GridTextCellWithAccessibility.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/23/24.
+//  Created by 임윤휘 on 10/14/24.
 //
 
 import UIKit
 
 /// Grid shape list cell with text and image
-class GridTextCell: UICollectionViewCell, Identifiable {
+class GridTextCellWithAccessibility: UICollectionViewCell, Identifiable {
     typealias ID = String?
+    
+    weak var delegate: AdjustableForAccessibility?
     
     var id: String?
     var thumbnailImage: UIImage? {
@@ -25,12 +27,6 @@ class GridTextCell: UICollectionViewCell, Identifiable {
     var secondaryText: String? {
         didSet {
             secondaryTextLabel.text = secondaryText
-        }
-    }
-    
-    var isAccessibilityForText: Bool = true {
-        didSet {
-            textLabel.isAccessibilityElement = isAccessibilityForText
         }
     }
     
@@ -57,12 +53,22 @@ class GridTextCell: UICollectionViewCell, Identifiable {
         textLabel.text = nil
         secondaryTextLabel.text = nil
     }
+    
+    override func accessibilityIncrement() {
+        delegate?.adjustableIncrement(self)
+        
+    }
+    
+    override func accessibilityDecrement() {
+        delegate?.adjustableDecrement(self)
+    }
 
 }
 
 // MARK: Configuration
-private extension GridTextCell {
+private extension GridTextCellWithAccessibility {
     func configureSubviews() {
+        textLabel.isAccessibilityElement = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .systemGray6
@@ -97,7 +103,7 @@ private extension GridTextCell {
     }
 }
 
-extension GridTextCell: DynamicTypeable {
+extension GridTextCellWithAccessibility: DynamicTypeable {
     func setPreferredFontyStyle() {
         textLabel.font = UIFont.preferredFont(forTextStyle: .body)
         secondaryTextLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
