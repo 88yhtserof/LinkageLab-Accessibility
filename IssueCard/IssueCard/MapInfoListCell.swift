@@ -12,7 +12,7 @@ final class MapInfoListCell: UICollectionViewCell {
     lazy var innerView = UIView()
     var rightView = UIView()
     lazy var imageView = UIImageView()
-    private lazy var stackView = UIStackView()
+    lazy var stackView = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,23 +28,18 @@ final class MapInfoListCell: UICollectionViewCell {
 extension MapInfoListCell {
     func configureView() {
         stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
+        stackView.alignment = .leading
         stackView.spacing = 10
-        
         stackView.addArrangedSubview(imageView)
-        stackView.addArrangedSubview(innerView)
-        [ imageView, innerView, rightView ]
-            .compactMap{ $0 }
-            .forEach{ stackView.addArrangedSubview($0) }
     }
     
     func configureConstraints() {
-        contentView.addPinnedSubview(stackView, height: nil)
+        contentView.addPinnedSubview(stackView, inset: UIEdgeInsets(top: 10, left: 5, bottom: -10, right: -5), height: nil)
         
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalToConstant: 25),
-            imageView.heightAnchor.constraint(equalTo
-                                              : imageView.widthAnchor)
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
         ])
     }
 }

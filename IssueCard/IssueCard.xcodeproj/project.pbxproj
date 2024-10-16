@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EAA3CA62CBF42F300F0FE82 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */; };
+		4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */; };
+		4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */; };
 		4EED06822CBDF986003F0A61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06812CBDF986003F0A61 /* AppDelegate.swift */; };
 		4EED06842CBDF986003F0A61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06832CBDF986003F0A61 /* SceneDelegate.swift */; };
 		4EED06862CBDF986003F0A61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06852CBDF986003F0A61 /* ViewController.swift */; };
@@ -18,12 +21,15 @@
 		4EED069C2CBE075B003F0A61 /* MapInfoViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED069B2CBE075B003F0A61 /* MapInfoViewController+DataSource.swift */; };
 		4EED069E2CBE089D003F0A61 /* MapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED069D2CBE089D003F0A61 /* MapInfo.swift */; };
 		4EED06A02CBE11C4003F0A61 /* MapInfoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED069F2CBE11C4003F0A61 /* MapInfoListCell.swift */; };
-		4EED06A22CBE193A003F0A61 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06A12CBE193A003F0A61 /* PhoneNumberView.swift */; };
+		4EED06A22CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06A12CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift */; };
 		4EED06A42CBE36CF003F0A61 /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06A32CBE36CF003F0A61 /* Actionable.swift */; };
-		4EED06A62CBE3715003F0A61 /* ActionableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06A52CBE3715003F0A61 /* ActionableView.swift */; };
+		4EED06A62CBE3715003F0A61 /* ActionableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED06A52CBE3715003F0A61 /* ActionableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
+		4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
+		4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+.swift"; sourceTree = "<group>"; };
 		4EED067E2CBDF986003F0A61 /* IssueCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssueCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED06812CBDF986003F0A61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EED06832CBDF986003F0A61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +43,9 @@
 		4EED069B2CBE075B003F0A61 /* MapInfoViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapInfoViewController+DataSource.swift"; sourceTree = "<group>"; };
 		4EED069D2CBE089D003F0A61 /* MapInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfo.swift; sourceTree = "<group>"; };
 		4EED069F2CBE11C4003F0A61 /* MapInfoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoListCell.swift; sourceTree = "<group>"; };
-		4EED06A12CBE193A003F0A61 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
+		4EED06A12CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewWithCopy.swift; sourceTree = "<group>"; };
 		4EED06A32CBE36CF003F0A61 /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
-		4EED06A52CBE3715003F0A61 /* ActionableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionableView.swift; sourceTree = "<group>"; };
+		4EED06A52CBE3715003F0A61 /* ActionableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +90,12 @@
 				4EED06992CBDFD1F003F0A61 /* View+Constraints.swift */,
 				4EED069D2CBE089D003F0A61 /* MapInfo.swift */,
 				4EED069F2CBE11C4003F0A61 /* MapInfoListCell.swift */,
-				4EED06A12CBE193A003F0A61 /* PhoneNumberView.swift */,
+				4EED06A12CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift */,
 				4EED06A32CBE36CF003F0A61 /* Actionable.swift */,
-				4EED06A52CBE3715003F0A61 /* ActionableView.swift */,
+				4EED06A52CBE3715003F0A61 /* ActionableLabel.swift */,
+				4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */,
+				4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */,
+				4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */,
 			);
 			path = IssueCard;
 			sourceTree = "<group>";
@@ -165,11 +174,14 @@
 				4EED069A2CBDFD1F003F0A61 /* View+Constraints.swift in Sources */,
 				4EED069E2CBE089D003F0A61 /* MapInfo.swift in Sources */,
 				4EED06862CBDF986003F0A61 /* ViewController.swift in Sources */,
-				4EED06A62CBE3715003F0A61 /* ActionableView.swift in Sources */,
+				4EED06A62CBE3715003F0A61 /* ActionableLabel.swift in Sources */,
 				4EED06A42CBE36CF003F0A61 /* Actionable.swift in Sources */,
+				4EAA3CA62CBF42F300F0FE82 /* CopyButton.swift in Sources */,
 				4EED069C2CBE075B003F0A61 /* MapInfoViewController+DataSource.swift in Sources */,
+				4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */,
 				4EED06822CBDF986003F0A61 /* AppDelegate.swift in Sources */,
-				4EED06A22CBE193A003F0A61 /* PhoneNumberView.swift in Sources */,
+				4EED06A22CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift in Sources */,
+				4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */,
 				4EED06842CBDF986003F0A61 /* SceneDelegate.swift in Sources */,
 				4EED06A02CBE11C4003F0A61 /* MapInfoListCell.swift in Sources */,
 				4EED06962CBDFAFC003F0A61 /* MapInfoViewController.swift in Sources */,

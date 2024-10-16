@@ -23,6 +23,7 @@ final class MapInfoViewController: DefaultViewController {
 
 private extension MapInfoViewController {
     func configureView() {
+        collectionView.isScrollEnabled = false
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in

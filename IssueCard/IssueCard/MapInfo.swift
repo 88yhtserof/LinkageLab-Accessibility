@@ -9,10 +9,10 @@ import UIKit
 
 struct MapInfo: Hashable {
     let image: String
-    let innerView: UIView
+    let innerView: ActionableLabel
     let rightView: UIView?
     
-    init(image: String, innerView: UIView, rightView: UIView?) {
+    init(image: String, innerView: ActionableLabel, rightView: UIView?) {
         self.image = image
         self.innerView = innerView
         self.rightView = rightView
@@ -21,6 +21,8 @@ struct MapInfo: Hashable {
 
 extension MapInfo {
     static let samples = [
-        MapInfo(image: "phone.fill", innerView: PhoneNumberView(phoneNumber: "02-6250-0699"), rightView: nil)
+        MapInfo(image: "phone.fill", innerView: PhoneNumberViewWithCopy(phoneNumber: "02-6250-0699"), rightView: nil),
+        MapInfo(image: "phone.fill", innerView: PhoneNumberView(phoneNumber: "02-6250-0699"), rightView: CopyButton(for: "02-6250-0699")),
+        MapInfo(image: "phone.fill", innerView: PhoneNumberViewWithCopy(phoneNumber: "02-6250-0699"), rightView: nil)
     ]
 }
