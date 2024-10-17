@@ -26,13 +26,15 @@ extension MelonChartNavigationViewController {
             return sectionForLatest()
         case .chart:
             return sectionForChart()
+        case .today:
+            return sectionForToday()
         }
     }
     
     func sectionForLatest() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.48))
         let nestedGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.48), heightDimension: .fractionalHeight(1.0))
-        let containerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .absolute(480))
+        let containerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .absolute(450))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
@@ -62,6 +64,22 @@ extension MelonChartNavigationViewController {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
         section.boundarySupplementaryItems = [titleBoundarySupplementaryItem()]
         section.orthogonalScrollingBehavior = .groupPaging
+        
+        return section
+    }
+    
+    func sectionForToday() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(150))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+        group.interItemSpacing = .flexible(5)
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
+        section.boundarySupplementaryItems = [titleBoundarySupplementaryItem()]
+        section.orthogonalScrollingBehavior = .continuous
+        section.interGroupSpacing = 10
         
         return section
     }

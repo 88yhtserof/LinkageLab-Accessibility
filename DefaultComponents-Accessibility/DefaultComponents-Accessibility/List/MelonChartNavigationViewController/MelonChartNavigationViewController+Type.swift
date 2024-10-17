@@ -11,14 +11,16 @@ import Foundation
 //MARK: Types for DataSource
 extension MelonChartNavigationViewController {
     enum Section: Int {
-        case latest, chart
+        case latest, chart, today
         
         var title: String {
             switch self {
             case .latest:
-                return "Latest"
+                return "최신 음악"
             case .chart:
-                return "Chart"
+                return "음악 차트"
+            case .today:
+                return "오늘의 음악"
             }
         }
     }
@@ -26,15 +28,24 @@ extension MelonChartNavigationViewController {
     struct Item: Hashable {
         let latest: String?
         let chart: String?
+        let today: String?
         
-        init(latest: String?) {
+        init(latest: String?, chart: String?, today: String?) {
             self.latest = latest
-            self.chart = nil
+            self.chart = chart
+            self.today = today
         }
         
-        init(chart: String?) {
-            self.chart = chart
-            self.latest = nil
+        init(latest: String) {
+            self.init(latest: latest, chart: nil, today: nil)
+        }
+        
+        init(chart: String) {
+            self.init(latest: nil, chart: chart, today: nil)
+        }
+        
+        init(today: String){
+            self.init(latest: nil, chart: nil, today: today)
         }
     }
     

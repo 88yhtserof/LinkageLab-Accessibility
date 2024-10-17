@@ -26,7 +26,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
             return sectionForLatest()
         case .chart:
             return sectionForChart()
-        case .custom:
+        case .today:
             return sectionForCustom()
         }
     }

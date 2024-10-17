@@ -50,7 +50,7 @@ private extension MelonChartNavigationViewControllerWithAccessibility {
                 return collectionView.dequeueConfiguredReusableCell(using: latestCellRegistration, for: indexPath, item: itemIdentifier)
             case .chart:
                 return collectionView.dequeueConfiguredReusableCell(using: chartCellRegistration, for: indexPath, item: itemIdentifier)
-            case.custom:
+            case .today:
                 return collectionView.dequeueConfiguredReusableCell(using: customCellRegistration, for: indexPath, item: itemIdentifier)
             }
         })

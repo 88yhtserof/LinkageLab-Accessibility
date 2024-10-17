@@ -39,6 +39,7 @@ private extension MelonChartNavigationViewController {
     func configureDataSource() {
         let latestCellRegistration = UICollectionView.CellRegistration(handler: latestCellRegistrationHandler)
         let chartCellRegistration = UICollectionView.CellRegistration(handler: chartCellRegistrationHandler)
+        let todayCellRegistration = UICollectionView.CellRegistration(handler: todayCellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let section = Section(rawValue: indexPath.section) else {
@@ -49,6 +50,8 @@ private extension MelonChartNavigationViewController {
                 return collectionView.dequeueConfiguredReusableCell(using: latestCellRegistration, for: indexPath, item: itemIdentifier.latest)
             case .chart:
                 return collectionView.dequeueConfiguredReusableCell(using: chartCellRegistration, for: indexPath, item: itemIdentifier.chart)
+            case .today:
+                return collectionView.dequeueConfiguredReusableCell(using: todayCellRegistration, for: indexPath, item: itemIdentifier.today)
             }
         })
         

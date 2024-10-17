@@ -48,10 +48,10 @@ extension MelonChartNavigationViewControllerWithAccessibility {
     
     func updateSnapshot() {
         snapshot = Snapshot()
-        snapshot.appendSections([.latest, .chart, .custom])
+        snapshot.appendSections([.latest, .chart, .today])
         snapshot.appendItems([.latest], toSection: .latest)
         snapshot.appendItems([.chart], toSection: .chart)
-        snapshot.appendItems([.custom], toSection: .custom)
+        snapshot.appendItems([.today], toSection: .today)
         dataSource.apply(snapshot)
     }
     
