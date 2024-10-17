@@ -84,7 +84,7 @@ private extension BorderedListCell {
             
             textLabel.centerYAnchor.constraint(equalTo: rankLabel.centerYAnchor),
             textLabel.leadingAnchor.constraint(equalTo: rankLabel.trailingAnchor, constant: 10),
-            textLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor)
+            textLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -10)
         ])
     }
 }
