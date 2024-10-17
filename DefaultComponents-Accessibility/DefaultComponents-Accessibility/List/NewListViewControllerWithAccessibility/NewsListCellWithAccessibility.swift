@@ -21,6 +21,7 @@ final class NewsListCellWithAccessibility: UITableViewCell {
     var content: String? {
         didSet {
             contentLabel.text = content
+            accessibilityValue = configureAccessibilityContent()
         }
     }
     
@@ -54,12 +55,17 @@ private extension NewsListCellWithAccessibility {
         stackView.distribution = .fill
         stackView.spacing = 10
         
-        accessibilityLabel = title
         accessibilityHint = "상세 내용을 확인하려면 이중탭 하세요"
         accessibilityTraits = .button
     }
     
     func configureConstraints() {
         contentView.addPinnedSubview(stackView, inset: UIEdgeInsets(top: 20, left: 10, bottom: -20, right: -10), height: nil)
+    }
+    
+    func configureAccessibilityContent() -> String? {
+        guard let content else { return nil }
+        let partOfcontent = String(content.prefix(80))
+        return partOfcontent + " 말줄임"
     }
 }
