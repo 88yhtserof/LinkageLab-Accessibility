@@ -61,10 +61,12 @@ class BorderedListCell: UICollectionViewCell, Identifiable {
 // MARK: Configuration
 private extension BorderedListCell {
     func configureSubviews() {
-        rankLabel.font = .systemFont(ofSize: 15, weight: .regular)
+        
+        rankLabel.sizeToFit()
         rankLabel.isAccessibilityElement = false
-        textLabel.font = .systemFont(ofSize: 15, weight: .thin)
+        
         textLabel.isAccessibilityElement = false
+        textLabel.textAlignment = .left
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.black.cgColor
     }
@@ -75,16 +77,14 @@ private extension BorderedListCell {
     
     func configureConstraints() {
         let spacing: CGFloat = 5.0
-        let height = contentView.frame.width
         
         NSLayoutConstraint.activate([
             rankLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: spacing),
             rankLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            rankLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             textLabel.centerYAnchor.constraint(equalTo: rankLabel.centerYAnchor),
-            textLabel.leadingAnchor.constraint(equalTo: rankLabel.leadingAnchor, constant: 15),
-            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            textLabel.leadingAnchor.constraint(equalTo: rankLabel.trailingAnchor, constant: 10),
+            textLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor)
         ])
     }
 }
