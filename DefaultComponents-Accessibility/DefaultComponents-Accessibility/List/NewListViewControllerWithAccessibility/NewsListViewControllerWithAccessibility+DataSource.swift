@@ -31,7 +31,7 @@ extension NewsListViewControllerWithAccessibility {
         let indexPath = IndexPath(item: index + 1, section: 0)
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         Task {
-            try? await UIAccessibility.setFocus(to: cell, for: .seconds(2))
+            try? await UIAccessibility.setFocus(to: cell, for: .seconds(1.5))
         }
     }
 }
