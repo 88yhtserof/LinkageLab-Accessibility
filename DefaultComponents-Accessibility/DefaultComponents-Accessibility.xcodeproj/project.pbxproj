@@ -26,6 +26,7 @@
 		14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */; };
 		14852BEB2CC227DE00F53857 /* MelonListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BEA2CC227DE00F53857 /* MelonListCell.swift */; };
 		14852BED2CC22CD500F53857 /* MusicGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BEC2CC22CD500F53857 /* MusicGroupView.swift */; };
+		14852BEF2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -125,6 +126,7 @@
 		14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTraitsTableCell.swift; sourceTree = "<group>"; };
 		14852BEA2CC227DE00F53857 /* MelonListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelonListCell.swift; sourceTree = "<group>"; };
 		14852BEC2CC22CD500F53857 /* MusicGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGroupView.swift; sourceTree = "<group>"; };
+		14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewController+Action.swift"; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				144564252CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift */,
 				14852BEA2CC227DE00F53857 /* MelonListCell.swift */,
 				14852BEC2CC22CD500F53857 /* MusicGroupView.swift */,
+				14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */,
 			);
 			path = MelonChartNavigationViewController;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 			files = (
 				144FC6F52CBCD87300CC75FE /* BorderedListCell.swift in Sources */,
 				144564282CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift in Sources */,
+				14852BEF2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift in Sources */,
 				4EEEE6132CC0D9B500FCF08B /* ChartCollectionListCell.swift in Sources */,
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */,

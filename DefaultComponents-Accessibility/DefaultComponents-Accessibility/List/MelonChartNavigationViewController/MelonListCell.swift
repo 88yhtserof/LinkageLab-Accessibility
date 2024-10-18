@@ -25,8 +25,8 @@ final class MelonListCell: UICollectionViewCell {
         }
     }
     
-    private lazy var musicGroupView = MusicGroupView(frame: frame)
-    private lazy var playButton = UIButton()
+    lazy var musicGroupView = MusicGroupView(frame: frame)
+    lazy var playButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,10 +46,6 @@ final class MelonListCell: UICollectionViewCell {
         musicGroupView.textLabel.text = nil
         musicGroupView.secondaryTextLabel.text = nil
     }
-    
-    @objc func didTapPlayButton() {
-        print("Present a Music Player")
-    }
 }
 
 // MARK: Configuration
@@ -60,7 +56,6 @@ private extension MelonListCell {
         config.image = UIImage(systemName: "play.fill")
         config.baseForegroundColor = .white
         playButton.configuration = config
-        playButton.addTarget(self, action: #selector(didTapPlayButton), for: .touchUpInside)
     }
     
     func configureContentView() {

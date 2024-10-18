@@ -25,6 +25,8 @@ final class MusicGroupView: UIView {
         }
     }
     
+    var action: (() -> Void)?
+    
     lazy var imageView = UIImageView()
     lazy var textLabel = UILabel()
     lazy var secondaryTextLabel = UILabel()
@@ -44,7 +46,8 @@ final class MusicGroupView: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        print("Present a Music Detail")
+        action?()
+        
     }
 }
 
