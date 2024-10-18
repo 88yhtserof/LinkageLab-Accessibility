@@ -54,7 +54,7 @@ private extension NewsListViewController {
 extension NewsListViewController: ButtonSupplementaryViewDelegate {
     func buttonSupplementaryView(didTapButton button: UIButton) {
         if pagable.total == News.samples.count {
-            var alert = UIAlertController(title: "마지막 페이지입니다", message: "모든 페이지를 확인하셨습니다.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "마지막 페이지입니다", message: "모든 페이지를 확인하셨습니다.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .default))
             self.present(alert, animated: true)
             return

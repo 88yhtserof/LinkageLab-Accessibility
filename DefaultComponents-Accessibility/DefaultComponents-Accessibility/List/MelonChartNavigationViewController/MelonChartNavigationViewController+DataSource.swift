@@ -11,8 +11,11 @@ extension MelonChartNavigationViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func latestCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
+    func latestCellRegistrationHandler(cell: MelonListCell, indexPath: IndexPath, item: String) {
         cell.text = item
+        cell.musicGroupView.addTarget(self, action: #selector(didTapMusicGroup), for: .touchUpInside)
+        cell.playButton.tag = indexPath.item
+        cell.playButton.addTarget(self, action: #selector(didTapPlayButton(_:)), for: .touchUpInside)
     }
     
     func chartCellRegistrationHandler(cell: BorderedListCell, indexPath: IndexPath, item: String) {
