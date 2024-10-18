@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MusicGroupView: UIView {
+final class MusicGroupView: UIControl {
     
     var thumbnailImage: UIImage? {
         didSet {
@@ -25,8 +25,6 @@ final class MusicGroupView: UIView {
         }
     }
     
-    var action: (() -> Void)?
-    
     lazy var imageView = UIImageView()
     lazy var textLabel = UILabel()
     lazy var secondaryTextLabel = UILabel()
@@ -42,12 +40,6 @@ final class MusicGroupView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        action?()
-        
     }
 }
 

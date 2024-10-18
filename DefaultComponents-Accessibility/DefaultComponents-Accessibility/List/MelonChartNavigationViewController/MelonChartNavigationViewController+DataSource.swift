@@ -13,10 +13,7 @@ extension MelonChartNavigationViewController {
     
     func latestCellRegistrationHandler(cell: MelonListCell, indexPath: IndexPath, item: String) {
         cell.text = item
-        cell.musicGroupView.action = {[self] in
-            let vc = TableViewController(isAccessible: false)
-            self.present(vc, animated: true)
-        }
+        cell.musicGroupView.addTarget(self, action: #selector(didTapMusicGroup), for: .touchUpInside)
         cell.playButton.tag = indexPath.item
         cell.playButton.addTarget(self, action: #selector(didTapPlayButton(_:)), for: .touchUpInside)
     }

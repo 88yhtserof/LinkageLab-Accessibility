@@ -229,9 +229,9 @@
 				144564272CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift */,
 				144564232CBB941B0097DF89 /* MelonChartNavigationViewController+ListLayout.swift */,
 				144564252CBB959F0097DF89 /* MelonChartNavigationViewController+Type.swift */,
+				14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */,
 				14852BEA2CC227DE00F53857 /* MelonListCell.swift */,
 				14852BEC2CC22CD500F53857 /* MusicGroupView.swift */,
-				14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */,
 			);
 			path = MelonChartNavigationViewController;
 			sourceTree = "<group>";

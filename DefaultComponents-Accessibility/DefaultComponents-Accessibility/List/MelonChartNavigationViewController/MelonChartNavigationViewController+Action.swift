@@ -17,4 +17,9 @@ extension MelonChartNavigationViewController {
             .forEach{ alert.addAction($0) }
         self.present(alert, animated: true)
     }
+    
+    @objc func didTapMusicGroup() {
+        let vc = TableViewController(isAccessible: false)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
