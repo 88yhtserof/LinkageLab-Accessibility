@@ -23,6 +23,7 @@
 		144FC6FA2CBCE8B000CC75FE /* InnerCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */; };
 		14852BE32CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */; };
 		14852BE52CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */; };
+		14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -117,6 +118,7 @@
 		144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCollectionListCell.swift; sourceTree = "<group>"; };
 		14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewControllerWithAccessibility+DataSource.swift"; sourceTree = "<group>"; };
 		14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewControllerWithAccessibility+Delegate.swift"; sourceTree = "<group>"; };
+		14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTraitsTableCell.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				14B1303B2CAED6D500877314 /* GrabberView.swift */,
 				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
 				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */,
+				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				4EB123062CB7B57900D771D3 /* NewsListCellWithAccessibility.swift in Sources */,
 				4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */,
 				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
+				14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
 				4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,

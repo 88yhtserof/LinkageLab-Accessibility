@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewsListCellWithAccessibility: UITableViewCell {
+final class NewsListCellWithAccessibility: ButtonTraitsTableCell {
     
     static let reuseIdentifier = "newslistcellwithaccessibility-identifier"
     
@@ -56,7 +56,7 @@ private extension NewsListCellWithAccessibility {
         stackView.spacing = 10
         
         accessibilityHint = "상세 내용을 확인하려면 이중탭 하세요"
-        accessibilityTraits = .button
+        isAccessibilityElement = true
     }
     
     func configureConstraints() {
