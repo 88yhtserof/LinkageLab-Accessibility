@@ -20,6 +20,10 @@
 		144FC6F32CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */; };
 		144FC6F52CBCD87300CC75FE /* BorderedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */; };
 		144FC6F72CBCDAB100CC75FE /* AdjustableForAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */; };
+		144FC6FA2CBCE8B000CC75FE /* InnerCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */; };
+		14852BE32CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */; };
+		14852BE52CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */; };
+		14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */; };
 		144FC6FA2CBCE8B000CC75FE /* TodayCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F92CBCE8B000CC75FE /* TodayCollectionListCell.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
@@ -114,6 +118,10 @@
 		144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTextCellWithAccessibility.swift; sourceTree = "<group>"; };
 		144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedListCell.swift; sourceTree = "<group>"; };
 		144FC6F62CBCDAB100CC75FE /* AdjustableForAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableForAccessibility.swift; sourceTree = "<group>"; };
+		144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCollectionListCell.swift; sourceTree = "<group>"; };
+		14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewControllerWithAccessibility+DataSource.swift"; sourceTree = "<group>"; };
+		14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewControllerWithAccessibility+Delegate.swift"; sourceTree = "<group>"; };
+		14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTraitsTableCell.swift; sourceTree = "<group>"; };
 		144FC6F92CBCE8B000CC75FE /* TodayCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionListCell.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +280,7 @@
 				14B1303B2CAED6D500877314 /* GrabberView.swift */,
 				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
 				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */,
+				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -395,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				4EB123032CB7B0C300D771D3 /* NewsListViewControllerWithAccessibility.swift */,
+				14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */,
+				14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */,
 				4EB123052CB7B57900D771D3 /* NewsListCellWithAccessibility.swift */,
 			);
 			path = NewListViewControllerWithAccessibility;
@@ -672,6 +683,7 @@
 				4EC52AEB2CA11594007E07D6 /* DateAndTimeViewController+Delegate.swift in Sources */,
 				4EC52AEF2CA1359F007E07D6 /* CollectionViewController+DataSource.swift in Sources */,
 				144564222CBB932B0097DF89 /* MelonChartNavigationViewController.swift in Sources */,
+				14852BE52CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift in Sources */,
 				4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */,
 				4E285DC52C901C68007F286C /* StateViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,
@@ -679,6 +691,7 @@
 				4EC52B002CA14976007E07D6 /* TableViewController+Delegate.swift in Sources */,
 				4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */,
 				4EB123002CB793B100D771D3 /* ButtonSupplementaryView.swift in Sources */,
+				14852BE32CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift in Sources */,
 				4EC52AFE2CA145C0007E07D6 /* TableViewController+DataSource.swift in Sources */,
 				1445642A2CBC00AA0097DF89 /* MelonChartNavigationViewControllerWithAccessibility.swift in Sources */,
 				144FC6F72CBCDAB100CC75FE /* AdjustableForAccessibility.swift in Sources */,
@@ -740,6 +753,7 @@
 				4EB123062CB7B57900D771D3 /* NewsListCellWithAccessibility.swift in Sources */,
 				4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */,
 				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
+				14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
 				4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */,
 				4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */,
