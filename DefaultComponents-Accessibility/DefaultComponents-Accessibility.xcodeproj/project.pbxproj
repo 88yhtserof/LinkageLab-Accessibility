@@ -24,6 +24,7 @@
 		14852BE32CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */; };
 		14852BE52CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */; };
 		14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */; };
+		144FC6FA2CBCE8B000CC75FE /* TodayCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144FC6F92CBCE8B000CC75FE /* TodayCollectionListCell.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -97,6 +98,8 @@
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */; };
 		4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */; };
+		4EEEE6132CC0D9B500FCF08B /* ChartCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */; };
+		4EEEE6172CC0DC2500FCF08B /* LatestCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */; };
 		4EF982152C93E4DF00809294 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982142C93E4DF00809294 /* AlertViewController.swift */; };
 		4EF982172C93FCDC00809294 /* AlertViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */; };
 /* End PBXBuildFile section */
@@ -119,6 +122,7 @@
 		14852BE22CC1FA0D00F53857 /* NewsListViewControllerWithAccessibility+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewControllerWithAccessibility+DataSource.swift"; sourceTree = "<group>"; };
 		14852BE42CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewControllerWithAccessibility+Delegate.swift"; sourceTree = "<group>"; };
 		14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTraitsTableCell.swift; sourceTree = "<group>"; };
+		144FC6F92CBCE8B000CC75FE /* TodayCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionListCell.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndSliderViewController.swift; sourceTree = "<group>"; };
 		4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityListCell.swift; sourceTree = "<group>"; };
+		4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCollectionListCell.swift; sourceTree = "<group>"; };
+		4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionListCell.swift; sourceTree = "<group>"; };
 		4EF982142C93E4DF00809294 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4EF982162C93FCDC00809294 /* AlertViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+Action.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,7 +236,9 @@
 				144FC6EE2CBCB1E800CC75FE /* MelonChartNavigationViewControllerWithAccessibility+Action.swift */,
 				1445642D2CBC00DF0097DF89 /* MelonChartNavigationViewControllerWithAccessibility+ListLayout.swift */,
 				1445642F2CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift */,
-				144FC6F92CBCE8B000CC75FE /* InnerCollectionListCell.swift */,
+				144FC6F92CBCE8B000CC75FE /* TodayCollectionListCell.swift */,
+				4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */,
+				4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */,
 			);
 			path = MelonChartNavigationViewControllerWithAccessibility;
 			sourceTree = "<group>";
@@ -662,6 +670,7 @@
 			files = (
 				144FC6F52CBCD87300CC75FE /* BorderedListCell.swift in Sources */,
 				144564282CBB98720097DF89 /* MelonChartNavigationViewController+DataSource.swift in Sources */,
+				4EEEE6132CC0D9B500FCF08B /* ChartCollectionListCell.swift in Sources */,
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */,
 				4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */,
@@ -704,7 +713,7 @@
 				4EC52B0C2CA19D57007E07D6 /* PresentationAndMenuViewController.swift in Sources */,
 				4E855F562CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift in Sources */,
 				4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */,
-				144FC6FA2CBCE8B000CC75FE /* InnerCollectionListCell.swift in Sources */,
+				144FC6FA2CBCE8B000CC75FE /* TodayCollectionListCell.swift in Sources */,
 				4EB122FA2CB7694300D771D3 /* NewsListCell.swift in Sources */,
 				4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */,
 				14F7FC422CB2C8DC00F3FA61 /* SearchViewControllerWithAccessibility+Delegate.swift in Sources */,
@@ -721,6 +730,7 @@
 				4E0AB0502C9BEF2800B8A89C /* SearchViewController.swift in Sources */,
 				4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */,
 				14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */,
+				4EEEE6172CC0DC2500FCF08B /* LatestCollectionListCell.swift in Sources */,
 				14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */,
 				4EC52AF52CA13925007E07D6 /* View+Constraints.swift in Sources */,
 				4EC52AE32C9D19D8007E07D6 /* SwitchViewController+Action.swift in Sources */,

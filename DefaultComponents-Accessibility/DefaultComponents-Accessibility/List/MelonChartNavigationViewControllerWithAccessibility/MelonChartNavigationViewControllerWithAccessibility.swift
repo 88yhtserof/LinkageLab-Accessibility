@@ -13,9 +13,6 @@ final class MelonChartNavigationViewControllerWithAccessibility: DefaultViewCont
     var snapshot: Snapshot!
     var accessibilityelements: [Any] = []
     var books = Book.samples
-    var currentPageOfLatest = 0
-    var currentPageOfChart = 0
-    var currentPageOfCustom = 0
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
@@ -33,7 +30,6 @@ final class MelonChartNavigationViewControllerWithAccessibility: DefaultViewCont
 private extension MelonChartNavigationViewControllerWithAccessibility {
     func configureSubviews() {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: -10)
-        collectionView.delegate = self
     }
     
     func configureView() {
@@ -43,7 +39,7 @@ private extension MelonChartNavigationViewControllerWithAccessibility {
     func configureDataSource() {
         let latestCellRegistration = UICollectionView.CellRegistration(handler: latestCellRegistrationHandler)
         let chartCellRegistration = UICollectionView.CellRegistration(handler: chartCellRegistrationHandler)
-        let customCellRegistration = UICollectionView.CellRegistration(handler: customCellRegistrationHandler)
+        let customCellRegistration = UICollectionView.CellRegistration(handler: todayCellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let section = Section(rawValue: indexPath.section) else {
@@ -51,11 +47,11 @@ private extension MelonChartNavigationViewControllerWithAccessibility {
             }
             switch section {
             case .latest:
-                return collectionView.dequeueConfiguredReusableCell(using: latestCellRegistration, for: indexPath, item: itemIdentifier.latest)
+                return collectionView.dequeueConfiguredReusableCell(using: latestCellRegistration, for: indexPath, item: itemIdentifier)
             case .chart:
-                return collectionView.dequeueConfiguredReusableCell(using: chartCellRegistration, for: indexPath, item: itemIdentifier.chart)
-            case.custom:
-                return collectionView.dequeueConfiguredReusableCell(using: customCellRegistration, for: indexPath, item: itemIdentifier.custom)
+                return collectionView.dequeueConfiguredReusableCell(using: chartCellRegistration, for: indexPath, item: itemIdentifier)
+            case .today:
+                return collectionView.dequeueConfiguredReusableCell(using: customCellRegistration, for: indexPath, item: itemIdentifier)
             }
         })
         
