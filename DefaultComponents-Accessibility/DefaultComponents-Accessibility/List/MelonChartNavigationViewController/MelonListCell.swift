@@ -66,8 +66,6 @@ private extension MelonListCell {
         contentView.addPinnedSubview(musicGroupView, height: nil)
         contentView.addSubviews([playButton])
         
-        let spacing: CGFloat = 5.0
-        let height = contentView.frame.width
         let horizontalInset: CGFloat = 5.0
         
         NSLayoutConstraint.activate([
