@@ -11,7 +11,7 @@ extension MelonChartNavigationViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func latestCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
+    func latestCellRegistrationHandler(cell: MelonListCell, indexPath: IndexPath, item: String) {
         cell.text = item
     }
     
