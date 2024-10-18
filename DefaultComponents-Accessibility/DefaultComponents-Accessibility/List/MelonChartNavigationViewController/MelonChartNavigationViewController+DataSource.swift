@@ -15,12 +15,17 @@ extension MelonChartNavigationViewController {
         cell.text = item
     }
     
-    func chartCellRegistrationHandler(cell: UICollectionViewCell, indexPath: IndexPath, item: String) {
-        var config = UIListContentConfiguration.valueCell()
-        config.text = item
-        cell.contentConfiguration = config
-        cell.contentView.layer.borderWidth = 1
-        cell.contentView.layer.borderColor = UIColor.black.cgColor
+    func chartCellRegistrationHandler(cell: BorderedListCell, indexPath: IndexPath, item: String) {
+        cell.rank = indexPath.item + 1
+        cell.text = item
+        cell.isAccessibilityElement = true
+        
+    }
+    
+    func todayCellRegistrationHandler(cell: BorderedListCell, indexPath: IndexPath, item: String) {
+        cell.rank = indexPath.item + 1
+        cell.text = item
+        cell.isAccessibilityElement = true
         
     }
     
@@ -32,11 +37,13 @@ extension MelonChartNavigationViewController {
     func updateSnapshot() {
         let latestItems = books.map{ Item(latest: $0.title) }
         let chartItems = books.map{ Item(chart: $0.title) }
+        let todayItems = books.map{ Item(today: $0.title) }
         
         snapshot = Snapshot()
-        snapshot.appendSections([.latest, .chart])
+        snapshot.appendSections([.latest, .chart, .today])
         snapshot.appendItems(latestItems, toSection: .latest)
         snapshot.appendItems(chartItems, toSection: .chart)
+        snapshot.appendItems(todayItems, toSection: .today)
         dataSource.apply(snapshot)
     }
     

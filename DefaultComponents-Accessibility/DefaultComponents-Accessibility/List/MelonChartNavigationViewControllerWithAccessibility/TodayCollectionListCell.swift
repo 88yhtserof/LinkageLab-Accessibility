@@ -1,5 +1,5 @@
 //
-//  InnerCollectionListCell.swift
+//  TodayCollectionListCell.swift
 //  DefaultComponents-Accessibility
 //
 //  Created by 임윤휘 on 10/14/24.
@@ -7,10 +7,12 @@
 
 import UIKit
 
-final class InnerCollectionListCell: UICollectionViewCell {
+final class TodayCollectionListCell: UICollectionViewCell {
     
     var dataSource: UICollectionViewDiffableDataSource<Int, String>!
     var books = Book.samples
+    var currentPage = 0
+    
     weak var delegate: AdjustableForAccessibility?
     private var currentPageOfCustom = 0
     
@@ -36,11 +38,9 @@ final class InnerCollectionListCell: UICollectionViewCell {
     }
 }
 
-private extension InnerCollectionListCell {
+private extension TodayCollectionListCell {
     
     func configureContentView() {
-        contentView.addPinnedSubview(collectionView, height: nil)
-        
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
         dataSource = UICollectionViewDiffableDataSource<Int, String>(collectionView: collectionView) { collectionView,indexPath,itemIdentifier in
@@ -52,6 +52,8 @@ private extension InnerCollectionListCell {
         snapshot.appendItems(books.map({$0.title}))
         dataSource.apply(snapshot)
         collectionView.dataSource = dataSource
+        
+        contentView.addPinnedSubview(collectionView, height: nil)
     }
     
     func layout() -> UICollectionViewLayout {
