@@ -17,6 +17,7 @@ extension MelonChartNavigationViewControllerWithAccessibility {
         cell.accessibilityTraits = [.button, .adjustable]
         cell.accessibilityLabel = books[cell.currentPage].title
         cell.accessibilityValue = "총 \(books.count) 페이지 중 \(cell.currentPage + 1) 페이지"
+        cell.presenting = self
     }
     
     func chartCellRegistrationHandler(cell: ChartCollectionListCell, indexPath: IndexPath, item: Item) {

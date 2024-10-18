@@ -12,6 +12,7 @@ final class LatestCollectionListCell: UICollectionViewCell {
     var dataSource: UICollectionViewDiffableDataSource<Int, String>!
     var books = Book.samples
     var currentPage = 0
+    var presenting: UIViewController?
     
     weak var delegate: AdjustableForAccessibility?
     private var currentPageOfCustom = 0
@@ -35,6 +36,17 @@ final class LatestCollectionListCell: UICollectionViewCell {
     
     override func accessibilityDecrement() {
         delegate?.adjustableDecrement(self)
+    }
+    
+    
+    @objc func didTapPlayButton(_ sender: UIButton) {
+        let title = books[sender.tag].title
+        let alert = UIAlertController(title: "음악 재생", message: "<\(title)>을 재생하시겠습니까?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel)
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        [ cancelAction, okAction ]
+            .forEach{ alert.addAction($0) }
+        presenting?.present(alert, animated: true)
     }
 }
 
@@ -76,8 +88,14 @@ private extension LatestCollectionListCell {
         return UICollectionViewCompositionalLayout(section: section)
     }
     
-    func cellRegistrationHandler(cell: GridTextCellWithAccessibility, indexPath: IndexPath, item: String) {
+    func cellRegistrationHandler(cell: MelonListCellWithAccessibility, indexPath: IndexPath, item: String) {
         cell.text = item
+        cell.musicGroupView.action = {[presenting] in
+            let vc = TableViewController(isAccessible: false)
+            presenting?.present(vc, animated: true)
+        }
+        cell.playButton.tag = indexPath.item
+        cell.playButton.addTarget(self, action: #selector(didTapPlayButton(_:)), for: .touchUpInside)
     }
     
     func configureAccessibilityValue(current index: Int) {
