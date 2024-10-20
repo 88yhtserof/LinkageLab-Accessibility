@@ -47,8 +47,8 @@ final class DateAndTimeViewController: DefaultCollectionViewController {
         configureSubViews()
         setPreferredFontyStyle()
         let sections = [
-            "UIDatePicker",
-            "UICalendar"
+            "DatePicker",
+            "Calendar"
         ]
         
         let items = [

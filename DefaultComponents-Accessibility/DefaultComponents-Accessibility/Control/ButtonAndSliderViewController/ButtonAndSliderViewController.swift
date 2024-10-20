@@ -51,12 +51,12 @@ final class ButtonAndSliderViewController: DefaultCollectionViewController {
         
         configureSubViews()
         let sections = [
-            "UIButton",
-            "UISlider"
+            "Button",
+            "Slider"
         ]
         
         let items = [
-            Item(sectionID: 0, tag: .standard, title: "비활성화 버튼", description: "비활성화 버튼", view: disabledButton),
+            Item(sectionID: 0, tag: .standard, title: "비활성화 버튼", description: "비활성화되어 동작을 수행할 수 없는 버튼입니다.", view: disabledButton),
             Item(sectionID: 0, tag: .standard, title: "텍스트 버튼",description: "기본적인 텍스트 버튼입니다.", view: textButton),
             Item(sectionID: 0, tag: .standard, title: "이미지 버튼", description: "이미지로 구성된 버튼입니다.", view: imageButton),
             Item(sectionID: 0, tag: .improve, title: "이미지 버튼",description: "이미지에 대한 설명이 제공됩니다.", view: imageButtonAccessibility),
