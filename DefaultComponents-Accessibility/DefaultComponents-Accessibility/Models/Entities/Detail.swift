@@ -30,7 +30,9 @@ struct Detail: Hashable {
     }
     
     var accessibilityLabel: String {
-        title.split(separator: " | ").joined(separator: ", ")
+        title
+            .split(whereSeparator: { ["|", "●", "▲", "⭑"].contains($0) })
+            .joined(separator: ",")
     }
 }
 
