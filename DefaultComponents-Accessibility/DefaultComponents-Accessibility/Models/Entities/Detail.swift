@@ -19,6 +19,14 @@ struct Detail: Hashable {
         case standard = "● 기본 컴포넌트"
         case improve = "▲ 개선 컴포넌트"
         case custom = "⭑ 커스텀 컴포넌트"
+        
+        var title: String {
+            self.rawValue
+        }
+        
+        var accessibilityLabel: String {
+            return String(title.suffix(title.count - 2))
+        }
     }
     
     var accessibilityLabel: String {
