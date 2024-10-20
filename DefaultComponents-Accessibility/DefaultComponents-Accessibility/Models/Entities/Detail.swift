@@ -39,11 +39,6 @@ extension Detail {
         itemsForSheet
     ]
     
-    static let test = [
-        "UILabel",
-        "UIText"
-    ]
-    
     private static let itemsForText = [
         Detail(title: "Label | TextField | TextView"),
         Detail(title: "SearchView ● 기본 컴포넌트"),
