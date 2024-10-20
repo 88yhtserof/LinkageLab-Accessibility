@@ -15,6 +15,15 @@ final class CollectionViewController: DefaultViewController {
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        super.isSettingFocus = false
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
