@@ -28,6 +28,7 @@
 		14852BED2CC22CD500F53857 /* MusicGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BEC2CC22CD500F53857 /* MusicGroupView.swift */; };
 		14852BEF2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */; };
 		14852BF12CC2384F00F53857 /* MelonListCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14852BF02CC2384F00F53857 /* MelonListCellWithAccessibility.swift */; };
+		1488352E2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */; };
 		14B1303C2CAED6D500877314 /* GrabberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1303B2CAED6D500877314 /* GrabberView.swift */; };
 		14F7FC3B2CB2AC4D00F3FA61 /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */; };
 		14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */; };
@@ -129,6 +130,7 @@
 		14852BEC2CC22CD500F53857 /* MusicGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGroupView.swift; sourceTree = "<group>"; };
 		14852BEE2CC232AF00F53857 /* MelonChartNavigationViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MelonChartNavigationViewController+Action.swift"; sourceTree = "<group>"; };
 		14852BF02CC2384F00F53857 /* MelonListCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelonListCellWithAccessibility.swift; sourceTree = "<group>"; };
+		1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTraitsCollectionListCell.swift; sourceTree = "<group>"; };
 		14B1303B2CAED6D500877314 /* GrabberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrabberView.swift; sourceTree = "<group>"; };
 		14F7FC3A2CB2AC4D00F3FA61 /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		14F7FC3D2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerWithAccessibility.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
 				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */,
 				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
+				1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				4EC52ADF2C9D157B007E07D6 /* SwitchViewController.swift in Sources */,
 				4EC51CA12C91597B00385BD0 /* DateAndTimeViewController.swift in Sources */,
 				14F7FC3E2CB2C8C200F3FA61 /* SearchViewControllerWithAccessibility.swift in Sources */,
+				1488352E2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
