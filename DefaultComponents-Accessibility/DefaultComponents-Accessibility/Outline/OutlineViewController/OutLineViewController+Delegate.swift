@@ -48,9 +48,9 @@ extension OutlineViewController: UICollectionViewDelegate {
             case 1:
                 vc = CollectionWithAccessibilityViewController()
             case 2:
-                vc = TableViewController(isAccessible: false)
+                vc = TableViewController()
             case 3:
-                vc = TableViewController(isAccessible: true)
+                vc = TableWithAccessibilityViewController()
             case 4:
                 vc = NewsListViewController()
             case 5:

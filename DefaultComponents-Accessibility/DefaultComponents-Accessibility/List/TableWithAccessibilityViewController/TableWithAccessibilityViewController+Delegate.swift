@@ -1,13 +1,13 @@
 //
-//  TableViewController+Delegate.swift
+//  TableWithAccessibilityViewController+Delegate.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/23/24.
+//  Created by 임윤휘 on 10/20/24.
 //
 
 import UIKit
 
-extension TableViewController: UITableViewDelegate {
+extension TableWithAccessibilityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "삭제하기") { _, _, handler in
             let item = self.books[indexPath.item]
@@ -25,6 +25,13 @@ extension TableViewController: UITableViewDelegate {
             let item = self.books[indexPath.item]
             self.reconfigureSnapshot(at: item)
             handler(true)
+            if UIAccessibility.isVoiceOverRunning {
+                let announcement = self.books[indexPath.item].bookmark ? "즐겨찾기 설정됨" : "즐겨찾기 해제됨"
+                UIAccessibility.post(notification: .announcement, argument: announcement)
+            }
+        }
+        if UIAccessibility.isVoiceOverRunning {
+            bookmarkAction.title = self.books[indexPath.item].bookmark ? "즐겨찾기 해제" : "즐겨찾기 설정"
         }
         return UISwipeActionsConfiguration(actions: [bookmarkAction])
     }

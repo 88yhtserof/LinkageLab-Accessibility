@@ -11,7 +11,7 @@ extension PresentationAndMenuViewController {
     @objc func didTapPresentButton(_ sender: UIButton) {
         isPresentAccessible = sender == presentButtonWithAccessibility
         
-        let presentVC = TableViewController(isAccessible: isPresentAccessible)
+        let presentVC = TableViewController()
         if let sheet = presentVC.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
             
