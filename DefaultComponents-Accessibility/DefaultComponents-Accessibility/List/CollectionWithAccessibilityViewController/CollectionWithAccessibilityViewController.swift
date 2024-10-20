@@ -1,13 +1,13 @@
 //
-//  CollectionViewController.swift
+//  CollectionWithAccessibilityViewController.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/23/24.
+//  Created by 임윤휘 on 10/20/24.
 //
 
 import UIKit
 
-final class CollectionViewController: DefaultViewController {
+final class CollectionWithAccessibilityViewController: DefaultViewController {
     
     var dataSouce: DataSource!
     var snapshot: Snapshot!
@@ -25,7 +25,7 @@ final class CollectionViewController: DefaultViewController {
 }
 
 // MARK: Configuration
-private extension CollectionViewController {
+private extension CollectionWithAccessibilityViewController {
     func configureSubviews() {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: -10)
     }
