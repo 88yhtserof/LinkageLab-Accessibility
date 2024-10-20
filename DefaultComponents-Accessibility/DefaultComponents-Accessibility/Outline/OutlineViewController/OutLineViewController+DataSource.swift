@@ -27,6 +27,9 @@ extension OutlineViewController {
         cell.contentConfiguration = configuration
         cell.selectedBackgroundView = UIView()
         cell.accessories = [.disclosureIndicator()]
+        if UIAccessibility.isVoiceOverRunning {
+            cell.accessibilityLabel = item.accessibilityLabel
+        }
     }
     
     func updateSnapshot() {
