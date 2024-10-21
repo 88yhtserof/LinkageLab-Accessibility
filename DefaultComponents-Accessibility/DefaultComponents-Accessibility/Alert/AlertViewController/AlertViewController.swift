@@ -18,9 +18,7 @@ final class AlertViewController: DefaultCollectionViewController {
         super.init(isAccessible: true)
         
         configureSubViews()
-        let sections = [
-            "UIAlert"
-        ]
+        let sections = [ "Alert" ]
         
         let items = [
             Item(sectionID: 0, tag: .standard, title: "안내 경고창", description: "안내 메세지를 전달할 수 있는 경고창", view: alertForMessageButton),

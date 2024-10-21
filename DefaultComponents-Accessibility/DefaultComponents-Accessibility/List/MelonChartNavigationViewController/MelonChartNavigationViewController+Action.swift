@@ -19,7 +19,7 @@ extension MelonChartNavigationViewController {
     }
     
     @objc func didTapMusicGroup() {
-        let vc = TableViewController(isAccessible: false)
+        let vc = TableViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

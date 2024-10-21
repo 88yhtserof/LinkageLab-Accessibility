@@ -28,8 +28,8 @@ final class StateViewController: DefaultCollectionViewController {
         configureSubViews()
         setPreferredFontyStyle()
         let sections = [
-            "UIActivityIndicator",
-            "UIProgress"
+            "ActivityIndicator",
+            "Progress"
         ]
         
         let items = [

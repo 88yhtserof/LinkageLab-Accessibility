@@ -13,7 +13,7 @@ extension OutlineViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Outline, Detail>
     typealias SectionSnapshot = NSDiffableDataSourceSectionSnapshot<Detail>
     
-    func headerRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Detail) {
+    func headerRegistrationHandler(cell: ButtonTraitsCollectionListCell, indexPath: IndexPath, item: Detail) {
         var configuration = cell.defaultContentConfiguration()
         configuration.text = item.title
         cell.contentConfiguration = configuration
@@ -21,12 +21,15 @@ extension OutlineViewController {
         cell.accessories = [.outlineDisclosure()]
     }
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: Detail) {
+    func cellRegistrationHandler(cell: ButtonTraitsCollectionListCell, indexPath: IndexPath, item: Detail) {
         var configuration = cell.defaultContentConfiguration()
         configuration.text = item.title
         cell.contentConfiguration = configuration
         cell.selectedBackgroundView = UIView()
         cell.accessories = [.disclosureIndicator()]
+        if UIAccessibility.isVoiceOverRunning {
+            cell.accessibilityLabel = item.accessibilityLabel
+        }
     }
     
     func updateSnapshot() {

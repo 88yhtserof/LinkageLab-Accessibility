@@ -76,7 +76,7 @@ final class LatestCollectionListCell: UICollectionViewCell {
     }
     
     @objc func didTapMusicGroup() {
-        let vc = TableViewController(isAccessible: false)
+        let vc = TableViewController()
         presenting?.navigationController?.pushViewController(vc, animated: true)
     }
 }

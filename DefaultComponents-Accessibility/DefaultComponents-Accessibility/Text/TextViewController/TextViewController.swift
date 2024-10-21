@@ -31,9 +31,9 @@ final class TextViewController: DefaultCollectionViewController {
         configureSubViews()
         setPreferredFontyStyle()
         let sections = [
-            "UILabel",
-            "UITextField",
-            "UITextView"
+            "Label",
+            "TextField",
+            "TextView"
         ]
         
         let items = [

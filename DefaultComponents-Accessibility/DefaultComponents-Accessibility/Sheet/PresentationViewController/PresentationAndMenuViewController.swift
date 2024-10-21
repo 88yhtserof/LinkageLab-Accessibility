@@ -22,7 +22,7 @@ final class PresentationAndMenuViewController: DefaultCollectionViewController {
         configureSubviews()
         let sections = [
             "PresentationContoller",
-            "UIMenu"
+            "Menu"
         ]
         
         let items = [

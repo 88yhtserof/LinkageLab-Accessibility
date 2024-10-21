@@ -19,6 +19,20 @@ struct Detail: Hashable {
         case standard = "● 기본 컴포넌트"
         case improve = "▲ 개선 컴포넌트"
         case custom = "⭑ 커스텀 컴포넌트"
+        
+        var title: String {
+            self.rawValue
+        }
+        
+        var accessibilityLabel: String {
+            return String(title.suffix(title.count - 2))
+        }
+    }
+    
+    var accessibilityLabel: String {
+        title
+            .split(whereSeparator: { ["|", "●", "▲", "⭑"].contains($0) })
+            .joined(separator: ",")
     }
 }
 
@@ -35,35 +49,30 @@ extension Detail {
         itemsForSheet
     ]
     
-    static let test = [
-        "UILabel",
-        "UIText"
-    ]
-    
     private static let itemsForText = [
-        Detail(title: "UILabel / UITextField / UITextView"),
-        Detail(title: "UISearchView ● 기본 컴포넌트"),
-        Detail(title: "UISearchView ▲ 개선 컴포넌트")
+        Detail(title: "Label | TextField | TextView"),
+        Detail(title: "SearchView ● 기본 컴포넌트"),
+        Detail(title: "SearchView ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForControl = [
-        Detail(title: "UIButton / UISlider"),
-        Detail(title: "UISwitch")
+        Detail(title: "Button | Slider"),
+        Detail(title: "Switch")
     ]
     
     private static let itemsForState = [
-        Detail(title: "UIActivityIndicatorView / UIProgressView")
+        Detail(title: "ActivityIndicatorView | ProgressView")
     ]
     
     private static let itemsForDateAndTime = [
-        Detail(title: "UIDatePickerView / UICalendarView")
+        Detail(title: "DatePickerView | CalendarView")
     ]
     
     private static let itemsForList = [
-        Detail(title: "UICollectionView ● 기본 컴포넌트"),
-        Detail(title: "UICollectionView ▲ 개선 컴포넌트"),
-        Detail(title: "UITableView ● 기본 컴포넌트"),
-        Detail(title: "UITableView ▲ 개선 컴포넌트"),
+        Detail(title: "CollectionView ● 기본 컴포넌트"),
+        Detail(title: "CollectionView ▲ 개선 컴포넌트"),
+        Detail(title: "TableView ● 기본 컴포넌트"),
+        Detail(title: "TableView ▲ 개선 컴포넌트"),
         Detail(title: "뉴스 더보기 ● 기본 컴포넌트"),
         Detail(title: "뉴스 더보기 ▲ 개선 컴포넌트"),
         Detail(title: "멜론 차트 탐색 ● 기본 컴포넌트"),
@@ -71,15 +80,15 @@ extension Detail {
     ]
     
     private static let itemsForPage = [
-        Detail(title: "UIPageViewController ● 기본 컴포넌트"),
-        Detail(title: "UIPageViewController ▲ 개선 컴포넌트")
+        Detail(title: "PageViewController ● 기본 컴포넌트"),
+        Detail(title: "PageViewController ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForAlert = [
-        Detail(title: "UIAlertViewController"),
+        Detail(title: "AlertViewController"),
     ]
     
     private static let itemsForSheet = [
-        Detail(title: "PresentationController / UIMenu")
+        Detail(title: "PresentationController | Menu")
     ]
 }

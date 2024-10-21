@@ -44,13 +44,13 @@ extension OutlineViewController: UICollectionViewDelegate {
         case .list:
             switch item {
             case 0:
-                vc = CollectionViewController(isAccessible: false)
+                vc = CollectionViewController()
             case 1:
-                vc = CollectionViewController(isAccessible: true)
+                vc = CollectionWithAccessibilityViewController()
             case 2:
-                vc = TableViewController(isAccessible: false)
+                vc = TableViewController()
             case 3:
-                vc = TableViewController(isAccessible: true)
+                vc = TableWithAccessibilityViewController()
             case 4:
                 vc = NewsListViewController()
             case 5:
@@ -79,7 +79,7 @@ extension OutlineViewController: UICollectionViewDelegate {
             return
         }
         
-        vc.navigationTitle = Detail.items[indexPath.section][item].title
+        vc.navigationTitle = Detail.items[indexPath.section][item].accessibilityLabel
         navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
 }

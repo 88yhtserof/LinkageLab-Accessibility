@@ -1,23 +1,27 @@
 //
-//  CollectionViewController+DataSource.swift
+//  CollectionWithAccessibilityViewController+DataSource.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 9/23/24.
+//  Created by 임윤휘 on 10/20/24.
 //
 
 import UIKit
 
 //MARK: DataSource
-extension CollectionViewController {
+extension CollectionWithAccessibilityViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func pagableCellRegistrationHandler(cell: GridTextCell, indexPath: IndexPath, item: String) {
+    func pagableCellRegistrationHandler(cell: GridTextCellWithAccessibility, indexPath: IndexPath, item: String) {
         cell.text = item
         cell.selectedBackgroundView = UIView()
+        if UIAccessibility.isVoiceOverRunning {
+            cell.isAccessibilityElement = true
+            cell.accessibilityLabel = item
+        }
     }
     
-    func listTypesCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String) {
+    func listTypesCellRegistrationHandler(cell: ButtonTraitsCollectionListCell, indexPath: IndexPath, item: String) {
         var configuration = UIListContentConfiguration.valueCell()
         configuration.text = item
         cell.contentConfiguration = configuration
@@ -27,6 +31,11 @@ extension CollectionViewController {
     func supplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
         let title = snapshot.sectionIdentifiers[indexPath.section].title
         supplementaryView.title = title
+        if UIAccessibility.isVoiceOverRunning {
+            supplementaryView.isAccessibilityElement = true
+            supplementaryView.accessibilityLabel = title
+            supplementaryView.accessibilityTraits = .header
+        }
     }
     
     func updateSnapshot() {
