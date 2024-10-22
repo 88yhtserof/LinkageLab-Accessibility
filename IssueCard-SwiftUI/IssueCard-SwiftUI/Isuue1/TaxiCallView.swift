@@ -7,34 +7,28 @@
 
 import SwiftUI
 import MapKit
+
 struct TaxiCallView: View {
+    
+    var category = "일반택시"
+    var capacity = "주변 4인승 택시 호출"
+    var estimatedArrivalTime = "3분"
+    var estimatedFare = "예상 22,000"
+    
+    var accessibilityTaxiInfo: String {
+        [ category, capacity, estimatedArrivalTime ]
+            .joined(separator: " ")
+    }
+    
+    
     var body: some View {
         MapView()
-        VStack {
-            HStack {
-                Image(systemName: "car")
-//                    .frame(width: 50, height: 50)
-                    .padding(.leading)
-                
-                VStack {
-                    HStack {
-                        Text("일반택시")
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Image(systemName: "info.circle")
-                            Text("예상 22,000")
-                        }
-                    }
-                    HStack {
-                        Text("주변 4인승 택시 호출")
-                        Text("3분")
-                        Spacer()
-                    }
-                }
-                .padding(.leading)
-                .padding(.trailing, 20)
+//            .accessibilitySortPriority(0.5)
+        
+        ZStack {
+            VStack {
+                Color.clear
+                    .contentShape(Rectangle())
             }
             .frame(height: 100)
             .frame(maxWidth: 380)
@@ -42,12 +36,43 @@ struct TaxiCallView: View {
             .cornerRadius(10)
             .padding(.horizontal)
             .padding(.top)
+            .accessibilityElement()
+            .accessibilityLabel(accessibilityTaxiInfo)
+//            .accessibilitySortPriority(0.3)
             
-            
+            HStack {
+                Image(systemName: "car")
+                    .padding(.leading)
+                    .frame(width: 50, height: 50)
+                    .accessibilityHidden(true)
+                
+                VStack {
+                    HStack {
+                        Text(category)
+                            .accessibilityHidden(true)
+                        Spacer()
+                        HStack {
+                            Image(systemName: "info.circle")
+                            Text(estimatedFare)
+                        }
+                        .accessibilityElement()
+                        .accessibilityLabel(estimatedFare)
+//                        .accessibilitySortPriority(0.1)
+                    }
+                    
+                    HStack {
+                        Text(capacity)
+                        Text(estimatedArrivalTime)
+                        Spacer()
+                    }
+                    .accessibilityHidden(true)
+                }
+                .padding(.trailing, 20)
+            }
+            .padding(.horizontal)
+            .padding(.top)
         }
-        .frame(maxWidth: .infinity)
-        .background(.white)
-        .cornerRadius(10)
+        .fixedSize(horizontal: true, vertical: true)
     }
 }
 
