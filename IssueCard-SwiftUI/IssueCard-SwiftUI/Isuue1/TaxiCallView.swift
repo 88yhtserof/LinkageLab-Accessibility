@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+// 순차 탐색
 struct TaxiCallView: View {
     
     var category = "일반택시"
@@ -20,10 +21,8 @@ struct TaxiCallView: View {
             .joined(separator: " ")
     }
     
-    
     var body: some View {
         MapView()
-//            .accessibilitySortPriority(0.5)
         
         ZStack {
             VStack {
@@ -36,9 +35,8 @@ struct TaxiCallView: View {
             .cornerRadius(10)
             .padding(.horizontal)
             .padding(.top)
-            .accessibilityElement()
+            .accessibilitySortPriority(0.5)
             .accessibilityLabel(accessibilityTaxiInfo)
-//            .accessibilitySortPriority(0.3)
             
             HStack {
                 Image(systemName: "car")
@@ -57,7 +55,6 @@ struct TaxiCallView: View {
                         }
                         .accessibilityElement()
                         .accessibilityLabel(estimatedFare)
-//                        .accessibilitySortPriority(0.1)
                     }
                     
                     HStack {
@@ -73,6 +70,7 @@ struct TaxiCallView: View {
             .padding(.top)
         }
         .fixedSize(horizontal: true, vertical: true)
+        .accessibilityElement(children: .contain)
     }
 }
 
