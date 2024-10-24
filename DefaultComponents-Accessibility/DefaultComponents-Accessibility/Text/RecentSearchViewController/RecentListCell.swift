@@ -15,6 +15,12 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
         }
     }
     
+    var identifier: String {
+        get { self.text }
+        set {}
+    }
+    var deleteAction: ((String) -> Void)?
+    
     private lazy var textLabel = UILabel()
     private lazy var deleteButton = UIButton()
     private lazy var stackView = UIStackView(arrangedSubviews: [textLabel, deleteButton])
@@ -30,6 +36,10 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc func didTapDeleteButton() {
+        deleteAction?(identifier)
+    }
 }
 
 private extension RecentListCell {
@@ -43,6 +53,7 @@ private extension RecentListCell {
         config.baseForegroundColor = .black
         config.buttonSize = .mini
         deleteButton.configuration = config
+        deleteButton.addTarget(self, action: #selector(didTapDeleteButton), for: .touchUpInside)
         
         stackView.axis = .horizontal
         stackView.distribution = .fill

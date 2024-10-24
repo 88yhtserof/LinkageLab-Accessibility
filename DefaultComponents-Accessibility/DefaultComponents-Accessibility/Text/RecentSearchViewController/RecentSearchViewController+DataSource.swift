@@ -13,6 +13,10 @@ extension RecentSearchViewController {
     
     func recentCellRegistrationHandler(cell: RecentListCell, indexPath: IndexPath, item: String?) {
         cell.text = item ?? ""
+        cell.deleteAction = { [weak self] identifier in
+            let item = Item(recent: identifier)
+            self?.updateSnapshotForRecent(itemToDelete: item)
+        }
     }
     
     func resultCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String?) {
@@ -37,6 +41,13 @@ extension RecentSearchViewController {
         snapshot.appendSections([.recent, .result])
         snapshot.appendItems(recentItems, toSection: .recent)
         snapshot.appendItems(resultItems, toSection: .result)
+        dataSource.apply(snapshot)
+    }
+    
+    func updateSnapshotForRecent(itemToDelete item: Item) {
+        guard let index = recents.firstIndex(of: item.recent!) else { return }
+        recents.remove(at: index)
+        snapshot.deleteItems([item])
         dataSource.apply(snapshot)
     }
     
