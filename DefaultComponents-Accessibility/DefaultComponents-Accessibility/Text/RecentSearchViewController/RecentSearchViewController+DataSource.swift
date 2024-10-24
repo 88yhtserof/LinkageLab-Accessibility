@@ -60,6 +60,19 @@ extension RecentSearchViewController {
         }
     }
     
+    func updateSnapshotForRecent(itemToAdd item: Item) {
+        if let first = recents.first {
+            let firstItem = Item(recent: first)
+            snapshot.insertItems([item], beforeItem: firstItem)
+        } else {
+            let recentItems = snapshot.itemIdentifiers(inSection: .recent)
+            snapshot.deleteItems(recentItems)
+            snapshot.appendItems([item], toSection: .recent)
+        }
+        recents.insert(item.recent!, at: 0)
+        dataSource.apply(snapshot)
+    }
+    
     func emptySnapshotForRecent() {
         snapshot.appendItems([Item()], toSection: .recent)
         dataSource.apply(snapshot)

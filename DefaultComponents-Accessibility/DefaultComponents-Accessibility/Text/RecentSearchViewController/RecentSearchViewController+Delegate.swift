@@ -12,6 +12,8 @@ extension RecentSearchViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         if let searchWord = searchBar.text {
             filteredSnapshot(searchWord: searchWord)
+            let item = Item(recent: searchWord)
+            updateSnapshotForRecent(itemToAdd: item)
         }
     }
     

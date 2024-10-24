@@ -59,6 +59,10 @@ private extension RecentListCell {
     }
     
     func configureStardCell() {
+        [ textLabel, deleteButton ]
+            .forEach{ $0.isHidden = false }
+        emptyLabel.isHidden = true
+        
         textLabel.text = text
         setPreferredFontyStyle()
         
@@ -85,6 +89,7 @@ private extension RecentListCell {
         
         [ textLabel, deleteButton ]
             .forEach{ $0.isHidden = true }
+        emptyLabel.isHidden = false
         contentView.backgroundColor = nil
         contentView.addPinnedSubview(emptyLabel, height: nil)
     }
