@@ -20,7 +20,13 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
         set {}
     }
     var deleteAction: ((String) -> Void)?
+    var isEmptyCell = false {
+        didSet {
+            configureCotentView()
+        }
+    }
     
+    private lazy var emptyLabel = UILabel()
     private lazy var textLabel = UILabel()
     private lazy var deleteButton = UIButton()
     private lazy var stackView = UIStackView(arrangedSubviews: [textLabel, deleteButton])
@@ -28,9 +34,7 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configureSubviews()
-        configureContentView()
-        configureConstraints()
+        configureCotentView()
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +47,18 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
 }
 
 private extension RecentListCell {
-    func configureSubviews() {
+    func configureCotentView() {
+        if isEmptyCell {
+            configureEmptyCell()
+        } else {
+            configureStardCell()
+        }
+        
+        backgroundView = UIView()
+        selectedBackgroundView = UIView()
+    }
+    
+    func configureStardCell() {
         textLabel.text = text
         setPreferredFontyStyle()
         
@@ -57,24 +72,30 @@ private extension RecentListCell {
         
         stackView.axis = .horizontal
         stackView.distribution = .fill
-    }
-    
-    func configureContentView() {
+        
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 10
-        backgroundView = UIView()
-        sizeToFit()
         
-        selectedBackgroundView = UIView()
+        contentView.addPinnedSubview(stackView, inset: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0), height: nil)
     }
     
-    func configureConstraints(){
-        contentView.addPinnedSubview(stackView, inset: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0), height: nil)
+    func configureEmptyCell() {
+        emptyLabel.text = "검색 내역이 없습니다"
+        setPreferredFontyStyle()
+        
+        [ textLabel, deleteButton ]
+            .forEach{ $0.isHidden = true }
+        contentView.backgroundColor = nil
+        contentView.addPinnedSubview(emptyLabel, height: nil)
     }
 }
 
 extension RecentListCell: DynamicTypeable {
     func setPreferredFontyStyle() {
-        textLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        if isEmptyCell {
+            emptyLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        } else {
+            textLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        }
     }
 }

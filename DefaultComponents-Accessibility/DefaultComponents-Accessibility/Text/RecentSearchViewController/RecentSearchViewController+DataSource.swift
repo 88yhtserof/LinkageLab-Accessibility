@@ -12,10 +12,15 @@ extension RecentSearchViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
     func recentCellRegistrationHandler(cell: RecentListCell, indexPath: IndexPath, item: String?) {
-        cell.text = item ?? ""
-        cell.deleteAction = { [weak self] identifier in
-            let item = Item(recent: identifier)
-            self?.updateSnapshotForRecent(itemToDelete: item)
+        if recents.isEmpty {
+            cell.isEmptyCell = true
+        } else {
+            cell.isEmptyCell = false
+            cell.text = item ?? ""
+            cell.deleteAction = { [weak self] identifier in
+                let item = Item(recent: identifier)
+                self?.updateSnapshotForRecent(itemToDelete: item)
+            }
         }
     }
     
@@ -48,6 +53,15 @@ extension RecentSearchViewController {
         guard let index = recents.firstIndex(of: item.recent!) else { return }
         recents.remove(at: index)
         snapshot.deleteItems([item])
+        dataSource.apply(snapshot)
+        
+        if recents.isEmpty {
+            emptySnapshotForRecent()
+        }
+    }
+    
+    func emptySnapshotForRecent() {
+        snapshot.appendItems([Item(recent: "")], toSection: .recent)
         dataSource.apply(snapshot)
     }
     
