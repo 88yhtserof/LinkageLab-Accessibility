@@ -30,6 +30,10 @@ extension RecentSearchViewController {
             self.result = result
         }
         
+        init() {
+            self.init(recent: nil, result: nil)
+        }
+        
         init(recent: String) {
             self.init(recent: recent, result: nil)
         }

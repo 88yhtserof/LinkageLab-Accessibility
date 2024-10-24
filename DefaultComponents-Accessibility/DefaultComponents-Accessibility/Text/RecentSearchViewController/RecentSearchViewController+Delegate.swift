@@ -20,6 +20,6 @@ extension RecentSearchViewController: UISearchBarDelegate {
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        emptySnashot()
+        emptySnashotForResult()
     }
 }

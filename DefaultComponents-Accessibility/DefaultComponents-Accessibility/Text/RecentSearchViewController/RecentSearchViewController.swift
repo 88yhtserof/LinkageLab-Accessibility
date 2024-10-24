@@ -41,9 +41,9 @@ extension RecentSearchViewController {
             }
             switch section {
             case .recent:
-                return collectionView.dequeueConfiguredReusableCell(using: recentCellRegistration, for: indexPath, item: itemIdentifier.recent)
+                return collectionView.dequeueConfiguredReusableCell(using: recentCellRegistration, for: indexPath, item: itemIdentifier.recent ?? "")
             case .result:
-                return collectionView.dequeueConfiguredReusableCell(using: resultCellRegistration, for: indexPath, item: itemIdentifier.result)
+                return collectionView.dequeueConfiguredReusableCell(using: resultCellRegistration, for: indexPath, item: itemIdentifier.result ?? "")
             }
         })
         
