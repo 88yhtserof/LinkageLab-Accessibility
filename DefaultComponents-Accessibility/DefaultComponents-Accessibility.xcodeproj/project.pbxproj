@@ -83,6 +83,7 @@
 		4EC05A5A2CC9D0400062E0D0 /* RecentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC05A592CC9D0400062E0D0 /* RecentListCell.swift */; };
 		4EC05A5C2CC9D8EB0062E0D0 /* RecentSearchViewController+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC05A5B2CC9D8EB0062E0D0 /* RecentSearchViewController+Type.swift */; };
 		4EC05A602CC9E70D0062E0D0 /* RecentSearchViewController+ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC05A5F2CC9E70D0062E0D0 /* RecentSearchViewController+ListLayout.swift */; };
+		4EC05A622CC9F33D0062E0D0 /* PreferredContentSizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC05A612CC9F33D0062E0D0 /* PreferredContentSizeManager.swift */; };
 		4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */; };
 		4EC51C972C91226300385BD0 /* OutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C962C91226300385BD0 /* OutlineViewController.swift */; };
 		4EC51C9A2C9128C400385BD0 /* OutLineViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */; };
@@ -200,6 +201,7 @@
 		4EC05A592CC9D0400062E0D0 /* RecentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentListCell.swift; sourceTree = "<group>"; };
 		4EC05A5B2CC9D8EB0062E0D0 /* RecentSearchViewController+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearchViewController+Type.swift"; sourceTree = "<group>"; };
 		4EC05A5F2CC9E70D0062E0D0 /* RecentSearchViewController+ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearchViewController+ListLayout.swift"; sourceTree = "<group>"; };
+		4EC05A612CC9F33D0062E0D0 /* PreferredContentSizeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredContentSizeManager.swift; sourceTree = "<group>"; };
 		4EC51C942C911B8500385BD0 /* StateViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateViewController+Action.swift"; sourceTree = "<group>"; };
 		4EC51C962C91226300385BD0 /* OutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineViewController.swift; sourceTree = "<group>"; };
 		4EC51C992C9128C400385BD0 /* OutLineViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutLineViewController+DataSource.swift"; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 			children = (
 				4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */,
 				4EC52AE62C9D36F4007E07D6 /* ImageLoader.swift */,
+				4EC05A612CC9F33D0062E0D0 /* PreferredContentSizeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -497,8 +500,8 @@
 				4E5076932CC8C5E0006A84D7 /* RecentSearchViewController.swift */,
 				4E5076952CC8C76E006A84D7 /* RecentSearchViewController+DataSource.swift */,
 				4E5076972CC8C77A006A84D7 /* RecentSearchViewController+Delegate.swift */,
-				4E5076992CC8C791006A84D7 /* RecentSearchViewController+Updating.swift */,
 				4EC05A5F2CC9E70D0062E0D0 /* RecentSearchViewController+ListLayout.swift */,
+				4E5076992CC8C791006A84D7 /* RecentSearchViewController+Updating.swift */,
 				4EC05A5B2CC9D8EB0062E0D0 /* RecentSearchViewController+Type.swift */,
 				4EC05A592CC9D0400062E0D0 /* RecentListCell.swift */,
 			);
@@ -767,6 +770,7 @@
 				4E5076982CC8C77A006A84D7 /* RecentSearchViewController+Delegate.swift in Sources */,
 				144564222CBB932B0097DF89 /* MelonChartNavigationViewController.swift in Sources */,
 				14852BE52CC1FA4800F53857 /* NewsListViewControllerWithAccessibility+Delegate.swift in Sources */,
+				4EC05A622CC9F33D0062E0D0 /* PreferredContentSizeManager.swift in Sources */,
 				4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */,
 				4E285DC52C901C68007F286C /* StateViewController.swift in Sources */,
 				4EC51C952C911B8500385BD0 /* StateViewController+Action.swift in Sources */,

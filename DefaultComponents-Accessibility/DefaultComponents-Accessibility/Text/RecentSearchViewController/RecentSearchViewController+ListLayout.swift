@@ -27,7 +27,7 @@ extension RecentSearchViewController {
     }
     
     func sectionForRecent(layoutEnviroment enviroment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let preferredContentSize = 2
+        let preferredContentSize = PreferredContentSizeManager.shared.size
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .fractionalHeight(1.0))
         let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(10), heightDimension: .estimated(CGFloat(preferredContentSize * 10)))
