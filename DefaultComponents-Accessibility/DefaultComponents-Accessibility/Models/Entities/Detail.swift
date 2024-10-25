@@ -52,7 +52,9 @@ extension Detail {
     private static let itemsForText = [
         Detail(title: "Label | TextField | TextView"),
         Detail(title: "SearchView ● 기본 컴포넌트"),
-        Detail(title: "SearchView ▲ 개선 컴포넌트")
+        Detail(title: "SearchView ▲ 개선 컴포넌트"),
+        Detail(title: "최신 검색어 ● 기본 컴포넌트"),
+        Detail(title: "최신 검색어 ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForControl = [

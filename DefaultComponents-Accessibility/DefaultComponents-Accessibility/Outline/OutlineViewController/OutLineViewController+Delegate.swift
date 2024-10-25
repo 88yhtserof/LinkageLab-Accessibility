@@ -25,6 +25,10 @@ extension OutlineViewController: UICollectionViewDelegate {
                 vc = SearchViewController()
             case 2:
                 vc = SearchViewControllerWithAccessibility()
+            case 3:
+                vc = RecentSearchViewController()
+            case 4:
+                vc = RecentSearchWithAccessibilityViewController()
             default:
                 return
             }
