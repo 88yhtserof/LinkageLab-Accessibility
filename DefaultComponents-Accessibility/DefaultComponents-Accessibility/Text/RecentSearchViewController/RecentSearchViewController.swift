@@ -33,6 +33,7 @@ extension RecentSearchViewController {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         
         let recentCellRegistration = UICollectionView.CellRegistration(handler: recentCellRegistrationHandler)
+        let recentEmptyCellRegistration = UICollectionView.CellRegistration(handler: recentEmptyCellRegistrationHandler)
         let resultCellRegistration = UICollectionView.CellRegistration(handler: resultCellRegistrationHandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
@@ -41,7 +42,11 @@ extension RecentSearchViewController {
             }
             switch section {
             case .recent:
-                return collectionView.dequeueConfiguredReusableCell(using: recentCellRegistration, for: indexPath, item: itemIdentifier.recent ?? "")
+                if let recent = itemIdentifier.recent {
+                    return collectionView.dequeueConfiguredReusableCell(using: recentCellRegistration, for: indexPath, item: recent)
+                } else {
+                    return collectionView.dequeueConfiguredReusableCell(using: recentEmptyCellRegistration, for: indexPath, item: String())
+                }
             case .result:
                 return collectionView.dequeueConfiguredReusableCell(using: resultCellRegistration, for: indexPath, item: itemIdentifier.result ?? "")
             }

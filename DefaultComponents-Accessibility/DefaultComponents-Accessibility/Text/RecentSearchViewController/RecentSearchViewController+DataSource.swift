@@ -12,16 +12,14 @@ extension RecentSearchViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
     func recentCellRegistrationHandler(cell: RecentListCell, indexPath: IndexPath, item: String) {
-        if recents.isEmpty {
-            cell.isEmptyCell = true
-        } else {
-            cell.isEmptyCell = false
-            cell.text = item
-            cell.deleteAction = { [weak self] identifier in
-                let item = Item(recent: identifier)
-                self?.updateSnapshotForRecent(itemToDelete: item)
-            }
+        cell.text = item
+        cell.deleteAction = { [weak self]  in
+            let itemToDelete = Item(recent: item)
+            self?.updateSnapshotForRecent(itemToDelete: itemToDelete)
         }
+    }
+    
+    func recentEmptyCellRegistrationHandler(cell: RecentEmptyListCell, indexPath: IndexPath, item: String) {
     }
     
     func resultCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String) {
