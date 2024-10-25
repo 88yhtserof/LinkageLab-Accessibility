@@ -17,6 +17,9 @@ extension RecentSearchViewController {
             let itemToDelete = Item(recent: item)
             self?.updateSnapshotForRecent(itemToDelete: itemToDelete)
         }
+        cell.textAction = { [weak self] searchWord in
+            self?.searchController.searchBar.text = searchWord
+        }
     }
     
     func recentEmptyCellRegistrationHandler(cell: RecentEmptyListCell, indexPath: IndexPath, item: String) {

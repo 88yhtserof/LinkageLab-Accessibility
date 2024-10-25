@@ -15,7 +15,7 @@ final class RecentSearchViewController: DefaultViewController {
     var recents = ["하퍼", "올리", "하니", "아일라", "이든", "아마라", "칸", "아주 긴 닉네임을 테스트 합니다"]
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
-    private lazy var searchController = UISearchController()
+    lazy var searchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

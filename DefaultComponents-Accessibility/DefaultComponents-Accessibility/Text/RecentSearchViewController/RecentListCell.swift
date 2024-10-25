@@ -11,14 +11,17 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
     
     var text: String = "닉네임" {
         didSet {
-            textLabel.text = text
+            textButtonConfig.title = text
+            textButton.configuration = textButtonConfig
         }
     }
     var deleteAction: (() -> Void)?
+    var textAction: ((String) -> Void)?
     
-    private lazy var textLabel = UILabel()
+    private var textButtonConfig = UIButton.Configuration.plain()
+    private lazy var textButton = UIButton()
     private lazy var deleteButton = UIButton()
-    private lazy var stackView = UIStackView(arrangedSubviews: [textLabel, deleteButton])
+    private lazy var stackView = UIStackView(arrangedSubviews: [textButton, deleteButton])
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,6 +36,11 @@ final class RecentListCell: ButtonTraitsCollectionListCell {
     @objc func didTapDeleteButton() {
         deleteAction?()
     }
+    
+    @objc func didTapTextButton(_ sender: UIButton) {
+        guard let searchWord = sender.titleLabel?.text else { return }
+        textAction?(searchWord)
+    }
 }
 
 private extension RecentListCell {
@@ -40,8 +48,9 @@ private extension RecentListCell {
         backgroundView = UIView()
         selectedBackgroundView = UIView()
         
-        textLabel.text = text
+        textButtonConfig.baseForegroundColor = .black
         setPreferredFontyStyle()
+        textButton.addTarget(self, action: #selector(didTapTextButton), for: .touchUpInside)
         
         let deleteImage = UIImage(systemName: "xmark")
         var config = UIButton.Configuration.plain()
@@ -63,6 +72,6 @@ private extension RecentListCell {
 
 extension RecentListCell: DynamicTypeable {
     func setPreferredFontyStyle() {
-        textLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        textButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .body)
     }
 }
