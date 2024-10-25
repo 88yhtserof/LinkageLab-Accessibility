@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct UserInfo: Hashable, Identifiable {
-    var id = UUID()
+struct UserInfo: Hashable, Equatable {
     var nickname: String
 }
 
