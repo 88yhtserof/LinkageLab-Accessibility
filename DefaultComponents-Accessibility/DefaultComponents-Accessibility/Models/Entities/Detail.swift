@@ -23,16 +23,6 @@ struct Detail: Hashable {
         var title: String {
             self.rawValue
         }
-        
-        var accessibilityLabel: String {
-            return String(title.suffix(title.count - 2))
-        }
-    }
-    
-    var accessibilityLabel: String {
-        title
-            .split(whereSeparator: { ["|", "●", "▲", "⭑"].contains($0) })
-            .joined(separator: ",")
     }
 }
 
@@ -52,7 +42,9 @@ extension Detail {
     private static let itemsForText = [
         Detail(title: "Label | TextField | TextView"),
         Detail(title: "SearchView ● 기본 컴포넌트"),
-        Detail(title: "SearchView ▲ 개선 컴포넌트")
+        Detail(title: "SearchView ▲ 개선 컴포넌트"),
+        Detail(title: "최근 검색어 ● 기본 컴포넌트"),
+        Detail(title: "최근 검색어 ▲ 개선 컴포넌트")
     ]
     
     private static let itemsForControl = [

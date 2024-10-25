@@ -28,7 +28,7 @@ extension OutlineViewController {
         cell.selectedBackgroundView = UIView()
         cell.accessories = [.disclosureIndicator()]
         if UIAccessibility.isVoiceOverRunning {
-            cell.accessibilityLabel = item.accessibilityLabel
+            cell.accessibilityLabel = item.title
         }
     }
     

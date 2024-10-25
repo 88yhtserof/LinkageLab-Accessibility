@@ -25,6 +25,10 @@ extension OutlineViewController: UICollectionViewDelegate {
                 vc = SearchViewController()
             case 2:
                 vc = SearchViewControllerWithAccessibility()
+            case 3:
+                vc = RecentSearchViewController()
+            case 4:
+                vc = RecentSearchWithAccessibilityViewController()
             default:
                 return
             }
@@ -79,7 +83,7 @@ extension OutlineViewController: UICollectionViewDelegate {
             return
         }
         
-        vc.navigationTitle = Detail.items[indexPath.section][item].accessibilityLabel
+        vc.navigationTitle = Detail.items[indexPath.section][item].title
         navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
 }

@@ -14,4 +14,10 @@ extension UIAccessibility {
         try await Task.sleep(for: duration)
         UIAccessibility.post(notification: .layoutChanged, argument: object)
     }
+    
+    @MainActor
+        static func announceString(for str: String) async {
+            try? await Task.sleep(for: .seconds(0.1))
+            UIAccessibility.post(notification: .announcement, argument: str)
+        }
 }
