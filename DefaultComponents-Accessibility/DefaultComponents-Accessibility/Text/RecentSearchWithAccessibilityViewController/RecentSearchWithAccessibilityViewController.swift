@@ -9,6 +9,8 @@ import UIKit
 
 final class RecentSearchWithAccessibilityViewController: DefaultViewController {
     
+    let headerSupplementaryKind = "title-element-kind"
+    
     var dataSource: DataSource!
     var snapshot: Snapshot!
     let allUsers = UserInfo.samples
@@ -56,7 +58,7 @@ extension RecentSearchWithAccessibilityViewController {
             }
         })
         
-        let titleSupplementaryRegistration = UICollectionView.SupplementaryRegistration(elementKind: "title-element-kind", handler: titleSupplementaryRegistrationHandler)
+        let titleSupplementaryRegistration = UICollectionView.SupplementaryRegistration(elementKind: headerSupplementaryKind, handler: titleSupplementaryRegistrationHandler)
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
             return collectionView.dequeueConfiguredReusableSupplementary(using: titleSupplementaryRegistration, for: indexPath)
         }
@@ -66,7 +68,7 @@ extension RecentSearchWithAccessibilityViewController {
     }
     
     func accessibilityValueForRecentSupplementary() {
-        guard let supplementaryView = collectionView.supplementaryView(forElementKind: "title-element-kind", at: IndexPath(item: 0, section: 0)) as? TitleSupplementaryView else { return }
+        guard let supplementaryView = collectionView.supplementaryView(forElementKind: headerSupplementaryKind, at: IndexPath(item: 0, section: 0)) as? TitleSupplementaryView else { return }
         supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어"
     }
     

@@ -17,6 +17,13 @@ extension RecentSearchWithAccessibilityViewController: UISearchBarDelegate {
             guard !recents.contains(userInfo) else { return }
             let item = Item(recent: UserInfo(nickname: searchWord))
             updateSnapshotForRecent(itemToAdd: item)
+            
+            if UIAccessibility.isVoiceOverRunning,
+               let resultHeader = collectionView.supplementaryView(forElementKind: headerSupplementaryKind, at: IndexPath(item: 0, section: 1)) {
+                Task {
+                    try? await UIAccessibility.setFocus(to: resultHeader)
+                }
+            }
         }
     }
     
