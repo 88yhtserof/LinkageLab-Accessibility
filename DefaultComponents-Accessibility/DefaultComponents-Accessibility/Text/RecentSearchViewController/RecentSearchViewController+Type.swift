@@ -22,10 +22,10 @@ extension RecentSearchViewController {
     }
     
     struct Item: Hashable {
-        let recent: String?
-        let result: String?
+        let recent: UserInfo?
+        let result: UserInfo?
         
-        init(recent: String?, result: String?) {
+        init(recent: UserInfo?, result: UserInfo?) {
             self.recent = recent
             self.result = result
         }
@@ -34,11 +34,11 @@ extension RecentSearchViewController {
             self.init(recent: nil, result: nil)
         }
         
-        init(recent: String) {
+        init(recent: UserInfo) {
             self.init(recent: recent, result: nil)
         }
         
-        init(result: String) {
+        init(result: UserInfo) {
             self.init(recent: nil, result: result)
         }
     }

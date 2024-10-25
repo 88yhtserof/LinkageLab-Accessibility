@@ -11,8 +11,8 @@ extension RecentSearchViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func recentCellRegistrationHandler(cell: RecentListCell, indexPath: IndexPath, item: String) {
-        cell.text = item
+    func recentCellRegistrationHandler(cell: RecentListCell, indexPath: IndexPath, item: UserInfo) {
+        cell.text = item.nickname
         cell.deleteAction = { [weak self]  in
             let itemToDelete = Item(recent: item)
             self?.updateSnapshotForRecent(itemToDelete: itemToDelete)
@@ -22,12 +22,12 @@ extension RecentSearchViewController {
         }
     }
     
-    func recentEmptyCellRegistrationHandler(cell: RecentEmptyListCell, indexPath: IndexPath, item: String) {
+    func recentEmptyCellRegistrationHandler(cell: RecentEmptyListCell, indexPath: IndexPath, item: Item) {
     }
     
-    func resultCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: String) {
+    func resultCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: UserInfo) {
         var configuration = UIListContentConfiguration.cell()
-        configuration.text = item
+        configuration.text = item.nickname
         cell.contentConfiguration = configuration
         cell.selectedBackgroundView = UIView()
     }
@@ -41,7 +41,7 @@ extension RecentSearchViewController {
     
     func initialSnapshot() {
         let recentItems = recents.isEmpty ? [Item()] : recents.map({ Item(recent: $0) })
-        let resultItems = samples.map({ Item(result: $0.title) })
+        let resultItems = allUsers.map({ Item(result: $0) })
         
         snapshot = Snapshot()
         snapshot.appendSections([.recent, .result])
@@ -87,9 +87,9 @@ extension RecentSearchViewController {
     
     func filteredSnapshot(searchWord word: String) {
         let resultItems = snapshot.itemIdentifiers(inSection: .result)
-        let filteredItems = samples
-            .map({ Item(result: $0.title) })
-            .filter{ $0.result!.contains(word) }
+        let filteredItems = allUsers
+            .map({ Item(result: $0) })
+            .filter{ $0.result!.nickname.contains(word) }
         snapshot.deleteItems(resultItems)
         snapshot.appendItems(filteredItems, toSection: .result)
         dataSource.apply(snapshot, animatingDifferences: true)

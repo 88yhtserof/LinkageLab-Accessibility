@@ -11,8 +11,8 @@ final class RecentSearchViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
-    let samples = Book.samples
-    var recents = ["하퍼", "올리", "하니", "아일라", "이든", "아마라", "칸", "아주 긴 닉네임을 테스트 합니다"]
+    let allUsers = UserInfo.samples
+    var recents = UserInfo.recents
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     lazy var searchController = UISearchController()
@@ -45,10 +45,11 @@ extension RecentSearchViewController {
                 if let recent = itemIdentifier.recent {
                     return collectionView.dequeueConfiguredReusableCell(using: recentCellRegistration, for: indexPath, item: recent)
                 } else {
-                    return collectionView.dequeueConfiguredReusableCell(using: recentEmptyCellRegistration, for: indexPath, item: String())
+                    return collectionView.dequeueConfiguredReusableCell(using: recentEmptyCellRegistration, for: indexPath, item: Item())
                 }
             case .result:
-                return collectionView.dequeueConfiguredReusableCell(using: resultCellRegistration, for: indexPath, item: itemIdentifier.result ?? "")
+                guard let userInfo = itemIdentifier.result else { return UICollectionViewCell() }
+                return collectionView.dequeueConfiguredReusableCell(using: resultCellRegistration, for: indexPath, item: userInfo)
             }
         })
         
