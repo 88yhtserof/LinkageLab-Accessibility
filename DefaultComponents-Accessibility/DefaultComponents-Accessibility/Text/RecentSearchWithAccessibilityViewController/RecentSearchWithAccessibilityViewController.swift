@@ -58,17 +58,7 @@ extension RecentSearchWithAccessibilityViewController {
         
         let titleSupplementaryRegistration = UICollectionView.SupplementaryRegistration(elementKind: "title-element-kind", handler: titleSupplementaryRegistrationHandler)
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
-            let supplementaryView = collectionView.dequeueConfiguredReusableSupplementary(using: titleSupplementaryRegistration, for: indexPath)
-            if UIAccessibility.isVoiceOverRunning,
-               let section = Section(rawValue: indexPath.section) {
-                switch section {
-                case .recent:
-                    supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어가 있습니다."
-                case .result:
-                    break
-                }
-            }
-            return supplementaryView
+            return collectionView.dequeueConfiguredReusableSupplementary(using: titleSupplementaryRegistration, for: indexPath)
         }
         
         initialSnapshot()
@@ -77,7 +67,7 @@ extension RecentSearchWithAccessibilityViewController {
     
     func accessibilityValueForRecentSupplementary() {
         guard let supplementaryView = collectionView.supplementaryView(forElementKind: "title-element-kind", at: IndexPath(item: 0, section: 0)) as? TitleSupplementaryView else { return }
-        supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어가 있습니다."
+        supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어"
     }
     
     func configureView() {

@@ -37,6 +37,19 @@ extension RecentSearchWithAccessibilityViewController {
             fatalError("Unknown Section")
         }
         supplementaryView.title = section.title
+        
+        if UIAccessibility.isVoiceOverRunning {
+            supplementaryView.isAccessibilityElement = true
+            supplementaryView.accessibilityLabel = section.title
+            supplementaryView.accessibilityTraits = .header
+            
+            switch section {
+            case .recent:
+                supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어"
+            case .result:
+                break
+            }
+        }
     }
     
     func initialSnapshot() {
