@@ -93,5 +93,16 @@ extension RecentSearchWithAccessibilityViewController {
         snapshot.deleteItems(resultItems)
         snapshot.appendItems(filteredItems, toSection: .result)
         dataSource.apply(snapshot, animatingDifferences: true)
+        
+        accessibilityAnnounceSearchResult(for: filteredItems)
+    }
+    
+    func accessibilityAnnounceSearchResult(for list: [Item]) {
+        if UIAccessibility.isVoiceOverRunning {
+            let annuouncement = "\(list.count)개 검색 결과 제안됨"
+            Task {
+                await UIAccessibility.announceString(for: annuouncement)
+            }
+        }
     }
 }

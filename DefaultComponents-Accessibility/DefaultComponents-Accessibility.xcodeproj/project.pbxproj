@@ -64,7 +64,7 @@
 		4E12CE4B2CA2482F004DF1EA /* Titleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4A2CA2482F004DF1EA /* Titleable.swift */; };
 		4E12CE4D2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */; };
 		4E1BC4F72CAF7244001A29D5 /* SearchViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BC4F62CAF7244001A29D5 /* SearchViewController+Updating.swift */; };
-		4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */; };
+		4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+.swift */; };
 		4E285DBF2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */; };
 		4E285DC52C901C68007F286C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E285DC42C901C68007F286C /* StateViewController.swift */; };
 		4E31E0F02C927024004C4979 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */; };
@@ -189,7 +189,7 @@
 		4E12CE4A2CA2482F004DF1EA /* Titleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titleable.swift; sourceTree = "<group>"; };
 		4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWithScrollViewController.swift; sourceTree = "<group>"; };
 		4E1BC4F62CAF7244001A29D5 /* SearchViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Updating.swift"; sourceTree = "<group>"; };
-		4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+Focus.swift"; sourceTree = "<group>"; };
+		4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+.swift"; sourceTree = "<group>"; };
 		4E285DBE2C8FE947007F286C /* ButtonAndSliderViewController+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonAndSliderViewController+Action.swift"; sourceTree = "<group>"; };
 		4E285DC42C901C68007F286C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		4E31E0EF2C927024004C4979 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
@@ -371,7 +371,7 @@
 				4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */,
 				14B1303B2CAED6D500877314 /* GrabberView.swift */,
 				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
-				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+Focus.swift */,
+				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+.swift */,
 				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
 				1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */,
 			);
@@ -826,7 +826,7 @@
 				4EB123022CB7A71300D771D3 /* Pagable.swift in Sources */,
 				4E12CE492CA244BC004DF1EA /* DefaultViewController.swift in Sources */,
 				4EC52AF32CA138D3007E07D6 /* TitleSupplementaryView.swift in Sources */,
-				4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+Focus.swift in Sources */,
+				4E1BC4F92CAF87F9001A29D5 /* UIAccessibility+.swift in Sources */,
 				144FC6F32CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift in Sources */,
 				144564302CBC00E90097DF89 /* MelonChartNavigationViewControllerWithAccessibility+Type.swift in Sources */,
 				4EC52AF72CA13A51007E07D6 /* CollectionView+ListLayout.swift in Sources */,
