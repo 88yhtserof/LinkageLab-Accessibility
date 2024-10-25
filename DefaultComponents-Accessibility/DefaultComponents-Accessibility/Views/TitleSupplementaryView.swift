@@ -15,6 +15,12 @@ class TitleSupplementaryView: UICollectionReusableView {
         }
     }
     
+    override var accessibilityValue: String? {
+        didSet {
+            titleLabel.accessibilityValue = accessibilityValue
+        }
+    }
+    
     private lazy var titleLabel = UILabel()
     
     override init(frame: CGRect) {

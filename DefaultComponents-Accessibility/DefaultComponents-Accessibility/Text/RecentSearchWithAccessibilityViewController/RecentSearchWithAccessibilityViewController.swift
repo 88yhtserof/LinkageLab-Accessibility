@@ -12,7 +12,11 @@ final class RecentSearchWithAccessibilityViewController: DefaultViewController {
     var dataSource: DataSource!
     var snapshot: Snapshot!
     let allUsers = UserInfo.samples
-    var recents = UserInfo.recents
+    var recents = UserInfo.recents {
+        didSet {
+            accessibilityValueForRecentSupplementary()
+        }
+    }
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     lazy var searchController = UISearchController()
@@ -54,12 +58,26 @@ extension RecentSearchWithAccessibilityViewController {
         
         let titleSupplementaryRegistration = UICollectionView.SupplementaryRegistration(elementKind: "title-element-kind", handler: titleSupplementaryRegistrationHandler)
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
-            return collectionView.dequeueConfiguredReusableSupplementary(using: titleSupplementaryRegistration, for: indexPath)
-            
+            let supplementaryView = collectionView.dequeueConfiguredReusableSupplementary(using: titleSupplementaryRegistration, for: indexPath)
+            if UIAccessibility.isVoiceOverRunning,
+               let section = Section(rawValue: indexPath.section) {
+                switch section {
+                case .recent:
+                    supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어가 있습니다."
+                case .result:
+                    break
+                }
+            }
+            return supplementaryView
         }
         
         initialSnapshot()
         collectionView.dataSource = dataSource
+    }
+    
+    func accessibilityValueForRecentSupplementary() {
+        guard let supplementaryView = collectionView.supplementaryView(forElementKind: "title-element-kind", at: IndexPath(item: 0, section: 0)) as? TitleSupplementaryView else { return }
+        supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어가 있습니다."
     }
     
     func configureView() {

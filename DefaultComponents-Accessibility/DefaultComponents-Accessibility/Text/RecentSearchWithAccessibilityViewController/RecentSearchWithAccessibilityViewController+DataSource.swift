@@ -55,6 +55,7 @@ extension RecentSearchWithAccessibilityViewController {
         recents.remove(at: index)
         snapshot.deleteItems([item])
         dataSource.apply(snapshot)
+        accessibilityAnnounceRecent(for: item)
         
         if recents.isEmpty {
             emptySnapshotForRecent()
@@ -103,6 +104,16 @@ extension RecentSearchWithAccessibilityViewController {
             Task {
                 await UIAccessibility.announceString(for: annuouncement)
             }
+        }
+    }
+    
+    func accessibilityAnnounceRecent(for item: Item) {
+        guard UIAccessibility.isVoiceOverRunning,
+              let nickname = item.recent?.nickname else { return }
+        let announcement = "\(nickname) 제거됨"
+        
+        Task {
+            await UIAccessibility.announceString(for: announcement)
         }
     }
 }

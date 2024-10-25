@@ -59,6 +59,7 @@ private extension RecentListCell {
         config.buttonSize = .mini
         deleteButton.configuration = config
         deleteButton.addTarget(self, action: #selector(didTapDeleteButton), for: .touchUpInside)
+        deleteButton.accessibilityLabel = "제거"
         
         stackView.axis = .horizontal
         stackView.distribution = .fill
