@@ -20,9 +20,6 @@ extension DefaultCollectionViewController {
         cell.selectedBackgroundView = UIView()
         cell.view.addSubview(item.view)
         cell.tagLabel.text = item.tag.title
-        if UIAccessibility.isVoiceOverRunning {
-            cell.tagLabel.accessibilityLabel = item.tag.accessibilityLabel
-        }
         
         item.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

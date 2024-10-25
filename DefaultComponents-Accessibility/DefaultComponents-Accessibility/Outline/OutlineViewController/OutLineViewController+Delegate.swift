@@ -83,7 +83,7 @@ extension OutlineViewController: UICollectionViewDelegate {
             return
         }
         
-        vc.navigationTitle = Detail.items[indexPath.section][item].accessibilityLabel
+        vc.navigationTitle = Detail.items[indexPath.section][item].title
         navigationController?.pushViewController(vc as! UIViewController, animated: true)
     }
 }

@@ -23,16 +23,6 @@ struct Detail: Hashable {
         var title: String {
             self.rawValue
         }
-        
-        var accessibilityLabel: String {
-            return String(title.suffix(title.count - 2))
-        }
-    }
-    
-    var accessibilityLabel: String {
-        title
-            .split(whereSeparator: { ["|", "●", "▲", "⭑"].contains($0) })
-            .joined(separator: ",")
     }
 }
 
