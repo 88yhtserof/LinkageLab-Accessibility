@@ -19,7 +19,6 @@ final class RecentSearchWithAccessibilityViewController: DefaultViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isSettingFocus = false
         configureSubviews()
         configureView()
         configureConstraints()
