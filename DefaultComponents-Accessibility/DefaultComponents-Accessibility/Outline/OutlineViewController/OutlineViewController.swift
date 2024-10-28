@@ -44,20 +44,7 @@ private extension OutlineViewController {
     }
     
     func configureConstraints() {
-        [ collectionView ]
-            .forEach{
-                $0.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview($0)
-            }
-        
-        let safeArea = view.safeAreaLayoutGuide
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
-        ])
+        view.addPinnedSubview(collectionView, height: nil)
     }
 }
 
