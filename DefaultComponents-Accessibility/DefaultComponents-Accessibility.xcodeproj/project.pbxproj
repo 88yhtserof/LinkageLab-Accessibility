@@ -360,7 +360,7 @@
 		4E0AB04A2C9BE10200B8A89C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4ED2C9132CCF32DE00AB40F8 /* Views */,
+				4ED2C9132CCF32DE00AB40F8 /* Custom */,
 				4ED2C9112CCF327F00AB40F8 /* TextFields */,
 				4ED2C9102CCF322800AB40F8 /* Controls */,
 				4ED2C90F2CCF320B00AB40F8 /* SupplementaryViews */,
@@ -751,12 +751,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4ED2C9132CCF32DE00AB40F8 /* Views */ = {
+		4ED2C9132CCF32DE00AB40F8 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
 			);
-			path = Views;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		4ED2C9142CCF346E00AB40F8 /* Resources */ = {
