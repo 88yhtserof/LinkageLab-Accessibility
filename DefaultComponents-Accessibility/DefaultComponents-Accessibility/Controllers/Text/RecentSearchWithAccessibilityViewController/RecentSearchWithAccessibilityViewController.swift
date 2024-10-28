@@ -1,25 +1,30 @@
 //
-//  RecentSearchViewController.swift
+//  RecentSearchWithAccessibilityViewController.swift
 //  DefaultComponents-Accessibility
 //
-//  Created by 링키지랩 on 10/23/24.
+//  Created by 임윤휘 on 10/25/24.
 //
 
 import UIKit
 
-final class RecentSearchViewController: DefaultViewController {
+final class RecentSearchWithAccessibilityViewController: DefaultViewController {
+    
+    let headerSupplementaryKind = "title-element-kind"
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
     let allUsers = UserInfo.samples
-    var recents = UserInfo.recents
+    var recents = UserInfo.recents {
+        didSet {
+            accessibilityValueForRecentSupplementary()
+        }
+    }
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     lazy var searchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isSettingFocus = false
         configureSubviews()
         configureView()
         configureConstraints()
@@ -27,7 +32,7 @@ final class RecentSearchViewController: DefaultViewController {
 }
 
 // MARK: Configuration
-extension RecentSearchViewController {
+extension RecentSearchWithAccessibilityViewController {
     
     func configureSubviews() {
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
@@ -53,14 +58,18 @@ extension RecentSearchViewController {
             }
         })
         
-        let titleSupplementaryRegistration = UICollectionView.SupplementaryRegistration(elementKind: "title-element-kind", handler: titleSupplementaryRegistrationHandler)
+        let titleSupplementaryRegistration = UICollectionView.SupplementaryRegistration(elementKind: headerSupplementaryKind, handler: titleSupplementaryRegistrationHandler)
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
             return collectionView.dequeueConfiguredReusableSupplementary(using: titleSupplementaryRegistration, for: indexPath)
-            
         }
         
         initialSnapshot()
         collectionView.dataSource = dataSource
+    }
+    
+    func accessibilityValueForRecentSupplementary() {
+        guard let supplementaryView = collectionView.supplementaryView(forElementKind: headerSupplementaryKind, at: IndexPath(item: 0, section: 0)) as? TitleSupplementaryView else { return }
+        supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어"
     }
     
     func configureView() {
@@ -73,19 +82,6 @@ extension RecentSearchViewController {
     }
     
     func configureConstraints() {
-        [ collectionView ]
-            .forEach{
-                $0.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview($0)
-            }
-        
-        let safeArea = view.safeAreaLayoutGuide
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
-        ])
+        view.addPinnedSubview(collectionView, height: nil)
     }
 }
