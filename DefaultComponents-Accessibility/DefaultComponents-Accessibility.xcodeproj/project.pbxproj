@@ -360,23 +360,14 @@
 		4E0AB04A2C9BE10200B8A89C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4E855F522CACE13D008CDB3B /* DefaultCollectionViewController */,
-				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
-				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
-				4EC52AF02CA13728007E07D6 /* GridTextCell.swift */,
-				144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */,
-				144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */,
-				4EC52AF22CA138D3007E07D6 /* TitleSupplementaryView.swift */,
-				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
-				4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */,
-				4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */,
-				4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */,
-				14B1303B2CAED6D500877314 /* GrabberView.swift */,
-				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
-				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+.swift */,
-				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
-				1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */,
-				4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */,
+				4ED2C9132CCF32DE00AB40F8 /* Views */,
+				4ED2C9112CCF327F00AB40F8 /* TextFields */,
+				4ED2C9102CCF322800AB40F8 /* Controls */,
+				4ED2C90F2CCF320B00AB40F8 /* SupplementaryViews */,
+				4ED2C90E2CCF31B000AB40F8 /* TableViewCells */,
+				4ED2C90D2CCF318700AB40F8 /* CollectionViewCells */,
+				4ED2C90C2CCF315B00AB40F8 /* DefualtViewControllers */,
+				4ED2C9122CCF32CA00AB40F8 /* Extensions */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -550,6 +541,7 @@
 				4E855F552CACE184008CDB3B /* DefaultCollectionViewController+DataSource.swift */,
 				4E855F572CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift */,
 				4E855F592CACE209008CDB3B /* DefaultCollectionViewController+Type.swift */,
+				4E855F5B2CACF378008CDB3B /* DefaultListCell.swift */,
 			);
 			path = DefaultCollectionViewController;
 			sourceTree = "<group>";
@@ -704,6 +696,78 @@
 				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
 			);
 			path = "DefaultComponents-Accessibility";
+			sourceTree = "<group>";
+		};
+		4ED2C90C2CCF315B00AB40F8 /* DefualtViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E12CE482CA244BC004DF1EA /* DefaultViewController.swift */,
+				4E12CE4C2CA27BD4004DF1EA /* DefaultWithScrollViewController.swift */,
+				4E855F522CACE13D008CDB3B /* DefaultCollectionViewController */,
+			);
+			path = DefualtViewControllers;
+			sourceTree = "<group>";
+		};
+		4ED2C90D2CCF318700AB40F8 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52AF02CA13728007E07D6 /* GridTextCell.swift */,
+				144FC6F22CBCBDAB00CC75FE /* GridTextCellWithAccessibility.swift */,
+				144FC6F42CBCD87300CC75FE /* BorderedListCell.swift */,
+				1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */,
+				4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		4ED2C90E2CCF31B000AB40F8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		4ED2C90F2CCF320B00AB40F8 /* SupplementaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52AF22CA138D3007E07D6 /* TitleSupplementaryView.swift */,
+				4EB122FF2CB793B100D771D3 /* ButtonSupplementaryView.swift */,
+			);
+			path = SupplementaryViews;
+			sourceTree = "<group>";
+		};
+		4ED2C9102CCF322800AB40F8 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				14B1303B2CAED6D500877314 /* GrabberView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		4ED2C9112CCF327F00AB40F8 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB0462C9BD22200B8A89C /* DefaultTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		4ED2C9122CCF32CA00AB40F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EC52AF42CA13925007E07D6 /* View+Constraints.swift */,
+				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4ED2C9132CCF32DE00AB40F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4EF982182C9415B100809294 /* AlertViewController */ = {
