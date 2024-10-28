@@ -51,7 +51,7 @@ private extension OutlineViewController {
 // MARK: CollectionView Layout
 private extension OutlineViewController {
     func layout() -> UICollectionViewLayout {
-        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         return UICollectionViewCompositionalLayout.list(using: configuration)
     }
 }
