@@ -367,7 +367,6 @@
 				4ED2C90E2CCF31B000AB40F8 /* TableViewCells */,
 				4ED2C90D2CCF318700AB40F8 /* CollectionViewCells */,
 				4ED2C90C2CCF315B00AB40F8 /* DefualtViewControllers */,
-				4ED2C9122CCF32CA00AB40F8 /* Extensions */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -568,8 +567,6 @@
 			isa = PBXGroup;
 			children = (
 				4E12CE542CA28B06004DF1EA /* Entities */,
-				4E12CE552CA28B11004DF1EA /* Protocols */,
-				4E12CE562CA28B4B004DF1EA /* Managers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -678,22 +675,14 @@
 		4ECD49762C8E9B6000F3BEC7 /* DefaultComponents-Accessibility */ = {
 			isa = PBXGroup;
 			children = (
-				4EC51C9D2C912A9100385BD0 /* Models */,
-				4E12CE4E2CA28A5B004DF1EA /* Outline */,
-				4E285DBD2C8FE911007F286C /* Control */,
-				4E0AB04C2C9BE1FB00B8A89C /* Text */,
-				4EC51C932C911B4E00385BD0 /* State */,
-				4E31E0F12C9275B7004C4979 /* DateAndTime */,
-				4EC52B022CA151E3007E07D6 /* List */,
-				4E12CE4F2CA28A7A004DF1EA /* Alert */,
-				4E12CE502CA28A8C004DF1EA /* Page */,
-				4EC52B152CA1B62D007E07D6 /* Sheet */,
-				4E0AB04A2C9BE10200B8A89C /* Views */,
 				4ECD49772C8E9B6000F3BEC7 /* AppDelegate.swift */,
 				4ECD49792C8E9B6000F3BEC7 /* SceneDelegate.swift */,
-				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
-				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
-				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
+				4ED2C9142CCF346E00AB40F8 /* Resources */,
+				4EC51C9D2C912A9100385BD0 /* Models */,
+				4E12CE552CA28B11004DF1EA /* Protocols */,
+				4E0AB04A2C9BE10200B8A89C /* Views */,
+				4ED2C9152CCF349E00AB40F8 /* Controllers */,
+				4ED2C9162CCF36A500AB40F8 /* Helpers */,
 			);
 			path = "DefaultComponents-Accessibility";
 			sourceTree = "<group>";
@@ -768,6 +757,41 @@
 				4E0AB0442C9BC9CE00B8A89C /* ComponentBoxView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4ED2C9142CCF346E00AB40F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD49852C8E9B6200F3BEC7 /* Info.plist */,
+				4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */,
+				4ECD49822C8E9B6200F3BEC7 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4ED2C9152CCF349E00AB40F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E12CE4E2CA28A5B004DF1EA /* Outline */,
+				4E0AB04C2C9BE1FB00B8A89C /* Text */,
+				4E285DBD2C8FE911007F286C /* Control */,
+				4EC51C932C911B4E00385BD0 /* State */,
+				4E31E0F12C9275B7004C4979 /* DateAndTime */,
+				4EC52B022CA151E3007E07D6 /* List */,
+				4E12CE502CA28A8C004DF1EA /* Page */,
+				4E12CE4F2CA28A7A004DF1EA /* Alert */,
+				4EC52B152CA1B62D007E07D6 /* Sheet */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4ED2C9162CCF36A500AB40F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4E12CE562CA28B4B004DF1EA /* Managers */,
+				4ED2C9122CCF32CA00AB40F8 /* Extensions */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4EF982182C9415B100809294 /* AlertViewController */ = {
