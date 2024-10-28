@@ -25,7 +25,7 @@ extension UIView {
         
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: inset.top),
-            view.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: inset.bottom),
+            view.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: inset.bottom),
             view.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: inset.left),
             view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: inset.right)
         ])

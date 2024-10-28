@@ -124,6 +124,7 @@
 		4ECD49812C8E9B6200F3BEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49802C8E9B6200F3BEC7 /* Assets.xcassets */; };
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */; };
+		4ED2C90B2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */; };
 		4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */; };
 		4EEEE6132CC0D9B500FCF08B /* ChartCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */; };
 		4EEEE6172CC0DC2500FCF08B /* LatestCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */; };
@@ -252,6 +253,7 @@
 		4ECD49832C8E9B6200F3BEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndSliderViewController.swift; sourceTree = "<group>"; };
+		4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTraitsCollectionListCell.swift; sourceTree = "<group>"; };
 		4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityListCell.swift; sourceTree = "<group>"; };
 		4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCollectionListCell.swift; sourceTree = "<group>"; };
 		4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionListCell.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				4E1BC4F82CAF87F9001A29D5 /* UIAccessibility+.swift */,
 				14852BE62CC20B4300F53857 /* ButtonTraitsTableCell.swift */,
 				1488352D2CC50B0B0015EA41 /* ButtonTraitsCollectionListCell.swift */,
+				4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				4EEEE6132CC0D9B500FCF08B /* ChartCollectionListCell.swift in Sources */,
 				4E0AB03F2C9BAB9700B8A89C /* Detail.swift in Sources */,
 				4E855F542CACE15C008CDB3B /* DefaultCollectionViewController.swift in Sources */,
+				4ED2C90B2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift in Sources */,
 				4E855F582CACE1C0008CDB3B /* DefaultCollectionViewController+ListLayout.swift in Sources */,
 				4EC52AE92CA0F53A007E07D6 /* StateViewController+Delegate.swift in Sources */,
 				14F7FC402CB2C8D300F3FA61 /* SearchViewControllerWithAccessibility+DataSource.swift in Sources */,

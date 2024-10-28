@@ -13,7 +13,7 @@ extension OutlineViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Outline, Detail>
     typealias SectionSnapshot = NSDiffableDataSourceSectionSnapshot<Detail>
     
-    func headerRegistrationHandler(cell: ButtonTraitsCollectionListCell, indexPath: IndexPath, item: Detail) {
+    func headerRegistrationHandler(cell: HeaderTraitsCollectionListCell, indexPath: IndexPath, item: Detail) {
         var configuration = cell.defaultContentConfiguration()
         configuration.text = item.title
         cell.contentConfiguration = configuration
