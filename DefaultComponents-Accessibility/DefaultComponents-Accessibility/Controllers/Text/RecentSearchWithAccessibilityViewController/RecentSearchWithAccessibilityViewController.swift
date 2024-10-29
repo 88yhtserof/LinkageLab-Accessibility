@@ -78,7 +78,7 @@ extension RecentSearchWithAccessibilityViewController {
         
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "책 제목을 입력하세요"
+        searchController.searchBar.placeholder = "닉네임을 입력하세요"
     }
     
     func configureConstraints() {
