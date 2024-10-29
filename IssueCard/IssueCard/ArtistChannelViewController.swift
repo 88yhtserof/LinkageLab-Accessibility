@@ -11,7 +11,7 @@ final class ArtistChannelViewController: UIViewController {
     lazy var artistBackgroundImageView: UIImageView = {
         let image = UIImage(named: "aespa_1")
         var view = UIImageView(image: image)
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleToFill
         return view
     }()
     
@@ -30,12 +30,14 @@ private extension ArtistChannelViewController {
     }
     
     func configureConstraints() {
-        view.addSubviews([artistBackgroundImageView])
+        view.addSubviews([artistBackgroundImageView, gradientBackgroundView])
+        let ratio = artistBackgroundImageView.frame.size.width / artistBackgroundImageView.frame.size.height
         
         NSLayoutConstraint.activate([
             artistBackgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             artistBackgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            artistBackgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            artistBackgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            artistBackgroundImageView.heightAnchor.constraint(equalTo: artistBackgroundImageView.widthAnchor, multiplier: ratio)
         ])
     }
 }
