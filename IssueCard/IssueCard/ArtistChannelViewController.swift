@@ -15,6 +15,8 @@ final class ArtistChannelViewController: UIViewController {
         return view
     }()
     
+    lazy var gradientBackgroundView = GradientTopBackgroundView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +28,7 @@ final class ArtistChannelViewController: UIViewController {
 private extension ArtistChannelViewController {
     
     func configureView() {
-        view.backgroundColor = .white
+//        view.backgroundColor = .white
     }
     
     func configureConstraints() {
@@ -37,7 +39,12 @@ private extension ArtistChannelViewController {
             artistBackgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             artistBackgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             artistBackgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            artistBackgroundImageView.heightAnchor.constraint(equalTo: artistBackgroundImageView.widthAnchor, multiplier: ratio)
+            artistBackgroundImageView.heightAnchor.constraint(equalTo: artistBackgroundImageView.widthAnchor, multiplier: ratio),
+            
+            gradientBackgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            gradientBackgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            gradientBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            gradientBackgroundView.topAnchor.constraint(equalTo: artistBackgroundImageView.topAnchor)
         ])
     }
 }
