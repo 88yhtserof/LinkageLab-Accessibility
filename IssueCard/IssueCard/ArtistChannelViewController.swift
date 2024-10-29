@@ -8,13 +8,7 @@
 import UIKit
 
 final class ArtistChannelViewController: UIViewController {
-    lazy var artistBackgroundImageView: UIImageView = {
-        let image = UIImage(named: "aespa_1")
-        var view = UIImageView(image: image)
-        view.contentMode = .scaleToFill
-        return view
-    }()
-    
+    lazy var artistBackgroundImageView = ArtistBackgroundImageView()
     lazy var gradientBackgroundView = GradientTopBackgroundView()
     
     override func viewDidLoad() {
