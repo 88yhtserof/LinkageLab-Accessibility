@@ -11,7 +11,7 @@ extension RecentSearchWithAccessibilityViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
-    func recentCellRegistrationHandler(cell: RecentListCell, indexPath: IndexPath, item: UserInfo) {
+    func recentCellRegistrationHandler(cell: RecentListCellWithAccessibility, indexPath: IndexPath, item: UserInfo) {
         cell.text = item.nickname
         cell.deleteAction = { [weak self]  in
             let itemToDelete = Item(recent: item)

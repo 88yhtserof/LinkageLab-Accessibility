@@ -125,6 +125,7 @@
 		4ECD49842C8E9B6200F3BEC7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD49832C8E9B6200F3BEC7 /* Base */; };
 		4ECD498E2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */; };
 		4ED2C90B2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */; };
+		4ED6AB172CD076C5001B630D /* RecentListCellWithAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED6AB162CD076C5001B630D /* RecentListCellWithAccessibility.swift */; };
 		4ED71CE52CA6392F00A1A724 /* AccessibilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */; };
 		4EEEE6132CC0D9B500FCF08B /* ChartCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */; };
 		4EEEE6172CC0DC2500FCF08B /* LatestCollectionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */; };
@@ -254,6 +255,7 @@
 		4ECD49852C8E9B6200F3BEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECD498D2C8ECBDD00F3BEC7 /* ButtonAndSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAndSliderViewController.swift; sourceTree = "<group>"; };
 		4ED2C90A2CCF1F1800AB40F8 /* HeaderTraitsCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTraitsCollectionListCell.swift; sourceTree = "<group>"; };
+		4ED6AB162CD076C5001B630D /* RecentListCellWithAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentListCellWithAccessibility.swift; sourceTree = "<group>"; };
 		4ED71CE42CA6392F00A1A724 /* AccessibilityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityListCell.swift; sourceTree = "<group>"; };
 		4EEEE6122CC0D9B500FCF08B /* ChartCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCollectionListCell.swift; sourceTree = "<group>"; };
 		4EEEE6162CC0DC2500FCF08B /* LatestCollectionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestCollectionListCell.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				149991B92CCB45DA0036BE94 /* RecentSearchWithAccessibilityViewController+ListLayout.swift */,
 				149991BB2CCB45E60036BE94 /* RecentSearchWithAccessibilityViewController+Updating.swift */,
 				149991BD2CCB45EF0036BE94 /* RecentSearchWithAccessibilityViewController+Type.swift */,
+				4ED6AB162CD076C5001B630D /* RecentListCellWithAccessibility.swift */,
 			);
 			path = RecentSearchWithAccessibilityViewController;
 			sourceTree = "<group>";
@@ -986,6 +989,7 @@
 				4EB123062CB7B57900D771D3 /* NewsListCellWithAccessibility.swift in Sources */,
 				4E855F5A2CACE209008CDB3B /* DefaultCollectionViewController+Type.swift in Sources */,
 				4EBB491B2CA3D63C006FD702 /* TextViewController+Delegate.swift in Sources */,
+				4ED6AB172CD076C5001B630D /* RecentListCellWithAccessibility.swift in Sources */,
 				14852BE72CC20B4300F53857 /* ButtonTraitsTableCell.swift in Sources */,
 				4EC52B062CA16CF5007E07D6 /* PageViewController+DataSource.swift in Sources */,
 				4EB122F82CB7679300D771D3 /* NewsListViewController.swift in Sources */,
@@ -1142,7 +1146,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQV4ZDQNW5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "DefaultComponents-Accessibility/Info.plist";
+				INFOPLIST_FILE = "DefaultComponents-Accessibility/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -1170,7 +1174,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQV4ZDQNW5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "DefaultComponents-Accessibility/Info.plist";
+				INFOPLIST_FILE = "DefaultComponents-Accessibility/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
