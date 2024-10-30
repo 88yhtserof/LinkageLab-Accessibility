@@ -25,11 +25,12 @@ extension RecentSearchWithAccessibilityViewController {
     func recentEmptyCellRegistrationHandler(cell: RecentEmptyListCell, indexPath: IndexPath, item: Item) {
     }
     
-    func resultCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: UserInfo) {
+    func resultCellRegistrationHandler(cell: ButtonTraitsCollectionListCell, indexPath: IndexPath, item: UserInfo) {
         var configuration = UIListContentConfiguration.cell()
         configuration.text = item.nickname
         cell.contentConfiguration = configuration
         cell.selectedBackgroundView = UIView()
+        cell.accessibilityLabel = item.nickname
     }
     
     func titleSupplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
@@ -37,19 +38,6 @@ extension RecentSearchWithAccessibilityViewController {
             fatalError("Unknown Section")
         }
         supplementaryView.title = section.title
-        
-        if UIAccessibility.isVoiceOverRunning {
-            supplementaryView.isAccessibilityElement = true
-            supplementaryView.accessibilityLabel = section.title
-            supplementaryView.accessibilityTraits = .header
-            
-            switch section {
-            case .recent:
-                supplementaryView.accessibilityValue = "\(self.recents.count)개의 검색어"
-            case .result:
-                break
-            }
-        }
     }
     
     func initialSnapshot() {
