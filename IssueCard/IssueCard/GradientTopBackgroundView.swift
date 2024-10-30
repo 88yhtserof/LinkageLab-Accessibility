@@ -21,7 +21,7 @@ private extension GradientTopBackgroundView {
         gradientLayer.frame = bounds
         let colors = [UIColor.white.withAlphaComponent(0.1).cgColor, UIColor.white.cgColor]
         gradientLayer.colors = colors
-        gradientLayer.locations = [0.25, 0.45]
+        gradientLayer.locations = [0.1, 0.45]
         layer.addSublayer(gradientLayer)
     }
 }
