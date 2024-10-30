@@ -13,6 +13,8 @@ final class RecentListCellWithAccessibility: ButtonTraitsCollectionListCell {
         didSet {
             textButtonConfig.title = text
             textButton.configuration = textButtonConfig
+            textButton.accessibilityLabel = text
+            textButton.accessibilityValue = "검색어로 입력"
             deleteButton.accessibilityHint = text
         }
     }
