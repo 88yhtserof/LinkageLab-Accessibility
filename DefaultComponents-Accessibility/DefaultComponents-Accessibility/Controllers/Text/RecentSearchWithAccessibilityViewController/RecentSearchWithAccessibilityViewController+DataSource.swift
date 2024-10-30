@@ -25,11 +25,12 @@ extension RecentSearchWithAccessibilityViewController {
     func recentEmptyCellRegistrationHandler(cell: RecentEmptyListCell, indexPath: IndexPath, item: Item) {
     }
     
-    func resultCellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, item: UserInfo) {
+    func resultCellRegistrationHandler(cell: ButtonTraitsCollectionListCell, indexPath: IndexPath, item: UserInfo) {
         var configuration = UIListContentConfiguration.cell()
         configuration.text = item.nickname
         cell.contentConfiguration = configuration
         cell.selectedBackgroundView = UIView()
+        cell.accessibilityLabel = item.nickname
     }
     
     func titleSupplementaryRegistrationHandler(supplementaryView: TitleSupplementaryView, string: String, indexPath: IndexPath) {
