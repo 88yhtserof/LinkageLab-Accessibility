@@ -14,6 +14,9 @@ final class ScrollView: UIScrollView {
         super.init(frame: frame)
         
         addPinnedSubview(contentView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalTo: self.frameLayoutGuide.widthAnchor)
+        ])
     }
     
     required init?(coder: NSCoder) {

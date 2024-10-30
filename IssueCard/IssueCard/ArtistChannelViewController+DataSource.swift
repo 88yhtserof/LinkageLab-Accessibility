@@ -55,6 +55,7 @@ extension ArtistChannelViewController {
         snapshot.appendItems([.latest], toSection: .latest)
         snapshot.appendItems([.chart], toSection: .chart)
         snapshot.appendItems([.today], toSection: .today)
+        print(snapshot.itemIdentifiers)
         dataSource.apply(snapshot)
     }
     

@@ -13,7 +13,7 @@ final class ArtistChannelViewController: DefaultAccessibilityViewController {
     var snapshot: Snapshot!
     var books = Music.samples
     
-    lazy var scrollView = ScrollView()
+//    lazy var scrollView = ScrollView()
     lazy var artistBackgroundImageView = ArtistBackgroundImageView()
     lazy var gradientBackgroundView = GradientTopBackgroundView()
     lazy var artistInfoView = ArtistInfoView()
@@ -31,13 +31,15 @@ final class ArtistChannelViewController: DefaultAccessibilityViewController {
 private extension ArtistChannelViewController {
     
     func configureView() {
-        collectionView.isScrollEnabled = false
+//        collectionView.isScrollEnabled = false
     }
     
     func configureConstraints() {
-        scrollView.contentView.addSubviews([artistBackgroundImageView, gradientBackgroundView, artistInfoView, collectionView])
+//        scrollView.contentView.addSubviews([artistBackgroundImageView, gradientBackgroundView, artistInfoView, collectionView])
+        view.addSubviews([artistBackgroundImageView, gradientBackgroundView, collectionView])
         
-        view.addPinnedSubview(scrollView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
+//        view.addPinnedSubview(scrollView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
+//        view.addPinnedSubview(collectionView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
         
         let ratio = artistBackgroundImageView.frame.size.width / artistBackgroundImageView.frame.size.height
         let horizontalInset = CGFloat(15)
@@ -51,16 +53,21 @@ private extension ArtistChannelViewController {
             gradientBackgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             gradientBackgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             gradientBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            gradientBackgroundView.topAnchor.constraint(equalTo: artistBackgroundImageView.topAnchor),
+            gradientBackgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+//
+//            artistInfoView.topAnchor.constraint(equalTo: scrollView.contentView.topAnchor, constant: 250),
+//            artistInfoView.leadingAnchor.constraint(equalTo: scrollView.contentView.leadingAnchor, constant: horizontalInset),
+//            artistInfoView.trailingAnchor.constraint(equalTo: scrollView.contentView.trailingAnchor, constant: horizontalInset),
             
-            artistInfoView.topAnchor.constraint(equalTo: scrollView.contentView.topAnchor, constant: 250),
-            artistInfoView.leadingAnchor.constraint(equalTo: scrollView.contentView.leadingAnchor, constant: horizontalInset),
-            artistInfoView.trailingAnchor.constraint(equalTo: scrollView.contentView.trailingAnchor, constant: horizontalInset),
+//            collectionView.topAnchor.constraint(equalTo: artistInfoView.bottomAnchor, constant: 10),
+//            collectionView.leadingAnchor.constraint(equalTo: scrollView.contentView.leadingAnchor, constant: horizontalInset),
+//            collectionView.trailingAnchor.constraint(equalTo: scrollView.contentView.trailingAnchor, constant: horizontalInset),
+//            collectionView.bottomAnchor.constraint(equalTo: scrollView.contentView.bottomAnchor, constant: 0)
             
-            collectionView.topAnchor.constraint(equalTo: artistInfoView.topAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: scrollView.contentView.leadingAnchor, constant: horizontalInset),
-            collectionView.trailingAnchor.constraint(equalTo: scrollView.contentView.trailingAnchor, constant: horizontalInset),
-            collectionView.bottomAnchor.constraint(equalTo: scrollView.contentView.bottomAnchor, constant: 0)
+            collectionView.topAnchor.constraint(equalTo: artistBackgroundImageView.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: gradientBackgroundView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: gradientBackgroundView.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: gradientBackgroundView.bottomAnchor, constant: 0)
         ])
     }
     
@@ -93,6 +100,7 @@ private extension ArtistChannelViewController {
         }
         
         updateSnapshot()
+        print("!!!")
         collectionView.dataSource = dataSource
     }
 }
