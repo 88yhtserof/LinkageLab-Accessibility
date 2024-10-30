@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E03C5572CD1BE1800C89D60 /* ArtistInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C5562CD1BE1800C89D60 /* ArtistInfoView.swift */; };
 		4E03C55B2CD1C1B800C89D60 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C55A2CD1C1B800C89D60 /* ScrollView.swift */; };
+		4E03C55D2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C55C2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift */; };
 		4EAA3CA62CBF42F300F0FE82 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */; };
 		4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */; };
 		4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		4E03C5562CD1BE1800C89D60 /* ArtistInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoView.swift; sourceTree = "<group>"; };
 		4E03C55A2CD1C1B800C89D60 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		4E03C55C2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAccessibilityViewController.swift; sourceTree = "<group>"; };
 		4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+.swift"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				4ED6AB1C2CD0B6F1001B630D /* ArtistBackgroundImageView.swift */,
 				4E03C5562CD1BE1800C89D60 /* ArtistInfoView.swift */,
 				4E03C55A2CD1C1B800C89D60 /* ScrollView.swift */,
+				4E03C55C2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift */,
 			);
 			path = IssueCard;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */,
 				4EED06822CBDF986003F0A61 /* AppDelegate.swift in Sources */,
 				4EED06A22CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift in Sources */,
+				4E03C55D2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift in Sources */,
 				4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */,
 				4EED06842CBDF986003F0A61 /* SceneDelegate.swift in Sources */,
 				4EED06A02CBE11C4003F0A61 /* MapInfoListCell.swift in Sources */,

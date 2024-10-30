@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ArtistChannelViewController: UIViewController {
+final class ArtistChannelViewController: DefaultAccessibilityViewController {
     
     lazy var scrollView = ScrollView()
     lazy var artistBackgroundImageView = ArtistBackgroundImageView()
@@ -25,7 +25,7 @@ final class ArtistChannelViewController: UIViewController {
 private extension ArtistChannelViewController {
     
     func configureView() {
-//        view.backgroundColor = .white
+        
     }
     
     func configureConstraints() {
