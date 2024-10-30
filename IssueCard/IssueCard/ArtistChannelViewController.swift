@@ -8,8 +8,11 @@
 import UIKit
 
 final class ArtistChannelViewController: UIViewController {
+    
+    lazy var scrollView = ScrollView()
     lazy var artistBackgroundImageView = ArtistBackgroundImageView()
     lazy var gradientBackgroundView = GradientTopBackgroundView()
+    lazy var artistInfoView = ArtistInfoView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +29,12 @@ private extension ArtistChannelViewController {
     }
     
     func configureConstraints() {
-        view.addSubviews([artistBackgroundImageView, gradientBackgroundView])
+        scrollView.contentView.addSubviews([artistBackgroundImageView, gradientBackgroundView, artistInfoView])
+        
+        view.addPinnedSubview(scrollView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
+        
         let ratio = artistBackgroundImageView.frame.size.width / artistBackgroundImageView.frame.size.height
+        let horizontalInset = CGFloat(15)
         
         NSLayoutConstraint.activate([
             artistBackgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -38,7 +45,11 @@ private extension ArtistChannelViewController {
             gradientBackgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             gradientBackgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             gradientBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            gradientBackgroundView.topAnchor.constraint(equalTo: artistBackgroundImageView.topAnchor)
+            gradientBackgroundView.topAnchor.constraint(equalTo: artistBackgroundImageView.topAnchor),
+            
+            artistInfoView.topAnchor.constraint(equalTo: scrollView.contentView.topAnchor, constant: 250),
+            artistInfoView.leadingAnchor.constraint(equalTo: scrollView.contentView.leadingAnchor, constant: horizontalInset),
+            artistInfoView.trailingAnchor.constraint(equalTo: scrollView.contentView.trailingAnchor, constant: horizontalInset)
         ])
     }
 }
