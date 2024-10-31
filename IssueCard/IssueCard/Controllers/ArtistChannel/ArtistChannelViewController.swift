@@ -16,6 +16,12 @@ final class ArtistChannelViewController: DefaultAccessibilityViewController {
     lazy var artistBackgroundImageView = ArtistBackgroundImageView()
     lazy var gradientBackgroundView = GradientTopBackgroundView()
     lazy var artistInfoView = ArtistInfoView()
+    
+    lazy var rightBarButton: UIBarButtonItem = {
+        var view = UIBarButtonItem()
+        view.image = UIImage(systemName: "ellipsis")
+        return view
+    }()
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     lazy var miniPlayerView = MiniPlayerView()
     
@@ -33,6 +39,8 @@ private extension ArtistChannelViewController {
     func configureView() {
         let miniPlayerHeight = miniPlayerView.frame.height
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: miniPlayerHeight, right: -10)
+        
+        navigationItem.rightBarButtonItem = rightBarButton
     }
     
     func configureConstraints() {
