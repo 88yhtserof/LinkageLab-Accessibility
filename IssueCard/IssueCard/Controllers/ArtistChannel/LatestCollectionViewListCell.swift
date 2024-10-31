@@ -21,7 +21,6 @@ final class LatestCollectionListCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("LatestCollectionListCell")
         configureContentView()
     }
     

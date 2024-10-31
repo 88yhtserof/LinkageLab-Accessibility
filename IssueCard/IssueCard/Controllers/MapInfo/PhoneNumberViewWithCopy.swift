@@ -56,7 +56,6 @@ final class PhoneNumberViewWithCopy: ActionableLabel {
     }
     
     func accessibilityCopyRotors() -> UIAccessibilityCustomRotor {
-        print("!!!")
         return UIAccessibilityCustomRotor(name: "복사") { predicate in
             self.copyAction()
             UIAccessibility.post(notification: .announcement, argument: "전화번호 복사됨")

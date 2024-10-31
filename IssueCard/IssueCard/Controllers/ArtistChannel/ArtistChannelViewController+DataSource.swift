@@ -12,7 +12,6 @@ extension ArtistChannelViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     
     func latestCellRegistrationHandler(cell: LatestCollectionListCell, indexPath: IndexPath, item: Item) {
-        print("@@@")
         cell.delegate = self
         cell.isAccessibilityElement = true
         cell.accessibilityTraits = [.button, .adjustable]
@@ -49,13 +48,11 @@ extension ArtistChannelViewController {
     }
     
     func updateSnapshot() {
-        print("updateSnapshot")
         snapshot = Snapshot()
         snapshot.appendSections([.latest, .chart, .today])
         snapshot.appendItems([.latest], toSection: .latest)
         snapshot.appendItems([.chart], toSection: .chart)
         snapshot.appendItems([.today], toSection: .today)
-        print(snapshot.itemIdentifiers)
         dataSource.apply(snapshot)
     }
     
