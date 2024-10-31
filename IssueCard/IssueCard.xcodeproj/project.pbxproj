@@ -25,6 +25,7 @@
 		4E03C5772CD1D2C700C89D60 /* TitleSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */; };
 		4E03C5792CD1D31E00C89D60 /* BorderedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */; };
 		4E0CECFC2CD3106500603CA6 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */; };
+		4E0CED072CD3229A00603CA6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CED062CD3229A00603CA6 /* TabBarController.swift */; };
 		4EAA3CA62CBF42F300F0FE82 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */; };
 		4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */; };
 		4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */; };
@@ -66,6 +67,7 @@
 		4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSupplementaryView.swift; sourceTree = "<group>"; };
 		4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedListCell.swift; sourceTree = "<group>"; };
 		4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
+		4E0CED062CD3229A00603CA6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+.swift"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				4E03C56E2CD1CF9B00C89D60 /* ArtistChannelListCell.swift */,
 				4E03C5722CD1D09C00C89D60 /* MusicGroupView.swift */,
 				4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */,
+				4E0CED062CD3229A00603CA6 /* TabBarController.swift */,
 			);
 			path = ArtistChannel;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				4E03C55D2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift in Sources */,
 				4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */,
 				4EED06842CBDF986003F0A61 /* SceneDelegate.swift in Sources */,
+				4E0CED072CD3229A00603CA6 /* TabBarController.swift in Sources */,
 				4E03C5752CD1D14800C89D60 /* Music.swift in Sources */,
 				4EED06A02CBE11C4003F0A61 /* MapInfoListCell.swift in Sources */,
 				4ED6AB1B2CD0A7F7001B630D /* GradientTopBackgroundView.swift in Sources */,
