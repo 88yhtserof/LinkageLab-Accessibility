@@ -71,7 +71,7 @@ class MiniPlayerView: UIView {
     }()
     
     init() {
-        let frame = CGRect(x: 0, y: 0, width: 0, height: 200)
+        let frame = CGRect(x: 0, y: 0, width: 0, height: 100)
         super.init(frame: frame)
         
         backgroundColor = .white

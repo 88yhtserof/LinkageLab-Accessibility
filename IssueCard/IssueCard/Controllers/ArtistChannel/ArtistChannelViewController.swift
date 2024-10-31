@@ -31,7 +31,8 @@ final class ArtistChannelViewController: DefaultAccessibilityViewController {
 private extension ArtistChannelViewController {
     
     func configureView() {
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 20, right: -10)
+        let miniPlayerHeight = miniPlayerView.frame.height
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: miniPlayerHeight, right: -10)
     }
     
     func configureConstraints() {
