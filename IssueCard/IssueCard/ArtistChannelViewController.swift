@@ -17,6 +17,7 @@ final class ArtistChannelViewController: DefaultAccessibilityViewController {
     lazy var gradientBackgroundView = GradientTopBackgroundView()
     lazy var artistInfoView = ArtistInfoView()
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
+    lazy var miniPlayerView = MiniPlayerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,13 @@ private extension ArtistChannelViewController {
     
     func configureConstraints() {
         view.addPinnedSubview(collectionView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
+        view.addSubviews([miniPlayerView])
+        
+        NSLayoutConstraint.activate([
+            miniPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            miniPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            miniPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     func configureDataSource() {

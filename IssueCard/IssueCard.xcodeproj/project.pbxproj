@@ -24,6 +24,7 @@
 		4E03C5752CD1D14800C89D60 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C5742CD1D14800C89D60 /* Music.swift */; };
 		4E03C5772CD1D2C700C89D60 /* TitleSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */; };
 		4E03C5792CD1D31E00C89D60 /* BorderedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */; };
+		4E0CECFC2CD3106500603CA6 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */; };
 		4EAA3CA62CBF42F300F0FE82 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */; };
 		4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */; };
 		4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */; };
@@ -64,6 +65,7 @@
 		4E03C5742CD1D14800C89D60 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSupplementaryView.swift; sourceTree = "<group>"; };
 		4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedListCell.swift; sourceTree = "<group>"; };
+		4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+.swift"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				4E03C5742CD1D14800C89D60 /* Music.swift */,
 				4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */,
 				4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */,
+				4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */,
 			);
 			path = IssueCard;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0CECFC2CD3106500603CA6 /* MiniPlayerView.swift in Sources */,
 				4E03C5572CD1BE1800C89D60 /* ArtistInfoView.swift in Sources */,
 				4E03C5692CD1CF2500C89D60 /* TodayCollectionListCell.swift in Sources */,
 				4E03C56B2CD1CF4500C89D60 /* ChartCollectionListCell.swift in Sources */,
