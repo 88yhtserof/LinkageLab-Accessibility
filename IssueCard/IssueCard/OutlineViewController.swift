@@ -33,7 +33,7 @@ class OutlineViewController: UIViewController {
         if sender == mapInfoButton {
             vc = MapInfoViewController()
         } else {
-            vc = ArtistChannelViewController()
+            vc = TabBarController()
         }
         
         navigationController?.pushViewController(vc, animated: true)
