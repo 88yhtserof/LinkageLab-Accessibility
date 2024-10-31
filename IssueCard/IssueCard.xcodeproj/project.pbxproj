@@ -101,6 +101,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0CECFD2CD31D2500603CA6 /* MapInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */,
+				4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */,
+				4EED06A12CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift */,
+				4EED06952CBDFAFC003F0A61 /* MapInfoViewController.swift */,
+				4EED069B2CBE075B003F0A61 /* MapInfoViewController+DataSource.swift */,
+				4EED069D2CBE089D003F0A61 /* MapInfo.swift */,
+				4EED069F2CBE11C4003F0A61 /* MapInfoListCell.swift */,
+			);
+			path = MapInfo;
+			sourceTree = "<group>";
+		};
+		4E0CECFE2CD31D6300603CA6 /* ArtistChannel */ = {
+			isa = PBXGroup;
+			children = (
+				4ED6AB182CD0A5FC001B630D /* ArtistChannelViewController.swift */,
+				4ED6AB1A2CD0A7F7001B630D /* GradientTopBackgroundView.swift */,
+				4ED6AB1C2CD0B6F1001B630D /* ArtistBackgroundImageView.swift */,
+				4E03C5562CD1BE1800C89D60 /* ArtistInfoView.swift */,
+				4E03C55E2CD1CE3F00C89D60 /* ArtistChannelViewController+DataSource.swift */,
+				4E03C5602CD1CE6E00C89D60 /* ArtistChannelViewController+Delegate.swift */,
+				4E03C5622CD1CE7B00C89D60 /* ArtistChannelViewController+Action.swift */,
+				4E03C5642CD1CE8600C89D60 /* ArtistChannelViewController+ListLayout.swift */,
+				4E03C5662CD1CE9D00C89D60 /* ArtistChannelViewController+Type.swift */,
+				4E03C5682CD1CF2500C89D60 /* TodayCollectionListCell.swift */,
+				4E03C56A2CD1CF4500C89D60 /* ChartCollectionListCell.swift */,
+				4E03C56C2CD1CF6C00C89D60 /* LatestCollectionViewListCell.swift */,
+				4E03C56E2CD1CF9B00C89D60 /* ArtistChannelListCell.swift */,
+				4E03C5722CD1D09C00C89D60 /* MusicGroupView.swift */,
+				4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */,
+			);
+			path = ArtistChannel;
+			sourceTree = "<group>";
+		};
+		4E0CECFF2CD31D7100603CA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E03C5742CD1D14800C89D60 /* Music.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4E0CED002CD31D8C00603CA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EED06972CBDFB26003F0A61 /* DefaultViewController.swift */,
+				4EED06A52CBE3715003F0A61 /* ActionableLabel.swift */,
+				4E03C55A2CD1C1B800C89D60 /* ScrollView.swift */,
+				4E03C55C2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift */,
+				4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */,
+				4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E0CED012CD31D9F00603CA6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4EED06A32CBE36CF003F0A61 /* Actionable.swift */,
+				4E03C5702CD1CFC700C89D60 /* AdjustableForAccessibility.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4E0CED022CD31DB100603CA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EED06992CBDFD1F003F0A61 /* View+Constraints.swift */,
+				4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E0CED032CD31E0000603CA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EED068A2CBDF988003F0A61 /* Assets.xcassets */,
+				4EED068C2CBDF988003F0A61 /* LaunchScreen.storyboard */,
+				4EED068F2CBDF988003F0A61 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E0CED042CD31E8C00603CA6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E0CECFD2CD31D2500603CA6 /* MapInfo */,
+				4E0CECFE2CD31D6300603CA6 /* ArtistChannel */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4E0CED052CD31E9C00603CA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4E0CED022CD31DB100603CA6 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4EED06752CBDF986003F0A61 = {
 			isa = PBXGroup;
 			children = (
@@ -123,42 +225,12 @@
 				4EED06812CBDF986003F0A61 /* AppDelegate.swift */,
 				4EED06832CBDF986003F0A61 /* SceneDelegate.swift */,
 				4EED06852CBDF986003F0A61 /* ViewController.swift */,
-				4EED06972CBDFB26003F0A61 /* DefaultViewController.swift */,
-				4EED06952CBDFAFC003F0A61 /* MapInfoViewController.swift */,
-				4EED069B2CBE075B003F0A61 /* MapInfoViewController+DataSource.swift */,
-				4EED068A2CBDF988003F0A61 /* Assets.xcassets */,
-				4EED068C2CBDF988003F0A61 /* LaunchScreen.storyboard */,
-				4EED068F2CBDF988003F0A61 /* Info.plist */,
-				4EED06992CBDFD1F003F0A61 /* View+Constraints.swift */,
-				4EED069D2CBE089D003F0A61 /* MapInfo.swift */,
-				4EED069F2CBE11C4003F0A61 /* MapInfoListCell.swift */,
-				4EED06A12CBE193A003F0A61 /* PhoneNumberViewWithCopy.swift */,
-				4EED06A32CBE36CF003F0A61 /* Actionable.swift */,
-				4EED06A52CBE3715003F0A61 /* ActionableLabel.swift */,
-				4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */,
-				4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */,
-				4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */,
-				4ED6AB182CD0A5FC001B630D /* ArtistChannelViewController.swift */,
-				4ED6AB1A2CD0A7F7001B630D /* GradientTopBackgroundView.swift */,
-				4ED6AB1C2CD0B6F1001B630D /* ArtistBackgroundImageView.swift */,
-				4E03C5562CD1BE1800C89D60 /* ArtistInfoView.swift */,
-				4E03C55A2CD1C1B800C89D60 /* ScrollView.swift */,
-				4E03C55C2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift */,
-				4E03C55E2CD1CE3F00C89D60 /* ArtistChannelViewController+DataSource.swift */,
-				4E03C5602CD1CE6E00C89D60 /* ArtistChannelViewController+Delegate.swift */,
-				4E03C5622CD1CE7B00C89D60 /* ArtistChannelViewController+Action.swift */,
-				4E03C5642CD1CE8600C89D60 /* ArtistChannelViewController+ListLayout.swift */,
-				4E03C5662CD1CE9D00C89D60 /* ArtistChannelViewController+Type.swift */,
-				4E03C5682CD1CF2500C89D60 /* TodayCollectionListCell.swift */,
-				4E03C56A2CD1CF4500C89D60 /* ChartCollectionListCell.swift */,
-				4E03C56C2CD1CF6C00C89D60 /* LatestCollectionViewListCell.swift */,
-				4E03C56E2CD1CF9B00C89D60 /* ArtistChannelListCell.swift */,
-				4E03C5702CD1CFC700C89D60 /* AdjustableForAccessibility.swift */,
-				4E03C5722CD1D09C00C89D60 /* MusicGroupView.swift */,
-				4E03C5742CD1D14800C89D60 /* Music.swift */,
-				4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */,
-				4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */,
-				4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */,
+				4E0CED032CD31E0000603CA6 /* Resources */,
+				4E0CECFF2CD31D7100603CA6 /* Models */,
+				4E0CED012CD31D9F00603CA6 /* Protocols */,
+				4E0CED002CD31D8C00603CA6 /* Views */,
+				4E0CED042CD31E8C00603CA6 /* Controllers */,
+				4E0CED052CD31E9C00603CA6 /* Helpers */,
 			);
 			path = IssueCard;
 			sourceTree = "<group>";
@@ -414,7 +486,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQV4ZDQNW5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = IssueCard/Info.plist;
+				INFOPLIST_FILE = IssueCard/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -445,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZQV4ZDQNW5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = IssueCard/Info.plist;
+				INFOPLIST_FILE = IssueCard/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
