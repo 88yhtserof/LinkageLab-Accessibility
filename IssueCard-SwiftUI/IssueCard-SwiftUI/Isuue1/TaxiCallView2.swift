@@ -22,55 +22,58 @@ struct TaxiCallView2: View {
     }
     
     var body: some View {
-        MapView()
         
-        ZStack {
-            VStack {
-                Color.clear
-                    .contentShape(Rectangle())
-            }
-            .frame(height: 100)
-            .frame(maxWidth: 380)
-            .background(Color(red: 235 / 255, green: 247 / 255, blue: 255 / 255))
-            .cornerRadius(10)
-            .padding(.horizontal)
-            .padding(.top)
-            .accessibilityElement()
-            .accessibilityLabel(accessibilityTaxiInfo)
+        VStack {
+            MapView()
             
-            HStack {
-                Image(systemName: "car")
-                    .padding(.leading)
-                    .frame(width: 50, height: 50)
-                    .accessibilityHidden(true)
-                
+            ZStack {
                 VStack {
-                    HStack {
-                        Text(category)
-                            .accessibilityHidden(true)
-                        Spacer()
-                        HStack {
-                            Image(systemName: "info.circle")
-                            Text(estimatedFare)
-                        }
-                        .accessibilityElement()
-                        .accessibilityLabel(estimatedFare)
-                    }
-                    
-                    HStack {
-                        Text(capacity)
-                        Text(estimatedArrivalTime)
-                        Spacer()
-                    }
-                    .accessibilityHidden(true)
+                    Color.clear
+                        .contentShape(Rectangle())
                 }
-                .padding(.trailing, 20)
+                .frame(height: 100)
+                .frame(maxWidth: 380)
+                .background(Color(red: 235 / 255, green: 247 / 255, blue: 255 / 255))
+                .cornerRadius(10)
+                .padding(.horizontal)
+                .padding(.top)
+                .accessibilityElement()
+                .accessibilityLabel(accessibilityTaxiInfo)
+                
+                HStack {
+                    Image(systemName: "car")
+                        .padding(.leading)
+                        .frame(width: 50, height: 50)
+                        .accessibilityHidden(true)
+                    
+                    VStack {
+                        HStack {
+                            Text(category)
+                                .accessibilityHidden(true)
+                            Spacer()
+                            HStack {
+                                Image(systemName: "info.circle")
+                                Text(estimatedFare)
+                            }
+                            .accessibilityElement()
+                            .accessibilityLabel(estimatedFare)
+                        }
+                        
+                        HStack {
+                            Text(capacity)
+                            Text(estimatedArrivalTime)
+                            Spacer()
+                        }
+                        .accessibilityHidden(true)
+                    }
+                    .padding(.trailing, 20)
+                }
+                .padding(.horizontal)
+                .padding(.top)
             }
-            .padding(.horizontal)
-            .padding(.top)
+            .fixedSize(horizontal: true, vertical: true)
+            .accessibilityElement(children: .contain)
         }
-        .fixedSize(horizontal: true, vertical: true)
-        .accessibilityElement(children: .contain)
     }
 }
 
