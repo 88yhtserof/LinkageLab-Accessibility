@@ -27,6 +27,7 @@
 		4E0CECFC2CD3106500603CA6 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */; };
 		4E0CED072CD3229A00603CA6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CED062CD3229A00603CA6 /* TabBarController.swift */; };
 		4E0CF9B12CDC520F00843EA4 /* ArtistListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CF9B02CDC520F00843EA4 /* ArtistListViewController.swift */; };
+		4E0CF9B52CDC7D3A00843EA4 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CF9B42CDC7D3A00843EA4 /* BackButton.swift */; };
 		4EAA3CA62CBF42F300F0FE82 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */; };
 		4EAA3CA82CBF46AC00F0FE82 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */; };
 		4EAA3CAA2CBF603E00F0FE82 /* UIAccessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */; };
@@ -70,6 +71,7 @@
 		4E0CECFB2CD3106500603CA6 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		4E0CED062CD3229A00603CA6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4E0CF9B02CDC520F00843EA4 /* ArtistListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListViewController.swift; sourceTree = "<group>"; };
+		4E0CF9B42CDC7D3A00843EA4 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		4EAA3CA52CBF42F300F0FE82 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		4EAA3CA72CBF46AC00F0FE82 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		4EAA3CA92CBF603E00F0FE82 /* UIAccessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAccessibility+.swift"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				4E03C55C2CD1CC7F00C89D60 /* DefaultAccessibilityViewController.swift */,
 				4E03C5762CD1D2C700C89D60 /* TitleSupplementaryView.swift */,
 				4E03C5782CD1D31E00C89D60 /* BorderedListCell.swift */,
+				4E0CF9B42CDC7D3A00843EA4 /* BackButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				4E03C56F2CD1CF9B00C89D60 /* ArtistChannelListCell.swift in Sources */,
 				4E03C5632CD1CE7B00C89D60 /* ArtistChannelViewController+Action.swift in Sources */,
 				4E03C5612CD1CE6E00C89D60 /* ArtistChannelViewController+Delegate.swift in Sources */,
+				4E0CF9B52CDC7D3A00843EA4 /* BackButton.swift in Sources */,
 				4EED069A2CBDFD1F003F0A61 /* View+Constraints.swift in Sources */,
 				4EED069E2CBE089D003F0A61 /* MapInfo.swift in Sources */,
 				4EED06862CBDF986003F0A61 /* OutlineViewController.swift in Sources */,

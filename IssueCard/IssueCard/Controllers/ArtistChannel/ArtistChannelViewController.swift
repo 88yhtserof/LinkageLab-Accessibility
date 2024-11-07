@@ -13,6 +13,7 @@ final class ArtistChannelViewController: DefaultViewController {
     var snapshot: Snapshot!
     var books = Music.samples
     
+    lazy var backButton = BackButton(of: self)
     lazy var artistBackgroundImageView = ArtistBackgroundImageView()
     lazy var gradientBackgroundView = GradientTopBackgroundView()
     lazy var artistInfoView = ArtistInfoView()
@@ -37,17 +38,22 @@ private extension ArtistChannelViewController {
     
     func configureView() {
         let miniPlayerHeight = miniPlayerView.frame.height
-        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: miniPlayerHeight, right: -10)
+        collectionView.contentInset = UIEdgeInsets(top: 80, left: 10, bottom: miniPlayerHeight, right: -10)
     }
     
     func configureConstraints() {
         view.addPinnedSubview(collectionView, height: nil, equalTo: .init(top: .view, leading: .view, bottom: .view, trailing: .view))
-        view.addSubviews([miniPlayerView])
+        view.addSubviews([backButton, miniPlayerView,])
+        
+        let ratio = artistBackgroundImageView.frame.size.width / artistBackgroundImageView.frame.size.height
         
         NSLayoutConstraint.activate([
+            backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            
             miniPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             miniPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            miniPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            miniPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
     
