@@ -11,7 +11,7 @@ import SwiftUI
 struct IssueCard_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            TaxiCallView()
+            OutlineTabView()
         }
     }
 }

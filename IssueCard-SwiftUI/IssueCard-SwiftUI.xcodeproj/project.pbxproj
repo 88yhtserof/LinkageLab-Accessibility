@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		143B104C2CC7F590000E5A4C /* TaxiCallView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143B104B2CC7F590000E5A4C /* TaxiCallView2.swift */; };
+		4E0CF9B72CDC85A100843EA4 /* OutlineTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CF9B62CDC85A100843EA4 /* OutlineTabView.swift */; };
 		4E30476F2CC5E4810044ACF2 /* IssueCard_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E30476E2CC5E4810044ACF2 /* IssueCard_SwiftUIApp.swift */; };
 		4E3047712CC5E4810044ACF2 /* TaxiCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3047702CC5E4810044ACF2 /* TaxiCallView.swift */; };
 		4E3047732CC5E4820044ACF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3047722CC5E4820044ACF2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		143B104B2CC7F590000E5A4C /* TaxiCallView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiCallView2.swift; sourceTree = "<group>"; };
+		4E0CF9B62CDC85A100843EA4 /* OutlineTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineTabView.swift; sourceTree = "<group>"; };
 		4E30476B2CC5E4810044ACF2 /* IssueCard-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IssueCard-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E30476E2CC5E4810044ACF2 /* IssueCard_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCard_SwiftUIApp.swift; sourceTree = "<group>"; };
 		4E3047702CC5E4810044ACF2 /* TaxiCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiCallView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				4E3047702CC5E4810044ACF2 /* TaxiCallView.swift */,
 				4E30477F2CC62F670044ACF2 /* MapView.swift */,
 				143B104B2CC7F590000E5A4C /* TaxiCallView2.swift */,
+				4E0CF9B62CDC85A100843EA4 /* OutlineTabView.swift */,
 			);
 			path = Isuue1;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0CF9B72CDC85A100843EA4 /* OutlineTabView.swift in Sources */,
 				4E3047712CC5E4810044ACF2 /* TaxiCallView.swift in Sources */,
 				143B104C2CC7F590000E5A4C /* TaxiCallView2.swift in Sources */,
 				4E3047802CC62F670044ACF2 /* MapView.swift in Sources */,
