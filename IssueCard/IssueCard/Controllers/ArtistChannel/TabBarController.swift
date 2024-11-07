@@ -9,40 +9,24 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    private let artistChannerlVC: UIViewController = {
-        let vc = ArtistChannelViewController()
+    private let artistListVC: UIViewController = {
+        let vc = UINavigationController(rootViewController: ArtistListViewController())
         let image = UIImage(systemName: "info.circle.fill")
-        vc.tabBarItem = UITabBarItem(title: "아티스트 채널", image: image, tag: 0)
+        vc.tabBarItem = UITabBarItem(title: "아티스트", image: image, tag: 0)
         return vc
     }()
     
-    
-    lazy var rightBarButton: UIBarButtonItem = {
-        var view = UIBarButtonItem()
-        view.image = UIImage(systemName: "ellipsis")
-        return view
+    private let mapInfoVC: UIViewController = {
+        let vc = UINavigationController(rootViewController: MapInfoViewController())
+        let image = UIImage(systemName: "map.fill")
+        vc.tabBarItem = UITabBarItem(title: "지도 정보", image: image, tag: 0)
+        return vc
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = [artistChannerlVC]
+        viewControllers = [artistListVC, mapInfoVC]
         view.backgroundColor = .white
-        
-        navigationItem.rightBarButtonItem = rightBarButton
-        navigationItem.hidesBackButton = true
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(didTapBackButton))
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if UIAccessibility.isVoiceOverRunning,
-           let leftBarButtonItem = navigationItem.leftBarButtonItem {
-            navigationItem.leftBarButtonItem?.accessibilityLabel = "뒤로 가기"
-            Task {
-                try? await UIAccessibility.setFocus(to: leftBarButtonItem)
-            }
-        }
     }
     
     @objc func didTapBackButton() {

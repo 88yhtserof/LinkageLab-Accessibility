@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ArtistChannelViewController: DefaultAccessibilityViewController {
+final class ArtistChannelViewController: DefaultViewController {
     
     var dataSource: DataSource!
     var snapshot: Snapshot!
@@ -25,6 +25,11 @@ final class ArtistChannelViewController: DefaultAccessibilityViewController {
         configureView()
         configureConstraints()
         configureDataSource()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
 }
 
