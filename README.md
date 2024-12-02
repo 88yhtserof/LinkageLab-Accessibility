@@ -59,6 +59,11 @@
 
 
 
+| 30개 이상 <br> 컴포넌트 | 멜론 차트 탐색 | 콘텐츠 더보기 | 최근 검색어 |
+| ----- | ----- | ----- | ----- |
+| <img src = "https://github.com/user-attachments/assets/a37b2ba0-1ed2-41b5-942d-42892ecd1085" width = 260 height = 580> | <img src = "https://github.com/user-attachments/assets/55e44f80-feb5-4e8e-bde4-f392a225f863" width = 260 height = 580> | <img src = "https://github.com/user-attachments/assets/1a4880f9-be2f-43bb-bb09-95f13cbec10c" width = 260 height = 580> | <img src = "https://github.com/user-attachments/assets/a1dd5585-32f9-41b3-9adf-296a310e5873" width = 260 height = 580> |
+
+
 
 <br>
 
