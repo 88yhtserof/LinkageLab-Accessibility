@@ -31,7 +31,7 @@
 ### 이슈2: 특정 컴포넌트 접근 불가
 - 초점 설정 단위와 화면 UI 구성 방식에 의해 발생한 문제
 - NSMutableAttributedString과 UITapGestureRecognizer를 활용하여 초점 설정 시도
-- VoiceOver의 초점 설정 단위는 컴포넌트 단위로 추가 초점 설정 불가 확인 및 의견 제안
+- VoiceOver의 초점 설정 단위는 컴포넌트 단위로, 추가 초점 설정 불가 확인 및 의견 제안
 - [**🔗상세 설명**](https://github.com/88yhtserof/LinkageLab-Accessibility/blob/main/4-Issue2.md)
 
 <br>
@@ -49,7 +49,7 @@
 
 ## <Basic Components with Accessibility: iOS 디지털 접근성 교육용 앱> 제작
 
-- 30 사례 이상 컴포넌트 접근성 보장 여부 조사 및 개선 작업
+- 30개 이상의 컴포넌트 사례의 접근성 보장 여부 조사 및 개선 작업
 - 멜론 차트 탐색 분석 및 제안
     - 여러 List 탐색 방식을 조사하고 멜론의 차트 탐색 방식과 비교, 분석 및 향후 적용 방식 제안
     - [**🔗상세 설명**](https://github.com/88yhtserof/LinkageLab-Accessibility/blob/main/1-MelonChart.md)
